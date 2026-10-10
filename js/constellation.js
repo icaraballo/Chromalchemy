@@ -1,0 +1,63 @@
+/* ---------- Constelación: simulación de fuerzas y dibujo en canvas ---------- */
+import {BY,KIDS} from './data.js';
+import {st,nodes,order,pending} from './state.js';
+import {rgba,lighten,lum,TAU,clamp,elastic,reduce,$} from './utils.js';
+
+const stage=$('stage');
+export const cv=$('cv'), ctx=cv.getContext('2d');
+
+export function resize(){const r=stage.getBoundingClientRect();st.W=r.width;st.H=r.height;st.DPR=Math.min(2,window.devicePixelRatio||1);
+ cv.width=Math.round(st.W*st.DPR);cv.height=Math.round(st.H*st.DPR);cv.style.width=st.W+'px';cv.style.height=st.H+'px';
+ st.S=clamp(Math.min(st.W,st.H)/680,.6,1.1);}
+export function makeStars(){st.stars=[];for(let i=0;i<160;i++)st.stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.1+.2,ph:Math.random()*TAU,sp:.5+Math.random()*1.5});}
+
+/* ---------- Simulación ---------- */
+function degree(id){let c=BY[id].p?2:0;for(const o of order){const p=BY[o].p;if(p&&(p[0]===id||p[1]===id))c++;}return c;}
+const crowd=()=>clamp(1.15-order.length/260,.55,1);
+const targetR=n=>(10+Math.min(degree(n.id),9)*1.8)*st.S*crowd();
+const birthScale=n=>{const t=st.now-n.born;if(t<0)return 0;return reduce?1:elastic(t/.7);};
+export function hit(x,y,exclude){let best=null,bd=1e9;for(const n of nodes.values()){if(n.id===exclude||st.now<n.born)continue;const d=Math.hypot(n.x-x,n.y-y);const lim=Math.max(n.r*1.5,24*st.S);if(d<lim&&d<bd){bd=d;best=n;}}return best;}
+export function step(dt){const S=st.S,f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.values()];
+ for(const n of arr){n.pulse=Math.max(0,n.pulse-dt*1.5);n.shake=Math.max(0,n.shake-dt);const tr=targetR(n);n.r=n.r?n.r+(tr-n.r)*Math.min(1,dt*8):tr;}
+ // La bola que se arrastra (fixed) no repele ni es repelida: si no, el objetivo «huye» y no hay forma de soltarla encima.
+ for(let i=0;i<arr.length;i++)for(let j=i+1;j<arr.length;j++){const a=arr[i],b=arr[j];if(a.fixed||b.fixed)continue;let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy;
+  if(d2<1){dx=Math.random()-.5;dy=Math.random()-.5;d2=1;}const d=Math.sqrt(d2);let fr=1500*S*S*crowd()*crowd()/d2;const minD=a.r+b.r+10*S*crowd();if(d<minD)fr+=(minD-d)*.06;
+  const ux=dx/d,uy=dy/d;a.vx-=ux*fr*f;a.vy-=uy*fr*f;b.vx+=ux*fr*f;b.vy+=uy*fr*f;}
+ for(const n of arr){const p=BY[n.id].p;if(!p)continue;for(const pid of p){const q=nodes.get(pid);if(!q)continue;const dx=n.x-q.x,dy=n.y-q.y,d=Math.hypot(dx,dy)||1;
+  const k=(d-88*S*crowd())*.0032*f,ux=dx/d,uy=dy/d;n.vx-=ux*k;n.vy-=uy*k;q.vx+=ux*k*.4;q.vy+=uy*k*.4;}}
+ const damp=Math.pow(.86,f);
+ for(const n of arr){n.vx+=(cx-n.x)*.0009*f;n.vy+=(cy-n.y)*.0009*f;n.vx*=damp;n.vy*=damp;
+  if(!n.fixed){n.x+=n.vx*f;n.y+=n.vy*f;n.x=clamp(n.x,20,st.W-20);n.y=clamp(n.y,20,st.H-20);}}}
+
+/* ---------- Dibujo ---------- */
+export function circle(x,y,r){ctx.beginPath();ctx.arc(x,y,Math.max(0,r),0,TAU);}
+function drawBg(){const W=st.W,H=st.H;ctx.fillStyle='#06070d';ctx.fillRect(0,0,W,H);
+ const recent=order.slice(-2);const spots=[[.28,.32],[.74,.7]];
+ recent.forEach((id,i)=>{const[x,y]=spots[i];const g=ctx.createRadialGradient(W*x,H*y,0,W*x,H*y,Math.max(W,H)*.6);g.addColorStop(0,rgba(BY[id].hex,.09));g.addColorStop(1,rgba(BY[id].hex,0));ctx.fillStyle=g;ctx.fillRect(0,0,W,H);});
+ for(const s of st.stars){const a=.2+.25*(reduce?1:Math.sin(st.now*s.sp+s.ph)*.5+.5);ctx.fillStyle=`rgba(220,225,255,${a})`;circle(s.x*W,s.y*H,s.r);ctx.fill();}}
+function drawLinks(){const {selected,hover}=st;ctx.globalCompositeOperation='lighter';
+ for(const n of nodes.values()){const p=BY[n.id].p;if(!p)continue;const sc=birthScale(n);if(sc<=0)continue;
+  for(const pid of p){const q=nodes.get(pid);if(!q)continue;const hl=selected===n.id||selected===pid||(hover&&(hover.id===n.id||hover.id===pid));
+   const g=ctx.createLinearGradient(q.x,q.y,n.x,n.y);const a=(hl?.75:.26)*Math.min(1,sc);g.addColorStop(0,rgba(BY[pid].hex,a));g.addColorStop(1,rgba(BY[n.id].hex,a));
+   ctx.strokeStyle=g;ctx.lineWidth=(hl?1.8:1.1)*Math.max(st.S,.8);ctx.beginPath();ctx.moveTo(q.x,q.y);ctx.lineTo(n.x,n.y);ctx.stroke();}}
+ ctx.globalCompositeOperation='source-over';}
+const nodePos=n=>[n.x+(n.shake?Math.sin(st.now*55)*n.shake*7*st.S:0),n.y];
+function drawNode(n){const sc=birthScale(n);if(sc<=0)return;const hex=BY[n.id].hex,[x,y]=nodePos(n);
+ const r=n.r*sc*(reduce?1:1+.035*Math.sin(st.now*1.8+n.ph))*(1+n.pulse*.35);const dark=lum(hex)<.16;
+ ctx.globalCompositeOperation='lighter';const g=ctx.createRadialGradient(x,y,r*.2,x,y,r*3.4);
+ const hc=dark?'#8c8aa8':hex;g.addColorStop(0,rgba(hc,dark?.3:.55));g.addColorStop(.35,rgba(hc,dark?.1:.17));g.addColorStop(1,rgba(hc,0));ctx.fillStyle=g;circle(x,y,r*3.4);ctx.fill();
+ ctx.globalCompositeOperation='source-over';
+ const c=ctx.createRadialGradient(x-r*.25,y-r*.25,0,x,y,r);c.addColorStop(0,lighten(hex,dark?.25:.62));c.addColorStop(.55,hex);c.addColorStop(1,hex);ctx.fillStyle=c;circle(x,y,r);ctx.fill();
+ if(dark){ctx.strokeStyle='rgba(220,218,240,.35)';ctx.lineWidth=1;circle(x,y,r);ctx.stroke();}
+ if(!pending(n.id).length&&KIDS[n.id].length&&sc>=1){ctx.strokeStyle=rgba(hex,.35);ctx.lineWidth=1;ctx.setLineDash([2,4]);circle(x,y,r+4*st.S);ctx.stroke();ctx.setLineDash([]);}}
+function drawRings(){const {selected,hover,drag,S}=st;
+ if(selected&&nodes.has(selected)){const n=nodes.get(selected);const[x,y]=nodePos(n);ctx.strokeStyle='rgba(236,232,255,.75)';ctx.lineWidth=1.4;circle(x,y,n.r*birthScale(n)+7*S);ctx.stroke();}
+ if(drag&&drag.started&&hover){const[x,y]=nodePos(hover);const r=hover.r+10*S+Math.sin(st.now*8)*2;ctx.strokeStyle=rgba(BY[drag.id].hex,.95);ctx.lineWidth=2.2;circle(x,y,r);ctx.stroke();
+  ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1;circle(x,y,r+5*S);ctx.stroke();}}
+function drawLabels(){const S=st.S,showAll=(S>=.8&&order.length<=60)||order.length<=14;ctx.font=`500 ${Math.round(11.5*Math.max(S,.9))}px Karla, system-ui, sans-serif`;ctx.textAlign='center';ctx.textBaseline='top';
+ for(const n of nodes.values()){const sc=birthScale(n);if(sc<.6)continue;const on=st.selected===n.id||st.hover===n;if(!showAll&&!on)continue;
+  const[x,y]=nodePos(n);ctx.fillStyle=on?'rgba(244,242,250,.95)':'rgba(220,216,236,.58)';ctx.fillText(BY[n.id].name,x,y+n.r*sc+7*S);}}
+export function draw(){ctx.setTransform(st.DPR,0,0,st.DPR,0,0);drawBg();drawLinks();
+ for(const n of nodes.values())drawNode(n);
+ st.effects=st.effects.filter(e=>{const el=st.now-e.t0;if(el>e.dur)return false;e.draw(el);return true;});
+ drawRings();drawLabels();}

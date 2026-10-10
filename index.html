@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chromalchemy</title>
+<meta name="description" content="Descubre 246 colores reales mezclándolos, cada uno con su historia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1</span></div>
+    <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
+    <div class="tools">
+      <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
+      <button type="button" id="reset">Reiniciar</button>
+      <button type="button" class="dev" id="reveal" hidden>Revelar todo (dev)</button>
+    </div>
+  </header>
+  <aside class="palette">
+    <div class="pal-head">Tu paleta</div>
+    <div class="pal-list" id="palList"></div>
+  </aside>
+  <main class="stage" id="stage">
+    <canvas id="cv" aria-label="Constelación de colores descubiertos"></canvas>
+    <div class="hint" id="hint">Arrastra un color <b>de la paleta o de la propia constelación</b> y suéltalo <b>encima de otro</b>. Toca cualquier color para leer su historia.</div>
+    <div class="toast" id="toast" hidden></div>
+    <section class="lore" id="lore" hidden aria-live="polite">
+      <button type="button" class="x" id="loreClose" aria-label="Cerrar ficha">×</button>
+      <div class="lore-top">
+        <div class="lore-orb" id="lOrb"></div>
+        <div style="min-width:0"><div class="eyebrow" id="lGen"></div><h2 id="lName"></h2><div class="hex" id="lHex"></div></div>
+      </div>
+      <div class="recipe" id="lRecipe"></div>
+      <h3>Por qué se llama así</h3>
+      <p id="lNombre"></p>
+      <h3>Su historia <span class="cert" id="lCert"></span></h3>
+      <p id="lHist"></p>
+      <div id="lNota"></div>
+      <div class="pend" id="lPend"></div>
+      <h3>Fuentes</h3>
+      <ol class="src" id="lSrc"></ol>
+    </section>
+    <section class="wheel" id="wheel" hidden>
+      <div class="wheel-card">
+        <button type="button" class="x" id="wheelClose" aria-label="Cerrar gama">×</button>
+        <div style="min-width:0">
+          <h2>Gama cromática</h2>
+          <p class="sub">Cada hueco es un color que aún no has sacado, colocado en su tono. Por el sitio sabes por dónde buscar, pero no qué es.</p>
+          <svg class="wheel-svg" id="wheelSvg" viewBox="-170 -170 340 340" role="img" aria-label="Rueda de colores descubiertos y pendientes"></svg>
+        </div>
+        <div class="famlist" id="famList"></div>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="ghost" id="ghost" hidden></div>
+<script>
+// Los módulos no cargan abriendo el archivo con doble clic (file://): avisarlo en vez de dejar la pantalla vacía.
+if(location.protocol==='file:')document.getElementById('hint').textContent='Ábrelo desde un servidor (python3 -m http.server) o en GitHub Pages: con doble clic el navegador no carga el juego.';
+</script>
+</body>
+</html>
