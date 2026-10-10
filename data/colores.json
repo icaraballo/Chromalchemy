@@ -1,0 +1,6356 @@
+[
+ {
+  "id": "rojo",
+  "name": "Rojo",
+  "fam": "rojos",
+  "hex": "#D7263D",
+  "tipo": "pigmento",
+  "gen": 0,
+  "parents": null,
+  "cert": "doc",
+  "nombre": "Del latín russus. Es una de las palabras de color más antiguas: en el estudio clásico de Berlin y Kay (1969), cuando una lengua tiene solo tres términos de color, el tercero, tras claro y oscuro, es el rojo.",
+  "historia": "Con ocre rojo, carbón y hematites se pintó el techo de los polícromos de Altamira. Su edad sigue en debate: se suele situar entre hace unos 16.500 y 14.000 años, aunque un estudio de 2012 fechó una figura roja de la misma sala en más de 22.000.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · rojo",
+    "https://dle.rae.es/rojo"
+   ],
+   [
+    "Wikipedia · Basic Color Terms",
+    "https://en.wikipedia.org/wiki/Basic_Color_Terms:_Their_Universality_and_Evolution"
+   ],
+   [
+    "Wikipedia · Cave of Altamira",
+    "https://en.wikipedia.org/wiki/Cave_of_Altamira"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo",
+  "name": "Amarillo",
+  "fam": "amarillos",
+  "hex": "#F5C518",
+  "tipo": "pigmento",
+  "gen": 0,
+  "parents": null,
+  "cert": "doc",
+  "nombre": "Del bajo latín hispánico amarellus, diminutivo del latín amarus, «amargo». El diccionario no explica por qué un color acabó llamándose «amarguito».",
+  "historia": "En una tumba egipcia del siglo XIV a. C. aparecieron terrones de oropimente, un mineral de arsénico. Hasta el siglo XIX fue uno de los pocos amarillos intensos: Rafael lo usó en la Madonna Sixtina pese a ser muy tóxico.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · amarillo",
+    "https://dle.rae.es/amarillo"
+   ],
+   [
+    "Wikipedia · Orpiment",
+    "https://en.wikipedia.org/wiki/Orpiment"
+   ]
+  ]
+ },
+ {
+  "id": "azul",
+  "name": "Azul",
+  "fam": "azules",
+  "hex": "#2262D6",
+  "tipo": "pigmento",
+  "gen": 0,
+  "parents": null,
+  "cert": "doc",
+  "nombre": "Quizá alteración del árabe hispánico lazawárd, que viene del persa lāžward, el nombre del lapislázuli. Se cree que el persa lo tomó de un nombre de lugar.",
+  "historia": "Homero nunca dice que el mar sea azul: lo llama «color vino». En 1858 Gladstone señaló que en Homero el azul no aparece. Mientras, Egipto ya fabricaba el azul egipcio, considerado el primer pigmento sintético: su uso más antiguo conocido es de hacia el 3250 a. C.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · azul",
+    "https://dle.rae.es/azul"
+   ],
+   [
+    "Wikipedia · Lapis lazuli",
+    "https://en.wikipedia.org/wiki/Lapis_lazuli"
+   ],
+   [
+    "Wikipedia · Wine-dark sea",
+    "https://en.wikipedia.org/wiki/Wine-dark_sea_(Homer)"
+   ],
+   [
+    "Wikipedia · Egyptian blue",
+    "https://en.wikipedia.org/wiki/Egyptian_blue"
+   ]
+  ]
+ },
+ {
+  "id": "blanco",
+  "name": "Blanco",
+  "fam": "blancos",
+  "hex": "#F2F0EA",
+  "tipo": "pigmento",
+  "gen": 0,
+  "parents": null,
+  "cert": "doc",
+  "nombre": "Del germánico blank. Es la misma palabra que dio el inglés blank y el francés blanc.",
+  "historia": "El albayalde, o blanco de plomo, se hacía dejando plomo sobre vapores de vinagre; en China ya se fabricaba hacia el 300 a. C. Fue el blanco de los pintores durante siglos y, en la Europa del XVIII, un maquillaje para blanquear la piel aunque se sabía que envenenaba.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · blanco",
+    "https://dle.rae.es/blanco"
+   ],
+   [
+    "Wikipedia · Lead white",
+    "https://en.wikipedia.org/wiki/Lead_white"
+   ]
+  ]
+ },
+ {
+  "id": "negro",
+  "name": "Negro",
+  "fam": "negros",
+  "hex": "#1B1B22",
+  "tipo": "pigmento",
+  "gen": 0,
+  "parents": null,
+  "cert": "doc",
+  "nombre": "Del latín niger. Los romanos tenían dos negros: ater, apagado, y niger, brillante y saturado. Ater desapareció; niger es el que ha llegado hasta hoy.",
+  "historia": "Las figuras de la cueva de Santimamiñe, en Bizkaia, están pintadas con carbón: sobre todo bisontes negros del Magdaleniense, de hace entre 14.500 y 12.000 años.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · negro",
+    "https://dle.rae.es/negro"
+   ],
+   [
+    "Wikipedia · Black",
+    "https://en.wikipedia.org/wiki/Black"
+   ],
+   [
+    "Prehistour · Santimamiñe",
+    "https://www.prehistour.eu/fr/portfolio-item/santimamine-cave"
+   ],
+   [
+    "Wikipedia · Santimamiñe",
+    "https://en.wikipedia.org/wiki/Santimami%C3%B1e"
+   ]
+  ]
+ },
+ {
+  "id": "granate",
+  "name": "Granate",
+  "fam": "rojos",
+  "hex": "#7E1F2D",
+  "tipo": "gema/mineral",
+  "gen": 1,
+  "parents": [
+   "rojo",
+   "negro"
+  ],
+  "receta": "historia",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Del occitano granat, por la piedra. Su raíz es el latín granum, «grano», quizá por los granos rojos de la granada.",
+  "historia": "Fue la gema más común en el mundo romano tardío. Se engastaba en celdillas de oro, una técnica que se encuentra desde el mar Negro hasta la Inglaterra anglosajona, como en el tesoro de Sutton Hoo.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · granate",
+    "https://dle.rae.es/granate"
+   ],
+   [
+    "Wikipedia · Garnet",
+    "https://en.wikipedia.org/wiki/Garnet"
+   ]
+  ]
+ },
+ {
+  "id": "rosa",
+  "name": "Rosa",
+  "fam": "rosas",
+  "hex": "#F4A6B8",
+  "tipo": "natural",
+  "gen": 1,
+  "parents": [
+   "rojo",
+   "blanco"
+  ],
+  "receta": "historia",
+  "de": 12.4,
+  "cert": "doc",
+  "nombre": "Por la flor, del latín rosa. En inglés, pink viene de unos claveles (Dianthus) llamados pinks por el borde rizado de sus pétalos, como el corte en zigzag de unas tijeras dentadas, las pinking shears.",
+  "historia": "En la Edad Media los nobles preferían rojos intensos. Madame de Pompadour, favorita de Luis XV, puso de moda el rosa y el azul pálido en Versalles e hizo crear un rosa propio en la porcelana de Sèvres. A finales del XVIII ya era popular en toda Europa.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Rose (color)",
+    "https://en.wikipedia.org/wiki/Rose_(color)"
+   ],
+   [
+    "Wikipedia · Pink",
+    "https://en.wikipedia.org/wiki/Pink"
+   ]
+  ]
+ },
+ {
+  "id": "naranja",
+  "name": "Naranja",
+  "fam": "naranjas",
+  "hex": "#F07F1A",
+  "tipo": "natural",
+  "gen": 1,
+  "parents": [
+   "rojo",
+   "amarillo"
+  ],
+  "receta": "historia",
+  "de": 15.3,
+  "cert": "doc",
+  "nombre": "Por la fruta. La palabra viene del sánscrito nāraṅga, pasó al persa nārang, al árabe nāranǧ y al árabe hispánico naranǧa.",
+  "historia": "Antes de que la fruta llegara, el inglés no tenía palabra para este color: decía ġeolurēad, «amarillo-rojo». El primer uso de orange como color en inglés es de 1502, en unas ropas compradas para Margarita Tudor. Por eso en inglés se sigue diciendo red hair o robin redbreast.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · naranja",
+    "https://dle.rae.es/naranja"
+   ],
+   [
+    "Wikipedia · Orange (colour)",
+    "https://en.wikipedia.org/wiki/Orange_(colour)"
+   ]
+  ]
+ },
+ {
+  "id": "indio",
+  "name": "Amarillo indio",
+  "fam": "amarillos",
+  "hex": "#E3A857",
+  "tipo": "pigmento",
+  "gen": 2,
+  "parents": [
+   "amarillo",
+   "naranja"
+  ],
+  "receta": "historia",
+  "de": 6.4,
+  "cert": "disc",
+  "nombre": "Llegaba a Europa desde la India.",
+  "historia": "Según una carta de T. N. Mukharji, se hacía con orina de vacas alimentadas solo con hojas de mango. Durante años se dudó: la escritora Victoria Finlay no encontró pruebas. Pero análisis de 2017 y 2018 de una muestra que el propio Mukharji envió a Londres dan la razón a su relato. Dejó de venderse hacia 1921.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Indian yellow",
+    "https://en.wikipedia.org/wiki/Indian_yellow"
+   ]
+  ]
+ },
+ {
+  "id": "verde",
+  "name": "Verde",
+  "fam": "verdes",
+  "hex": "#2E9E4A",
+  "tipo": "pigmento",
+  "gen": 1,
+  "parents": [
+   "amarillo",
+   "azul"
+  ],
+  "receta": "historia",
+  "de": 6.7,
+  "cert": "doc",
+  "nombre": "Del latín viridis.",
+  "historia": "Uno de los verdes más usados durante siglos fue el cardenillo, que se obtenía atacando cobre con vinagre. Aparece en pinturas de Pompeya y en Giotto. Con el tiempo puede oscurecerse y volverse marrón, y en el siglo XIX lo desplazaron verdes más estables.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · verde",
+    "https://dle.rae.es/verde"
+   ],
+   [
+    "Wikipedia · Verdigris",
+    "https://en.wikipedia.org/wiki/Verdigris"
+   ]
+  ]
+ },
+ {
+  "id": "oliva",
+  "name": "Oliva",
+  "fam": "verdes",
+  "hex": "#7F7B2C",
+  "tipo": "natural",
+  "gen": 1,
+  "parents": [
+   "amarillo",
+   "negro"
+  ],
+  "receta": "historia",
+  "de": 10.7,
+  "cert": "doc",
+  "nombre": "Por el color de las aceitunas verdes, sin madurar.",
+  "historia": "Su versión apagada, el verde oliva militar (olive drab), aparece como nombre de color en inglés en 1892. Vistió al ejército estadounidense durante la Segunda Guerra Mundial y Vietnam, hasta que en 1981 llegó el camuflaje de cuatro colores.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Olive (color)",
+    "https://en.wikipedia.org/wiki/Olive_(color)"
+   ],
+   [
+    "Wikipedia · Olive drab",
+    "https://en.wikipedia.org/wiki/Olive_drab"
+   ]
+  ]
+ },
+ {
+  "id": "scheele",
+  "name": "Verde Scheele",
+  "fam": "verdes",
+  "hex": "#6CAB2E",
+  "tipo": "persona",
+  "gen": 2,
+  "parents": [
+   "verde",
+   "amarillo"
+  ],
+  "receta": "historia",
+  "de": 2.4,
+  "cert": "doc",
+  "nombre": "Por Carl Wilhelm Scheele, el químico sueco que lo inventó en 1775.",
+  "historia": "Era arsenito de cobre: bonito y venenoso. Tiñó papeles pintados, vestidos, velas, juguetes y hasta dulces. En 1861 murió Matilda Scheurer, una joven de 19 años que espolvoreaba con él hojas de flores artificiales.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se dijo que el papel verde de la casa de Napoleón en Santa Elena lo envenenó con arsénico. Las investigaciones recientes lo descartan: murió de cáncer de estómago."
+  },
+  "src": [
+   [
+    "Wikipedia · Scheele’s green",
+    "https://en.wikipedia.org/wiki/Scheele%27s_green"
+   ]
+  ]
+ },
+ {
+  "id": "celadon",
+  "name": "Celadón",
+  "fam": "verdes",
+  "hex": "#A9DDB0",
+  "tipo": "cultura",
+  "gen": 2,
+  "parents": [
+   "verde",
+   "blanco"
+  ],
+  "receta": "historia",
+  "de": 5.9,
+  "cert": "doc",
+  "nombre": "Por Céladon, un pastor de la novela francesa L’Astrée (1627) que vestía cintas verde pálido.",
+  "historia": "Así se llamó en Europa a la cerámica de vidriado verde nacida en China, que alcanzó su forma clásica con la dinastía Song. En Corea, el celadón Goryeo vivió su mejor momento entre los siglos XII y XIII.",
+  "nota": {
+   "cert": "disc",
+   "t": "Otra teoría dice que «celadón» es una deformación del nombre de Saladino, que en 1171 regaló cuarenta piezas de esta cerámica al sultán de Siria."
+  },
+  "src": [
+   [
+    "Wikipedia · Celadon",
+    "https://en.wikipedia.org/wiki/Celadon"
+   ]
+  ]
+ },
+ {
+  "id": "celeste",
+  "name": "Celeste",
+  "fam": "azules",
+  "hex": "#8EC9F0",
+  "tipo": "natural",
+  "gen": 1,
+  "parents": [
+   "azul",
+   "blanco"
+  ],
+  "receta": "historia",
+  "de": 9.8,
+  "cert": "doc",
+  "nombre": "Del latín caelestis, «del cielo».",
+  "historia": "El cielo es azul porque el aire dispersa mucho más la luz azul que la roja. Lord Rayleigh trabajó en ello desde 1871, y en 1899 publicó el modelo que lo explica. El fenómeno se llama dispersión de Rayleigh.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · celeste",
+    "https://dle.rae.es/celeste"
+   ],
+   [
+    "Wikipedia · Rayleigh scattering",
+    "https://en.wikipedia.org/wiki/Rayleigh_scattering"
+   ]
+  ]
+ },
+ {
+  "id": "marino",
+  "name": "Azul marino",
+  "fam": "azules",
+  "hex": "#1C2C4E",
+  "tipo": "cultura",
+  "gen": 1,
+  "parents": [
+   "azul",
+   "negro"
+  ],
+  "receta": "historia",
+  "de": 7.1,
+  "cert": "doc",
+  "nombre": "Por la Marina británica. En inglés se llama navy blue, «azul marina».",
+  "historia": "El primer reglamento de uniformes para oficiales de la Marina británica, de 1748, fijó el azul oscuro y el blanco. A finales del XVIII lo adoptaron también los marineros, en parte porque el color oscuro disimulaba la suciedad en los viajes largos.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Navy blue",
+    "https://en.wikipedia.org/wiki/Navy_blue"
+   ],
+   [
+    "Wikipedia · Uniforms of the Royal Navy",
+    "https://en.wikipedia.org/wiki/Uniforms_of_the_Royal_Navy"
+   ]
+  ]
+ },
+ {
+  "id": "turquesa",
+  "name": "Turquesa",
+  "fam": "azules",
+  "hex": "#2CB8B0",
+  "tipo": "gema/mineral",
+  "gen": 2,
+  "parents": [
+   "azul",
+   "verde"
+  ],
+  "receta": "historia",
+  "de": 14.3,
+  "cert": "doc",
+  "nombre": "Del francés antiguo turquois, «turco», porque llegaba a Europa a través del Imperio otomano. En realidad se extraía en Persia y en el Sinaí.",
+  "historia": "Los mexicas la combinaban con oro, cuarzo, malaquita y conchas para hacer máscaras y objetos ceremoniales de mosaico. Era para ellos una piedra muy valiosa.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Turquoise",
+    "https://en.wikipedia.org/wiki/Turquoise"
+   ]
+  ]
+ },
+ {
+  "id": "prusia",
+  "name": "Azul de Prusia",
+  "fam": "azules",
+  "hex": "#14507C",
+  "tipo": "pigmento",
+  "gen": 2,
+  "parents": [
+   "rojo",
+   "marino"
+  ],
+  "receta": "historia",
+  "de": 33.6,
+  "cert": "doc",
+  "nombre": "Lo sintetizó por primera vez el fabricante de pinturas Diesbach en Berlín, capital de Prusia, hacia 1706.",
+  "historia": "Diesbach intentaba hacer un rojo con cochinilla y le salió azul. Hokusai lo usó en La gran ola de Kanagawa. Y el cianuro, que se forma al fabricarlo, debe su nombre a la palabra griega para el azul oscuro.",
+  "nota": {
+   "cert": "disc",
+   "t": "Se cuenta que el error vino de una potasa contaminada con sangre que le prestó el alquimista Dippel. Ninguna otra fuente histórica conocida menciona a Dippel en esto."
+  },
+  "src": [
+   [
+    "Wikipedia · Prussian blue",
+    "https://en.wikipedia.org/wiki/Prussian_blue"
+   ]
+  ]
+ },
+ {
+  "id": "purpura",
+  "name": "Púrpura de Tiro",
+  "fam": "violetas",
+  "hex": "#7E1E5C",
+  "tipo": "tinte",
+  "gen": 1,
+  "parents": [
+   "rojo",
+   "azul"
+  ],
+  "receta": "historia",
+  "de": 5.7,
+  "cert": "doc",
+  "nombre": "Por Tiro, la ciudad fenicia que lo producía. «Púrpura» viene del griego porphýra. Se ha propuesto que el propio nombre de Fenicia signifique «tierra de la púrpura».",
+  "historia": "Se sacaba de caracoles marinos: 12.000 ejemplares daban solo 1,4 gramos de tinte puro. En el siglo IV solo el emperador romano podía vestirlo. En Bizancio, a los hijos nacidos de un emperador reinante los llamaban porfirogénetos, «nacidos en la púrpura».",
+  "nota": {
+   "cert": "disc",
+   "t": "Ya en el siglo X había dos explicaciones de «nacido en la púrpura»: por el color imperial o por la sala de pórfido, una piedra púrpura, donde daban a luz las emperatrices."
+  },
+  "src": [
+   [
+    "Wikipedia · Tyrian purple",
+    "https://en.wikipedia.org/wiki/Tyrian_purple"
+   ],
+   [
+    "Wikipedia · Born in the purple",
+    "https://en.wikipedia.org/wiki/Born_in_the_purple"
+   ]
+  ]
+ },
+ {
+  "id": "malva",
+  "name": "Malva",
+  "fam": "violetas",
+  "hex": "#9B4FB0",
+  "tipo": "tinte",
+  "gen": 2,
+  "parents": [
+   "purpura",
+   "blanco"
+  ],
+  "receta": "historia",
+  "de": 12.7,
+  "cert": "doc",
+  "nombre": "Por la flor de la malva, mauve en francés.",
+  "historia": "En 1856, William Perkin, de 18 años, intentaba sintetizar quinina contra la malaria y obtuvo un residuo que teñía de púrpura: el primer tinte de anilina. Entre 1859 y 1861 fue tal la moda que la revista Punch hablaba del «sarampión malva».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Mauve",
+    "https://en.wikipedia.org/wiki/Mauve"
+   ],
+   [
+    "Wikipedia · Mauveine",
+    "https://en.wikipedia.org/wiki/Mauveine"
+   ]
+  ]
+ },
+ {
+  "id": "marron",
+  "name": "Marrón",
+  "fam": "marrones",
+  "hex": "#7A4A24",
+  "tipo": "natural",
+  "gen": 2,
+  "parents": [
+   "naranja",
+   "negro"
+  ],
+  "receta": "historia",
+  "de": 16.6,
+  "cert": "doc",
+  "nombre": "Del francés marron, «castaña comestible».",
+  "historia": "Existió un pigmento llamado «marrón momia», hecho con momias molidas; en 1712 ya lo vendía en París una tienda llamada À la momie. En 1881, cuando Alma-Tadema le confirmó de dónde salía, Edward Burne-Jones enterró su tubo en el jardín. Lo contó su esposa en sus memorias.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · marrón",
+    "https://dle.rae.es/marr%C3%B3n"
+   ],
+   [
+    "Wikipedia · Mummy brown",
+    "https://en.wikipedia.org/wiki/Mummy_brown"
+   ]
+  ]
+ },
+ {
+  "id": "siena",
+  "name": "Siena tostada",
+  "fam": "marrones",
+  "hex": "#A5502E",
+  "tipo": "lugar",
+  "gen": 3,
+  "parents": [
+   "marron",
+   "rojo"
+  ],
+  "receta": "historia",
+  "de": 7.5,
+  "cert": "doc",
+  "nombre": "Por la ciudad de Siena, en la Toscana, donde se producía en el Renacimiento. «Tostada» porque se obtiene calentando la siena natural.",
+  "historia": "Al calentarla, el óxido de hierro se deshidrata y se convierte en parte en hematites, que la vuelve rojiza. Entre los siglos XVI y XIX fue uno de los marrones básicos de cualquier pintor.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Sienna",
+    "https://en.wikipedia.org/wiki/Sienna"
+   ]
+  ]
+ },
+ {
+  "id": "marfil",
+  "name": "Marfil",
+  "fam": "blancos",
+  "hex": "#F3EBD3",
+  "tipo": "natural",
+  "gen": 1,
+  "parents": [
+   "amarillo",
+   "blanco"
+  ],
+  "receta": "historia",
+  "de": 19.4,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico ʿaẓm alfíl, «hueso de elefante».",
+  "historia": "Moliendo marfil carbonizado se hacía el «negro marfil», uno de los negros de los pintores. Hoy ya no se usa marfil de verdad y el nombre es sinónimo de negro de hueso.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · marfil",
+    "https://dle.rae.es/marfil"
+   ],
+   [
+    "Wikipedia · Ivory black",
+    "https://en.wikipedia.org/wiki/Ivory_black"
+   ]
+  ]
+ },
+ {
+  "id": "gris",
+  "name": "Gris",
+  "fam": "grises",
+  "hex": "#8A8A92",
+  "tipo": "pigmento",
+  "gen": 1,
+  "parents": [
+   "blanco",
+   "negro"
+  ],
+  "receta": "historia",
+  "de": 5.4,
+  "cert": "doc",
+  "nombre": "Probablemente del occitano gris.",
+  "historia": "Pintar solo en grises se llama grisalla. Van Eyck y otros pintores la usaron en la cara exterior de los retablos, como el de Gante, para imitar estatuas: la escultura era más cara que la pintura.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · gris",
+    "https://dle.rae.es/gris"
+   ],
+   [
+    "Wikipedia · Grisaille",
+    "https://en.wikipedia.org/wiki/Grisaille"
+   ]
+  ]
+ },
+ {
+  "id": "payne",
+  "name": "Gris de Payne",
+  "fam": "grises",
+  "hex": "#536878",
+  "tipo": "persona",
+  "gen": 2,
+  "parents": [
+   "gris",
+   "azul"
+  ],
+  "receta": "historia",
+  "de": 12.1,
+  "cert": "doc",
+  "nombre": "Por William Payne, acuarelista inglés activo entre 1776 y 1830.",
+  "historia": "La receta original mezclaba azul de Prusia, ocre amarillo y laca carmesí. Payne buscaba algo menos duro que el negro para sus clases y para dar profundidad a la media distancia de sus paisajes.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Payne’s grey",
+    "https://en.wikipedia.org/wiki/Payne%27s_grey"
+   ]
+  ]
+ },
+ {
+  "id": "bermellon",
+  "name": "Bermellón",
+  "fam": "rojos",
+  "hex": "#E34234",
+  "tipo": "pigmento",
+  "gen": 2,
+  "parents": [
+   "rojo",
+   "naranja"
+  ],
+  "receta": "historia",
+  "de": 4.7,
+  "cert": "doc",
+  "nombre": "Del francés vermillon, y este del latín vermiculus, «gusanito», por el quermes, un insecto del que se sacaba un tinte rojo.",
+  "historia": "Se hacía moliendo cinabrio, un mineral de mercurio. La principal fuente de los romanos fue la mina de Almadén, trabajada por presos.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · bermellón",
+    "https://dle.rae.es/bermell%C3%B3n"
+   ],
+   [
+    "Wikipedia · Vermilion",
+    "https://en.wikipedia.org/wiki/Vermilion"
+   ]
+  ]
+ },
+ {
+  "id": "magenta",
+  "name": "Magenta",
+  "fam": "rosas",
+  "hex": "#D4207E",
+  "tipo": "lugar",
+  "gen": 2,
+  "parents": [
+   "purpura",
+   "rojo"
+  ],
+  "receta": "historia",
+  "de": 13.7,
+  "cert": "doc",
+  "nombre": "Por la batalla de Magenta (junio de 1859), victoria franco-sarda sobre Austria. El tinte, patentado ese año por François-Emmanuel Verguin, se llamaba fucsina y se rebautizó para celebrarla.",
+  "historia": "El magenta no está en el arcoíris: ninguna longitud de onda tiene ese tono. Lo vemos cuando nos llega a la vez luz roja y azul.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Magenta",
+    "https://en.wikipedia.org/wiki/Magenta"
+   ]
+  ]
+ },
+ {
+  "id": "ocre",
+  "name": "Ocre",
+  "fam": "amarillos",
+  "hex": "#C98A2B",
+  "tipo": "pigmento",
+  "gen": 3,
+  "parents": [
+   "marron",
+   "amarillo"
+  ],
+  "receta": "historia",
+  "de": 6.6,
+  "cert": "doc",
+  "nombre": "Del griego ṓkhra, de ōkhrós, «pálido».",
+  "historia": "En la cueva de Blombos, en Sudáfrica, aparecieron trozos de ocre grabados con dibujos abstractos de hace unos 75.000 años. Mucho después, en la década de 1780, Jean-Étienne Astier industrializó su extracción en Rosellón, en Francia.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Ochre",
+    "https://en.wikipedia.org/wiki/Ochre"
+   ]
+  ]
+ },
+ {
+  "id": "indigo",
+  "name": "Índigo",
+  "fam": "azules",
+  "hex": "#35307E",
+  "tipo": "tinte",
+  "gen": 2,
+  "parents": [
+   "purpura",
+   "marino"
+  ],
+  "receta": "historia",
+  "de": 9.5,
+  "cert": "doc",
+  "nombre": "Del griego indikón phármakon, «tinte de la India», de donde llegaba.",
+  "historia": "Newton lo contó como uno de los siete colores del arcoíris, a imagen de las siete notas de la escala musical. Los expertos discuten si su «índigo» era lo que hoy llamamos así. Es el tinte de los vaqueros.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Indigo",
+    "https://en.wikipedia.org/wiki/Indigo"
+   ]
+  ]
+ },
+ {
+  "id": "ultramar",
+  "name": "Ultramar",
+  "fam": "azules",
+  "hex": "#2A3AC0",
+  "tipo": "pigmento",
+  "gen": 2,
+  "parents": [
+   "purpura",
+   "azul"
+  ],
+  "receta": "historia",
+  "de": 10.2,
+  "cert": "doc",
+  "nombre": "Del latín ultramarinus, «de más allá del mar»: el lapislázuli venía de minas de Afganistán.",
+  "historia": "En el Renacimiento llegó a valer tanto como el oro y se reservaba para el manto de la Virgen. En 1824 una sociedad francesa ofreció 6.000 francos a quien lo fabricara; Guimet lo logró en 1826 pero lo guardó en secreto, y Gmelin publicó su método en 1828.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Ultramarine",
+    "https://en.wikipedia.org/wiki/Ultramarine"
+   ]
+  ]
+ },
+ {
+  "id": "topo",
+  "name": "Topo",
+  "fam": "marrones",
+  "hex": "#7E7064",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "gris",
+   "marron"
+  ],
+  "receta": "historia",
+  "de": 7.2,
+  "cert": "doc",
+  "nombre": "Del francés taupe, «topo», por el color del pelaje del topo europeo.",
+  "historia": "Es uno de los nombres de color más imprecisos: puede ser casi cualquier gris pardo o pardo grisáceo, y ni los diseñadores se ponen de acuerdo. Su significado se amplió en los años cuarenta.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Taupe",
+    "https://en.wikipedia.org/wiki/Taupe"
+   ]
+  ]
+ },
+ {
+  "id": "carmin",
+  "name": "Carmín",
+  "fam": "rojos",
+  "hex": "#B0123A",
+  "tipo": "tinte",
+  "gen": 3,
+  "parents": [
+   "rojo",
+   "magenta"
+  ],
+  "receta": "historia",
+  "de": 10.3,
+  "cert": "doc",
+  "nombre": "Del francés carmin, quizá del mismo origen que «carmesí». La raíz está en el persa medio carmir, «rojo», que también dio el árabe qirmiz.",
+  "historia": "Se saca de la cochinilla, un insecto de los cactus que aztecas e incas ya usaban. Fue una gran fuente de ingresos para la Corona española, que tuvo su monopolio en Europa hasta hacia 1820. Hoy sigue en los alimentos con el código E120.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · carmín",
+    "https://dle.rae.es/carm%C3%ADn"
+   ],
+   [
+    "Wikipedia · Carmine",
+    "https://en.wikipedia.org/wiki/Carmine"
+   ]
+  ]
+ },
+ {
+  "id": "cuarzo-rosa",
+  "name": "Cuarzo rosa",
+  "fam": "rosas",
+  "hex": "#F7CAC9",
+  "tipo": "gema/mineral",
+  "gen": 2,
+  "parents": [
+   "rosa",
+   "marfil"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Variedad rosa del cuarzo.",
+  "historia": "Su color viene de aluminio y fósforo en el cristal, activados por la radiación natural. Algunas variedades se decoloran con la luz.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Rose quartz",
+    "https://en.wikipedia.org/wiki/Rose_quartz"
+   ]
+  ]
+ },
+ {
+  "id": "tekhelet",
+  "name": "Tekhelet",
+  "fam": "azules",
+  "hex": "#2C6E9B",
+  "tipo": "tinte",
+  "gen": 3,
+  "parents": [
+   "turquesa",
+   "indigo"
+  ],
+  "receta": "calculada",
+  "de": 0.8,
+  "cert": "disc",
+  "nombre": "Nombre hebreo del azul que la Biblia manda usar en los flecos rituales y las vestiduras de los sacerdotes.",
+  "historia": "Según los textos rabínicos venía de un animal marino, el jilazón. La receta se perdió hacia los siglos V-VI. Hoy se identifica con el caracol Hexaplex trunculus, aunque no todos están de acuerdo.",
+  "nota": {
+   "cert": "disc",
+   "t": "En 1887 un rabino propuso la sepia como fuente, pero su azul resultó ser azul de Prusia sintético."
+  },
+  "src": [
+   [
+    "Wikipedia · Tekhelet",
+    "https://en.wikipedia.org/wiki/Tekhelet"
+   ]
+  ]
+ },
+ {
+  "id": "palo-de-brasil",
+  "name": "Palo de Brasil",
+  "fam": "rojos",
+  "hex": "#B1302C",
+  "tipo": "tinte",
+  "gen": 3,
+  "parents": [
+   "granate",
+   "bermellon"
+  ],
+  "receta": "calculada",
+  "de": 0.8,
+  "cert": "doc",
+  "nombre": "Del portugués brasil, un rojo como de brasa, y pau, «madera».",
+  "historia": "Los portugueses llegaron a Brasil en 1500 y montaron un comercio muy rentable con esta madera de tinte. Los marinos llamaron a la tierra Terra do Brasil, «tierra del palo brasil», y de ahí el nombre del país.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Brazilwood",
+    "https://en.wikipedia.org/wiki/Brazilwood"
+   ]
+  ]
+ },
+ {
+  "id": "herrumbre",
+  "name": "Herrumbre",
+  "fam": "naranjas",
+  "hex": "#B7410E",
+  "tipo": "natural",
+  "gen": 2,
+  "parents": [
+   "granate",
+   "naranja"
+  ],
+  "receta": "calculada",
+  "de": 1.8,
+  "cert": "doc",
+  "nombre": "Del latín ferrumen, de ferrum, «hierro».",
+  "historia": "Es óxido de hierro. Ocupa más volumen que el hierro original, y por eso puede llegar a reventar estructuras.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · herrumbre",
+    "https://dle.rae.es/herrumbre"
+   ],
+   [
+    "Wikipedia · Rust",
+    "https://en.wikipedia.org/wiki/Rust"
+   ]
+  ]
+ },
+ {
+  "id": "azul-talavera",
+  "name": "Azul Talavera",
+  "fam": "azules",
+  "hex": "#2B4C9B",
+  "tipo": "lugar",
+  "gen": 3,
+  "parents": [
+   "prusia",
+   "ultramar"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "Por la cerámica de Talavera de la Reina.",
+  "historia": "Tiene unos cinco siglos de historia, con raíz islámica y técnicas renacentistas traídas por artesanos flamencos. Con Felipe II llegó a la vajilla de El Escorial. En 2019 la UNESCO la declaró patrimonio inmaterial junto a la de Puebla y Tlaxcala, en México.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cerámica de Talavera de la Reina",
+    "https://es.wikipedia.org/wiki/Cer%C3%A1mica_de_Talavera_de_la_Reina"
+   ]
+  ]
+ },
+ {
+  "id": "alizarina",
+  "name": "Alizarina",
+  "fam": "rojos",
+  "hex": "#C41E3A",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "rojo",
+   "carmin"
+  ],
+  "receta": "calculada",
+  "de": 0.4,
+  "cert": "doc",
+  "nombre": "Es el colorante rojo de la raíz de la granza.",
+  "historia": "En 1868 los químicos Graebe y Liebermann, de BASF, la fabricaron a partir del alquitrán de hulla: fue el primer tinte natural copiado por síntesis. El mercado de la granza se hundió casi de un día para otro.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Alizarin",
+    "https://en.wikipedia.org/wiki/Alizarin"
+   ],
+   [
+    "Wikipedia · Crimson",
+    "https://en.wikipedia.org/wiki/Crimson"
+   ]
+  ]
+ },
+ {
+  "id": "carmesi",
+  "name": "Carmesí",
+  "fam": "rojos",
+  "hex": "#B3122E",
+  "tipo": "tinte",
+  "gen": 4,
+  "parents": [
+   "carmin",
+   "palo-de-brasil"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico qarmazí, «del color del quermes», el insecto del que se sacaba el tinte.",
+  "historia": "Hacia el año 1400 la palabra ya designaba en inglés tanto al insecto como a su tinte. En 1868 la síntesis de la alizarina por Graebe y Liebermann desplazó a los carmesíes naturales.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · carmesí",
+    "https://dle.rae.es/carmes%C3%AD"
+   ],
+   [
+    "Wikipedia · Crimson",
+    "https://en.wikipedia.org/wiki/Crimson"
+   ]
+  ]
+ },
+ {
+  "id": "aventurina",
+  "name": "Aventurina",
+  "fam": "verdes",
+  "hex": "#5DA271",
+  "tipo": "gema/mineral",
+  "gen": 2,
+  "parents": [
+   "verde",
+   "gris"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Del italiano a ventura, «por casualidad».",
+  "historia": "En el siglo XVIII se descubrió por accidente en Murano un vidrio con destellos: se cuenta que un operario dejó caer limaduras de cobre en el vidrio fundido. El nombre pasó después al mineral, verde y brillante por la fuchsita.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Aventurine",
+    "https://en.wikipedia.org/wiki/Aventurine"
+   ]
+  ],
+  "reemplaza": "Musgo"
+ },
+ {
+  "id": "violeta-de-genciana",
+  "name": "Violeta de genciana",
+  "fam": "violetas",
+  "hex": "#5B3A9E",
+  "tipo": "cultura",
+  "gen": 3,
+  "parents": [
+   "malva",
+   "indigo"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Por el color de algunas flores de genciana: no se hace con gencianas ni con violetas.",
+  "historia": "Alfred Kern lo sintetizó en 1883 y el oftalmólogo Jakob Stilling descubrió que era antiséptico. En 1884 Hans Christian Gram lo usó para clasificar bacterias: la tinción de Gram.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Crystal violet",
+    "https://en.wikipedia.org/wiki/Crystal_violet"
+   ]
+  ]
+ },
+ {
+  "id": "nazareno",
+  "name": "Nazareno",
+  "fam": "violetas",
+  "hex": "#4B2A5E",
+  "tipo": "cultura",
+  "gen": 3,
+  "parents": [
+   "granate",
+   "prusia"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Gentilicio de Nazaret. La RAE define al nazareno como el penitente que en Semana Santa va con túnica, por lo común morada.",
+  "historia": "Los nazarenos son miembros de cofradías que hacen la estación de penitencia en Semana Santa. El morado es en la Iglesia el color de la penitencia.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · nazareno",
+    "https://dle.rae.es/nazareno"
+   ],
+   [
+    "Wikipedia · Nazareno",
+    "https://es.wikipedia.org/wiki/Nazareno"
+   ],
+   [
+    "Wikipedia · Liturgical colours",
+    "https://en.wikipedia.org/wiki/Liturgical_colours"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-tiziano",
+  "name": "Rojo Tiziano",
+  "fam": "rojos",
+  "hex": "#B5462B",
+  "tipo": "persona",
+  "gen": 3,
+  "parents": [
+   "marron",
+   "bermellon"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "Por el pintor veneciano Tiziano, que pintaba a menudo mujeres pelirrojas.",
+  "historia": "Es un pelirrojo dorado tirando a castaño. En Ana de las Tejas Verdes, Ana lo explica: Tiziano fue un artista famoso al que le gustaba pintar mujeres pelirrojas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Titian hair",
+    "https://en.wikipedia.org/wiki/Titian_hair"
+   ]
+  ]
+ },
+ {
+  "id": "zanahoria",
+  "name": "Zanahoria",
+  "fam": "naranjas",
+  "hex": "#ED9121",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "naranja",
+   "indio"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Por la raíz.",
+  "historia": "Las zanahorias naranjas aparecieron en los Países Bajos en los siglos XVI-XVII, pero no se fijaron como variedad estable hasta principios del XVIII. Antes eran sobre todo moradas o amarillas.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se dice que los holandeses las cultivaron naranjas en honor a Guillermo de Orange. Solo lo sostiene la tradición oral: quizá se prefirieron porque no oscurecían los guisos como las moradas."
+  },
+  "src": [
+   [
+    "Wikipedia · Carrot",
+    "https://en.wikipedia.org/wiki/Carrot"
+   ]
+  ]
+ },
+ {
+  "id": "sanguina",
+  "name": "Sanguina",
+  "fam": "rojos",
+  "hex": "#A8442D",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "oliva",
+   "carmin"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Del latín sanguis, «sangre», por su parecido con la sangre seca.",
+  "historia": "Es una tiza de ocre rojo, una variedad de hematites. Leonardo da Vinci fue el primer gran artista que dibujó con ella, a finales del siglo XV.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Red chalk",
+    "https://en.wikipedia.org/wiki/Red_chalk"
+   ]
+  ]
+ },
+ {
+  "id": "ceniza",
+  "name": "Ceniza",
+  "fam": "grises",
+  "hex": "#B2B0AA",
+  "tipo": "cultura",
+  "gen": 2,
+  "parents": [
+   "marfil",
+   "gris"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Por el color de la ceniza.",
+  "historia": "El Miércoles de Ceniza se marca la frente con la ceniza de las palmas del Domingo de Ramos del año anterior. En inglés, ash gray aparece como nombre de color en 1374.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Ash Wednesday",
+    "https://en.wikipedia.org/wiki/Ash_Wednesday"
+   ],
+   [
+    "Wikipedia · Battleship grey",
+    "https://en.wikipedia.org/wiki/Battleship_grey"
+   ]
+  ]
+ },
+ {
+  "id": "azulete",
+  "name": "Azulete",
+  "fam": "azules",
+  "hex": "#5D8AC9",
+  "tipo": "cultura",
+  "gen": 3,
+  "parents": [
+   "azul",
+   "ceniza"
+  ],
+  "receta": "calculada",
+  "de": 0.7,
+  "cert": "doc",
+  "nombre": "Diminutivo de «azul». La RAE lo define como el viso azul que se daba a las medias de seda blanca, y en Aragón, la pasta de añil en bolas.",
+  "historia": "El azul que se añade al lavado compensa el amarilleo de la ropa blanca y la hace parecer más blanca. Se usaron esmalte, índigo, azul de Prusia y ultramar.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · azulete",
+    "https://dle.rae.es/azulete"
+   ],
+   [
+    "Wikipedia · Laundry bluing",
+    "https://en.wikipedia.org/wiki/Laundry_bluing"
+   ]
+  ]
+ },
+ {
+  "id": "sinopia",
+  "name": "Sinopia",
+  "fam": "rojos",
+  "hex": "#A84432",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "siena",
+   "palo-de-brasil"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "Por Sinope, el puerto turco del mar Negro desde el que se exportaba.",
+  "historia": "En el Renacimiento los pintores la usaban para dibujar el boceto directamente sobre el revoque del fresco. Esos dibujos preparatorios se llaman hoy sinopie, el plural italiano del pigmento.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Sinopia",
+    "https://en.wikipedia.org/wiki/Sinopia"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-garibaldi",
+  "name": "Rojo Garibaldi",
+  "fam": "rojos",
+  "hex": "#C8202F",
+  "tipo": "persona",
+  "gen": 4,
+  "parents": [
+   "bermellon",
+   "carmin"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Por las camisas rojas de los voluntarios de Giuseppe Garibaldi.",
+  "historia": "En 1860, la Expedición de los Mil, con sus camisas rojas, fue clave en la unificación de Italia. Durante un tiempo Garibaldi fue el hombre más famoso de Europa.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se dice que las camisas venían de una fábrica de Montevideo que las hacía para los mataderos argentinos, pero no hay documentos que lo prueben."
+  },
+  "src": [
+   [
+    "Wikipedia · Redshirts (Italy)",
+    "https://en.wikipedia.org/wiki/Redshirts_(Italy)"
+   ]
+  ]
+ },
+ {
+  "id": "naranja-internacional",
+  "name": "Naranja internacional",
+  "fam": "naranjas",
+  "hex": "#C0362C",
+  "tipo": "cultura",
+  "gen": 5,
+  "parents": [
+   "rojo-tiziano",
+   "rojo-garibaldi"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "International orange, el naranja de seguridad de la ingeniería.",
+  "historia": "El puente Golden Gate está pintado en un tono algo más claro, hecho a medida contra la corrosión del mar y la niebla. Lo llevan los trajes de escape de la NASA y lo llevó el avión cohete Bell X-1.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · International orange",
+    "https://en.wikipedia.org/wiki/International_orange"
+   ]
+  ]
+ },
+ {
+  "id": "glauco",
+  "name": "Glauco",
+  "fam": "verdes",
+  "hex": "#7FA8A0",
+  "tipo": "cultura",
+  "gen": 3,
+  "parents": [
+   "celadon",
+   "payne"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "Del latín glaucus, y este del griego glaukós: «brillante, plateado», y más tarde «verde azulado» o «gris».",
+  "historia": "El epíteto más común de Atenea en Homero es glaukópis, que se traduce como «de ojos brillantes». Glaux es la lechuza, su ave, y se discute si el epíteto alude a sus ojos.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · glauco",
+    "https://dle.rae.es/glauco"
+   ],
+   [
+    "Wikipedia · Athena",
+    "https://en.wikipedia.org/wiki/Athena"
+   ],
+   [
+    "Wikipedia · Glaucous",
+    "https://en.wikipedia.org/wiki/Glaucous"
+   ]
+  ]
+ },
+ {
+  "id": "azul-han",
+  "name": "Azul Han",
+  "fam": "azules",
+  "hex": "#4A6FB5",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "azul-talavera",
+   "azulete"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Por la dinastía Han de China.",
+  "historia": "Es un silicato de bario y cobre que se fabricó en China desde la dinastía Zhou (1045-771 a. C.) hasta el final de los Han, hacia el 220. Es casi gemelo del azul egipcio, que lleva calcio en lugar de bario.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Han purple and Han blue",
+    "https://en.wikipedia.org/wiki/Han_purple_and_Han_blue"
+   ]
+  ]
+ },
+ {
+  "id": "lapislazuli",
+  "name": "Lapislázuli",
+  "fam": "azules",
+  "hex": "#26619C",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "prusia",
+   "azul-han"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "De lapis, «piedra», y del latín medieval lazulum, «cielo».",
+  "historia": "La mina de Sar-i Sang, en Afganistán, se explota desde hace más de 6.000 años. Está en la máscara funeraria de Tutankamón.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Lapis lazuli",
+    "https://en.wikipedia.org/wiki/Lapis_lazuli"
+   ]
+  ]
+ },
+ {
+  "id": "turmalina",
+  "name": "Turmalina",
+  "fam": "rosas",
+  "hex": "#E2649A",
+  "tipo": "gema/mineral",
+  "gen": 3,
+  "parents": [
+   "rosa",
+   "magenta"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Del cingalés tōramalli, nombre que se daba a las cornalinas.",
+  "historia": "Al calentarse se carga de electricidad. Por eso la llamaban el «imán de Ceilán»: atraía y luego repelía la ceniza caliente.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Tourmaline",
+    "https://en.wikipedia.org/wiki/Tourmaline"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-indio",
+  "name": "Rojo indio",
+  "fam": "rojos",
+  "hex": "#CD5C5C",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "siena",
+   "turmalina"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Probablemente porque al principio se importaba de la India, donde abundan suelos rojos de laterita.",
+  "historia": "Es un ocre de óxido férrico. Hoy se fabrica de forma artificial.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Indian red (color)",
+    "https://en.wikipedia.org/wiki/Indian_red_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "tornasol",
+  "name": "Tornasol",
+  "fam": "violetas",
+  "hex": "#7A4E9C",
+  "tipo": "tinte",
+  "gen": 4,
+  "parents": [
+   "azul-talavera",
+   "turmalina"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Tinte de líquenes que cambia de color.",
+  "historia": "Se obtiene de los mismos líquenes que la orchilla. Es rojo en ácido y azul en base: por eso se usa para medir la acidez.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Orcein",
+    "https://en.wikipedia.org/wiki/Orcein"
+   ]
+  ],
+  "reemplaza": "Violeta de cobalto"
+ },
+ {
+  "id": "quermes",
+  "name": "Quermes",
+  "fam": "rojos",
+  "hex": "#A3172C",
+  "tipo": "tinte",
+  "gen": 2,
+  "parents": [
+   "rojo",
+   "granate"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Del sánscrito kṛmija, «hecho por un gusano».",
+  "historia": "Es un insecto que vive en la coscoja mediterránea. Fue el rojo de lujo de la Europa medieval para sedas y paños escarlata, hasta que la cochinilla traída de México, más potente, lo sustituyó.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Kermes (dye)",
+    "https://en.wikipedia.org/wiki/Kermes_(dye)"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-turco",
+  "name": "Rojo turco",
+  "fam": "rojos",
+  "hex": "#B22222",
+  "tipo": "tinte",
+  "gen": 4,
+  "parents": [
+   "rojo-tiziano",
+   "quermes"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Porque el método llegó a Europa desde Esmirna, en el Imperio otomano.",
+  "historia": "Se teñía el algodón con raíz de granza en un proceso larguísimo con lejía, aceite y excrementos de oveja. En 1746 dos tintoreros de Esmirna llevaron la receta a Francia. En Escocia hubo fábricas de rojo turco hasta 1961.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Turkey red",
+    "https://en.wikipedia.org/wiki/Turkey_red"
+   ]
+  ]
+ },
+ {
+  "id": "amaranto",
+  "name": "Amaranto",
+  "fam": "rojos",
+  "hex": "#9F2B68",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "malva",
+   "quermes"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Del griego amárantos, «que no se marchita»: la flor que no se marchita.",
+  "historia": "El colorante E123 se llama amaranto aunque no sale de la planta. En 1976 Estados Unidos lo prohibió como posible cancerígeno tras pruebas con ratas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Amaranth",
+    "https://en.wikipedia.org/wiki/Amaranth"
+   ],
+   [
+    "Wikipedia · Amaranth (dye)",
+    "https://en.wikipedia.org/wiki/Amaranth_(dye)"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-pompeyano",
+  "name": "Rojo pompeyano",
+  "fam": "rojos",
+  "hex": "#A5402D",
+  "tipo": "lugar",
+  "gen": 4,
+  "parents": [
+   "herrumbre",
+   "amaranto"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "disc",
+  "nombre": "Por los murales rojos de Pompeya.",
+  "historia": "No es un pigmento concreto, sino una referencia cultural al rojo de las paredes de la ciudad sepultada por el Vesubio en el año 79.",
+  "nota": {
+   "cert": "disc",
+   "t": "Un equipo del CNR italiano dirigido por Sergio Omarini sostiene que buena parte de esos rojos eran ocre amarillo, enrojecido por el calor de la erupción a más de 700 °C."
+  },
+  "src": [
+   [
+    "Wikipedia · Pompeian red",
+    "https://en.wikipedia.org/wiki/Pompeian_red"
+   ],
+   [
+    "Archaeology (2011)",
+    "https://archive.archaeology.org/news/2011/wednesday-september-28/"
+   ]
+  ]
+ },
+ {
+  "id": "peonia",
+  "name": "Peonía",
+  "fam": "rosas",
+  "hex": "#D9608A",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "cuarzo-rosa",
+   "quermes"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "Del latín paeonia, y este del griego paiōnía.",
+  "historia": "El médico griego Dioscórides ya relacionaba una hierba llamada aglaofotis con la familia de la peonía.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · peonía",
+    "https://dle.rae.es/peon%C3%ADa"
+   ],
+   [
+    "Wikipedia · Peony",
+    "https://en.wikipedia.org/wiki/Peony"
+   ]
+  ]
+ },
+ {
+  "id": "rosa-pompadour",
+  "name": "Rosa Pompadour",
+  "fam": "rosas",
+  "hex": "#E87FA0",
+  "tipo": "persona",
+  "gen": 4,
+  "parents": [
+   "rosa",
+   "peonia"
+  ],
+  "receta": "calculada",
+  "de": 0.3,
+  "cert": "doc",
+  "nombre": "Por Madame de Pompadour, favorita de Luis XV.",
+  "historia": "Puso de moda el rosa y el azul pálido en Versalles e hizo crear un rosa propio en la manufactura de porcelana de Sèvres, que ella misma impulsó y acabó comprando en 1759.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Pink",
+    "https://en.wikipedia.org/wiki/Pink"
+   ],
+   [
+    "Wikipedia · Madame de Pompadour",
+    "https://en.wikipedia.org/wiki/Madame_de_Pompadour"
+   ]
+  ]
+ },
+ {
+  "id": "frambuesa",
+  "name": "Frambuesa",
+  "fam": "rosas",
+  "hex": "#C72C5F",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "quermes",
+   "peonia"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Del francés framboise.",
+  "historia": "Como nombre de color, raspberry aparece en inglés en 1892.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · frambuesa",
+    "https://dle.rae.es/frambuesa"
+   ],
+   [
+    "Wikipedia · Raspberry (color)",
+    "https://en.wikipedia.org/wiki/Raspberry_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "cinabrio",
+  "name": "Cinabrio",
+  "fam": "rojos",
+  "hex": "#C3392B",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "herrumbre",
+   "frambuesa"
+  ],
+  "receta": "calculada",
+  "de": 0.7,
+  "cert": "doc",
+  "nombre": "Del latín cinnabaris, y este del griego kinnábari.",
+  "historia": "Es sulfuro de mercurio, el mineral del que sale el bermellón. La mina de Almadén fue durante siglos el yacimiento de cinabrio más importante del mundo. En China se usó para la famosa laca roja tallada.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · cinabrio",
+    "https://dle.rae.es/cinabrio"
+   ],
+   [
+    "Wikipedia · Cinnabar",
+    "https://en.wikipedia.org/wiki/Cinnabar"
+   ]
+  ]
+ },
+ {
+  "id": "minio",
+  "name": "Minio",
+  "fam": "rojos",
+  "hex": "#E2532D",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "zanahoria",
+   "frambuesa"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Del latín minium. Los copistas que lo usaban para pintar iniciales «miniaban» (miniare).",
+  "historia": "Se obtiene calentando blanco de plomo al aire. Las pequeñas ilustraciones de los manuscritos pintados con él se llamaron miniaturas: la palabra viene del minio, no de «mínimo».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Minium (pigment)",
+    "https://en.wikipedia.org/wiki/Minium_(pigment)"
+   ]
+  ]
+ },
+ {
+  "id": "azul-delft",
+  "name": "Azul Delft",
+  "fam": "azules",
+  "hex": "#1F4E9A",
+  "tipo": "lugar",
+  "gen": 2,
+  "parents": [
+   "azul",
+   "marino"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Por la ciudad holandesa de Delft.",
+  "historia": "Cuando la muerte del emperador Wanli en 1620 cortó el suministro de porcelana china, los alfareros holandeses empezaron a imitarla en loza esmaltada azul y blanca.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Delftware",
+    "https://en.wikipedia.org/wiki/Delftware"
+   ]
+  ]
+ },
+ {
+  "id": "glasto",
+  "name": "Glasto",
+  "fam": "azules",
+  "hex": "#5A7FA8",
+  "tipo": "tinte",
+  "gen": 3,
+  "parents": [
+   "ceniza",
+   "azul-delft"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del latín glastum. También se llama hierba pastel.",
+  "historia": "Fue el gran tinte azul de la Europa medieval. La región de Toulouse se enriqueció con su comercio y sus mercaderes construyeron palacetes como el Hôtel d'Assézat.",
+  "nota": {
+   "cert": "disc",
+   "t": "Julio César escribió que los britanos se teñían con vitrum, que normalmente significa «vidrio». No está claro que se refiriera al glasto."
+  },
+  "src": [
+   [
+    "RAE · glasto",
+    "https://dle.rae.es/glasto"
+   ],
+   [
+    "Wikipedia · Isatis tinctoria",
+    "https://en.wikipedia.org/wiki/Isatis_tinctoria"
+   ]
+  ]
+ },
+ {
+  "id": "azul-francia",
+  "name": "Azul Francia",
+  "fam": "azules",
+  "hex": "#318CE7",
+  "tipo": "lugar",
+  "gen": 3,
+  "parents": [
+   "celeste",
+   "azul-delft"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "En francés, bleu de France.",
+  "historia": "Desde al menos el siglo XII el escudo de los reyes de Francia lleva flores de lis de oro sobre azul. Hoy es el color de los equipos nacionales franceses y su color nacional en las carreras.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Bleu de France (colour)",
+    "https://en.wikipedia.org/wiki/Bleu_de_France_(colour)"
+   ]
+  ]
+ },
+ {
+  "id": "azul-chefchaouen",
+  "name": "Azul Chefchaouen",
+  "fam": "azules",
+  "hex": "#4F86C6",
+  "tipo": "lugar",
+  "gen": 4,
+  "parents": [
+   "glasto",
+   "azul-francia"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "disc",
+  "nombre": "Por Chefchaouen, la «perla azul» de Marruecos, con su medina pintada de azul.",
+  "historia": "Nadie sabe con certeza por qué se pinta de azul.",
+  "nota": {
+   "cert": "disc",
+   "t": "Hay tres explicaciones populares: que espanta a los mosquitos, que recuerda al cielo, o que se pintó en los años setenta para atraer turistas."
+  },
+  "src": [
+   [
+    "Wikipedia · Chefchaouen",
+    "https://en.wikipedia.org/wiki/Chefchaouen"
+   ]
+  ],
+  "reemplaza": "Azul Nattier"
+ },
+ {
+  "id": "tanzanita",
+  "name": "Tanzanita",
+  "fam": "azules",
+  "hex": "#4E5BC8",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "violeta-de-genciana",
+   "azul-francia"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Por Tanzania. Se lo puso Tiffany & Co., al parecer porque «zoisita azul» no parecía muy vendible.",
+  "historia": "Se descubrió en 1967 cerca de las colinas de Mererani y solo existe en una pequeña zona del norte de Tanzania.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Tanzanite",
+    "https://en.wikipedia.org/wiki/Tanzanite"
+   ]
+  ]
+ },
+ {
+  "id": "azul-ming",
+  "name": "Azul Ming",
+  "fam": "azules",
+  "hex": "#1F3F8F",
+  "tipo": "cultura",
+  "gen": 3,
+  "parents": [
+   "indigo",
+   "azul-delft"
+  ],
+  "receta": "calculada",
+  "de": 2,
+  "cert": "doc",
+  "nombre": "Por la porcelana azul y blanca de las dinastías Yuan y Ming.",
+  "historia": "Se hacía posible gracias al cobalto importado de Persia, llamado huihui qing. Jingdezhen empezó a producirla a principios del siglo XIV.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Blue and white pottery",
+    "https://en.wikipedia.org/wiki/Blue_and_white_pottery"
+   ]
+  ]
+ },
+ {
+  "id": "azul-wedgwood",
+  "name": "Azul Wedgwood",
+  "fam": "azules",
+  "hex": "#5B7DB1",
+  "tipo": "persona",
+  "gen": 4,
+  "parents": [
+   "ceniza",
+   "azul-ming"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Por el ceramista inglés Josiah Wedgwood.",
+  "historia": "En la década de 1770 creó el jasperware, un gres mate con relieves blancos. Su color más famoso es este azul pálido. En 1790 terminó una copia del Jarrón Portland tras cuatro años de trabajo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Jasperware",
+    "https://en.wikipedia.org/wiki/Jasperware"
+   ]
+  ]
+ },
+ {
+  "id": "plata",
+  "name": "Plata",
+  "fam": "grises",
+  "hex": "#C0C0C0",
+  "tipo": "gema/mineral",
+  "gen": 2,
+  "parents": [
+   "blanco",
+   "gris"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "Del latín medieval plata, «lámina de metal», del griego platýs, «plano». El latín clásico decía argentum, de ahí su símbolo, Ag.",
+  "historia": "Argentina tomó su nombre de argentum, el metal que se pensaba que formaba buena parte de su riqueza.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · plata",
+    "https://dle.rae.es/plata"
+   ],
+   [
+    "Wikipedia · Silver",
+    "https://en.wikipedia.org/wiki/Silver"
+   ]
+  ]
+ },
+ {
+  "id": "tangerina",
+  "name": "Tangerina",
+  "fam": "naranjas",
+  "hex": "#F28500",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "naranja",
+   "zanahoria"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Del inglés tangerine, «de Tánger», el puerto marroquí del estrecho de Gibraltar.",
+  "historia": "El Oxford English Dictionary registra un uso temprano en The Tatler de Addison, en 1710.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Tangerine",
+    "https://en.wikipedia.org/wiki/Tangerine"
+   ]
+  ],
+  "reemplaza": "Butano"
+ },
+ {
+  "id": "murexida",
+  "name": "Murexida",
+  "fam": "violetas",
+  "hex": "#8B2E7A",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "carmin",
+   "azul-chefchaouen"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Su nombre recuerda al múrex, el caracol de la púrpura de Tiro.",
+  "historia": "Proust la obtuvo en 1818 a partir del ácido purpúrico. Hacia 1853 los tintoreros franceses empezaron a fabricarla con guano sudamericano, y se usó hasta 1865: fue el primer tinte sintético de mordiente.",
+  "nota": null,
+  "src": [
+   [
+    "CAMEO · Murexide",
+    "https://cameo.mfa.org/wiki/Murexide"
+   ],
+   [
+    "Wikipedia · Murexide",
+    "https://en.wikipedia.org/wiki/Murexide"
+   ]
+  ]
+ },
+ {
+  "id": "cardenillo",
+  "name": "Cardenillo",
+  "fam": "verdes",
+  "hex": "#43B3AE",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "turquesa",
+   "glauco"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Diminutivo de «cárdeno». La RAE lo define como acetato de cobre usado en pintura.",
+  "historia": "En la Edad Media se hacía con tiras de cobre y vinagre enterradas en estiércol. Lo usó Giotto, y en el siglo XIX lo sustituyeron verdes más estables.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · cardenillo",
+    "https://dle.rae.es/cardenillo"
+   ],
+   [
+    "Wikipedia · Verdigris",
+    "https://en.wikipedia.org/wiki/Verdigris"
+   ]
+  ]
+ },
+ {
+  "id": "espinela",
+  "name": "Espinela",
+  "fam": "rojos",
+  "hex": "#C0233E",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "rojo-turco",
+   "frambuesa"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Gema roja que durante siglos se confundió con el rubí: todas las piedras rojas se llamaban rubíes.",
+  "historia": "El «Rubí del Príncipe Negro», de 170 quilates, preside la corona imperial británica y es en realidad una espinela. Las espinelas no se distinguieron químicamente del rubí hasta 1783.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se cuenta que Pedro I de Castilla se la dio al Príncipe Negro en 1367."
+  },
+  "src": [
+   [
+    "Wikipedia · Black Prince's Ruby",
+    "https://en.wikipedia.org/wiki/Black_Prince%27s_Ruby"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-cardenal",
+  "name": "Rojo cardenal",
+  "fam": "rojos",
+  "hex": "#C41E3A",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "alizarina",
+   "espinela"
+  ],
+  "receta": "calculada",
+  "de": 0.6,
+  "cert": "doc",
+  "nombre": "Probablemente por las sotanas de los cardenales católicos, aunque su color oficial es el escarlata.",
+  "historia": "El pájaro cardenal norteamericano también debe su nombre a los cardenales y a su vestimenta roja.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cardinal (color)",
+    "https://en.wikipedia.org/wiki/Cardinal_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "laca-de-granza",
+  "name": "Laca de granza",
+  "fam": "rosas",
+  "hex": "#E32636",
+  "tipo": "pigmento",
+  "gen": 3,
+  "parents": [
+   "rojo",
+   "bermellon"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Laca hecha con la raíz de la granza o rubia (Rubia tinctorum).",
+  "historia": "La granza ya se cultivaba en Egipto hacia el 1500 a. C. Las primeras lacas eran débiles y se desvanecían enseguida, hasta que el tintorero inglés George Field mejoró el proceso en 1804.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Rose madder",
+    "https://en.wikipedia.org/wiki/Rose_madder"
+   ]
+  ]
+ },
+ {
+  "id": "amapola",
+  "name": "Amapola",
+  "fam": "naranjas",
+  "hex": "#E35335",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "ocre",
+   "laca-de-granza"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "De ababol, su nombre antiguo. En francés, coquelicot.",
+  "historia": "Monet pintó Campo de amapolas en 1875. Desde la Primera Guerra Mundial es el símbolo del recuerdo de los soldados caídos, porque brotaba en los campos removidos por la guerra; el poema In Flanders Fields la hizo famosa.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · amapola",
+    "https://dle.rae.es/amapola"
+   ],
+   [
+    "Wikipedia · Papaver rhoeas",
+    "https://en.wikipedia.org/wiki/Papaver_rhoeas"
+   ]
+  ]
+ },
+ {
+  "id": "salmon",
+  "name": "Salmón",
+  "fam": "naranjas",
+  "hex": "#F08A73",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "cuarzo-rosa",
+   "amapola"
+  ],
+  "receta": "calculada",
+  "de": 0.6,
+  "cert": "doc",
+  "nombre": "Por el color de la carne del salmón.",
+  "historia": "El salmón salvaje lo debe a la astaxantina del krill y las gambas que come; el de piscifactoría sería gris, así que se añade al pienso. La industria mide el tono con el SalmoFan, un abanico de muestras del rosa pálido al rojo intenso.",
+  "nota": null,
+  "src": [
+   [
+    "Quartz · Why farmed salmon has color added",
+    "https://qz.com/358811/heres-why-your-farmed-salmon-has-color-added-to-it/"
+   ],
+   [
+    "Salmon Business · SalmoFan",
+    "https://www.salmonbusiness.com/no-farmed-salmon-are-not-artificially-coloured-like-candy/"
+   ]
+  ]
+ },
+ {
+  "id": "cachu",
+  "name": "Cachú",
+  "fam": "marrones",
+  "hex": "#6B3E26",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "negro",
+   "amapola"
+  ],
+  "receta": "calculada",
+  "de": 0.8,
+  "cert": "doc",
+  "nombre": "Extracto vegetal llamado catecú o cachú (en inglés, cutch).",
+  "historia": "Es un tinte marrón rico en taninos que sirve para teñir lana, seda y algodón y para curtir pieles. En el sur de Asia forma parte de la mezcla para mascar llamada paan.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Catechu",
+    "https://en.wikipedia.org/wiki/Catechu"
+   ]
+  ]
+ },
+ {
+  "id": "naranja-cadmio",
+  "name": "Naranja cadmio",
+  "fam": "naranjas",
+  "hex": "#ED872D",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "rosa-pompadour",
+   "tangerina"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Por el cadmio, que con selenio da los tonos naranjas y rojos.",
+  "historia": "Los pigmentos de cadmio desplazaron al bermellón, que era de mercurio, porque aguantan mucho mejor la luz.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cadmium orange",
+    "https://en.wikipedia.org/wiki/Cadmium_orange"
+   ],
+   [
+    "Wikipedia · Cadmium pigments",
+    "https://en.wikipedia.org/wiki/Cadmium_pigments"
+   ]
+  ]
+ },
+ {
+  "id": "purpura-han",
+  "name": "Púrpura Han",
+  "fam": "violetas",
+  "hex": "#5A4FCF",
+  "tipo": "pigmento",
+  "gen": 3,
+  "parents": [
+   "azul",
+   "malva"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Por la dinastía Han de China.",
+  "historia": "Es un silicato de bario y cobre, hermano del azul Han, fabricado en China desde hace casi 3.000 años. Colorea los pantalones de los guerreros de terracota. En 2006 se descubrió que, en ciertas condiciones, se comporta como si «perdiera una dimensión».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Han purple and Han blue",
+    "https://en.wikipedia.org/wiki/Han_purple_and_Han_blue"
+   ]
+  ]
+ },
+ {
+  "id": "alabastro",
+  "name": "Alabastro",
+  "fam": "blancos",
+  "hex": "#EDEAE0",
+  "tipo": "gema/mineral",
+  "gen": 2,
+  "parents": [
+   "blanco",
+   "marfil"
+  ],
+  "receta": "calculada",
+  "de": 2.6,
+  "cert": "doc",
+  "nombre": "Del griego alábastros, un frasco de alabastro. Quizá relacionado con la diosa egipcia Bastet.",
+  "historia": "Los frascos de alabastro para ungüentos, los alabastra, eran muy apreciados en la Antigüedad. El alabastro egipcio es calcita; el europeo medieval, yeso, más blando.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Alabaster",
+    "https://en.wikipedia.org/wiki/Alabaster"
+   ]
+  ]
+ },
+ {
+  "id": "blanco-de-espana",
+  "name": "Blanco de España",
+  "fam": "blancos",
+  "hex": "#F4F1E8",
+  "tipo": "pigmento",
+  "gen": 3,
+  "parents": [
+   "blanco",
+   "alabastro"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Así llama la RAE al carbonato de calcio usado para limpiar metales, baldosas o zapatos.",
+  "historia": "Es creta molida: la creta está hecha sobre todo de diminutas placas de calcita de las conchas de algas del plancton.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · blanco de España",
+    "https://dle.rae.es/blanco"
+   ],
+   [
+    "Wikipedia · Chalk",
+    "https://en.wikipedia.org/wiki/Chalk"
+   ]
+  ]
+ },
+ {
+  "id": "rodocrosita",
+  "name": "Rodocrosita",
+  "fam": "rosas",
+  "hex": "#E4778F",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "palo-de-brasil",
+   "blanco-de-espana"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Del griego, «de color rosa».",
+  "historia": "También se la llama rosa del Inca. Es la piedra nacional de Argentina, y la variedad bandeada se extrae en Capillitas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Rhodochrosite",
+    "https://en.wikipedia.org/wiki/Rhodochrosite"
+   ]
+  ]
+ },
+ {
+  "id": "clavel",
+  "name": "Clavel",
+  "fam": "rosas",
+  "hex": "#F08BA0",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "rosa",
+   "rodocrosita"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Del catalán clavell. En inglés carnation viene quizá del latín corona, por las coronas de flores griegas y romanas.",
+  "historia": "En 1974 la caída de la dictadura portuguesa se llamó Revolución de los Claveles, por los claveles rojos que lució la gente.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · clavel",
+    "https://dle.rae.es/clavel"
+   ],
+   [
+    "Wikipedia · Dianthus caryophyllus",
+    "https://en.wikipedia.org/wiki/Dianthus_caryophyllus"
+   ],
+   [
+    "Wikipedia · Pink",
+    "https://en.wikipedia.org/wiki/Pink"
+   ]
+  ]
+ },
+ {
+  "id": "zafiro",
+  "name": "Zafiro",
+  "fam": "azules",
+  "hex": "#0F52BA",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "azul",
+   "azul-ming"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Del latín tardío sapphirus, del griego sáppheiros, quizá de origen persa.",
+  "historia": "Es corindón, como el rubí. Su azul viene del hierro y el titanio. En la Antigüedad el nombre quizá designaba otra piedra.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · zafiro",
+    "https://dle.rae.es/zafiro"
+   ],
+   [
+    "Wikipedia · Sapphire",
+    "https://en.wikipedia.org/wiki/Sapphire"
+   ]
+  ]
+ },
+ {
+  "id": "azul-cobalto",
+  "name": "Azul cobalto",
+  "fam": "azules",
+  "hex": "#0047AB",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "azul-ming",
+   "zafiro"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Por el cobalto, que le da el color.",
+  "historia": "Louis Jacques Thénard descubrió en 1802 un azul de cobalto y alúmina, que se empezó a fabricar en Francia en 1807. En 1818 el acuarelista John Varley lo propuso como sustituto del ultramar.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cobalt blue",
+    "https://en.wikipedia.org/wiki/Cobalt_blue"
+   ]
+  ]
+ },
+ {
+  "id": "gris-davy",
+  "name": "Gris Davy",
+  "fam": "grises",
+  "hex": "#555555",
+  "tipo": "persona",
+  "gen": 6,
+  "parents": [
+   "minio",
+   "azul-cobalto"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Por Henry Davey, que lo introdujo en Inglaterra.",
+  "historia": "Es un pigmento de tierra hecho con arcilla y pizarra muy molidas.",
+  "nota": null,
+  "src": [
+   [
+    "CAMEO · Davey's gray",
+    "https://cameo.mfa.org/wiki/Davey%27s_gray"
+   ]
+  ]
+ },
+ {
+  "id": "azafran",
+  "name": "Azafrán",
+  "fam": "naranjas",
+  "hex": "#F4A31A",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "amarillo",
+   "tangerina"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico azza'farán, del árabe clásico za'farān. En última instancia viene del persa, quizá de zarparān, «hebras de oro».",
+  "historia": "Hacen falta unas 150.000 flores de crocus para un kilo, es decir, unas 150 flores por gramo. Hubo una época en que en la bolsa de Filadelfia cotizaba al precio del oro.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se suele decir que los monjes budistas tiñen sus túnicas con azafrán. En realidad es demasiado caro: usan cúrcuma o madera de jaca."
+  },
+  "src": [
+   [
+    "RAE · azafrán",
+    "https://dle.rae.es/azafr%C3%A1n"
+   ],
+   [
+    "Wikipedia · Saffron",
+    "https://en.wikipedia.org/wiki/Saffron"
+   ]
+  ]
+ },
+ {
+  "id": "absenta",
+  "name": "Absenta",
+  "fam": "verdes",
+  "hex": "#7FB238",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "cardenillo",
+   "azafran"
+  ],
+  "receta": "calculada",
+  "de": 0.8,
+  "cert": "doc",
+  "nombre": "Por el licor de ajenjo. La llamaban la fée verte, «el hada verde».",
+  "historia": "Fue la bebida de los artistas y escritores parisinos de finales del XIX. Francia la prohibió hacia 1914-1915 y no levantó la prohibición hasta 2011. Su verde viene de la clorofila de las hierbas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Absinthe",
+    "https://en.wikipedia.org/wiki/Absinthe"
+   ]
+  ]
+ },
+ {
+  "id": "albero",
+  "name": "Albero",
+  "fam": "amarillos",
+  "hex": "#D9A441",
+  "tipo": "lugar",
+  "gen": 3,
+  "parents": [
+   "naranja",
+   "plata"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "Por la calcarenita amarilla de las canteras de Los Alcores, como Alcalá de Guadaíra.",
+  "historia": "Molida, cubre el ruedo de las plazas de toros y las calles de la Feria de Sevilla.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Albero",
+    "https://es.wikipedia.org/wiki/Albero"
+   ]
+  ]
+ },
+ {
+  "id": "terracota",
+  "name": "Terracota",
+  "fam": "marrones",
+  "hex": "#C46A49",
+  "tipo": "cultura",
+  "gen": 5,
+  "parents": [
+   "indio",
+   "rojo-pompeyano"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Del italiano terracotta, y este del latín terra cocta, «tierra cocida».",
+  "historia": "El ejército de terracota del emperador Qin Shi Huang, de hacia el 210 a. C., es su ejemplo más famoso.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · terracota",
+    "https://dle.rae.es/terracota"
+   ],
+   [
+    "Wikipedia · Terracotta",
+    "https://en.wikipedia.org/wiki/Terracotta"
+   ]
+  ]
+ },
+ {
+  "id": "burdeos",
+  "name": "Burdeos",
+  "fam": "rojos",
+  "hex": "#6D1A2A",
+  "tipo": "lugar",
+  "gen": 5,
+  "parents": [
+   "negro",
+   "alizarina"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Por la ciudad francesa de Burdeos y el vino de su región.",
+  "historia": "Es un rojo oscuro muy parecido al borgoña. Ambos nombres de color vienen del vino.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Burdeos (color)",
+    "https://es.wikipedia.org/wiki/Burdeos_(color)"
+   ],
+   [
+    "Wikipedia · Burgundy (color)",
+    "https://en.wikipedia.org/wiki/Burgundy_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "cobre",
+  "name": "Cobre",
+  "fam": "naranjas",
+  "hex": "#B87333",
+  "tipo": "gema/mineral",
+  "gen": 3,
+  "parents": [
+   "scheele",
+   "bermellon"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Del latín tardío cuprum, de aes cyprium, «metal de Chipre».",
+  "historia": "Chipre fue una de las grandes fuentes de cobre del mundo romano. Su símbolo químico, Cu, viene de ahí.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · cobre",
+    "https://dle.rae.es/cobre"
+   ],
+   [
+    "Wikipedia · Copper",
+    "https://en.wikipedia.org/wiki/Copper"
+   ]
+  ]
+ },
+ {
+  "id": "bronce",
+  "name": "Bronce",
+  "fam": "marrones",
+  "hex": "#CD7F32",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "zanahoria",
+   "cobre"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Del italiano bronzo, y este del latín aes Brundusi, «bronce de Brindisi», ciudad famosa por el suyo.",
+  "historia": "Es una aleación de cobre con estaño u otros metales. Dio nombre a la Edad del Bronce, que empezó hacia el 3000 a. C. en gran parte del Viejo Mundo.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · bronce",
+    "https://dle.rae.es/bronce"
+   ],
+   [
+    "Wikipedia · Bronze Age",
+    "https://en.wikipedia.org/wiki/Bronze_Age"
+   ]
+  ]
+ },
+ {
+  "id": "gamuza",
+  "name": "Gamuza",
+  "fam": "marrones",
+  "hex": "#C9A86A",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "plata",
+   "bronce"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Del latín tardío camox, nombre del rebeco.",
+  "historia": "La piel curtida del rebeco queda suave, aterciopelada y amarillo pálido. De ahí pasó el nombre a la tela y a las bayetas de limpiar.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · gamuza",
+    "https://dle.rae.es/gamuza"
+   ]
+  ]
+ },
+ {
+  "id": "henna",
+  "name": "Henna",
+  "fam": "naranjas",
+  "hex": "#B4532A",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "rojo-pompeyano",
+   "cobre"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Del árabe ḥinnāʾ.",
+  "historia": "Es el polvo de las hojas de Lawsonia inermis. En el antiguo Egipto se usó en algunas momias: la de Henuttamehu tiene el pelo teñido de rojo intenso, probablemente con henna.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Henna",
+    "https://en.wikipedia.org/wiki/Henna"
+   ]
+  ]
+ },
+ {
+  "id": "ceruleo",
+  "name": "Cerúleo",
+  "fam": "azules",
+  "hex": "#2A9BD6",
+  "tipo": "pigmento",
+  "gen": 3,
+  "parents": [
+   "celeste",
+   "prusia"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Del latín caeruleus, «azul oscuro, azul o azul verdoso».",
+  "historia": "El pigmento, un estannato de cobalto, lo sintetizó el químico suizo Albrecht Höpfner en 1789. Monet lo usó en las sombras de La estación de Saint-Lazare.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cerulean",
+    "https://en.wikipedia.org/wiki/Cerulean"
+   ]
+  ]
+ },
+ {
+  "id": "flamenco",
+  "name": "Flamenco",
+  "fam": "rosas",
+  "hex": "#F38DA9",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "cuarzo-rosa",
+   "peonia"
+  ],
+  "receta": "calculada",
+  "de": 2,
+  "cert": "doc",
+  "nombre": "La palabra viene del portugués o español flamengo, «color de llama», del provenzal flamenc. La RAE lo deriva del neerlandés flaming.",
+  "historia": "Los flamencos son rosas por los carotenoides de lo que comen, como la artemia y las algas: su hígado los convierte en pigmento.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Flamingo",
+    "https://en.wikipedia.org/wiki/Flamingo"
+   ],
+   [
+    "RAE · flamenco",
+    "https://dle.rae.es/flamenco"
+   ]
+  ]
+ },
+ {
+  "id": "lila",
+  "name": "Lila",
+  "fam": "violetas",
+  "hex": "#C8A2C8",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "celeste",
+   "flamenco"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Del francés lilac, del árabe līlak, del persa lilang y del sánscrito nîla, «azul oscuro».",
+  "historia": "Como nombre de color en inglés aparece en 1775.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · lila",
+    "https://dle.rae.es/lila"
+   ],
+   [
+    "Wikipedia · Lilac (color)",
+    "https://en.wikipedia.org/wiki/Lilac_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "rosa-te",
+  "name": "Rosa té",
+  "fam": "rosas",
+  "hex": "#F4C2C2",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "rosa",
+   "alabastro"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Por las rosas de té, llamadas así por su aroma, que recuerda al té negro chino.",
+  "historia": "Llegaron a Occidente desde Cantón a principios del siglo XIX; una de las primeras, la Hume's Blush Tea-scented China, es de 1809.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Tea rose",
+    "https://en.wikipedia.org/wiki/Tea_rose"
+   ]
+  ]
+ },
+ {
+  "id": "mandarina",
+  "name": "Mandarina",
+  "fam": "naranjas",
+  "hex": "#F28500",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "tangerina",
+   "naranja-cadmio"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Por la fruta, que se relaciona con los mandarines: del portugués mandarim, y este del malayo.",
+  "historia": "En inglés el nombre aparece en el siglo XVIII, a través de un término alemán que significaba «manzana china».",
+  "nota": {
+   "cert": "disc",
+   "t": "Se suele decir que la fruta se llama así por el color de las túnicas de los mandarines chinos. No está claro: ni siquiera los botánicos saben por qué se le puso ese nombre."
+  },
+  "src": [
+   [
+    "RAE · mandarín",
+    "https://dle.rae.es/mandar%C3%ADn"
+   ],
+   [
+    "Wikipedia · Mandarin orange",
+    "https://en.wikipedia.org/wiki/Mandarin_orange"
+   ]
+  ]
+ },
+ {
+  "id": "capuchino",
+  "name": "Capuchino",
+  "fam": "marrones",
+  "hex": "#7B5544",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "topo",
+   "cachu"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Por el color del hábito de los frailes capuchinos.",
+  "historia": "A finales del siglo XVIII los cafés de Viena servían el Kapuziner, llamado así por el hábito de los capuchinos. De ahí viene el capuchino.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cappuccino",
+    "https://en.wikipedia.org/wiki/Cappuccino"
+   ]
+  ]
+ },
+ {
+  "id": "achiote",
+  "name": "Achiote",
+  "fam": "naranjas",
+  "hex": "#D9531E",
+  "tipo": "tinte",
+  "gen": 4,
+  "parents": [
+   "palo-de-brasil",
+   "zanahoria"
+  ],
+  "receta": "calculada",
+  "de": 1.8,
+  "cert": "doc",
+  "nombre": "Del náhuatl achiyotl, de achi-, «semilla».",
+  "historia": "Sale de las semillas de Bixa orellana, árbol de México a Brasil. Pueblos indígenas de Brasil lo usaban para pintarse el cuerpo y como repelente. Hoy es el colorante E160b y da su color a muchos quesos.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · achiote",
+    "https://dle.rae.es/achiote"
+   ],
+   [
+    "Wikipedia · Annatto",
+    "https://en.wikipedia.org/wiki/Annatto"
+   ]
+  ]
+ },
+ {
+  "id": "pimenton",
+  "name": "Pimentón",
+  "fam": "naranjas",
+  "hex": "#C84C1E",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "rojo-tiziano",
+   "achiote"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Polvo de pimientos rojos secos y molidos.",
+  "historia": "El pimentón de la Vera se seca con humo, de ahí su sabor ahumado. Es denominación de origen registrada en la Unión Europea desde 2007.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · pimentón",
+    "https://dle.rae.es/piment%C3%B3n"
+   ],
+   [
+    "Wikipedia · Pimentón de la Vera",
+    "https://es.wikipedia.org/wiki/Piment%C3%B3n_de_la_Vera"
+   ]
+  ]
+ },
+ {
+  "id": "escarlata",
+  "name": "Escarlata",
+  "fam": "rojos",
+  "hex": "#E0301E",
+  "tipo": "tinte",
+  "gen": 6,
+  "parents": [
+   "laca-de-granza",
+   "pimenton"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico iškarláṭa, del griego bizantino sigillâtos, un tejido marcado con anillos, y este del latín sigillatum, «paño sellado».",
+  "historia": "Durante la Edad Media «escarlata» era también el nombre de un paño de lujo, casi siempre rojo. La RAE aún recoge ese sentido de tela. Como nombre de color en inglés aparece hacia 1250.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · escarlata",
+    "https://dle.rae.es/escarlata"
+   ],
+   [
+    "Wikipedia · Scarlet (color)",
+    "https://en.wikipedia.org/wiki/Scarlet_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "realgar",
+  "name": "Realgar",
+  "fam": "naranjas",
+  "hex": "#E25822",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "bermellon",
+   "ocre"
+  ],
+  "receta": "calculada",
+  "de": 1.8,
+  "cert": "doc",
+  "nombre": "En español, rejalgar: del árabe hispánico ráhǧ alḡár, «polvo de la cueva».",
+  "historia": "Es sulfuro de arsénico, muy venenoso. En el Imperio romano se comerciaba como pigmento rojo anaranjado. Con la luz se descompone en un polvo amarillo, el pararrejalgar.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · rejalgar",
+    "https://dle.rae.es/rejalgar"
+   ],
+   [
+    "Wikipedia · Realgar",
+    "https://en.wikipedia.org/wiki/Realgar"
+   ]
+  ]
+ },
+ {
+  "id": "purpura-de-casio",
+  "name": "Púrpura de Casio",
+  "fam": "violetas",
+  "hex": "#7D1A5A",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "violeta-de-genciana",
+   "quermes"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Por Andreas Cassius, médico de Hamburgo.",
+  "historia": "Son partículas diminutas de oro sobre óxido de estaño. Cassius estudió la reacción en 1665. Da el color rojo al vidrio rubí y sirve como prueba química del oro.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Purple of Cassius",
+    "https://en.wikipedia.org/wiki/Purple_of_Cassius"
+   ]
+  ]
+ },
+ {
+  "id": "laca-roja",
+  "name": "Laca roja",
+  "fam": "rojos",
+  "hex": "#A1173A",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "rojo-garibaldi",
+   "purpura-de-casio"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "«Laca» viene del árabe hispánico lákk, del persa lāk y del sánscrito lākṣā.",
+  "historia": "Es una resina que segregan unos insectos sobre los árboles; refinada, es la goma laca. Se cree que su nombre en la India, lakh, «cien mil», alude a la cantidad enorme de insectos que cubren cada árbol.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · laca",
+    "https://dle.rae.es/laca"
+   ],
+   [
+    "Wikipedia · Shellac",
+    "https://en.wikipedia.org/wiki/Shellac"
+   ],
+   [
+    "Wikipedia · Lac",
+    "https://en.wikipedia.org/wiki/Lac"
+   ]
+  ]
+ },
+ {
+  "id": "azul-yinmn",
+  "name": "Azul YInMn",
+  "fam": "azules",
+  "hex": "#2E5090",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "azul-talavera",
+   "azul-delft"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Por sus elementos: itrio (Y), indio (In) y manganeso (Mn).",
+  "historia": "Lo encontraron por casualidad Mas Subramanian y Andrew Smith en la Universidad Estatal de Oregón en 2009. Crayola sacó una cera «inspirada» en él, Bluetiful, que no lo lleva.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · YInMn Blue",
+    "https://en.wikipedia.org/wiki/YInMn_Blue"
+   ]
+  ]
+ },
+ {
+  "id": "crisoprasa",
+  "name": "Crisoprasa",
+  "fam": "verdes",
+  "hex": "#7FC77F",
+  "tipo": "gema/mineral",
+  "gen": 3,
+  "parents": [
+   "verde",
+   "celadon"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Del griego chrysos, «oro», y prasinon, «verde».",
+  "historia": "Es una calcedonia verde manzana. Su color viene de trazas de níquel, a diferencia de la esmeralda, que lo debe al cromo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Chrysoprase",
+    "https://en.wikipedia.org/wiki/Chrysoprase"
+   ]
+  ]
+ },
+ {
+  "id": "verde-nilo",
+  "name": "Verde Nilo",
+  "fam": "verdes",
+  "hex": "#B2D8B4",
+  "tipo": "lugar",
+  "gen": 4,
+  "parents": [
+   "blanco-de-espana",
+   "crisoprasa"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Del francés eau de Nil, «agua del Nilo».",
+  "historia": "El nombre entró en el vocabulario del color a finales del siglo XIX, en pleno auge de la egiptomanía. Se puso de moda en la decoración y la joyería art déco, y Hitchcock vistió con él a Grace Kelly en La ventana indiscreta.",
+  "nota": null,
+  "src": [
+   [
+    "The Paris Review · Eau de Nil",
+    "https://www.theparisreview.org/blog/?p=121495"
+   ]
+  ]
+ },
+ {
+  "id": "morado",
+  "name": "Morado",
+  "fam": "violetas",
+  "hex": "#5B2C6F",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "purpura",
+   "indigo"
+  ],
+  "receta": "calculada",
+  "de": 2.4,
+  "cert": "doc",
+  "nombre": "De mora: el color de la fruta.",
+  "historia": "La RAE lo define como el color que está entre el rojo y el azul. En el rito romano es el color litúrgico del Adviento y la Cuaresma, tiempos de penitencia.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · morado",
+    "https://dle.rae.es/morado"
+   ],
+   [
+    "Wikipedia · Liturgical colours",
+    "https://en.wikipedia.org/wiki/Liturgical_colours"
+   ]
+  ]
+ },
+ {
+  "id": "canela",
+  "name": "Canela",
+  "fam": "marrones",
+  "hex": "#B5651D",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "oliva",
+   "achiote"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del francés antiguo canele y del italiano cannella, diminutivo de canna, «caña», por la forma de canuto de la corteza seca.",
+  "historia": "Llegó a Egipto hacia el 2000 a. C. y se consideraba digna de reyes y dioses. Portugueses y holandeses controlaron después la canela de Sri Lanka.",
+  "nota": {
+   "cert": "ley",
+   "t": "Heródoto contaba que unas aves gigantes recogían la canela para hacer sus nidos. Plinio ya decía que era un cuento de los comerciantes."
+  },
+  "src": [
+   [
+    "RAE · canela",
+    "https://dle.rae.es/canela"
+   ],
+   [
+    "Wikipedia · Cinnamon",
+    "https://en.wikipedia.org/wiki/Cinnamon"
+   ]
+  ]
+ },
+ {
+  "id": "chocolate",
+  "name": "Chocolate",
+  "fam": "marrones",
+  "hex": "#5C3317",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "negro",
+   "herrumbre"
+  ],
+  "receta": "calculada",
+  "de": 2.4,
+  "cert": "disc",
+  "nombre": "Etimología discutida, según la RAE. Se compara con el náhuatl xocoatl, de xoco, «amargo», y atl, «agua».",
+  "historia": "La palabra llegó a Europa desde el náhuatl a través del español.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · chocolate",
+    "https://dle.rae.es/chocolate"
+   ]
+  ]
+ },
+ {
+  "id": "sangre-de-dragon",
+  "name": "Sangre de dragón",
+  "fam": "rojos",
+  "hex": "#8A1C1C",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "carmesi",
+   "chocolate"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Por su color de sangre y por la leyenda sobre su origen.",
+  "historia": "Es la resina roja de los dragos, como el de Socotra o el drago canario. Se usa desde la Antigüedad como barniz, medicina, incienso, pigmento y tinte.",
+  "nota": {
+   "cert": "ley",
+   "t": "Algunas enciclopedias medievales decían que era la sangre de dragones y elefantes muertos en combate."
+  },
+  "src": [
+   [
+    "Wikipedia · Dragon's blood",
+    "https://en.wikipedia.org/wiki/Dragon%27s_blood"
+   ]
+  ]
+ },
+ {
+  "id": "lacre",
+  "name": "Lacre",
+  "fam": "rojos",
+  "hex": "#9E1B22",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "carmesi",
+   "sangre-de-dragon"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Del portugués lacre, variante de «laca».",
+  "historia": "El lacre medieval era cera de abeja y resina, teñido de rojo con bermellón. En el siglo XVI llegó la goma laca de las Indias y se convirtió en su base. Servía para cerrar documentos y demostrar que nadie los había abierto.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · lacre",
+    "https://dle.rae.es/lacre"
+   ],
+   [
+    "Wikipedia · Sealing wax",
+    "https://en.wikipedia.org/wiki/Sealing_wax"
+   ]
+  ]
+ },
+ {
+  "id": "plomo",
+  "name": "Plomo",
+  "fam": "grises",
+  "hex": "#6D7275",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "payne",
+   "topo"
+  ],
+  "receta": "calculada",
+  "de": 2.4,
+  "cert": "doc",
+  "nombre": "Del latín plumbum, de donde viene su símbolo, Pb, y la palabra inglesa plumbing, «fontanería».",
+  "historia": "Escritores griegos y romanos ya advirtieron que era tóxico, pero en Europa no se reconoció de forma general hasta finales del siglo XIX.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Lead",
+    "https://en.wikipedia.org/wiki/Lead"
+   ]
+  ]
+ },
+ {
+  "id": "orchilla",
+  "name": "Orchilla",
+  "fam": "violetas",
+  "hex": "#8E4585",
+  "tipo": "tinte",
+  "gen": 2,
+  "parents": [
+   "purpura",
+   "gris"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Nombre canario del liquen Roccella tinctoria.",
+  "historia": "Por su tinte rojo violáceo fue muy buscada por los tintoreros europeos a finales de la Edad Media. Desde 1758 se fabricó un tinte de líquenes llamado cudbear.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Roccella tinctoria",
+    "https://es.wikipedia.org/wiki/Roccella_tinctoria"
+   ],
+   [
+    "Wikipedia · Orcein",
+    "https://en.wikipedia.org/wiki/Orcein"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-veneciano",
+  "name": "Rojo veneciano",
+  "fam": "rojos",
+  "hex": "#A23B2C",
+  "tipo": "lugar",
+  "gen": 4,
+  "parents": [
+   "granate",
+   "cobre"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Por Venecia. También se le llamaba sinopia, porque el mejor venía del puerto de Sinope.",
+  "historia": "Es un óxido de hierro rojo apagado. Cennino Cennini, pintor del siglo XIV, recomendaba mezclarlo con blanco de cal para pintar la piel.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Venetian red",
+    "https://en.wikipedia.org/wiki/Venetian_red"
+   ]
+  ]
+ },
+ {
+  "id": "oro",
+  "name": "Oro",
+  "fam": "amarillos",
+  "hex": "#D4AF37",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "zanahoria",
+   "plata"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Del latín aurum, de una raíz que significa «brillar», la misma de aurora.",
+  "historia": "Es de los elementos menos reactivos: no reacciona con el oxígeno a ninguna temperatura. Por eso no se oxida ni pierde el brillo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Gold",
+    "https://en.wikipedia.org/wiki/Gold"
+   ]
+  ]
+ },
+ {
+  "id": "gutagamba",
+  "name": "Gutagamba",
+  "fam": "amarillos",
+  "hex": "#E49B0F",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "tangerina",
+   "oro"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "En inglés gamboge, de Camboja, el antiguo nombre de Camboya.",
+  "historia": "Es la resina de árboles Garcinia de Camboya y Tailandia. Ha teñido túnicas de monjes budistas, y es tóxica: en dosis altas puede ser mortal.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Gamboge",
+    "https://en.wikipedia.org/wiki/Gamboge"
+   ]
+  ]
+ },
+ {
+  "id": "armino",
+  "name": "Armiño",
+  "fam": "blancos",
+  "hex": "#F7F5F0",
+  "tipo": "cultura",
+  "gen": 4,
+  "parents": [
+   "blanco",
+   "blanco-de-espana"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Por la piel blanca de invierno del armiño, con la punta de la cola negra.",
+  "historia": "Forraba los mantos de coronación y las túnicas de reyes y altos nobles. En heráldica se asocia sobre todo al ducado de Bretaña.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Ermine (heraldry)",
+    "https://en.wikipedia.org/wiki/Ermine_(heraldry)"
+   ]
+  ]
+ },
+ {
+  "id": "peltre",
+  "name": "Peltre",
+  "fam": "grises",
+  "hex": "#8E9294",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "ceniza",
+   "plomo"
+  ],
+  "receta": "calculada",
+  "de": 1.8,
+  "cert": "doc",
+  "nombre": "De origen incierto, según la RAE.",
+  "historia": "Es una aleación de estaño que antes podía llevar hasta un 40 % de plomo. En Europa se usó para platos y jarras desde la Edad Media hasta que la sustituyeron la loza y el vidrio.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · peltre",
+    "https://dle.rae.es/peltre"
+   ],
+   [
+    "Wikipedia · Pewter",
+    "https://en.wikipedia.org/wiki/Pewter"
+   ]
+  ]
+ },
+ {
+  "id": "azul-egipcio",
+  "name": "Azul egipcio",
+  "fam": "azules",
+  "hex": "#1034A6",
+  "tipo": "pigmento",
+  "gen": 3,
+  "parents": [
+   "indigo",
+   "ultramar"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Por Egipto, donde se fabricó por primera vez.",
+  "historia": "Está considerado el primer pigmento sintético. El ejemplo más antiguo es un cuenco de alabastro de hacia el 3250 a. C., hallado en Hieracómpolis.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Egyptian blue",
+    "https://en.wikipedia.org/wiki/Egyptian_blue"
+   ]
+  ]
+ },
+ {
+  "id": "azul-persa",
+  "name": "Azul persa",
+  "fam": "azules",
+  "hex": "#1C39BB",
+  "tipo": "lugar",
+  "gen": 4,
+  "parents": [
+   "ultramar",
+   "azul-egipcio"
+  ],
+  "receta": "calculada",
+  "de": 0.7,
+  "cert": "doc",
+  "nombre": "Por el azul de la cerámica persa y los azulejos de mezquitas y palacios de Irán.",
+  "historia": "También evoca el lapislázuli de Persia y Afganistán. Como nombre de color en inglés aparece en 1669.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Persian blue",
+    "https://en.wikipedia.org/wiki/Persian_blue"
+   ]
+  ]
+ },
+ {
+  "id": "esmalte",
+  "name": "Esmalte",
+  "fam": "azules",
+  "hex": "#003399",
+  "tipo": "pigmento",
+  "gen": 4,
+  "parents": [
+   "azul-ming",
+   "azul-egipcio"
+  ],
+  "receta": "calculada",
+  "de": 1.8,
+  "cert": "doc",
+  "nombre": "Vidrio de cobalto molido como pigmento.",
+  "historia": "El ejemplo más antiguo es un trozo mesopotámico de hace unos 4.000 años. Se usó mucho en la pintura europea de los siglos XV al XVII y en Inglaterra se añadía al almidón de la ropa. En los cuadros suele haberse decolorado.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Smalt",
+    "https://en.wikipedia.org/wiki/Smalt"
+   ]
+  ]
+ },
+ {
+  "id": "azul-klein",
+  "name": "Azul Klein",
+  "fam": "azules",
+  "hex": "#002FA7",
+  "tipo": "persona",
+  "gen": 5,
+  "parents": [
+   "azul-egipcio",
+   "esmalte"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Por el artista Yves Klein. Su nombre oficial es International Klein Blue.",
+  "historia": "Lo desarrolló con el proveedor de pinturas Edouard Adam: ultramar en un aglutinante sintético que no apaga el color. En mayo de 1960 registró la fórmula con un sobre Soleau, un depósito con fecha que no es una patente.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · International Klein Blue",
+    "https://en.wikipedia.org/wiki/International_Klein_Blue"
+   ]
+  ]
+ },
+ {
+  "id": "cereza",
+  "name": "Cereza",
+  "fam": "rojos",
+  "hex": "#C4183C",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "espinela",
+   "rojo-cardenal"
+  ],
+  "receta": "calculada",
+  "de": 0.8,
+  "cert": "doc",
+  "nombre": "Por la fruta. En francés, cerise.",
+  "historia": "Como nombre de color, cerise aparece en el Times de Londres en 1858, aunque ya se usaba en 1845 en un libro de patrones de ganchillo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cerise (color)",
+    "https://en.wikipedia.org/wiki/Cerise_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "miel",
+  "name": "Miel",
+  "fam": "amarillos",
+  "hex": "#EBA937",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "indio",
+   "azafran"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Por el color de la miel.",
+  "historia": "En una tumba de Georgia, de hace entre 4.700 y 5.500 años, se encontró miel todavía comestible.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se repite que en las tumbas egipcias se halló miel comestible. No es cierto: los casos citados eran otras sustancias o solo restos químicos."
+  },
+  "src": [
+   [
+    "Wikipedia · Honey",
+    "https://en.wikipedia.org/wiki/Honey"
+   ]
+  ]
+ },
+ {
+  "id": "curcuma",
+  "name": "Cúrcuma",
+  "fam": "amarillos",
+  "hex": "#E8A317",
+  "tipo": "tinte",
+  "gen": 7,
+  "parents": [
+   "gutagamba",
+   "miel"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Del árabe clásico kurkum, y este del pelvi kurkum, «azafrán». En inglés, turmeric quizá venga del latín terra merita, «tierra merecida».",
+  "historia": "Como tinte no aguanta la luz, pero tiñe saris y túnicas de monjes budistas. Como colorante alimentario es el E100.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · cúrcuma",
+    "https://dle.rae.es/c%C3%BArcuma"
+   ],
+   [
+    "Wikipedia · Turmeric",
+    "https://en.wikipedia.org/wiki/Turmeric"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-falun",
+  "name": "Rojo Falun",
+  "fam": "rojos",
+  "hex": "#801818",
+  "tipo": "lugar",
+  "gen": 4,
+  "parents": [
+   "quermes",
+   "chocolate"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Por la mina de cobre de Falun, en Suecia, de cuyos residuos se obtenía.",
+  "historia": "Desde el siglo XVI se mezclaban los residuos de la mina con aceite de linaza y harina de centeno. En el siglo XVII empezó a pintarse en las casas de madera para imitar el ladrillo, y sigue siendo el rojo típico del campo sueco.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Falu red",
+    "https://en.wikipedia.org/wiki/Falu_red"
+   ]
+  ]
+ },
+ {
+  "id": "rubi",
+  "name": "Rubí",
+  "fam": "rojos",
+  "hex": "#9B111E",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "carmesi",
+   "rojo-falun"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "De rubín, y en última instancia del latín ruber, «rojo».",
+  "historia": "Es corindón, el mismo mineral que el zafiro: el rojo se lo da el cromo. Por eso a veces se le llama «zafiro rojo».",
+  "nota": null,
+  "src": [
+   [
+    "RAE · rubí",
+    "https://dle.rae.es/rub%C3%AD"
+   ],
+   [
+    "Wikipedia · Ruby",
+    "https://en.wikipedia.org/wiki/Ruby"
+   ]
+  ]
+ },
+ {
+  "id": "sangre-de-toro",
+  "name": "Sangre de toro",
+  "fam": "rojos",
+  "hex": "#8B0A1A",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "rojo-falun",
+   "rubi"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Del francés sang de bœuf, «sangre de buey».",
+  "historia": "Es un vidriado rojo de óxido de cobre que se cuece sin oxígeno. Nació en los hornos de Jingdezhen durante el reinado del emperador Kangxi (1662-1722) y sus efectos nunca salen dos veces iguales.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Sang de boeuf glaze",
+    "https://en.wikipedia.org/wiki/Sang_de_boeuf_glaze"
+   ]
+  ]
+ },
+ {
+  "id": "azurita",
+  "name": "Azurita",
+  "fam": "azules",
+  "hex": "#007FFF",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "celeste",
+   "azul-egipcio"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Del mismo origen que «azul», por su color.",
+  "historia": "Fue una de las grandes fuentes de azul de los pintores medievales: era un mineral común en Europa y mucho más barato que el ultramar. Con el tiempo puede verdear, porque se transforma en malaquita.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Azurite",
+    "https://en.wikipedia.org/wiki/Azurite"
+   ]
+  ]
+ },
+ {
+  "id": "verde-quirofano",
+  "name": "Verde quirófano",
+  "fam": "verdes",
+  "hex": "#4FA79B",
+  "tipo": "cultura",
+  "gen": 4,
+  "parents": [
+   "aventurina",
+   "ceruleo"
+  ],
+  "receta": "calculada",
+  "de": 2.8,
+  "cert": "doc",
+  "nombre": "Por la ropa y los paños de los quirófanos.",
+  "historia": "A principios del siglo XX un cirujano cambió el blanco por el verde: la luz intensa sobre el blanco cansaba la vista, y el verde reduce las imágenes residuales tras mirar sangre. En los años cincuenta y sesenta casi todos los hospitales habían dejado el blanco.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Scrubs",
+    "https://en.wikipedia.org/wiki/Scrubs_(clothing)"
+   ]
+  ]
+ },
+ {
+  "id": "ciruela",
+  "name": "Ciruela",
+  "fam": "violetas",
+  "hex": "#8E4585",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "violeta-de-genciana",
+   "peonia"
+  ],
+  "receta": "calculada",
+  "de": 2.4,
+  "cert": "doc",
+  "nombre": "Del latín cereola pruna, «ciruelas de color de cera».",
+  "historia": "Como nombre de color, prune aparece en inglés en 1789, por el color de la ciruela pasa cocida.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · ciruela",
+    "https://dle.rae.es/ciruela"
+   ],
+   [
+    "Wikipedia · Plum (color)",
+    "https://en.wikipedia.org/wiki/Plum_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "azul-cambridge",
+  "name": "Azul Cambridge",
+  "fam": "azules",
+  "hex": "#A3C1AD",
+  "tipo": "cultura",
+  "gen": 3,
+  "parents": [
+   "celadon",
+   "ceniza"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Por la Universidad de Cambridge.",
+  "historia": "Es el azul claro del rival de Oxford en la regata. Se dice que deriva del azul del colegio de Eton.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Oxford Blue (colour)",
+    "https://en.wikipedia.org/wiki/Oxford_Blue_(colour)"
+   ]
+  ]
+ },
+ {
+  "id": "coral",
+  "name": "Coral",
+  "fam": "rojos",
+  "hex": "#F2735D",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "minio",
+   "clavel"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "Por el coral rojo del Mediterráneo, Corallium rubrum.",
+  "historia": "Los romanos colgaban ramas de coral al cuello de los niños para protegerlos, y en Italia se llevó contra el mal de ojo hasta el siglo XX.",
+  "nota": {
+   "cert": "ley",
+   "t": "En griego el coral se llamaba gorgeia: según el mito, nació de la sangre de la Gorgona Medusa."
+  },
+  "src": [
+   [
+    "Wikipedia · Precious coral",
+    "https://en.wikipedia.org/wiki/Precious_coral"
+   ]
+  ]
+ },
+ {
+  "id": "mostaza",
+  "name": "Mostaza",
+  "fam": "amarillos",
+  "hex": "#E1AD01",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "amarillo",
+   "albero"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Del latín mustum, «mosto».",
+  "historia": "Los romanos hacían la salsa mezclando semillas de mostaza molidas con mosto de uva, y de ahí el nombre.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Mustard (condiment)",
+    "https://en.wikipedia.org/wiki/Mustard_(condiment)"
+   ]
+  ]
+ },
+ {
+  "id": "oropimente",
+  "name": "Oropimente",
+  "fam": "amarillos",
+  "hex": "#E8B923",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "amarillo",
+   "mostaza"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Del latín auripigmentum, «pigmento de oro»: por su color y porque se creía que contenía oro.",
+  "historia": "Es sulfuro de arsénico. En una tumba egipcia del siglo XIV a. C. aparecieron terrones de oropimente, y Rafael lo usó en la Madonna Sixtina. Fue uno de los pocos amarillos intensos hasta el siglo XIX.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Orpiment",
+    "https://en.wikipedia.org/wiki/Orpiment"
+   ]
+  ]
+ },
+ {
+  "id": "gris-marengo",
+  "name": "Gris marengo",
+  "fam": "grises",
+  "hex": "#4C5866",
+  "tipo": "lugar",
+  "gen": 2,
+  "parents": [
+   "negro",
+   "gris"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Del francés marengo, por la ciudad italiana de Marengo.",
+  "historia": "La RAE recoge marengo como un gris oscuro y como una tela de lana tejida con hilos de distintos colores.",
+  "nota": {
+   "cert": "disc",
+   "t": "Se suele relacionar con la batalla de Marengo, ganada por Napoleón en 1800. La RAE solo menciona la ciudad."
+  },
+  "src": [
+   [
+    "RAE · marengo",
+    "https://dle.rae.es/marengo"
+   ]
+  ]
+ },
+ {
+  "id": "verde-hooker",
+  "name": "Verde Hooker",
+  "fam": "verdes",
+  "hex": "#49796B",
+  "tipo": "persona",
+  "gen": 3,
+  "parents": [
+   "aventurina",
+   "gris-marengo"
+  ],
+  "receta": "calculada",
+  "de": 2.6,
+  "cert": "doc",
+  "nombre": "Por William Hooker (1779-1832), ilustrador oficial de la Royal Horticultural Society.",
+  "historia": "Lo inventó mezclando azul de Prusia y gutagamba, y lo usaba para pintar las hojas en sus famosas láminas de frutas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · William Hooker",
+    "https://en.wikipedia.org/wiki/William_Hooker_(botanical_illustrator)"
+   ]
+  ]
+ },
+ {
+  "id": "pizarra",
+  "name": "Pizarra",
+  "fam": "grises",
+  "hex": "#5A6770",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "plomo",
+   "gris-marengo"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Quizá del vasco lapitzarri, «piedra de pizarra», de lapitz, «pizarra», y harri, «piedra». El la- inicial se tomó por el artículo.",
+  "historia": "Se parte en láminas finas y sus tejados duran siglos. En las escuelas de los siglos XVIII y XIX se escribía en pizarras y pizarrines.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · pizarra",
+    "https://dle.rae.es/pizarra"
+   ],
+   [
+    "Wikipedia · Slate",
+    "https://en.wikipedia.org/wiki/Slate"
+   ]
+  ]
+ },
+ {
+  "id": "gris-acero",
+  "name": "Gris acero",
+  "fam": "grises",
+  "hex": "#71797E",
+  "tipo": "gema/mineral",
+  "gen": 6,
+  "parents": [
+   "peltre",
+   "pizarra"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "«Acero» viene del latín tardío aciarium, de acies, «filo».",
+  "historia": "El acero es hierro con un poco de carbono. Los famosos aceros de Damasco tienen origen en la India, y el proceso Bessemer de 1855 permitió fabricarlo en masa.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · acero",
+    "https://dle.rae.es/acero"
+   ],
+   [
+    "Wikipedia · Steel",
+    "https://en.wikipedia.org/wiki/Steel"
+   ]
+  ]
+ },
+ {
+  "id": "cornalina",
+  "name": "Cornalina",
+  "fam": "rojos",
+  "hex": "#B31B1B",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "bermellon",
+   "rojo-falun"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "De cornelina, por el fruto rojo del cornejo, al que se parece.",
+  "historia": "Los romanos tallaban sellos de cornalina porque la cera caliente no se pega a ella. En el valle del Indo ya se hacían cuentas grabadas hace más de 4.000 años.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Carnelian",
+    "https://en.wikipedia.org/wiki/Carnelian"
+   ]
+  ]
+ },
+ {
+  "id": "castano",
+  "name": "Castaño",
+  "fam": "marrones",
+  "hex": "#6B4423",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "marron",
+   "chocolate"
+  ],
+  "receta": "calculada",
+  "de": 2.4,
+  "cert": "doc",
+  "nombre": "Del latín castanea, y este del griego kastáneia, «nueces del castaño».",
+  "historia": "En español convive con «marrón», que llegó del francés marron, «castaña»: los dos nombres vienen del mismo fruto.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · castaño",
+    "https://dle.rae.es/casta%C3%B1o"
+   ],
+   [
+    "RAE · marrón",
+    "https://dle.rae.es/marr%C3%B3n"
+   ]
+  ]
+ },
+ {
+  "id": "caoba",
+  "name": "Caoba",
+  "fam": "marrones",
+  "hex": "#6E2E1F",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "burdeos",
+   "castano"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "De origen caribe.",
+  "historia": "En el siglo XVIII los ebanistas británicos la preferían para los muebles de calidad; Jamaica y las Bahamas eran las principales fuentes.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · caoba",
+    "https://dle.rae.es/caoba"
+   ],
+   [
+    "Wikipedia · Mahogany",
+    "https://en.wikipedia.org/wiki/Mahogany"
+   ]
+  ]
+ },
+ {
+  "id": "hematites",
+  "name": "Hematites",
+  "fam": "grises",
+  "hex": "#4F4A4C",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "azul-yinmn",
+   "castano"
+  ],
+  "receta": "calculada",
+  "de": 2,
+  "cert": "doc",
+  "nombre": "Del griego haima, «sangre».",
+  "historia": "Aunque se ve negra o gris acero, al rayarla deja siempre un trazo rojo. Molida es ocre rojo. El robot Opportunity la encontró en Marte en unas bolitas apodadas «arándanos».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Hematite",
+    "https://en.wikipedia.org/wiki/Hematite"
+   ]
+  ]
+ },
+ {
+  "id": "tabaco",
+  "name": "Tabaco",
+  "fam": "marrones",
+  "hex": "#71543B",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "topo",
+   "castano"
+  ],
+  "receta": "calculada",
+  "de": 2,
+  "cert": "doc",
+  "nombre": "Del árabe clásico ṭubbāq, nombre que antes del descubrimiento de América se daba a hierbas medicinales que mareaban, como la olivarda.",
+  "historia": "Al llegar la planta americana, los españoles le aplicaron ese nombre árabe que ya existía.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · tabaco",
+    "https://dle.rae.es/tabaco"
+   ]
+  ]
+ },
+ {
+  "id": "feldgrau",
+  "name": "Feldgrau",
+  "fam": "grises",
+  "hex": "#5D6352",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "verde-hooker",
+   "tabaco"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Del alemán, «gris de campaña».",
+  "historia": "Prusia lo estrenó en 1907 y en 1910 era el uniforme de campaña del ejército alemán. Siguió siéndolo hasta 1945.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Feldgrau",
+    "https://en.wikipedia.org/wiki/Feldgrau"
+   ]
+  ]
+ },
+ {
+  "id": "gris-confederado",
+  "name": "Gris confederado",
+  "fam": "grises",
+  "hex": "#8C8C88",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "celeste",
+   "tabaco"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Por los uniformes del ejército confederado en la guerra de Secesión.",
+  "historia": "Se eligió el gris porque era barato de teñir y era el color de las milicias estatales. Con el tiempo los tejidos se desteñían hasta un pardo amarillento.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Uniforms of the Confederate States Armed Forces",
+    "https://en.wikipedia.org/wiki/Uniforms_of_the_Confederate_States_Armed_Forces"
+   ]
+  ]
+ },
+ {
+  "id": "avellana",
+  "name": "Avellana",
+  "fam": "marrones",
+  "hex": "#8E7618",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "mandarina",
+   "feldgrau"
+  ],
+  "receta": "calculada",
+  "de": 1,
+  "cert": "doc",
+  "nombre": "Del latín abellana nux, «nuez de Avella», ciudad de Campania famosa por estos frutos.",
+  "historia": "El nombre científico del avellano, Corylus avellana, conserva el de la ciudad.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · avellana",
+    "https://dle.rae.es/avellana"
+   ],
+   [
+    "Wikipedia · Hazelnut",
+    "https://en.wikipedia.org/wiki/Hazelnut"
+   ]
+  ]
+ },
+ {
+  "id": "blanco-de-titanio",
+  "name": "Blanco de titanio",
+  "fam": "blancos",
+  "hex": "#FCFCF7",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "blanco-de-espana",
+   "armino"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Dióxido de titanio.",
+  "historia": "Se fabrica en masa desde 1916 y es el pigmento blanco más usado del mundo por su brillo. Como aditivo alimentario, el E171, la Unión Europea lo prohibió en 2022.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Titanium dioxide",
+    "https://en.wikipedia.org/wiki/Titanium_dioxide"
+   ]
+  ]
+ },
+ {
+  "id": "blanco-de-zinc",
+  "name": "Blanco de zinc",
+  "fam": "blancos",
+  "hex": "#FEFEFA",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "armino",
+   "blanco-de-titanio"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Óxido de zinc. En acuarela se vendió como «blanco chino».",
+  "historia": "Winsor & Newton lo promocionó en la década de 1830. Su gran ventaja era que no es tan tóxico como el blanco de plomo; su defecto, que al óleo se vuelve quebradizo y puede agrietarse.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Zinc white",
+    "https://en.wikipedia.org/wiki/Zinc_white"
+   ]
+  ]
+ },
+ {
+  "id": "hueso",
+  "name": "Hueso",
+  "fam": "blancos",
+  "hex": "#E3DAC9",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "marfil",
+   "plata"
+  ],
+  "receta": "calculada",
+  "de": 3.1,
+  "cert": "doc",
+  "nombre": "Por el color del hueso.",
+  "historia": "Como nombre de color, bone aparece en inglés en la primera década del siglo XIX.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Bone (color)",
+    "https://en.wikipedia.org/wiki/Bone_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "perla",
+  "name": "Perla",
+  "fam": "blancos",
+  "hex": "#EAE0C8",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "marfil",
+   "hueso"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Por la perla.",
+  "historia": "Se forma dentro de moluscos vivos, capa a capa de nácar. La perla Peregrina se ofreció a Felipe II, que la quiso para sí y acabó entre las joyas de la Corona española.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Pearl",
+    "https://en.wikipedia.org/wiki/Pearl"
+   ]
+  ]
+ },
+ {
+  "id": "nacar",
+  "name": "Nácar",
+  "fam": "blancos",
+  "hex": "#EFE7DD",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "armino",
+   "hueso"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Del catalán nacra o nacre, del árabe hispánico náqra, «tamboril».",
+  "historia": "Es la capa interior de algunas conchas. Brilla con colores porque sus láminas de aragonito tienen un grosor parecido a la longitud de onda de la luz.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · nácar",
+    "https://dle.rae.es/n%C3%A1car"
+   ],
+   [
+    "Wikipedia · Nacre",
+    "https://en.wikipedia.org/wiki/Nacre"
+   ]
+  ]
+ },
+ {
+  "id": "gualda",
+  "name": "Gualda",
+  "fam": "amarillos",
+  "hex": "#E3C44A",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "mostaza",
+   "hueso"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Nombre de la planta Reseda luteola, la «reseda de tintoreros».",
+  "historia": "Se usa como tinte desde el primer milenio a. C., quizá antes que el glasto o la granza. Mezclada con el azul del glasto daba verdes como el verde Lincoln.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Reseda luteola",
+    "https://en.wikipedia.org/wiki/Reseda_luteola"
+   ]
+  ]
+ },
+ {
+  "id": "pistacho",
+  "name": "Pistacho",
+  "fam": "verdes",
+  "hex": "#93C572",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "cardenillo",
+   "gualda"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del persa medio pistakē, a través del griego, el latín y el italiano.",
+  "historia": "Hay pruebas arqueológicas de que ya se comía hacia el 6750 a. C.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Pistachio",
+    "https://en.wikipedia.org/wiki/Pistachio"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-plomo-estano",
+  "name": "Amarillo plomo-estaño",
+  "fam": "amarillos",
+  "hex": "#E9D66B",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "alabastro",
+   "oropimente"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Por su composición, plomo y estaño. Lo llaman el «amarillo de los viejos maestros».",
+  "historia": "Fue muy usado en el Renacimiento y el Barroco, pero hacia 1750 cayó en el olvido sin que se sepa por qué. Richard Jacobi lo redescubrió en 1941.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Lead-tin-yellow",
+    "https://en.wikipedia.org/wiki/Lead-tin-yellow"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-taxi",
+  "name": "Amarillo taxi",
+  "fam": "amarillos",
+  "hex": "#F7B500",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "amarillo",
+   "azafran"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Por los taxis amarillos.",
+  "historia": "El 2 de agosto de 1915 salieron en Chicago los primeros 45 Yellow Cabs de la compañía de John Hertz, pintados de amarillo para que se vieran al máximo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Yellow Cab Company",
+    "https://en.wikipedia.org/wiki/Yellow_Cab_Company"
+   ]
+  ]
+ },
+ {
+  "id": "pulga",
+  "name": "Pulga",
+  "fam": "marrones",
+  "hex": "#7F5A58",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "chocolate",
+   "peltre"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del francés couleur puce, «color pulga».",
+  "historia": "Se puso de moda en la Francia de finales del XVIII, en la corte de Luis XVI, y siguió siéndolo en el París del XIX.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se dice que era el color favorito de María Antonieta, pero no hay ningún retrato suyo vestida de ese color."
+  },
+  "src": [
+   [
+    "Wikipedia · Puce",
+    "https://en.wikipedia.org/wiki/Puce"
+   ]
+  ]
+ },
+ {
+  "id": "peridoto",
+  "name": "Peridoto",
+  "fam": "verdes",
+  "hex": "#B4C424",
+  "tipo": "gema/mineral",
+  "gen": 3,
+  "parents": [
+   "amarillo",
+   "scheele"
+  ],
+  "receta": "calculada",
+  "de": 2.8,
+  "cert": "doc",
+  "nombre": "El origen del nombre es incierto.",
+  "historia": "Desde hacia el 300 a. C. se extraía en la isla de Zabargad, en el mar Rojo, y entonces se llamaba topazios: el «topacio» antiguo era en realidad peridoto.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se dice que algunas «esmeraldas» de Cleopatra eran peridotos. No hay prueba de ello."
+  },
+  "src": [
+   [
+    "Wikipedia · Peridot",
+    "https://en.wikipedia.org/wiki/Peridot"
+   ],
+   [
+    "Wikipedia · Topaz",
+    "https://en.wikipedia.org/wiki/Topaz"
+   ]
+  ]
+ },
+ {
+  "id": "sombra",
+  "name": "Sombra",
+  "fam": "marrones",
+  "hex": "#635147",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "hematites",
+   "tabaco"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "disc",
+  "nombre": "Unos lo relacionan con la región italiana de Umbría y otros con el latín umbra, «sombra».",
+  "historia": "Es una tierra con mucho manganeso, lo que la hace más oscura que el ocre o la siena. Los pintores la aprecian porque seca rápido y la usan para la primera capa del cuadro.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Umber",
+    "https://en.wikipedia.org/wiki/Umber"
+   ]
+  ]
+ },
+ {
+  "id": "cafe",
+  "name": "Café",
+  "fam": "marrones",
+  "hex": "#6F4E37",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "herrumbre",
+   "gris-marengo"
+  ],
+  "receta": "calculada",
+  "de": 3.6,
+  "cert": "doc",
+  "nombre": "Del italiano caffè, del turco kahve y del árabe clásico qahwah.",
+  "historia": "El nombre hizo el mismo viaje que la bebida: de Arabia a Turquía, de Turquía a Italia y de ahí al resto de Europa.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · café",
+    "https://dle.rae.es/caf%C3%A9"
+   ]
+  ]
+ },
+ {
+  "id": "antracita",
+  "name": "Antracita",
+  "fam": "negros",
+  "hex": "#383E42",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "marino",
+   "cafe"
+  ],
+  "receta": "calculada",
+  "de": 2.6,
+  "cert": "doc",
+  "nombre": "Del griego anthrakítēs, «parecido al carbón».",
+  "historia": "Es el carbón de mayor calidad: entre un 86 y un 97 % de carbono, con pocas impurezas y la mayor energía de todos.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Anthracite",
+    "https://en.wikipedia.org/wiki/Anthracite"
+   ]
+  ]
+ },
+ {
+  "id": "gris-acorazado",
+  "name": "Gris acorazado",
+  "fam": "grises",
+  "hex": "#848482",
+  "tipo": "cultura",
+  "gen": 4,
+  "parents": [
+   "celeste",
+   "cafe"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Por la pintura de los acorazados.",
+  "historia": "Es el gris de la pintura antióxido con que se protegía el casco de hierro y acero de los buques de guerra.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Battleship grey",
+    "https://en.wikipedia.org/wiki/Battleship_grey"
+   ]
+  ]
+ },
+ {
+  "id": "caqui",
+  "name": "Caqui",
+  "fam": "marrones",
+  "hex": "#A69A6B",
+  "tipo": "cultura",
+  "gen": 7,
+  "parents": [
+   "indio",
+   "gris-acero"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Del inglés khaki, del hindi khākī y del pelvi xāk, «polvo».",
+  "historia": "Lo vistió por primera vez el Cuerpo de Guías del ejército británico de la India, creado en diciembre de 1846. El ejército británico lo adoptó después en campañas como la guerra de los bóers.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · caqui",
+    "https://dle.rae.es/caqui"
+   ],
+   [
+    "Wikipedia · Khaki",
+    "https://en.wikipedia.org/wiki/Khaki"
+   ]
+  ]
+ },
+ {
+  "id": "azul-maya",
+  "name": "Azul maya",
+  "fam": "azules",
+  "hex": "#73C2FB",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "azurita",
+   "blanco-de-titanio"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Por la civilización maya.",
+  "historia": "Es índigo fijado en una arcilla, la paligorskita, y resiste de forma extraordinaria: hay murales de Chichén Itzá de más de mil años que conservan el color. Se pintaba con él a quienes se arrojaban al cenote sagrado en honor del dios de la lluvia, Chaac.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Maya blue",
+    "https://en.wikipedia.org/wiki/Maya_blue"
+   ]
+  ]
+ },
+ {
+  "id": "camello",
+  "name": "Camello",
+  "fam": "marrones",
+  "hex": "#C19A6B",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "plata",
+   "cobre"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Por el pelo de camello, una fibra textil para abrigos y jerséis.",
+  "historia": "Los pinceles llamados «de pelo de camello» suelen ser de pelo de buey y nunca llevan pelo de camello.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Camel hair",
+    "https://en.wikipedia.org/wiki/Camel_hair"
+   ],
+   [
+    "Wikipedia · Paintbrush",
+    "https://en.wikipedia.org/wiki/Paintbrush"
+   ]
+  ]
+ },
+ {
+  "id": "pardo-van-dyck",
+  "name": "Pardo Van Dyck",
+  "fam": "marrones",
+  "hex": "#4A3324",
+  "tipo": "persona",
+  "gen": 4,
+  "parents": [
+   "negro",
+   "siena"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Por el pintor Anton van Dyck. Antes se llamaba tierra de Cassel o de Colonia, por su ciudad de origen.",
+  "historia": "El pigmento es siglos más antiguo que el pintor: el nombre se lo pusieron después.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Van Dyke brown",
+    "https://en.wikipedia.org/wiki/Van_Dyke_brown"
+   ]
+  ]
+ },
+ {
+  "id": "nogal",
+  "name": "Nogal",
+  "fam": "marrones",
+  "hex": "#5D432C",
+  "tipo": "tinte",
+  "gen": 5,
+  "parents": [
+   "castano",
+   "pardo-van-dyck"
+  ],
+  "receta": "calculada",
+  "de": 2.5,
+  "cert": "doc",
+  "nombre": "Del latín tardío nucalis, «relativo a la nuez».",
+  "historia": "La cáscara verde de la nuez tiene un tinte que va del amarillo pardo al marrón oscuro y se ha usado para teñir tela.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · nogal",
+    "https://dle.rae.es/nogal"
+   ],
+   [
+    "Wikipedia · Juglans regia",
+    "https://en.wikipedia.org/wiki/Juglans_regia"
+   ]
+  ]
+ },
+ {
+  "id": "jade",
+  "name": "Jade",
+  "fam": "verdes",
+  "hex": "#00A86B",
+  "tipo": "gema/mineral",
+  "gen": 3,
+  "parents": [
+   "verde",
+   "turquesa"
+  ],
+  "receta": "calculada",
+  "de": 3.5,
+  "cert": "doc",
+  "nombre": "Del francés jade, y este del español «piedra de la ijada»: los conquistadores lo usaban como remedio para el costado.",
+  "historia": "El nombre científico nefrita viene de lapis nephriticus, la traducción latina de esa misma expresión española, y del griego nephrós, «riñón».",
+  "nota": null,
+  "src": [
+   [
+    "RAE · jade",
+    "https://dle.rae.es/jade"
+   ],
+   [
+    "Wikipedia · Jade",
+    "https://en.wikipedia.org/wiki/Jade"
+   ]
+  ]
+ },
+ {
+  "id": "alejandrita",
+  "name": "Alejandrita",
+  "fam": "verdes",
+  "hex": "#3E8E73",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "plomo",
+   "jade"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Por el futuro zar Alejandro II, a quien la dedicó el mineralogista Nils Gustaf Nordenskiöld.",
+  "historia": "Es verdosa a la luz del día y rojiza con luz incandescente. Las primeras se hallaron en los Urales, en la década de 1830.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Alexandrite",
+    "https://en.wikipedia.org/wiki/Alexandrite"
+   ]
+  ]
+ },
+ {
+  "id": "viridiana",
+  "name": "Viridiana",
+  "fam": "verdes",
+  "hex": "#40826D",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "verde-hooker",
+   "alejandrita"
+  ],
+  "receta": "calculada",
+  "de": 0.8,
+  "cert": "doc",
+  "nombre": "Del latín viridis, «verde».",
+  "historia": "Es óxido de cromo hidratado. Pannetier y Binet lo prepararon en París en 1838, con un método caro y secreto. En 1859 C. E. Guignet patentó uno más barato.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Viridian",
+    "https://en.wikipedia.org/wiki/Viridian"
+   ]
+  ]
+ },
+ {
+  "id": "verde-cobalto",
+  "name": "Verde cobalto",
+  "fam": "verdes",
+  "hex": "#3D9970",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "gris-acorazado",
+   "jade"
+  ],
+  "receta": "calculada",
+  "de": 2.6,
+  "cert": "doc",
+  "nombre": "También verde de Rinman, por su descubridor.",
+  "historia": "Lo descubrió el químico sueco Sven Rinman en 1780. Es óxido de zinc con cobalto. Apenas se usa porque colorea poco y es caro.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cobalt green",
+    "https://en.wikipedia.org/wiki/Cobalt_green"
+   ]
+  ]
+ },
+ {
+  "id": "borgona",
+  "name": "Borgoña",
+  "fam": "rojos",
+  "hex": "#800020",
+  "tipo": "lugar",
+  "gen": 7,
+  "parents": [
+   "burdeos",
+   "sangre-de-toro"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "Por el vino de Borgoña, en Francia.",
+  "historia": "El primer uso registrado de burgundy como nombre de color en inglés es de 1881.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Burgundy (color)",
+    "https://en.wikipedia.org/wiki/Burgundy_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "glicinia",
+  "name": "Glicinia",
+  "fam": "violetas",
+  "hex": "#C9A0DC",
+  "tipo": "persona",
+  "gen": 3,
+  "parents": [
+   "blanco",
+   "malva"
+  ],
+  "receta": "calculada",
+  "de": 3,
+  "cert": "doc",
+  "nombre": "En latín, Wisteria: Thomas Nuttall bautizó el género en 1818 en honor del anatomista Caspar Wistar.",
+  "historia": "Cuando le preguntaron por qué escribió Wisteria y no Wistaria, Nuttall dijo que por eufonía. Su biógrafo cree que pensaba en un amigo suyo apellidado Wister.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Wisteria",
+    "https://en.wikipedia.org/wiki/Wisteria"
+   ]
+  ]
+ },
+ {
+  "id": "amatista",
+  "name": "Amatista",
+  "fam": "violetas",
+  "hex": "#9966CC",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "violeta-de-genciana",
+   "glicinia"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Del griego amethystos, «no ebrio».",
+  "historia": "Su violeta viene de impurezas de hierro alteradas por la radiación natural.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se creía que protegía de la borrachera a quien la llevaba."
+  },
+  "src": [
+   [
+    "Wikipedia · Amethyst",
+    "https://en.wikipedia.org/wiki/Amethyst"
+   ]
+  ]
+ },
+ {
+  "id": "azul-majorelle",
+  "name": "Azul Majorelle",
+  "fam": "azules",
+  "hex": "#6050DC",
+  "tipo": "persona",
+  "gen": 5,
+  "parents": [
+   "ultramar",
+   "amatista"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "Por el pintor francés Jacques Majorelle, que lo patentó.",
+  "historia": "En 1923 empezó a crear su jardín de Marrakech y le dedicó casi cuarenta años. En los años ochenta lo compraron y restauraron Yves Saint Laurent y Pierre Bergé.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Majorelle Garden",
+    "https://en.wikipedia.org/wiki/Majorelle_Garden"
+   ]
+  ]
+ },
+ {
+  "id": "fucsia",
+  "name": "Fucsia",
+  "fam": "rosas",
+  "hex": "#E0218A",
+  "tipo": "persona",
+  "gen": 4,
+  "parents": [
+   "magenta",
+   "turmalina"
+  ],
+  "receta": "calculada",
+  "de": 3.2,
+  "cert": "doc",
+  "nombre": "Del latín moderno fuchsia, por Leonhart Fuchs (1501-1566), médico y botánico alemán. El botánico francés Charles Plumier le dedicó la flor.",
+  "historia": "En 1859 se patentó un tinte de anilina llamado fucsina, por la flor. Ese mismo año se rebautizó como magenta.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · fucsia",
+    "https://dle.rae.es/fucsia"
+   ],
+   [
+    "Wikipedia · Fuchsia (color)",
+    "https://en.wikipedia.org/wiki/Fuchsia_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "rosa-mexicano",
+  "name": "Rosa mexicano",
+  "fam": "rosas",
+  "hex": "#E4007C",
+  "tipo": "cultura",
+  "gen": 5,
+  "parents": [
+   "magenta",
+   "fucsia"
+  ],
+  "receta": "calculada",
+  "de": 2.6,
+  "cert": "doc",
+  "nombre": "Lo dio a conocer el periodista, pintor y diseñador Ramón Valdiosera.",
+  "historia": "A mediados de los años cuarenta Valdiosera recorrió México recogiendo ropa tradicional y luego abrió un taller en Ciudad de México para llevar sus telas y colores a la moda.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Mexican pink",
+    "https://en.wikipedia.org/wiki/Mexican_pink"
+   ]
+  ]
+ },
+ {
+  "id": "leonado",
+  "name": "Leonado",
+  "fam": "marrones",
+  "hex": "#C69C6D",
+  "tipo": "natural",
+  "gen": 3,
+  "parents": [
+   "marron",
+   "marfil"
+  ],
+  "receta": "calculada",
+  "de": 3.3,
+  "cert": "doc",
+  "nombre": "La RAE lo define como «amarillo rojizo, como el del pelo del león».",
+  "historia": "Es el color del pelaje del león; la RAE da como sinónimos aleonado, rojizo y rubio.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · leonado",
+    "https://dle.rae.es/leonado"
+   ]
+  ]
+ },
+ {
+  "id": "moldavita",
+  "name": "Moldavita",
+  "fam": "verdes",
+  "hex": "#4F7942",
+  "tipo": "gema/mineral",
+  "gen": 7,
+  "parents": [
+   "absenta",
+   "antracita"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Por el río Moldava (Vltava), en Bohemia. Zippe usó el nombre en 1836.",
+  "historia": "Es vidrio verde formado cuando un meteorito cayó en lo que hoy es el cráter de Nördlinger Ries, en Alemania, hace unos 15 millones de años.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Moldavite",
+    "https://en.wikipedia.org/wiki/Moldavite"
+   ]
+  ],
+  "reemplaza": "Verde Veronés"
+ },
+ {
+  "id": "ambar",
+  "name": "Ámbar",
+  "fam": "naranjas",
+  "hex": "#FFB000",
+  "tipo": "gema/mineral",
+  "gen": 7,
+  "parents": [
+   "azafran",
+   "amarillo-taxi"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico 'ánbar, del árabe clásico 'anbar, que también designaba el ámbar gris.",
+  "historia": "En griego el ámbar se llamaba ēlektron. En 1600 William Gilbert llamó electricus, «como el ámbar», a los cuerpos que atraen cosas al frotarlos: de ahí viene la palabra «electricidad».",
+  "nota": null,
+  "src": [
+   [
+    "RAE · ámbar",
+    "https://dle.rae.es/%C3%A1mbar"
+   ],
+   [
+    "Wikipedia · Amber",
+    "https://en.wikipedia.org/wiki/Amber"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-de-napoles",
+  "name": "Amarillo de Nápoles",
+  "fam": "amarillos",
+  "hex": "#F8DE7E",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "oro",
+   "blanco-de-titanio"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "El nombre aparece a finales del siglo XVII en un tratado latino de Andrea Pozzo: luteolum napolitanum.",
+  "historia": "Es antimoniato de plomo, uno de los pigmentos sintéticos más antiguos: se ha encontrado en vidrios y ladrillos vidriados de Egipto y Mesopotamia de hace unos 3.500 años.",
+  "nota": {
+   "cert": "ley",
+   "t": "Los primeros teóricos del color creyeron que venía de Nápoles o del Vesubio. Su origen real es incierto."
+  },
+  "src": [
+   [
+    "Wikipedia · Naples yellow",
+    "https://en.wikipedia.org/wiki/Naples_yellow"
+   ]
+  ]
+ },
+ {
+  "id": "beige",
+  "name": "Beige",
+  "fam": "blancos",
+  "hex": "#D8C8A8",
+  "tipo": "cultura",
+  "gen": 6,
+  "parents": [
+   "gamuza",
+   "armino"
+  ],
+  "receta": "calculada",
+  "de": 2.4,
+  "cert": "doc",
+  "nombre": "Del francés beige, que designaba la lana natural, sin blanquear ni teñir.",
+  "historia": "Como nombre de color en inglés aparece en 1887.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Beige",
+    "https://en.wikipedia.org/wiki/Beige"
+   ]
+  ]
+ },
+ {
+  "id": "verde-botella",
+  "name": "Verde botella",
+  "fam": "verdes",
+  "hex": "#006A4E",
+  "tipo": "cultura",
+  "gen": 5,
+  "parents": [
+   "antracita",
+   "jade"
+  ],
+  "receta": "calculada",
+  "de": 3,
+  "cert": "doc",
+  "nombre": "Por el vidrio verde de las botellas.",
+  "historia": "Bottle green aparece como nombre de color en inglés en 1816.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Bottle green",
+    "https://en.wikipedia.org/wiki/Bottle_green"
+   ]
+  ]
+ },
+ {
+  "id": "pavo-real",
+  "name": "Pavo real",
+  "fam": "azules",
+  "hex": "#005F69",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "azul-delft",
+   "verde-botella"
+  ],
+  "receta": "calculada",
+  "de": 1.3,
+  "cert": "doc",
+  "nombre": "Por las plumas del pavo real.",
+  "historia": "Su pigmento es marrón: el azul y el verde salen de la estructura microscópica de la pluma. Robert Hooke lo observó al microscopio en 1665 y Newton lo explicó en 1704.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Structural coloration",
+    "https://en.wikipedia.org/wiki/Structural_coloration"
+   ]
+  ]
+ },
+ {
+  "id": "calabaza",
+  "name": "Calabaza",
+  "fam": "naranjas",
+  "hex": "#FF7518",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "mandarina",
+   "coral"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Quizá de origen prerromano, según la RAE.",
+  "historia": "La tradición de vaciar calabazas viene de Irlanda, donde se tallaban nabos. En América se pasó a la calabaza, más grande y fácil de tallar.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · calabaza",
+    "https://dle.rae.es/calabaza"
+   ],
+   [
+    "Wikipedia · Pumpkin",
+    "https://en.wikipedia.org/wiki/Pumpkin"
+   ]
+  ]
+ },
+ {
+  "id": "bistre",
+  "name": "Bistre",
+  "fam": "marrones",
+  "hex": "#3D2B1F",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "negro",
+   "cachu"
+  ],
+  "receta": "calculada",
+  "de": 1.9,
+  "cert": "doc",
+  "nombre": "Pigmento de hollín de madera.",
+  "historia": "Se quemaba madera de haya, se recogía el hollín y se hervía con agua. Muchos viejos maestros lo usaron como tinta para sus dibujos a la aguada.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Bistre",
+    "https://en.wikipedia.org/wiki/Bistre"
+   ]
+  ]
+ },
+ {
+  "id": "sepia",
+  "name": "Sepia",
+  "fam": "marrones",
+  "hex": "#704214",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "realgar",
+   "bistre"
+  ],
+  "receta": "calculada",
+  "de": 2.3,
+  "cert": "doc",
+  "nombre": "Del latín sepia, y este del griego sēpía, la sepia.",
+  "historia": "El pigmento se sacaba de la bolsa de tinta del animal. El virado al sepia es un proceso químico que vuelve marrones las fotos en blanco y negro, y por eso asociamos este color a las fotos antiguas.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · sepia",
+    "https://dle.rae.es/sepia"
+   ],
+   [
+    "Wikipedia · Sepia (color)",
+    "https://en.wikipedia.org/wiki/Sepia_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "rojo-cadmio",
+  "name": "Rojo cadmio",
+  "fam": "rojos",
+  "hex": "#E30022",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "rojo-garibaldi",
+   "amapola"
+  ],
+  "receta": "calculada",
+  "de": 3.1,
+  "cert": "doc",
+  "nombre": "Por el cadmio, el metal que da el color.",
+  "historia": "El cadmio se descubrió en 1817 y enseguida se vio su potencial como pigmento, aunque no se extrajo a gran escala hasta la década de 1840. Pintores como Van Gogh y Monet usaron pigmentos de cadmio.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cadmium pigments",
+    "https://en.wikipedia.org/wiki/Cadmium_pigments"
+   ]
+  ]
+ },
+ {
+  "id": "topacio",
+  "name": "Topacio",
+  "fam": "amarillos",
+  "hex": "#FFC87C",
+  "tipo": "gema/mineral",
+  "gen": 6,
+  "parents": [
+   "naranja-cadmio",
+   "blanco-de-titanio"
+  ],
+  "receta": "calculada",
+  "de": 2.7,
+  "cert": "doc",
+  "nombre": "Probablemente del griego Topazios, una isla del mar Rojo que Plinio consideraba legendaria. Otra hipótesis lo relaciona con el sánscrito tapas, «calor».",
+  "historia": "El «topacio» de la Antigüedad era otra piedra amarilla, probablemente crisolita (peridoto). El nombre no se aplicó al mineral actual hasta 1737.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Topaz",
+    "https://en.wikipedia.org/wiki/Topaz"
+   ]
+  ]
+ },
+ {
+  "id": "melocoton",
+  "name": "Melocotón",
+  "fam": "naranjas",
+  "hex": "#FFCBA4",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "rosa-te",
+   "topacio"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del latín malum cotonium, «membrillo».",
+  "historia": "Según la RAE, el nombre se explica porque el melocotonero se injerta en el membrillo para obtener las mejores variedades.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · melocotón",
+    "https://dle.rae.es/melocot%C3%B3n"
+   ]
+  ]
+ },
+ {
+  "id": "salvia",
+  "name": "Salvia",
+  "fam": "verdes",
+  "hex": "#9CAF88",
+  "tipo": "natural",
+  "gen": 8,
+  "parents": [
+   "viridiana",
+   "melocoton"
+  ],
+  "receta": "calculada",
+  "de": 1.7,
+  "cert": "doc",
+  "nombre": "Del latín salvia. Plinio cuenta que así la llamaban los romanos; a veces se la llamaba salvatrix, «la salvadora».",
+  "historia": "Tuvo gran fama medicinal durante toda la Edad Media, con muchos refranes sobre su poder curativo.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · salvia",
+    "https://dle.rae.es/salvia"
+   ],
+   [
+    "Wikipedia · Salvia officinalis",
+    "https://en.wikipedia.org/wiki/Salvia_officinalis"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-cromo",
+  "name": "Amarillo cromo",
+  "fam": "amarillos",
+  "hex": "#FFA700",
+  "tipo": "pigmento",
+  "gen": 7,
+  "parents": [
+   "mandarina",
+   "topacio"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "Por el cromo, que identificó el químico francés Vauquelin estudiando la crocoíta.",
+  "historia": "Es cromato de plomo. Los estudios de los Girasoles de Van Gogh muestran que sus amarillos de cromo se están oscureciendo y volviendo marrones.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Chrome yellow",
+    "https://en.wikipedia.org/wiki/Chrome_yellow"
+   ]
+  ]
+ },
+ {
+  "id": "champan",
+  "name": "Champán",
+  "fam": "amarillos",
+  "hex": "#F7E7CE",
+  "tipo": "lugar",
+  "gen": 5,
+  "parents": [
+   "marfil",
+   "perla"
+  ],
+  "receta": "calculada",
+  "de": 3.2,
+  "cert": "doc",
+  "nombre": "Por el color del vino espumoso de Champaña.",
+  "historia": "El primer uso de champagne como nombre de color en inglés es de 1915.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Champagne (color)",
+    "https://en.wikipedia.org/wiki/Champagne_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "paja",
+  "name": "Paja",
+  "fam": "amarillos",
+  "hex": "#E4D96F",
+  "tipo": "natural",
+  "gen": 6,
+  "parents": [
+   "peridoto",
+   "champan"
+  ],
+  "receta": "calculada",
+  "de": 2.8,
+  "cert": "doc",
+  "nombre": "Por el color de la paja. En latín ya existía stramineus con ese sentido.",
+  "historia": "El primer uso de straw como nombre de color en inglés es de 1589.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Straw (colour)",
+    "https://en.wikipedia.org/wiki/Straw_(colour)"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-uranio",
+  "name": "Amarillo uranio",
+  "fam": "amarillos",
+  "hex": "#D1E231",
+  "tipo": "gema/mineral",
+  "gen": 3,
+  "parents": [
+   "amarillo",
+   "celadon"
+  ],
+  "receta": "calculada",
+  "de": 3.6,
+  "cert": "doc",
+  "nombre": "Por el vidrio de uranio.",
+  "historia": "Brilla en verde con luz ultravioleta. Estuvo de moda entre 1880 y 1920 y en los años treinta le llamaron «vidrio vaselina». Algunas piezas dan lectura en un contador Geiger, pero se consideran inofensivas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Uranium glass",
+    "https://en.wikipedia.org/wiki/Uranium_glass"
+   ]
+  ]
+ },
+ {
+  "id": "citrino",
+  "name": "Citrino",
+  "fam": "amarillos",
+  "hex": "#E4D00A",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "amarillo",
+   "amarillo-uranio"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Del latín citrus, a través del francés citrin, «limón».",
+  "historia": "El citrino natural es raro: casi todo el que se vende es amatista calentada.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Citrine (quartz)",
+    "https://en.wikipedia.org/wiki/Citrine_(quartz)"
+   ]
+  ]
+ },
+ {
+  "id": "malaquita",
+  "name": "Malaquita",
+  "fam": "verdes",
+  "hex": "#0BDA51",
+  "tipo": "gema/mineral",
+  "gen": 4,
+  "parents": [
+   "jade",
+   "amarillo-uranio"
+  ],
+  "receta": "calculada",
+  "de": 3.9,
+  "cert": "doc",
+  "nombre": "Del francés malachite, del griego molochites lithos, «piedra verde malva», por el color de las hojas de malva.",
+  "historia": "En el antiguo Egipto se molía para hacer pintura de ojos, también en los ritos funerarios. El Hermitage de San Petersburgo tiene una Sala de Malaquita con un jarrón enorme.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · malaquita",
+    "https://dle.rae.es/malaquita"
+   ],
+   [
+    "Wikipedia · Malachite",
+    "https://en.wikipedia.org/wiki/Malachite"
+   ]
+  ]
+ },
+ {
+  "id": "esmeralda",
+  "name": "Esmeralda",
+  "fam": "verdes",
+  "hex": "#50C878",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "glauco",
+   "malaquita"
+  ],
+  "receta": "calculada",
+  "de": 0.7,
+  "cert": "doc",
+  "nombre": "Del francés antiguo esmeralde, del latín smaragdus y del griego smáragdos, «gema verde».",
+  "historia": "En Egipto se extraía desde hacia el 1500 a. C. en el monte Smaragdus. Colombia, con minas como Muzo, ha sido históricamente el mayor productor del mundo. Como nombre de color en inglés aparece en 1598.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · esmeralda",
+    "https://dle.rae.es/esmeralda"
+   ],
+   [
+    "Wikipedia · Emerald",
+    "https://en.wikipedia.org/wiki/Emerald"
+   ],
+   [
+    "Wikipedia · Moss green",
+    "https://en.wikipedia.org/wiki/Moss_green"
+   ]
+  ]
+ },
+ {
+  "id": "verde-paris",
+  "name": "Verde París",
+  "fam": "verdes",
+  "hex": "#50D27A",
+  "tipo": "pigmento",
+  "gen": 5,
+  "parents": [
+   "azul-cambridge",
+   "malaquita"
+  ],
+  "receta": "calculada",
+  "de": 1.2,
+  "cert": "doc",
+  "nombre": "Por su uso como veneno para ratas en las alcantarillas de París.",
+  "historia": "Es acetoarsenito de cobre. Fue de los primeros insecticidas, contra el escarabajo de la patata. Monet y Gauguin apreciaban su verde intenso, pero causó muchas intoxicaciones en las fábricas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Paris green",
+    "https://en.wikipedia.org/wiki/Paris_green"
+   ]
+  ]
+ },
+ {
+  "id": "tierra-verde",
+  "name": "Tierra verde",
+  "fam": "verdes",
+  "hex": "#6E8B5A",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "tabaco",
+   "verde-paris"
+  ],
+  "receta": "calculada",
+  "de": 2,
+  "cert": "doc",
+  "nombre": "En francés, terre verte: una tierra verde de celadonita y glauconita.",
+  "historia": "Los romanos la usaron en Pompeya. En la Edad Media se aplicaba debajo de las carnaciones para pintar la piel. Cennino Cennini decía que «los antiguos nunca doraban sino con este verde».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Green earth",
+    "https://en.wikipedia.org/wiki/Green_earth"
+   ]
+  ]
+ },
+ {
+  "id": "limon",
+  "name": "Limón",
+  "fam": "amarillos",
+  "hex": "#FFF44F",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "armino",
+   "citrino"
+  ],
+  "receta": "calculada",
+  "de": 3.4,
+  "cert": "doc",
+  "nombre": "Del árabe laymūn y el persa līmūn, un nombre general para los cítricos.",
+  "historia": "Llegó a Europa por el sur de Italia, como muy tarde en el siglo II, en tiempos de Roma.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Lemon",
+    "https://en.wikipedia.org/wiki/Lemon"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-imperial",
+  "name": "Amarillo imperial",
+  "fam": "amarillos",
+  "hex": "#FFD300",
+  "tipo": "cultura",
+  "gen": 7,
+  "parents": [
+   "amarillo-taxi",
+   "limon"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Por las túnicas de los emperadores chinos.",
+  "historia": "En China, el amarillo era símbolo de la majestad y el favor imperiales. El estandarte imperial de la dinastía Qing era amarillo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Imperial yellow",
+    "https://en.wikipedia.org/wiki/Imperial_yellow"
+   ]
+  ]
+ },
+ {
+  "id": "aureolina",
+  "name": "Aureolina",
+  "fam": "amarillos",
+  "hex": "#FDEE00",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "citrino",
+   "limon"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "También se llama amarillo de cobalto.",
+  "historia": "Lo obtuvo por primera vez Nikolaus Wolfgang Fischer en Breslavia en 1831. Edouard Saint-Evre lo sintetizó por su cuenta en 1851-1852 y lo introdujo como pigmento para artistas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Aureolin",
+    "https://en.wikipedia.org/wiki/Aureolin"
+   ]
+  ]
+ },
+ {
+  "id": "canario",
+  "name": "Canario",
+  "fam": "amarillos",
+  "hex": "#FFEF00",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "limon",
+   "aureolina"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Por el pájaro, que lleva el nombre de las islas Canarias, en latín canariae insulae, «islas de los perros».",
+  "historia": "El canario salvaje es verdoso. El amarillo de los canarios domésticos viene de una mutación que eliminó sus melaninas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Atlantic canary",
+    "https://en.wikipedia.org/wiki/Atlantic_canary"
+   ]
+  ]
+ },
+ {
+  "id": "amarillo-cadmio",
+  "name": "Amarillo cadmio",
+  "fam": "amarillos",
+  "hex": "#FFF600",
+  "tipo": "pigmento",
+  "gen": 8,
+  "parents": [
+   "limon",
+   "canario"
+  ],
+  "receta": "calculada",
+  "de": 1.6,
+  "cert": "doc",
+  "nombre": "Por el sulfuro de cadmio.",
+  "historia": "El cadmio se descubrió en 1817, pero hasta la década de 1840 no hubo bastante para fabricar pigmento. Fue el amarillo luminoso de los impresionistas.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cadmium yellow",
+    "https://en.wikipedia.org/wiki/Cadmium_yellow"
+   ],
+   [
+    "Wikipedia · Cadmium pigments",
+    "https://en.wikipedia.org/wiki/Cadmium_pigments"
+   ]
+  ]
+ },
+ {
+  "id": "caput-mortuum",
+  "name": "Caput mortuum",
+  "fam": "rojos",
+  "hex": "#592720",
+  "tipo": "pigmento",
+  "gen": 6,
+  "parents": [
+   "burdeos",
+   "pardo-van-dyck"
+  ],
+  "receta": "calculada",
+  "de": 3.2,
+  "cert": "doc",
+  "nombre": "«Cabeza muerta» en latín: el término alquímico para el residuo inútil que quedaba tras una operación.",
+  "historia": "Los alquimistas lo representaban con una calavera, símbolo de la decadencia. En la química del siglo XVIII también designaba restos rojizo-pardos de compuestos de hierro, y de ahí el pigmento.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Caput mortuum",
+    "https://en.wikipedia.org/wiki/Caput_mortuum"
+   ]
+  ]
+ },
+ {
+  "id": "verde-billar",
+  "name": "Verde billar",
+  "fam": "verdes",
+  "hex": "#0A6C3F",
+  "tipo": "cultura",
+  "gen": 7,
+  "parents": [
+   "oliva",
+   "pavo-real"
+  ],
+  "receta": "calculada",
+  "de": 2.8,
+  "cert": "doc",
+  "nombre": "Por el paño de las mesas de billar.",
+  "historia": "El paño es verde en homenaje a la hierba de los juegos al aire libre de los que nació el billar.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Billiard table",
+    "https://en.wikipedia.org/wiki/Billiard_table"
+   ]
+  ]
+ },
+ {
+  "id": "rosa-bebe",
+  "name": "Rosa bebé",
+  "fam": "rosas",
+  "hex": "#F4C2D7",
+  "tipo": "cultura",
+  "gen": 5,
+  "parents": [
+   "flamenco",
+   "armino"
+  ],
+  "receta": "calculada",
+  "de": 3.6,
+  "cert": "disc",
+  "nombre": "Por la ropa de bebé.",
+  "historia": "La asociación del rosa con las niñas y el azul con los niños se conocía desde finales del siglo XIX, pero en Estados Unidos no se impuso hasta los años cuarenta y cincuenta.",
+  "nota": {
+   "cert": "disc",
+   "t": "Se repite que antes era al revés, rosa para niños. La historiadora Paoletti no halló normas fijas hacia 1900, y Del Giudice no encontró pruebas de esa inversión antes de los años cuarenta."
+  },
+  "src": [
+   [
+    "Wikipedia · Gendered associations of pink and blue",
+    "https://en.wikipedia.org/wiki/Gendered_associations_of_pink_and_blue"
+   ]
+  ]
+ },
+ {
+  "id": "albaricoque",
+  "name": "Albaricoque",
+  "fam": "naranjas",
+  "hex": "#FBCEB1",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "topacio",
+   "rosa-bebe"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Del árabe al-barqūq, del griego bizantino, y en origen del latín praecoquus, «precoz», porque madura pronto.",
+  "historia": "El inglés apricot tomó la palabra a través del francés y del español albaricoque.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Apricot",
+    "https://en.wikipedia.org/wiki/Apricot"
+   ]
+  ]
+ },
+ {
+  "id": "tinta-ferrogalica",
+  "name": "Tinta ferrogálica",
+  "fam": "negros",
+  "hex": "#2A2420",
+  "tipo": "cultura",
+  "gen": 7,
+  "parents": [
+   "negro",
+   "bistre"
+  ],
+  "receta": "calculada",
+  "de": 2.1,
+  "cert": "doc",
+  "nombre": "De hierro y agallas de roble.",
+  "historia": "Fue la tinta estándar de Europa del siglo V al XIX: con ella se escribieron el Códice Sinaítico y muchos dibujos de Leonardo. Es ácida y con el tiempo puede comerse el papel.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Iron gall ink",
+    "https://en.wikipedia.org/wiki/Iron_gall_ink"
+   ]
+  ]
+ },
+ {
+  "id": "onice",
+  "name": "Ónice",
+  "fam": "negros",
+  "hex": "#2F2F2F",
+  "tipo": "gema/mineral",
+  "gen": 8,
+  "parents": [
+   "antracita",
+   "tinta-ferrogalica"
+  ],
+  "receta": "calculada",
+  "de": 0.6,
+  "cert": "doc",
+  "nombre": "Del latín onyx, y este del griego ónyx, «garra» o «uña».",
+  "historia": "La palabra inglesa nail, «uña», es pariente de la griega.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Onyx",
+    "https://en.wikipedia.org/wiki/Onyx"
+   ]
+  ]
+ },
+ {
+  "id": "negro-de-hueso",
+  "name": "Negro de hueso",
+  "fam": "negros",
+  "hex": "#232020",
+  "tipo": "pigmento",
+  "gen": 8,
+  "parents": [
+   "negro",
+   "tinta-ferrogalica"
+  ],
+  "receta": "calculada",
+  "de": 0.9,
+  "cert": "doc",
+  "nombre": "Huesos calcinados. También se llama negro marfil.",
+  "historia": "Lo usaron Rembrandt, Velázquez, Manet y Picasso. Durante mucho tiempo también se empleó para refinar el azúcar.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Bone char",
+    "https://en.wikipedia.org/wiki/Bone_char"
+   ]
+  ]
+ },
+ {
+  "id": "negro-marte",
+  "name": "Negro Marte",
+  "fam": "negros",
+  "hex": "#262323",
+  "tipo": "pigmento",
+  "gen": 9,
+  "parents": [
+   "tinta-ferrogalica",
+   "negro-de-hueso"
+  ],
+  "receta": "calculada",
+  "de": 1.5,
+  "cert": "doc",
+  "nombre": "Por Marte, dios romano de la guerra y patrón del hierro.",
+  "historia": "Es un pigmento de óxido de hierro creado en el siglo XX.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Mars black",
+    "https://en.wikipedia.org/wiki/Mars_black"
+   ]
+  ]
+ },
+ {
+  "id": "azabache",
+  "name": "Azabache",
+  "fam": "negros",
+  "hex": "#242124",
+  "tipo": "gema/mineral",
+  "gen": 10,
+  "parents": [
+   "negro-de-hueso",
+   "negro-marte"
+  ],
+  "receta": "calculada",
+  "de": 1.4,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico azzabáǧ, del árabe clásico sabaǧ y del pelvi šabag.",
+  "historia": "A finales de la Edad Media Santiago de Compostela era un gran centro de amuletos de azabache para los peregrinos, hechos con piedra de Asturias. En la Inglaterra victoriana el azabache de Whitby se puso de moda como joya de luto.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · azabache",
+    "https://dle.rae.es/azabache"
+   ],
+   [
+    "Wikipedia · Jet (gemstone)",
+    "https://en.wikipedia.org/wiki/Jet_(gemstone)"
+   ]
+  ]
+ },
+ {
+  "id": "lavanda",
+  "name": "Lavanda",
+  "fam": "violetas",
+  "hex": "#B9A6E3",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "armino",
+   "amatista"
+  ],
+  "receta": "calculada",
+  "de": 3.9,
+  "cert": "doc",
+  "nombre": "Del francés lavande o el italiano lavanda. Se suele explicar por el latín lavare, «lavar», por las infusiones que se usaban en el baño, pero no es seguro.",
+  "historia": "Sus flores secas se meten en saquitos entre la ropa guardada para perfumarla y espantar a las polillas.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · lavanda",
+    "https://dle.rae.es/lavanda"
+   ],
+   [
+    "Wikipedia · Lavandula",
+    "https://en.wikipedia.org/wiki/Lavandula"
+   ]
+  ]
+ },
+ {
+  "id": "azul-oxford",
+  "name": "Azul Oxford",
+  "fam": "azules",
+  "hex": "#002147",
+  "tipo": "cultura",
+  "gen": 5,
+  "parents": [
+   "negro",
+   "esmalte"
+  ],
+  "receta": "calculada",
+  "de": 3.4,
+  "cert": "doc",
+  "nombre": "Por la Universidad de Oxford.",
+  "historia": "Lo eligieron Charles Wordsworth y Thomas Garnier, remeros de la primera regata contra Cambridge en 1829, basándose en la camiseta de Christ Church. De ahí el apodo de los «azules oscuros».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Oxford Blue (colour)",
+    "https://en.wikipedia.org/wiki/Oxford_Blue_(colour)"
+   ]
+  ]
+ },
+ {
+  "id": "cian",
+  "name": "Cian",
+  "fam": "azules",
+  "hex": "#00B7EB",
+  "tipo": "cultura",
+  "gen": 4,
+  "parents": [
+   "celeste",
+   "ceruleo"
+  ],
+  "receta": "calculada",
+  "de": 4.6,
+  "cert": "doc",
+  "nombre": "Del griego kyanos, «esmalte azul oscuro, lapislázuli».",
+  "historia": "Es una de las cuatro tintas de la imprenta, junto a magenta, amarillo y negro. Como nombre de color en inglés aparece en 1879.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Cyan",
+    "https://en.wikipedia.org/wiki/Cyan"
+   ]
+  ]
+ },
+ {
+  "id": "menta",
+  "name": "Menta",
+  "fam": "verdes",
+  "hex": "#98FF98",
+  "tipo": "natural",
+  "gen": 5,
+  "parents": [
+   "blanco-de-espana",
+   "malaquita"
+  ],
+  "receta": "calculada",
+  "de": 4.5,
+  "cert": "doc",
+  "nombre": "Del latín mentha, y este del griego míntha.",
+  "historia": "Es una de las plantas aromáticas más antiguas en uso.",
+  "nota": {
+   "cert": "ley",
+   "t": "En el mito griego, Minta era una ninfa amada por Hades a la que Perséfone o Deméter convirtieron en planta."
+  },
+  "src": [
+   [
+    "Wikipedia · Mentha",
+    "https://en.wikipedia.org/wiki/Mentha"
+   ]
+  ]
+ },
+ {
+  "id": "lima",
+  "name": "Lima",
+  "fam": "verdes",
+  "hex": "#BFFF00",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "aureolina",
+   "menta"
+  ],
+  "receta": "calculada",
+  "de": 2.2,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico lima, y este del árabe līmah.",
+  "historia": "En el siglo XIX los marineros británicos tomaban cítricos, entre ellos lima, contra el escorbuto. De ahí el mote limey para los británicos.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · lima",
+    "https://dle.rae.es/lima"
+   ],
+   [
+    "Wikipedia · Lime (fruit)",
+    "https://en.wikipedia.org/wiki/Lime_(fruit)"
+   ]
+  ]
+ },
+ {
+  "id": "chartreuse",
+  "name": "Chartreuse",
+  "fam": "verdes",
+  "hex": "#DFFF00",
+  "tipo": "cultura",
+  "gen": 9,
+  "parents": [
+   "amarillo-cadmio",
+   "lima"
+  ],
+  "receta": "calculada",
+  "de": 1.1,
+  "cert": "doc",
+  "nombre": "Por el licor de los monjes cartujos de la Grande Chartreuse.",
+  "historia": "Lo elaboran desde 1737 con una receta ligada a un manuscrito de 1605. Lleva 130 plantas y la fórmula solo la conocen unos pocos monjes. Como nombre de color aparece en 1884.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Chartreuse (liqueur)",
+    "https://en.wikipedia.org/wiki/Chartreuse_(liqueur)"
+   ]
+  ]
+ },
+ {
+  "id": "azufre",
+  "name": "Azufre",
+  "fam": "amarillos",
+  "hex": "#EDFF21",
+  "tipo": "gema/mineral",
+  "gen": 8,
+  "parents": [
+   "limon",
+   "lima"
+  ],
+  "receta": "calculada",
+  "de": 1.8,
+  "cert": "doc",
+  "nombre": "Del latín sulpur.",
+  "historia": "En la Antigüedad se quemaba para purificar las casas. En la Biblia, Sodoma y Gomorra caen bajo «azufre y fuego», y el Apocalipsis habla de un «lago de fuego y azufre»: por eso huele a infierno.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Sulfur",
+    "https://en.wikipedia.org/wiki/Sulfur"
+   ]
+  ]
+ },
+ {
+  "id": "palo-de-campeche",
+  "name": "Palo de Campeche",
+  "fam": "negros",
+  "hex": "#2B1B2E",
+  "tipo": "tinte",
+  "gen": 4,
+  "parents": [
+   "negro",
+   "nazareno"
+  ],
+  "receta": "calculada",
+  "de": 4.5,
+  "cert": "doc",
+  "nombre": "Por Campeche, en México. Su nombre científico es Haematoxylum campechianum.",
+  "historia": "Entre los siglos XVII y XIX se exportaba a Europa como valioso tinte. Belice nació de campamentos ingleses de corta de palo de Campeche, cuyos leñadores eran a menudo antiguos marineros y piratas. Hoy da la hematoxilina, un tinte de laboratorio.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Haematoxylum campechianum",
+    "https://en.wikipedia.org/wiki/Haematoxylum_campechianum"
+   ]
+  ]
+ },
+ {
+  "id": "negro-de-vid",
+  "name": "Negro de vid",
+  "fam": "negros",
+  "hex": "#2B2A26",
+  "tipo": "pigmento",
+  "gen": 9,
+  "parents": [
+   "onice",
+   "negro-de-hueso"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Carbón de sarmientos de vid quemados.",
+  "historia": "Es un nombre del siglo XIX. Daba un negro más débil que el de humo o el de marfil, pero aguanta muy bien la luz.",
+  "nota": null,
+  "src": [
+   [
+    "CAMEO · Vine black",
+    "https://cameo.mfa.org/wiki/Vine_black"
+   ]
+  ]
+ },
+ {
+  "id": "berenjena",
+  "name": "Berenjena",
+  "fam": "violetas",
+  "hex": "#3D0734",
+  "tipo": "natural",
+  "gen": 2,
+  "parents": [
+   "granate",
+   "marino"
+  ],
+  "receta": "calculada",
+  "de": 6.6,
+  "cert": "doc",
+  "nombre": "Del árabe hispánico baḏinǧána, del árabe clásico y del persa bātingān.",
+  "historia": "Llegó a la península con los árabes, y su nombre hizo el mismo camino.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · berenjena",
+    "https://dle.rae.es/berenjena"
+   ]
+  ]
+ },
+ {
+  "id": "isabelino",
+  "name": "Isabelino",
+  "fam": "blancos",
+  "hex": "#F4F0CC",
+  "tipo": "persona",
+  "gen": 3,
+  "parents": [
+   "marfil",
+   "alabastro"
+  ],
+  "receta": "calculada",
+  "de": 6.1,
+  "cert": "doc",
+  "nombre": "Del inglés isabella. El primer uso registrado es de 1600, en un inventario del guardarropa de Isabel I de Inglaterra: «un vestido de satén color Isabella».",
+  "historia": "Es un blanco amarillento grisáceo, como de tela gastada.",
+  "nota": {
+   "cert": "ley",
+   "t": "La leyenda dice que la infanta Isabel Clara Eugenia juró no cambiarse de camisa hasta que acabara el sitio de Ostende (1601-1604), o Isabel la Católica hasta tomar Granada. Las fechas lo desmienten: la palabra ya existía antes del sitio."
+  },
+  "src": [
+   [
+    "Wikipedia · Isabelline (colour)",
+    "https://en.wikipedia.org/wiki/Isabelline_(colour)"
+   ]
+  ]
+ },
+ {
+  "id": "crema",
+  "name": "Crema",
+  "fam": "blancos",
+  "hex": "#FFFDD0",
+  "tipo": "natural",
+  "gen": 4,
+  "parents": [
+   "marfil",
+   "isabelino"
+  ],
+  "receta": "calculada",
+  "de": 4.9,
+  "cert": "doc",
+  "nombre": "Del francés crème, la nata.",
+  "historia": "Es el color de la nata de la leche, un blanco con un toque amarillo.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · crema",
+    "https://dle.rae.es/crema"
+   ]
+  ]
+ },
+ {
+  "id": "rosa-schiaparelli",
+  "name": "Rosa Schiaparelli",
+  "fam": "rosas",
+  "hex": "#FC0FC0",
+  "tipo": "persona",
+  "gen": 6,
+  "parents": [
+   "glicinia",
+   "rosa-mexicano"
+  ],
+  "receta": "calculada",
+  "de": 5.2,
+  "cert": "doc",
+  "nombre": "Por la diseñadora surrealista Elsa Schiaparelli. En inglés se llama shocking pink.",
+  "historia": "Viene de su perfume Shocking (1937): era el rosa de las letras de la caja. Se inspiró en un diamante rosa de Cartier, el Tête de Bélier, de una de sus mejores clientas, Daisy Fellowes.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Shocking pink",
+    "https://en.wikipedia.org/wiki/Shocking_pink"
+   ]
+  ]
+ },
+ {
+  "id": "ebano",
+  "name": "Ébano",
+  "fam": "negros",
+  "hex": "#26201A",
+  "tipo": "natural",
+  "gen": 10,
+  "parents": [
+   "tinta-ferrogalica",
+   "negro-de-vid"
+  ],
+  "receta": "calculada",
+  "de": 2.7,
+  "cert": "doc",
+  "nombre": "Del latín ebenus, del griego ébenos, palabra de origen nubio. En egipcio antiguo era hbny.",
+  "historia": "Algunas especies son tan densas que se hunden en el agua. Con él se hacen las teclas negras de pianos y clavecines.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · ébano",
+    "https://dle.rae.es/%C3%A9bano"
+   ],
+   [
+    "Wikipedia · Ebony",
+    "https://en.wikipedia.org/wiki/Ebony"
+   ]
+  ]
+ },
+ {
+  "id": "opalo",
+  "name": "Ópalo",
+  "fam": "blancos",
+  "hex": "#E8EEF0",
+  "tipo": "gema/mineral",
+  "gen": 6,
+  "parents": [
+   "plata",
+   "blanco-de-titanio"
+  ],
+  "receta": "calculada",
+  "de": 4.7,
+  "cert": "doc",
+  "nombre": "Probablemente del sánscrito upala, «piedra preciosa», aunque se discute.",
+  "historia": "Sus destellos de colores salen de esferas de sílice ordenadas que difractan la luz. Se suele decir que Australia produce el 95-97 % del ópalo precioso del mundo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Opal",
+    "https://en.wikipedia.org/wiki/Opal"
+   ]
+  ]
+ },
+ {
+  "id": "azul-alicia",
+  "name": "Azul Alicia",
+  "fam": "azules",
+  "hex": "#F0F8FF",
+  "tipo": "persona",
+  "gen": 7,
+  "parents": [
+   "blanco-de-zinc",
+   "opalo"
+  ],
+  "receta": "calculada",
+  "de": 4,
+  "cert": "doc",
+  "nombre": "Por Alice Roosevelt Longworth, hija del presidente Theodore Roosevelt; era su color favorito.",
+  "historia": "En 1919 el musical Irene lanzó la canción Alice Blue Gown. La obra hizo 670 funciones y mantuvo un récord durante 18 años.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Alice blue",
+    "https://en.wikipedia.org/wiki/Alice_blue"
+   ]
+  ]
+ },
+ {
+  "id": "obsidiana",
+  "name": "Obsidiana",
+  "fam": "negros",
+  "hex": "#1F1D24",
+  "tipo": "gema/mineral",
+  "gen": 5,
+  "parents": [
+   "antracita",
+   "palo-de-campeche"
+  ],
+  "receta": "calculada",
+  "de": 6,
+  "cert": "doc",
+  "nombre": "Del latín lapis obsidianus: según Plinio, la descubrió en Etiopía un romano llamado Obsidio.",
+  "historia": "Es vidrio volcánico y se rompe en filos cortantes. Los aztecas la usaban en las hojas de sus espadas macuahuitl y en espejos rituales ligados a Tezcatlipoca, el «espejo humeante».",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Obsidian",
+    "https://en.wikipedia.org/wiki/Obsidian"
+   ]
+  ]
+ },
+ {
+  "id": "negro-de-humo",
+  "name": "Negro de humo",
+  "fam": "negros",
+  "hex": "#1C1C1C",
+  "tipo": "pigmento",
+  "gen": 8,
+  "parents": [
+   "tinta-ferrogalica",
+   "obsidiana"
+  ],
+  "receta": "calculada",
+  "de": 3,
+  "cert": "doc",
+  "nombre": "Hollín de lámparas de aceite.",
+  "historia": "Los negros de carbón se usan como pigmento desde la prehistoria. Rembrandt y Vermeer pintaron con ellos.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Carbon black",
+    "https://en.wikipedia.org/wiki/Carbon_black"
+   ]
+  ]
+ },
+ {
+  "id": "luto",
+  "name": "Luto",
+  "fam": "negros",
+  "hex": "#141416",
+  "tipo": "cultura",
+  "gen": 9,
+  "parents": [
+   "obsidiana",
+   "negro-de-humo"
+  ],
+  "receta": "calculada",
+  "de": 2.9,
+  "cert": "doc",
+  "nombre": "Del latín luctus, «dolor». La RAE lo define también como el vestido negro que se lleva por la muerte de alguien.",
+  "historia": "El duelo largo y visible de la reina Victoria tras la muerte del príncipe Alberto en 1861 marcó las costumbres de luto de toda una época.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · luto",
+    "https://dle.rae.es/luto"
+   ],
+   [
+    "Wikipedia · Mourning",
+    "https://en.wikipedia.org/wiki/Mourning"
+   ]
+  ]
+ },
+ {
+  "id": "verde-lincoln",
+  "name": "Verde Lincoln",
+  "fam": "verdes",
+  "hex": "#195905",
+  "tipo": "lugar",
+  "gen": 3,
+  "parents": [
+   "negro",
+   "scheele"
+  ],
+  "receta": "calculada",
+  "de": 6.1,
+  "cert": "doc",
+  "nombre": "Por Lincoln, gran ciudad pañera de la Inglaterra medieval.",
+  "historia": "La lana se teñía primero de azul con glasto y luego de amarillo con gualda. El poeta Michael Drayton escribió que Lincoln teñía el mejor verde de Inglaterra. A finales del XVI pasó de moda.",
+  "nota": {
+   "cert": "ley",
+   "t": "Se asocia a Robin Hood y al bosque de Sherwood. Es tradición de baladas y leyendas, no un hecho histórico."
+  },
+  "src": [
+   [
+    "Wikipedia · Lincoln green",
+    "https://en.wikipedia.org/wiki/Lincoln_green"
+   ]
+  ]
+ },
+ {
+  "id": "violeta",
+  "name": "Violeta",
+  "fam": "violetas",
+  "hex": "#8F00FF",
+  "tipo": "natural",
+  "gen": 7,
+  "parents": [
+   "azurita",
+   "rosa-schiaparelli"
+  ],
+  "receta": "calculada",
+  "de": 5.5,
+  "cert": "doc",
+  "nombre": "Diminutivo de viola, por la flor.",
+  "historia": "Es el color del extremo del espectro visible, entre unos 380 y 435 nanómetros. Justo detrás empieza el ultravioleta, que ya no vemos.",
+  "nota": null,
+  "src": [
+   [
+    "RAE · violeta",
+    "https://dle.rae.es/violeta"
+   ],
+   [
+    "Wikipedia · Violet (color)",
+    "https://en.wikipedia.org/wiki/Violet_(color)"
+   ]
+  ]
+ },
+ {
+  "id": "vantablack",
+  "name": "Vantablack",
+  "fam": "negros",
+  "hex": "#050505",
+  "tipo": "cultura",
+  "gen": 10,
+  "parents": [
+   "negro-de-humo",
+   "luto"
+  ],
+  "receta": "calculada",
+  "de": 4.2,
+  "cert": "doc",
+  "nombre": "De VANTA, siglas en inglés de «matrices de nanotubos alineados verticalmente».",
+  "historia": "Surrey NanoSystems lo presentó en 2014: absorbe hasta el 99,965 % de la luz. En 2016 cedió en exclusiva su uso artístico a Anish Kapoor, lo que enfadó a otros artistas y acabó en una «pelea» con el rosa más rosa de Stuart Semple.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Vantablack",
+    "https://en.wikipedia.org/wiki/Vantablack"
+   ]
+  ]
+ },
+ {
+  "id": "heliotropo",
+  "name": "Heliotropo",
+  "fam": "violetas",
+  "hex": "#DF73FF",
+  "tipo": "natural",
+  "gen": 8,
+  "parents": [
+   "blanco-de-zinc",
+   "violeta"
+  ],
+  "receta": "calculada",
+  "de": 5.9,
+  "cert": "doc",
+  "nombre": "Del griego helios, «sol», y trepein, «girar».",
+  "historia": "Se creía que sus flores giraban hacia el sol. En medicina, la erupción violácea de la dermatomiositis se llama «eritema en heliotropo» por su parecido con la planta.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Heliotropium",
+    "https://en.wikipedia.org/wiki/Heliotropium"
+   ]
+  ]
+ },
+ {
+  "id": "aguamarina",
+  "name": "Aguamarina",
+  "fam": "azules",
+  "hex": "#7FFFD4",
+  "tipo": "gema/mineral",
+  "gen": 6,
+  "parents": [
+   "cian",
+   "menta"
+  ],
+  "receta": "calculada",
+  "de": 7.5,
+  "cert": "doc",
+  "nombre": "Del latín aqua marina, «agua de mar».",
+  "historia": "Es un berilo, de la misma familia que la esmeralda. La aguamarina Dom Pedro, de 10.363 quilates, es la mayor tallada del mundo.",
+  "nota": null,
+  "src": [
+   [
+    "Wikipedia · Aquamarine (gem)",
+    "https://en.wikipedia.org/wiki/Aquamarine_(gem)"
+   ]
+  ]
+ }
+]
