@@ -11,22 +11,35 @@ export function resize(){const r=stage.getBoundingClientRect();st.W=r.width;st.H
  st.S=clamp(Math.min(st.W,st.H)/680,.6,1.1);}
 export function makeStars(){st.stars=[];for(let i=0;i<160;i++)st.stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.1+.2,ph:Math.random()*TAU,sp:.5+Math.random()*1.5});}
 
-/* ---------- Simulación ---------- */
+/* ---------- Simulación ----------
+   Fuerzas: repulsión entre vecinas, muelle hacia los padres y atracción hacia la zona de la
+   familia. Desde la v1.5 (CB-03) la repulsión sólo alcanza a las bolas cercanas: si cada bola
+   empuja a todas, con muchas en poco sitio la suma las saca contra los bordes. */
+// Zona de cada familia: [ángulo en grados, distancia al centro en fracciones de R]. Los tonos
+// en círculo, como en la gama; blancos arriba, negros abajo y grises en el centro.
+const ZONA={rojos:[0,1],marrones:[25,.55],naranjas:[40,1],amarillos:[80,1],verdes:[140,1],azules:[215,1],violetas:[265,1],rosas:[320,1],blancos:[270,.35],grises:[0,0],negros:[90,.35]};
 function degree(id){let c=BY[id].p?2:0;for(const o of order){const p=BY[o].p;if(p&&(p[0]===id||p[1]===id))c++;}return c;}
-const crowd=()=>clamp(1.15-order.length/260,.55,1);
+// Cuánto se encoge todo: por el número de bolas y por el sitio que hay (área por bola).
+const crowd=()=>Math.min(clamp(1.15-order.length/260,.55,1),clamp(Math.sqrt(st.W*st.H/(Math.max(order.length,1)*2600)),.42,1));
 const targetR=n=>(10+Math.min(degree(n.id),9)*1.8)*st.S*crowd();
 const birthScale=n=>{const t=st.now-n.born;if(t<0)return 0;return reduce?1:elastic(t/.7);};
 export function hit(x,y,exclude){let best=null,bd=1e9;for(const n of nodes.values()){if(n.id===exclude||st.now<n.born)continue;const d=Math.hypot(n.x-x,n.y-y);const lim=Math.max(n.r*1.5,24*st.S);if(d<lim&&d<bd){bd=d;best=n;}}return best;}
 export function step(dt){const S=st.S,f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.values()];
  for(const n of arr){n.pulse=Math.max(0,n.pulse-dt*1.5);n.shake=Math.max(0,n.shake-dt);const tr=targetR(n);n.r=n.r?n.r+(tr-n.r)*Math.min(1,dt*8):tr;}
  // La bola que se arrastra (fixed) no repele ni es repelida: si no, el objetivo «huye» y no hay forma de soltarla encima.
+ const corte=3.2*Math.sqrt(st.W*st.H/Math.max(arr.length,1)); // alcance de la repulsión: unas 3 distancias típicas
  for(let i=0;i<arr.length;i++)for(let j=i+1;j<arr.length;j++){const a=arr[i],b=arr[j];if(a.fixed||b.fixed)continue;let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy;
-  if(d2<1){dx=Math.random()-.5;dy=Math.random()-.5;d2=1;}const d=Math.sqrt(d2);let fr=1500*S*S*crowd()*crowd()/d2;const minD=a.r+b.r+10*S*crowd();if(d<minD)fr+=(minD-d)*.06;
+  if(d2<1){dx=Math.random()-.5;dy=Math.random()-.5;d2=1;}const d=Math.sqrt(d2);if(d>corte)continue;let fr=1500*S*S*crowd()*crowd()/d2*(1-d/corte);const minD=a.r+b.r+10*S*crowd();if(d<minD)fr+=(minD-d)*.06;
   const ux=dx/d,uy=dy/d;a.vx-=ux*fr*f;a.vy-=uy*fr*f;b.vx+=ux*fr*f;b.vy+=uy*fr*f;}
  for(const n of arr){const p=BY[n.id].p;if(!p)continue;for(const pid of p){const q=nodes.get(pid);if(!q)continue;const dx=n.x-q.x,dy=n.y-q.y,d=Math.hypot(dx,dy)||1;
   const k=(d-88*S*crowd())*.0032*f,ux=dx/d,uy=dy/d;n.vx-=ux*k;n.vy-=uy*k;q.vx+=ux*k*.4;q.vy+=uy*k*.4;}}
  const damp=Math.pow(.86,f);
- for(const n of arr){n.vx+=(cx-n.x)*.0009*f;n.vy+=(cy-n.y)*.0009*f;n.vx*=damp;n.vy*=damp;
+ const g=.00144/crowd(),R=Math.min(st.W,st.H)*.34,m=36*S;
+ for(const n of arr){const[ang,rf]=ZONA[BY[n.id].fam],a=ang*Math.PI/180;
+  n.vx+=(cx+Math.cos(a)*R*rf-n.x)*g*f;n.vy+=(cy+Math.sin(a)*R*rf-n.y)*g*f;
+  // Bordes blandos: cerca del borde, un empujón hacia dentro (el clamp de abajo queda de tope).
+  if(n.x<m)n.vx+=(m-n.x)*.03*f;if(n.x>st.W-m)n.vx-=(n.x-st.W+m)*.03*f;if(n.y<m)n.vy+=(m-n.y)*.03*f;if(n.y>st.H-m)n.vy-=(n.y-st.H+m)*.03*f;
+  n.vx*=damp;n.vy*=damp;
   if(!n.fixed){n.x+=n.vx*f;n.y+=n.vy*f;n.x=clamp(n.x,20,st.W-20);n.y=clamp(n.y,20,st.H-20);}}}
 
 /* ---------- Dibujo ---------- */
