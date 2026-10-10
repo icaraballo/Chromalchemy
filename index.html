@@ -5,34 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chromalchemy</title>
 <meta name="description" content="Descubre 246 colores reales mezclándolos, cada uno con su historia.">
+<!-- Tarjeta del enlace (LinkedIn, WhatsApp, X…): las URL de imagen tienen que ser absolutas. -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://icaraballo.github.io/Chromalchemy/">
+<meta property="og:title" content="Chromalchemy">
+<meta property="og:description" content="246 colores reales. Mézclalos y descubre su historia.">
+<meta property="og:image" content="https://icaraballo.github.io/Chromalchemy/img/tarjeta.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Chromalchemy: una constelación de colores unidos a los dos colores de los que salen.">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0a10">
+<link rel="icon" href="img/icono.svg" type="image/svg+xml">
+<link rel="icon" href="img/icono-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/icono-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=1.2">
+<link rel="stylesheet" href="css/styles.css?v=1.3">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/constellation.js": "./js/constellation.js?v=1.2",
-  "./js/data.js": "./js/data.js?v=1.2",
-  "./js/drag.js": "./js/drag.js?v=1.2",
-  "./js/effects.js": "./js/effects.js?v=1.2",
-  "./js/game.js": "./js/game.js?v=1.2",
-  "./js/lore.js": "./js/lore.js?v=1.2",
-  "./js/main.js": "./js/main.js?v=1.2",
-  "./js/palette.js": "./js/palette.js?v=1.2",
-  "./js/state.js": "./js/state.js?v=1.2",
-  "./js/ui.js": "./js/ui.js?v=1.2",
-  "./js/utils.js": "./js/utils.js?v=1.2",
-  "./js/wheel.js": "./js/wheel.js?v=1.2"
+  "./js/constellation.js": "./js/constellation.js?v=1.3",
+  "./js/data.js": "./js/data.js?v=1.3",
+  "./js/drag.js": "./js/drag.js?v=1.3",
+  "./js/effects.js": "./js/effects.js?v=1.3",
+  "./js/game.js": "./js/game.js?v=1.3",
+  "./js/lore.js": "./js/lore.js?v=1.3",
+  "./js/main.js": "./js/main.js?v=1.3",
+  "./js/palette.js": "./js/palette.js?v=1.3",
+  "./js/state.js": "./js/state.js?v=1.3",
+  "./js/ui.js": "./js/ui.js?v=1.3",
+  "./js/utils.js": "./js/utils.js?v=1.3",
+  "./js/wheel.js": "./js/wheel.js?v=1.3"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.2"></script>
+<script type="module" src="js/main.js?v=1.3"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.2</span></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.3</span></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
