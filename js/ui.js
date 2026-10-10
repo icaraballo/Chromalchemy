@@ -11,7 +11,9 @@ const toastEl=$('toast');
 
 /* ---------- Avisos ---------- */
 let toastT;
-export function toast(html,id,label){toastEl.innerHTML=`<span style="display:flex;gap:10px;align-items:center;min-width:0">${html}</span>`+(id?`<button type="button">${label}</button>`:'');
+// Un mensaje de texto suelto va en un solo <span>: si no, cada trozo («Ya tienes», la negrita, el punto) sería una columna del flex (CB-02).
+export function toast(html,id,label){const body=html.startsWith('<span')?html:`<span>${html}</span>`;
+ toastEl.innerHTML=`<span style="display:flex;gap:10px;align-items:center;min-width:0">${body}</span>`+(id?`<button type="button">${label}</button>`:'');
  toastEl.hidden=false;toastEl.classList.remove('show');void toastEl.offsetWidth;toastEl.classList.add('show');clearTimeout(toastT);
  toastT=setTimeout(()=>{toastEl.hidden=true;},id?5200:2800);
  if(id)toastEl.querySelector('button').onclick=()=>{openLore(id);toastEl.hidden=true;};}
