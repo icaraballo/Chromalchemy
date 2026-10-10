@@ -12,7 +12,8 @@ HTML, CSS y JavaScript sin frameworks ni compilación. Los datos van en `data/co
 
 ## Estado
 
-v1: el prototipo, portado a módulos sin cambiar cómo se juega. Todavía no guarda la partida.
+v1.1: la partida se guarda en el navegador, y hay logros al llegar a la mitad y al total de
+cada familia de colores.
 
 | Ruta | Qué es |
 |---|---|
@@ -31,6 +32,10 @@ Los módulos no cargan con doble clic (`file://`): hay que servir la carpeta.
 npm run serve        # python3 -m http.server 8765 → http://127.0.0.1:8765
 npm test             # las recetas
 ```
+
+Al publicar una versión nueva: `tools/version.sh 1.2` (cambia la etiqueta y el `?v=` de cada
+archivo en `index.html`, para que el navegador no mezcle versiones). Un módulo nuevo hay que
+añadirlo a mano al `importmap` de `index.html`.
 
 ## Recalcular las recetas
 

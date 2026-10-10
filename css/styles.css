@@ -113,6 +113,13 @@ a{color:var(--accent)}
 .toast em{font-family:var(--display);font-style:normal;font-size:19px}
 .toast small{display:block;color:var(--muted);font-size:11px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase}
 .toast button{background:rgba(201,190,255,.14);border:0;border-radius:8px;padding:7px 11px;cursor:pointer;font-size:12.5px;white-space:nowrap}
+.logro{position:absolute;top:16px;left:50%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;gap:12px;max-width:calc(100% - 32px);width:max-content;background:var(--panel-solid);border:1px solid color-mix(in srgb, var(--fam) 55%, transparent);border-radius:14px;padding:10px 16px 10px 12px;cursor:pointer;box-shadow:0 0 30px -8px var(--fam),0 16px 40px -16px rgba(0,0,0,.8)}
+.logro.show{animation:logroin .5s cubic-bezier(.2,1.4,.4,1)}
+@keyframes logroin{from{opacity:0;transform:translate(-50%,-12px) scale(.96)}to{opacity:1;transform:translate(-50%,0)}}
+.logro-dot{width:26px;height:26px;border-radius:50%;flex:0 0 auto;background:radial-gradient(circle at 34% 30%, color-mix(in srgb, var(--fam) 45%, white), var(--fam) 60%);box-shadow:0 0 16px var(--fam)}
+.logro small{display:block;color:var(--muted);font-size:11px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.logro small:last-child{letter-spacing:.04em;text-transform:none}
+.logro em{display:block;font-family:var(--display);font-style:normal;font-size:20px;line-height:1.15;margin:1px 0}
 .ghost{position:fixed;left:0;top:0;width:42px;height:42px;border-radius:50%;pointer-events:none;z-index:50;transform:translate(-50%,-50%)}
 body.dragging,body.dragging *{cursor:grabbing!important}
 @media (max-width:760px){
@@ -135,4 +142,4 @@ body.dragging,body.dragging *{cursor:grabbing!important}
   .wheel-card{grid-template-columns:minmax(0,1fr)}
   .famlist{grid-template-columns:1fr 1fr}
 }
-@media (prefers-reduced-motion:reduce){.pi.new,.toast.show{animation:none}.fam-h .chev{transition:none}}
+@media (prefers-reduced-motion:reduce){.pi.new,.toast.show,.logro.show{animation:none}.fam-h .chev{transition:none}}
