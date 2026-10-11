@@ -339,7 +339,7 @@
   "receta": "historia",
   "de": 5.9,
   "cert": "doc",
-  "nombre": "Por Céladon, un pastor de la novela francesa L’Astrée (1627) que vestía cintas verde pálido.",
+  "nombre": "Por Céladon, un pastor de la novela francesa L’Astrée (publicada entre 1607 y 1627) que vestía cintas verde pálido.",
   "historia": "Así se llamó en Europa a la cerámica de vidriado verde nacida en China, que alcanzó su forma clásica con la dinastía Song. En Corea, el celadón Goryeo vivió su mejor momento entre los siglos XII y XIII.",
   "nota": {
    "cert": "disc",
@@ -349,6 +349,10 @@
    [
     "Wikipedia · Celadon",
     "https://en.wikipedia.org/wiki/Celadon"
+   ],
+   [
+    "Wikipedia · L’Astrée",
+    "https://en.wikipedia.org/wiki/L%27Astr%C3%A9e"
    ]
   ]
  },
@@ -1543,7 +1547,7 @@
   "historia": "No es un pigmento concreto, sino una referencia cultural al rojo de las paredes de la ciudad sepultada por el Vesubio en el año 79.",
   "nota": {
    "cert": "disc",
-   "t": "Un equipo del CNR italiano dirigido por Sergio Omarini sostiene que buena parte de esos rojos eran ocre amarillo, enrojecido por el calor de la erupción a más de 700 °C."
+   "t": "Un equipo del Instituto Nacional de Óptica del CNR italiano, dirigido por Sergio Omarini, sostiene que buena parte de esos rojos eran ocre amarillo que el calor de la erupción volvió rojo: el ocre amarillo enrojece por encima de unos 700 °C. La historiadora Mary Beard advierte que no se sabe en qué proporción."
   },
   "src": [
    [
@@ -1789,12 +1793,16 @@
   "historia": "Nadie sabe con certeza por qué se pinta de azul.",
   "nota": {
    "cert": "disc",
-   "t": "Hay tres explicaciones populares: que espanta a los mosquitos, que recuerda al cielo, o que se pintó en los años setenta para atraer turistas."
+   "t": "Hay cuatro explicaciones populares: que espanta a los mosquitos, que recuerda al cielo, que lo trajeron los judíos llegados en los años treinta, por el hilo azul de sus mantos de oración, o que se pintó en los años setenta para atraer turistas. Ninguna está probada."
   },
   "src": [
    [
     "Wikipedia · Chefchaouen",
     "https://en.wikipedia.org/wiki/Chefchaouen"
+   ],
+   [
+    "Afar · Why is Chefchaouen blue",
+    "https://www.afar.com/magazine/why-is-chefchaouen-blue"
    ]
   ],
   "reemplaza": "Azul Nattier"
@@ -1998,7 +2006,7 @@
   "historia": "El «Rubí del Príncipe Negro», de 170 quilates, preside la corona imperial británica y es en realidad una espinela. Las espinelas no se distinguieron químicamente del rubí hasta 1783.",
   "nota": {
    "cert": "ley",
-   "t": "Se cuenta que Pedro I de Castilla se la dio al Príncipe Negro en 1367."
+   "t": "Se cuenta que Pedro I de Castilla se la dio al Príncipe Negro en 1367, como pago por su ayuda en la guerra. Pero el relato no aparece hasta la década de 1760, y la piedra no vuelve a salir en los documentos hasta 1415."
   },
   "src": [
    [
@@ -2729,10 +2737,10 @@
   "de": 1,
   "cert": "doc",
   "nombre": "Por la fruta, que se relaciona con los mandarines: del portugués mandarim, y este del malayo.",
-  "historia": "En inglés el nombre aparece en el siglo XVIII, a través de un término alemán que significaba «manzana china».",
+  "historia": "En inglés, mandarin orange es un calco del sueco mandarin apelsin, del siglo XVIII. Apelsin, como el alemán Apfelsine, significa «manzana de China».",
   "nota": {
    "cert": "disc",
-   "t": "Se suele decir que la fruta se llama así por el color de las túnicas de los mandarines chinos. No está claro: ni siquiera los botánicos saben por qué se le puso ese nombre."
+   "t": "Se suele decir que la fruta se llama así por el color de las túnicas de los mandarines chinos. No está claro: no se sabe por qué se le puso ese nombre."
   },
   "src": [
    [
@@ -3458,10 +3466,10 @@
   "de": 1.3,
   "cert": "doc",
   "nombre": "Por el color de la miel.",
-  "historia": "En una tumba de Georgia, de hace entre 4.700 y 5.500 años, se encontró miel todavía comestible.",
+  "historia": "En una tumba de Georgia, de hace entre 4.700 y 5.500 años, se hallaron restos de miel en el interior de unas vasijas de barro.",
   "nota": {
    "cert": "ley",
-   "t": "Se repite que en las tumbas egipcias se halló miel comestible. No es cierto: los casos citados eran otras sustancias o solo restos químicos."
+   "t": "Se repite que en las tumbas egipcias se halló miel todavía comestible. No es así: no se ha encontrado miel comestible en ninguna tumba egipcia."
   },
   "src": [
    [
@@ -4335,6 +4343,10 @@
    [
     "Wikipedia · Topaz",
     "https://en.wikipedia.org/wiki/Topaz"
+   ],
+   [
+    "GIA · Peridot history and lore",
+    "https://www.gia.edu/peridot-history-lore"
    ]
   ]
  },
@@ -5588,7 +5600,7 @@
   "de": 3.6,
   "cert": "disc",
   "nombre": "Por la ropa de bebé.",
-  "historia": "La asociación del rosa con las niñas y el azul con los niños se conocía desde finales del siglo XIX, pero en Estados Unidos no se impuso hasta los años cuarenta y cincuenta.",
+  "historia": "La asociación del rosa con las niñas y el azul con los niños ya se conocía en el siglo XIX, pero en Estados Unidos no se impuso hasta los años cuarenta y cincuenta.",
   "nota": {
    "cert": "disc",
    "t": "Se repite que antes era al revés, rosa para niños. La historiadora Paoletti no halló normas fijas hacia 1900, y Del Giudice no encontró pruebas de esa inversión antes de los años cuarenta."
@@ -6017,7 +6029,7 @@
   "historia": "Es un blanco amarillento grisáceo, como de tela gastada.",
   "nota": {
    "cert": "ley",
-   "t": "La leyenda dice que la infanta Isabel Clara Eugenia juró no cambiarse de camisa hasta que acabara el sitio de Ostende (1601-1604), o Isabel la Católica hasta tomar Granada. Las fechas lo desmienten: la palabra ya existía antes del sitio."
+   "t": "La leyenda dice que la infanta Isabel Clara Eugenia juró no cambiarse de camisa hasta que acabara el sitio de Ostende (1601-1604), o Isabel la Católica hasta tomar Granada (1491-1492). Ninguna se sostiene: la palabra ya se usaba en 1600, antes del sitio de Ostende, y la de Granada también se tiene por falsa."
   },
   "src": [
    [
