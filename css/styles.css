@@ -139,8 +139,10 @@ body.panning,body.panning *{cursor:move!important}
   .stage{margin-bottom:var(--peek)}
   .top{gap:8px 12px;padding:8px 16px}
   .brand h1{font-size:22px}
-  .tag{display:none}
-  .bar{width:90px}
+  /* La versión, también en el móvil (T-13): pequeña y discreta, pero legible. */
+  .brand{gap:7px}
+  .tag{font-size:11px;letter-spacing:.04em;text-transform:none;color:#A39FBA}
+  .bar{width:80px}
   .palette{position:fixed;left:0;right:0;bottom:0;z-index:20;height:var(--hoja);border-right:0;border-top:1px solid rgba(236,232,255,.14);border-radius:18px 18px 0 0;background:var(--panel-solid);box-shadow:0 -10px 30px rgba(0,0,0,.55);padding-bottom:env(safe-area-inset-bottom,0px);
     transform:translateY(calc(100% - var(--peek)));transition:transform .28s cubic-bezier(.2,.8,.3,1)}
   .palette.half{transform:none}
@@ -176,4 +178,6 @@ body.panning,body.panning *{cursor:move!important}
   .stage:has(.lore:not([hidden])) .toast{top:16px;bottom:auto}
   .stage:has(.lore:not([hidden])):has(.logro:not([hidden])) .toast{top:96px}
 }
+/* Móviles muy estrechos: la barrita se acorta para que la versión y el contador quepan en una línea. */
+@media (max-width:345px){.bar{width:46px}}
 @media (prefers-reduced-motion:reduce){.pi.new,.toast.show,.logro.show{animation:none}.fam-h .chev{transition:none}}
