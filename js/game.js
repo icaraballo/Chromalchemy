@@ -4,7 +4,7 @@ import {st,nodes,order,openFams,logros,addNode,guardar} from './state.js';
 import {burst,puff,ping} from './effects.js';
 import {renderPalette,updateProgress} from './palette.js';
 import {openLore} from './lore.js';
-import {toast,hint,logro} from './ui.js';
+import {toast,hint,logro,logroGama,logroLeyendas} from './ui.js';
 import {alMezclar} from './pistas.js';
 import {TAU,esc} from './utils.js';
 
@@ -19,9 +19,15 @@ function discover(id,x,y,a,b){const col=BY[id].hex;
  burst(x,y,[BY[a].hex,BY[b].hex,col,col],col);
  st.lastNew=id;openFams.add(BY[id].fam);renderPalette();updateProgress();if(st.selected)openLore(st.selected);
  hint.hidden=true;
- comprobarLogro(BY[id].fam);alMezclar(true);guardar();
+ comprobarLogro(BY[id].fam);comprobarGama(BY[id]);alMezclar(true);guardar();
  if(order.length===DATA.length)toast(`<span class="dot" style="background:conic-gradient(#D7263D,#F5C518,#2E9E4A,#2262D6,#9B4FB0,#D7263D)"></span><span><small>Gama completa</small><em>Has descubierto los ${DATA.length} colores</em></span>`);
  else toast(`<span class="dot" style="background:${col};box-shadow:0 0 14px ${col}"></span><span><small>Nuevo color</small><em>${esc(BY[id].name)}</em></span>`,id,'Leer su historia');}
+// El 25, 50 y 75 % de la gama (el 100 % ya tiene su aviso, «Gama completa») y todas las
+// leyendas: los colores cuya ficha lleva una nota o una historia de leyenda. Una vez por partida.
+const LEYENDAS=DATA.filter(d=>d.cert==='ley'||(d.nota&&d.nota.cert==='ley')).map(d=>d.id);
+function comprobarGama(d){
+ for(const pct of [25,50,75])if(order.length>=Math.ceil(DATA.length*pct/100)&&!logros.has('gama:'+pct)){logros.add('gama:'+pct);logroGama(pct);}
+ if(LEYENDAS.includes(d.id)&&LEYENDAS.every(id=>nodes.has(id))&&!logros.has('leyendas')){logros.add('leyendas');logroLeyendas(LEYENDAS.length);}}
 // Al llegar a la mitad o al total de una familia, una sola vez por partida.
 function comprobarLogro(fam){const all=DATA.filter(d=>d.fam===fam),got=all.filter(d=>nodes.has(d.id)).length;
  if(got===all.length&&!logros.has(fam+':100')){logros.add(fam+':100');logros.add(fam+':50');logro(fam,true);}

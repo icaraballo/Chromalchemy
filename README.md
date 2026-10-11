@@ -25,7 +25,8 @@ dónde sale cada dato.
 - **Toca un color** para leer su historia y ver cuántas mezclas le quedan por descubrir.
 - **«Gama»** abre una rueda de tonos con huecos donde faltan colores: te dice por dónde
   buscar, no qué buscar.
-- Hay **logros** al llegar a la mitad y al total de cada familia, y la partida **se guarda**
+- Hay **logros** al llegar a la mitad y al total de cada familia, al 25, 50 y 75 % de la
+  gama y al reunir todos los colores con leyenda, y la partida **se guarda**
   sola en el navegador.
 
 Funciona en el ordenador y en el móvil.
