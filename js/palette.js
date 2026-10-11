@@ -23,4 +23,4 @@ export function renderPalette(){
 palList.addEventListener('click',e=>{const h=e.target.closest('.fam-h');if(!h)return;const f=h.parentElement.dataset.fam;openFams.has(f)?openFams.delete(f):openFams.add(f);renderPalette();});
 
 $('tot').textContent=DATA.length;
-export function updateProgress(){$('cnt').textContent=order.length;const q=DATA.length-order.length;$('palLeft').textContent=q?`${q} por descubrir`:'Gama completa';$('bar').innerHTML=order.map(id=>`<span style="flex:0 0 ${100/DATA.length}%;background:${BY[id].hex}"></span>`).join('');}
+export function updateProgress(){$('cnt').textContent=order.length;$('palGot').textContent=`${order.length} ${order.length===1?'descubierto':'descubiertos'}`;const q=DATA.length-order.length;$('palLeft').textContent=q?`${q} por descubrir`:'Gama completa';$('bar').innerHTML=order.map(id=>`<span style="flex:0 0 ${100/DATA.length}%;background:${BY[id].hex}"></span>`).join('');}
