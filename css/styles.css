@@ -2,6 +2,7 @@ html,body{margin:0}[hidden]{display:none!important}
 /* Layout: one-screen game. Paleta por familias a la izquierda (abajo en móvil) + constelación + ficha flotante + rueda cromática en modal. Tema oscuro único, a propósito. */
 :root{
   color-scheme: dark;
+  --oro:#F2D27A;
   --bg:#0a0a10;
   --panel:rgba(20,19,30,.88);
   --panel-solid:#14131e;
@@ -50,6 +51,10 @@ a{color:var(--accent)}
 .fam-h .fc{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums}
 .fam-h .mini{width:44px;height:3px;border-radius:2px;background:rgba(255,255,255,.07);overflow:hidden}
 .fam-h .mini b{display:block;height:100%;background:var(--fam)}
+/* Familia completa: dorado, más claro que el «Discutido» (--disc) para no confundirlos. */
+.fam.completa .fn,.fam.completa .fc{color:var(--oro)}
+.fam.completa .mini b{background:var(--oro)}
+.fam .estrella{font-style:normal;font-size:.85em}
 .fam-b{display:none;padding:0 0 10px}
 .fam.open .fam-b{display:block}
 .pi{display:flex;align-items:center;gap:10px;padding:5px 8px;border-radius:10px;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-y}
