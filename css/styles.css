@@ -40,6 +40,8 @@ a{color:var(--accent)}
 .palette{border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0;background:var(--bg);z-index:2}
 .pal-head{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:14px 16px 6px}
 .pal-list{overflow-y:auto;padding:0 8px 18px;min-height:0}
+/* El tirador, el contador y la tira son de la hoja del móvil (T-10): en el ordenador, ocultos. */
+.pal-head .grab,.pal-left,.strip{display:none}
 .fam{border-bottom:1px solid var(--line)}
 .fam-h{width:100%;display:flex;align-items:center;gap:10px;background:none;border:0;padding:10px 8px;cursor:pointer;text-align:left}
 .fam-h .chev{width:8px;height:8px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(-45deg);transition:transform .2s;flex:0 0 auto}
@@ -66,6 +68,8 @@ a{color:var(--accent)}
 #cv{position:absolute;inset:0;touch-action:none;display:block}
 .hint{position:absolute;top:16px;left:50%;transform:translateX(-50%);max-width:calc(100% - 32px);width:max-content;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--muted);text-align:center;pointer-events:none;backdrop-filter:blur(8px)}
 .hint b{color:var(--fg);font-weight:500}
+/* Con zoom, volver a ver la constelación entera (T-12) */
+.zoom-out{position:absolute;left:14px;top:14px;z-index:5;background:var(--panel-solid);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--fg);cursor:pointer;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}
 /* lore card */
 .lore{position:absolute;top:16px;right:16px;width:min(380px,calc(100% - 32px));max-height:calc(100% - 32px);overflow-y:auto;background:var(--panel);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;z-index:4;box-shadow:0 24px 60px -20px rgba(0,0,0,.7)}
 .x{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.05);cursor:pointer;font-size:18px;line-height:1;color:var(--muted)}
@@ -124,24 +128,45 @@ a{color:var(--accent)}
 .logro em{display:block;font-family:var(--display);font-style:normal;font-size:20px;line-height:1.15;margin:1px 0}
 .ghost{position:fixed;left:0;top:0;width:42px;height:42px;border-radius:50%;pointer-events:none;z-index:50;transform:translate(-50%,-50%)}
 body.dragging,body.dragging *{cursor:grabbing!important}
+/* Mientras se arrastra un color o el fondo, que no se seleccione texto por el camino. */
+body.dragging,body.panning{user-select:none;-webkit-user-select:none}
+body.panning,body.panning *{cursor:move!important}
 @media (max-width:760px){
-  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr) auto}
+  /* La paleta es una hoja que sale de abajo, encima de la constelación (T-10, sheet.js). Plegada
+     asoma --peek (la cabecera y la tira); la constelación termina justo ahí, así que se ve entera. */
+  :root{--peek:calc(118px + env(safe-area-inset-bottom,0px));--hoja:56vh}
+  .app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+  .stage{margin-bottom:var(--peek)}
   .top{gap:8px 12px;padding:8px 16px}
   .brand h1{font-size:22px}
   .tag{display:none}
   .bar{width:90px}
-  .palette{grid-row:3;border-right:0;border-top:1px solid var(--line);max-height:38vh;padding-bottom:env(safe-area-inset-bottom,0px)}
-  .pal-head{padding:8px 16px 2px}
-  .pal-list{padding:0 12px 10px}
+  .palette{position:fixed;left:0;right:0;bottom:0;z-index:20;height:var(--hoja);border-right:0;border-top:1px solid rgba(236,232,255,.14);border-radius:18px 18px 0 0;background:var(--panel-solid);box-shadow:0 -10px 30px rgba(0,0,0,.55);padding-bottom:env(safe-area-inset-bottom,0px);
+    transform:translateY(calc(100% - var(--peek)));transition:transform .28s cubic-bezier(.2,.8,.3,1)}
+  .palette.half{transform:none}
+  .palette.moving{transition:none}
+  .pal-head{position:relative;display:flex;justify-content:space-between;align-items:baseline;padding:22px 18px 8px;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+  .pal-head .grab{display:block;position:absolute;top:8px;left:50%;width:40px;height:4px;margin-left:-20px;border-radius:2px;background:rgba(236,232,255,.28)}
+  .pal-left{display:inline}
+  .strip{display:flex;gap:2px;overflow-x:auto;overflow-y:hidden;height:72px;flex:0 0 auto;padding:0 10px;scrollbar-width:none;transition:height .2s}
+  .strip::-webkit-scrollbar{display:none}
+  .strip .pi{flex:0 0 60px;flex-direction:column;gap:4px;padding:4px 2px;touch-action:pan-x}
+  .strip .sw{width:30px;height:30px}
+  .strip .nm{font-size:10.5px;max-width:58px;text-align:center;flex:none;color:var(--muted)}
+  .palette.half .strip{height:0}
+  .pal-list{padding:0 12px 10px;flex:1}
   .fam.open .fam-b{display:flex;flex-wrap:wrap;gap:2px}
   .pi{flex-direction:column;gap:4px;width:66px;padding:6px 4px}
   .pi .sw{width:30px;height:30px}
   .pi .nm{font-size:11px;max-width:62px;text-align:center;flex:none}
   .pi .bd{display:none}
   .slots{width:100%}
-  .lore{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70%;border-radius:18px 18px 0 0;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+  .lore{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70%;z-index:30;border-radius:18px 18px 0 0;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
   .hint{border-radius:14px;width:auto}
+  .wheel{z-index:30}
   .wheel-card{grid-template-columns:minmax(0,1fr)}
+  /* Con la hoja a media altura, el aviso sube por encima de ella. */
+  .app:has(.palette.half) .toast{bottom:calc(var(--hoja) - var(--peek) + 12px)}
   .famlist{grid-template-columns:1fr 1fr}
   /* Con la ficha abierta (hoja inferior), el aviso sube a la franja de constelación que queda a
      la vista, en vez de taparla; y si también hay un logro, debajo de él (CB-02). */

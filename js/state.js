@@ -29,4 +29,4 @@ export const pending=id=>KIDS[id].filter(k=>!nodes.has(k));
 const CLAVE='chromalchemy';
 export function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify({v:1,order,logros:[...logros]}));}catch{}}
 export function leerGuardado(){try{const g=JSON.parse(localStorage.getItem(CLAVE));if(g&&Array.isArray(g.order))return g;}catch{}return null;}
-export function addNode(id,x,y,delay){const n={id,x,y,vx:0,vy:0,r:0,born:st.now+(delay||0),pulse:0,shake:0,fixed:false,ph:Math.random()*TAU};nodes.set(id,n);order.push(id);return n;}
+export function addNode(id,x,y,delay){const n={id,x,y,vx:0,vy:0,r:0,born:st.now+(delay||0),pulse:0,shake:0,ph:Math.random()*TAU};nodes.set(id,n);order.push(id);return n;}

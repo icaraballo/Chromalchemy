@@ -1,9 +1,9 @@
-/* ---------- Paleta por familias y barra de progreso ---------- */
+/* ---------- Paleta por familias, tira de colores y barra de progreso ---------- */
 import {DATA,FAMS,BY,KIDS} from './data.js';
 import {st,nodes,order,openFams,pending} from './state.js';
 import {esc,$} from './utils.js';
 
-export const palList=$('palList');
+export const palList=$('palList'), strip=$('strip');
 
 export function renderPalette(){
  palList.innerHTML=FAMS.map(([fid,fname,fc])=>{
@@ -14,9 +14,13 @@ export function renderPalette(){
   const slots=left?`<div class="slots">${'<span class="slot">?</span>'.repeat(left)}<small>${left} por descubrir</small></div>`:'';
   return`<div class="fam${open?' open':''}" data-fam="${fid}" style="--fam:${fc}"><button type="button" class="fam-h" aria-expanded="${open}"><span class="chev"></span><span class="fn">${fname}</span><span class="mini"><b style="width:${got.length/all.length*100}%"></b></span><span class="fc">${got.length}/${all.length}</span></button><div class="fam-b">${items}${slots}</div></div>`;
  }).join('');
+ // La tira de la hoja plegada, en el móvil (T-10): todos tus colores en una fila, el último primero.
+ strip.innerHTML=[...order].reverse().map(id=>{const d=BY[id];
+  return`<div class="pi${id===st.lastNew?' new':''}" data-id="${id}" tabindex="0" role="button" aria-label="${esc(d.name)}. Arrastra para mezclar, pulsa para ver su historia"><span class="sw" style="--c:${d.hex}"></span><span class="nm">${esc(d.name)}</span></div>`;}).join('');
+ strip.scrollLeft=0;
  st.lastNew=null;
 }
 palList.addEventListener('click',e=>{const h=e.target.closest('.fam-h');if(!h)return;const f=h.parentElement.dataset.fam;openFams.has(f)?openFams.delete(f):openFams.add(f);renderPalette();});
 
 $('tot').textContent=DATA.length;
-export function updateProgress(){$('cnt').textContent=order.length;$('bar').innerHTML=order.map(id=>`<span style="flex:0 0 ${100/DATA.length}%;background:${BY[id].hex}"></span>`).join('');}
+export function updateProgress(){$('cnt').textContent=order.length;const q=DATA.length-order.length;$('palLeft').textContent=q?`${q} por descubrir`:'Gama completa';$('bar').innerHTML=order.map(id=>`<span style="flex:0 0 ${100/DATA.length}%;background:${BY[id].hex}"></span>`).join('');}

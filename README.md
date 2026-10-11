@@ -14,8 +14,12 @@ dónde sale cada dato.
 
 ## Cómo se juega
 
-- **Arrastra un color sobre otro**, desde la paleta o desde la propia constelación. Si
-  reaccionan, explosión y color nuevo; si no, tiemblan.
+- **Arrastra un color sobre otro**, desde la paleta o desde la propia constelación: llevas una
+  muestra y la sueltas encima. Si reaccionan, explosión y color nuevo; si no, tiemblan.
+- **Acércate** a la constelación con dos dedos (o la rueda del ratón) y muévete arrastrando el
+  fondo: de cerca se leen todos los nombres. «Ver toda» vuelve a la vista entera.
+- En el móvil, la paleta es una **hoja que se desliza** desde abajo: plegada, una tira con tus
+  colores; abierta, la paleta por familias.
 - **Toca un color** para leer su historia y ver cuántas mezclas le quedan por descubrir.
 - **«Gama»** abre una rueda de tonos con huecos donde faltan colores: te dice por dónde
   buscar, no qué buscar.

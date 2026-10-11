@@ -4,6 +4,7 @@ import {st,nodes,order,openFams,logros,addNode,guardar,leerGuardado} from './sta
 import {renderPalette,updateProgress} from './palette.js';
 import {openLore,closeLore} from './lore.js';
 import {wheel} from './wheel.js';
+import {resetCam} from './camera.js';
 import {TAU,$} from './utils.js';
 
 export const hint=$('hint');
@@ -31,7 +32,7 @@ export function logro(fid,completa){const [,fname,fc]=FAMS.find(f=>f[0]===fid);c
 logroEl.onclick=()=>{logroEl.hidden=true;};
 
 /* ---------- Partida nueva: los cinco básicos en pentágono ---------- */
-export function reset(){nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;logroEl.hidden=true;openFams.clear();
+export function reset(){resetCam();nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;logroEl.hidden=true;openFams.clear();
  BASICS.forEach((id,i)=>{const a=-Math.PI/2+i*TAU/5;addNode(id,st.W/2+Math.cos(a)*120*st.S,st.H/2+Math.sin(a)*120*st.S,i*.09);openFams.add(BY[id].fam);});
  renderPalette();updateProgress();hint.hidden=false;guardar();}
 // Con la partida guardada, reiniciar borra de verdad: se pregunta antes si hay algo que perder.
