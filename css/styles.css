@@ -68,6 +68,33 @@ a{color:var(--accent)}
 #cv{position:absolute;inset:0;touch-action:none;display:block}
 .hint{position:absolute;top:16px;left:50%;transform:translateX(-50%);max-width:calc(100% - 32px);width:max-content;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--muted);text-align:center;pointer-events:none;backdrop-filter:blur(8px)}
 .hint b{color:var(--fg);font-weight:500}
+/* Pistas (T-09): el botón, los «?» de la paleta, la tarjeta del acertijo y la pastilla */
+.tools .pista-btn{color:var(--fg)}
+.tools .pista-btn i{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--accent);display:grid;place-items:center;font:600 9px var(--mono);font-style:normal;color:var(--accent);box-sizing:border-box}
+.tools .pista-btn.brilla{border-color:rgba(201,190,255,.55);box-shadow:0 0 0 3px rgba(201,190,255,.12),0 0 18px rgba(201,190,255,.35)}
+.slot{cursor:pointer}
+.slot:hover{border-color:var(--accent);color:var(--accent)}
+.pcard{position:absolute;left:12px;top:12px;z-index:8;width:min(420px,calc(100% - 24px));box-sizing:border-box;background:var(--panel-solid);border:1px solid rgba(201,190,255,.35);border-radius:16px;padding:14px 16px 12px;box-shadow:0 20px 50px -18px rgba(0,0,0,.8)}
+.pcard .eb{display:flex;gap:10px;align-items:center;padding-right:34px;font:10.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.pcard p{margin:8px 0 10px;font-size:14.5px;line-height:1.45}
+.pcard .tapado{color:var(--accent);letter-spacing:.05em}
+.pcard .row{display:flex;gap:8px;justify-content:flex-end}
+.pcard .row button{border:0;border-radius:9px;padding:8px 12px;font-size:13px;cursor:pointer}
+.pcard .mas{background:rgba(201,190,255,.16)}
+.pcard .luego{background:none;color:var(--muted)}
+.pcard .x{top:8px;right:8px}
+.dots{display:inline-flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:rgba(236,232,255,.18)}.dots i.on{background:var(--accent)}
+.ppill{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:8;display:flex;align-items:center;gap:9px;width:max-content;max-width:calc(100% - 24px);box-sizing:border-box;background:var(--panel-solid);border:1px solid rgba(201,190,255,.35);border-radius:999px;padding:6px 6px 6px 10px;font-size:13px;box-shadow:0 14px 34px -14px rgba(0,0,0,.8)}
+.ppill .q{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--accent);display:grid;place-items:center;font:600 10px var(--mono);color:var(--accent);flex:0 0 auto;box-sizing:border-box}
+.ppill>span:not(.q):not(.dots){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ppill .dots{gap:4px}.ppill .dots i{width:6px;height:6px}
+.ppill button{border:0;border-radius:999px;background:rgba(201,190,255,.16);font-size:12px;padding:5px 10px;cursor:pointer;flex:0 0 auto}
+.ppill .ver{background:none;padding:0;font-size:13px;text-decoration:underline;text-decoration-color:rgba(201,190,255,.5);text-underline-offset:3px}
+.ppill .x{position:static;width:26px;height:26px;padding:0;font-size:16px;background:none;color:var(--muted)}
+/* Con la pastilla arriba, el logro y «Ver toda» se apartan; con la tarjeta, «Ver toda» espera. */
+.stage:has(#pPill:not([hidden])) .logro{top:60px}
+.stage:has(#pPill:not([hidden])) .zoom-out{top:60px}
+.stage:has(#pCard:not([hidden])) .zoom-out{display:none}
 /* Con zoom, volver a ver la constelación entera (T-12) */
 .zoom-out{position:absolute;left:14px;top:14px;z-index:5;background:var(--panel-solid);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--fg);cursor:pointer;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}
 /* lore card */

@@ -11,7 +11,7 @@ export function renderPalette(){
   const open=openFams.has(fid);
   const items=got.map(d=>{const pen=pending(d.id).length;const bd=KIDS[d.id].length?(pen?`<span class="bd" title="Mezclas por descubrir">${pen}</span>`:`<span class="bd done" title="Ya has sacado todas sus mezclas">✓</span>`):'';
    return`<div class="pi${d.id===st.lastNew?' new':''}" data-id="${d.id}" tabindex="0" role="button" aria-label="${esc(d.name)}. Arrastra para mezclar, pulsa para ver su historia"><span class="sw" style="--c:${d.hex}"></span><span class="nm">${esc(d.name)}</span>${bd}</div>`;}).join('');
-  const slots=left?`<div class="slots">${'<span class="slot">?</span>'.repeat(left)}<small>${left} por descubrir</small></div>`:'';
+  const slots=left?`<div class="slots">${'<span class="slot" title="Pedir una pista de esta familia">?</span>'.repeat(left)}<small>${left} por descubrir</small></div>`:'';
   return`<div class="fam${open?' open':''}" data-fam="${fid}" style="--fam:${fc}"><button type="button" class="fam-h" aria-expanded="${open}"><span class="chev"></span><span class="fn">${fname}</span><span class="mini"><b style="width:${got.length/all.length*100}%"></b></span><span class="fc">${got.length}/${all.length}</span></button><div class="fam-b">${items}${slots}</div></div>`;
  }).join('');
  // La tira de la hoja plegada, en el móvil (T-10): todos tus colores en una fila, el último primero.

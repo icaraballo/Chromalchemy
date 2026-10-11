@@ -32,9 +32,9 @@ export function logro(fid,completa){const [,fname,fc]=FAMS.find(f=>f[0]===fid);c
 logroEl.onclick=()=>{logroEl.hidden=true;};
 
 /* ---------- Partida nueva: los cinco básicos en pentágono ---------- */
-export function reset(){resetCam();nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;logroEl.hidden=true;openFams.clear();
+export function reset(){resetCam();st.pista=null;nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;logroEl.hidden=true;openFams.clear();
  BASICS.forEach((id,i)=>{const a=-Math.PI/2+i*TAU/5;addNode(id,st.W/2+Math.cos(a)*120*st.S,st.H/2+Math.sin(a)*120*st.S,i*.09);openFams.add(BY[id].fam);});
- renderPalette();updateProgress();hint.hidden=false;guardar();}
+ renderPalette();updateProgress();hint.hidden=false;guardar();dispatchEvent(new Event('pistas'));}
 // Con la partida guardada, reiniciar borra de verdad: se pregunta antes si hay algo que perder.
 $('reset').onclick=()=>{const n=order.length-BASICS.length;
  if(n>0&&!confirm(`¿Empezar de cero? Se borrarán los ${n} ${n===1?'color descubierto':'colores descubiertos'}.`))return;
@@ -51,6 +51,8 @@ export function restaurar(){const g=leerGuardado();if(!g)return false;
   const a=nodes.get(d.p[0]),b=nodes.get(d.p[1]);if(!a||!b)continue; // guardado raro: se salta lo que no encaja
   const ang=Math.random()*TAU;addNode(id,(a.x+b.x)/2+Math.cos(ang)*30*st.S,(a.y+b.y)/2+Math.sin(ang)*30*st.S,.45+i*.01);i++;}
  (g.logros||[]).forEach(k=>{if(typeof k==='string')logros.add(k);});
+ const p=g.pista;st.pista=p&&BY[p.id]&&BY[p.id].p&&!nodes.has(p.id)&&p.paso>=1&&p.paso<=3?{id:p.id,paso:p.paso|0}:null;
+ dispatchEvent(new Event('pistas'));
  renderPalette();updateProgress();hint.hidden=order.length>BASICS.length;
  return true;}
 
@@ -63,4 +65,4 @@ window.addEventListener('hashchange',syncDev);syncDev();
 $('reveal').onclick=()=>{let i=0;const todo=DATA.filter(d=>!nodes.has(d.id)).sort((a,b)=>gen(a.id)-gen(b.id));
  for(const d of todo){const a=nodes.get(d.p[0]),b=nodes.get(d.p[1]);const ang=Math.random()*TAU;
   addNode(d.id,(a.x+b.x)/2+Math.cos(ang)*30*st.S,(a.y+b.y)/2+Math.sin(ang)*30*st.S,i*.05);openFams.add(d.fam);i++;}
- renderPalette();updateProgress();hint.hidden=true;if(st.selected)openLore(st.selected);};
+ renderPalette();updateProgress();hint.hidden=true;if(st.selected)openLore(st.selected);dispatchEvent(new Event('pistas'));};

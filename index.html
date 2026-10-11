@@ -23,36 +23,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=1.7">
+<link rel="stylesheet" href="css/styles.css?v=1.8">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/camera.js": "./js/camera.js?v=1.7",
-  "./js/constellation.js": "./js/constellation.js?v=1.7",
-  "./js/data.js": "./js/data.js?v=1.7",
-  "./js/drag.js": "./js/drag.js?v=1.7",
-  "./js/effects.js": "./js/effects.js?v=1.7",
-  "./js/game.js": "./js/game.js?v=1.7",
-  "./js/lore.js": "./js/lore.js?v=1.7",
-  "./js/main.js": "./js/main.js?v=1.7",
-  "./js/palette.js": "./js/palette.js?v=1.7",
-  "./js/sheet.js": "./js/sheet.js?v=1.7",
-  "./js/state.js": "./js/state.js?v=1.7",
-  "./js/ui.js": "./js/ui.js?v=1.7",
-  "./js/utils.js": "./js/utils.js?v=1.7",
-  "./js/wheel.js": "./js/wheel.js?v=1.7"
+  "./js/camera.js": "./js/camera.js?v=1.8",
+  "./js/constellation.js": "./js/constellation.js?v=1.8",
+  "./js/data.js": "./js/data.js?v=1.8",
+  "./js/drag.js": "./js/drag.js?v=1.8",
+  "./js/effects.js": "./js/effects.js?v=1.8",
+  "./js/game.js": "./js/game.js?v=1.8",
+  "./js/lore.js": "./js/lore.js?v=1.8",
+  "./js/main.js": "./js/main.js?v=1.8",
+  "./js/palette.js": "./js/palette.js?v=1.8",
+  "./js/pistas.js": "./js/pistas.js?v=1.8",
+  "./js/sheet.js": "./js/sheet.js?v=1.8",
+  "./js/state.js": "./js/state.js?v=1.8",
+  "./js/ui.js": "./js/ui.js?v=1.8",
+  "./js/utils.js": "./js/utils.js?v=1.8",
+  "./js/wheel.js": "./js/wheel.js?v=1.8"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.7"></script>
+<script type="module" src="js/main.js?v=1.8"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.7</span></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.8</span></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
+      <button type="button" class="pista-btn" id="pistaBtn"><i>?</i>Pista</button>
       <button type="button" id="reset">Reiniciar</button>
       <button type="button" class="dev" id="reveal" hidden>Revelar todo (dev)</button>
     </div>
@@ -67,6 +69,9 @@
     <canvas id="cv" aria-label="Constelación de colores descubiertos"></canvas>
     <div class="hint" id="hint">Arrastra un color <b>de la paleta o de la propia constelación</b> y suéltalo <b>encima de otro</b>. Toca cualquier color para leer su historia.</div>
     <button type="button" class="zoom-out" id="zoomOut" hidden>Ver toda</button>
+    <!-- La pista en curso: la tarjeta (el acertijo) o la pastilla de arriba (T-09). -->
+    <div class="pcard" id="pCard" role="status" hidden></div>
+    <div class="ppill" id="pPill" role="status" hidden></div>
     <div class="toast" id="toast" hidden></div>
     <div class="logro" id="logro" role="status" hidden></div>
     <section class="lore" id="lore" hidden aria-live="polite">

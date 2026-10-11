@@ -20,6 +20,8 @@ dónde sale cada dato.
   fondo: de cerca se leen todos los nombres. «Ver toda» vuelve a la vista entera.
 - En el móvil, la paleta es una **hoja que se desliza** desde abajo: plegada, una tira con tus
   colores; abierta, la paleta por familias.
+- **¿Atascado? Pide una pista** con el botón o tocando un «?» de la paleta: primero un
+  acertijo, luego un ingrediente, luego los dos.
 - **Toca un color** para leer su historia y ver cuántas mezclas le quedan por descubrir.
 - **«Gama»** abre una rueda de tonos con huecos donde faltan colores: te dice por dónde
   buscar, no qué buscar.

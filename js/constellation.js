@@ -69,15 +69,18 @@ function drawRings(){const {selected,hover,drag,S}=st;
  // La bola de la que sale la muestra que se arrastra (T-11): un anillo discontinuo, para saber de dónde viene.
  if(drag&&drag.started&&drag.from==='node'&&nodes.has(drag.id)){const n=nodes.get(drag.id);const[x,y]=nodePos(n);ctx.strokeStyle=rgba(BY[n.id].hex,.8);ctx.lineWidth=1.4;ctx.setLineDash([3,4]);circle(x,y,(n.r+6*S)*rz());ctx.stroke();ctx.setLineDash([]);}
  if(selected&&nodes.has(selected)){const n=nodes.get(selected);const[x,y]=nodePos(n);ctx.strokeStyle='rgba(236,232,255,.75)';ctx.lineWidth=1.4;circle(x,y,(n.r*birthScale(n)+7*S)*rz());ctx.stroke();}
+ // Los ingredientes de la pista (T-09): un aro que late, del color de acento.
+ for(const id of st.pistaIngr){const n=nodes.get(id);if(!n)continue;const[x,y]=nodePos(n),k=Math.sin(st.now*3.2)*.5+.5,r=(n.r+9*S)*rz()+k*3*S/cam.z;
+  ctx.strokeStyle='rgba(201,190,255,.95)';ctx.lineWidth=2.2/Math.sqrt(cam.z);circle(x,y,r);ctx.stroke();ctx.strokeStyle=`rgba(201,190,255,${.12+.18*k})`;ctx.lineWidth=7/Math.sqrt(cam.z);circle(x,y,r+4*S/cam.z);ctx.stroke();}
  if(drag&&drag.started&&hover){const[x,y]=nodePos(hover);const r=(hover.r+10*S+Math.sin(st.now*8)*2)*rz();ctx.strokeStyle=rgba(BY[drag.id].hex,.95);ctx.lineWidth=2.2;circle(x,y,r);ctx.stroke();
   ctx.strokeStyle='rgba(255,255,255,.35)';ctx.lineWidth=1;circle(x,y,r+5*S*rz());ctx.stroke();}}
 // Los nombres se dibujan a tamaño fijo en pantalla (por eso el /cam.z) y salen todos cuando hay
 // sitio: pocas bolas, o con zoom suficiente para que entre una y otra quepa un nombre (T-12).
 function drawLabels(){const S=st.S,k=1/cam.z,hueco=Math.sqrt(st.W*st.H/Math.max(order.length,1))*cam.z;
- const showAll=(S>=.8&&order.length<=60)||order.length<=14||hueco>=62;
+ const showAll=(S>=.8&&order.length<=60)||order.length<=14||(cam.z>1.05&&hueco>=62);
  ctx.font=`500 ${Math.round(11.5*Math.max(S,.9))*k}px Karla, system-ui, sans-serif`;ctx.textAlign='center';ctx.textBaseline='top';
- for(const n of nodes.values()){const sc=birthScale(n);if(sc<.6)continue;const on=st.selected===n.id||st.hover===n;if(!showAll&&!on)continue;
-  const[x,y]=nodePos(n);ctx.fillStyle=on?'rgba(244,242,250,.95)':'rgba(220,216,236,.58)';ctx.fillText(BY[n.id].name,x,y+n.r*sc*rz()+7*S*k);}}
+ for(const n of nodes.values()){const sc=birthScale(n);if(sc<.6)continue;const on=st.selected===n.id||st.hover===n||st.pistaIngr.includes(n.id);if(!showAll&&!on)continue;
+  const[x,y]=nodePos(n);ctx.fillStyle=on?'rgba(244,242,250,.95)':'rgba(220,216,236,.58)';ctx.fillText(BY[n.id].name,x,y+n.r*sc*rz()+7*S*k+(st.pistaIngr.includes(n.id)?12*S*rz():0));}}
 export function draw(){ctx.setTransform(st.DPR,0,0,st.DPR,0,0);drawBg();
  // El fondo de estrellas no se mueve; lo demás, con la cámara.
  ctx.setTransform(st.DPR*cam.z,0,0,st.DPR*cam.z,st.DPR*cam.x,st.DPR*cam.y);drawLinks();

@@ -12,6 +12,8 @@ export const st={
  hover:null,                 // nodo bajo el puntero (o bajo lo que se arrastra)
  drag:null,                  // arrastre en curso
  lastNew:null,               // último color descubierto (anima su entrada en la paleta)
+ pista:null,                 // la pista en curso: {id, paso 1-3} (pistas.js)
+ pistaIngr:[],               // los ingredientes que la pista deja ver (los ilumina la constelación)
  stars:[],
 };
 export const nodes=new Map();   // id → nodo de la constelación
@@ -27,6 +29,6 @@ export const pending=id=>KIDS[id].filter(k=>!nodes.has(k));
    recolocan al cargar. localStorage puede fallar (navegación privada, almacenamiento lleno):
    entonces se juega igual, sólo que sin guardar. */
 const CLAVE='chromalchemy';
-export function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify({v:1,order,logros:[...logros]}));}catch{}}
+export function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify({v:1,order,logros:[...logros],pista:st.pista}));}catch{}}
 export function leerGuardado(){try{const g=JSON.parse(localStorage.getItem(CLAVE));if(g&&Array.isArray(g.order))return g;}catch{}return null;}
 export function addNode(id,x,y,delay){const n={id,x,y,vx:0,vy:0,r:0,born:st.now+(delay||0),pulse:0,shake:0,ph:Math.random()*TAU};nodes.set(id,n);order.push(id);return n;}
