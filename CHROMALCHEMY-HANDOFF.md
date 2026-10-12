@@ -31,7 +31,7 @@ Juego web de descubrir colores mezclándolos, en la línea de *Little Alchemy* /
 | Familias | 11, por cómo se ve el color (no por receta): Rojos 35, Rosas 16, Naranjas 19, Amarillos 26, Verdes 30, Azules 36, Violetas 18, Marrones 24, Blancos 14, Grises 14, Negros 14. |
 | Rigor | Cada ficha lleva certeza: **documentado**, **discutido** o **leyenda**. Lo dudoso va en una nota aparte, marcada. Nunca se presenta una leyenda como hecho. |
 | Mezcla | Siempre 1:1 entre dos colores ya descubiertos. Una pareja da como mucho un color. Mezclar un color consigo mismo no da nada. |
-| Modo desarrollador | «Revelar todo» solo aparece con `#dev` en la URL. El jugador normal no lo ve. |
+| Modo desarrollador | «Revelar todo» solo aparece con `?dev=1` en la URL (mismo interruptor que el juego de trail; el prototipo v3 usaba `#dev`). El jugador normal no lo ve. |
 | Tecnología | HTML, CSS y JavaScript sin frameworks ni compilación. Datos en JSON aparte. Debe funcionar en GitHub Pages tal cual. |
 | Nombre | Chromalchemy. Repo: `chromalchemy` (público, ya creado en GitHub por Iñigo). |
 
@@ -49,7 +49,7 @@ Juego web de descubrir colores mezclándolos, en la línea de *Little Alchemy* /
 4. **Paleta por familias.** Desplegables con contador (p. ej. «Azules 4/36»), barrita de progreso, los colores descubiertos y huecos «?» para los que faltan. Cada color muestra un número con las mezclas que le quedan por descubrir, o ✓ cuando está agotado.
 5. **Ficha de historia** (al pulsar un color): bola grande, nombre, nivel de mezcla y familia, hex/rgb, receta (chips clicables a los padres), «Por qué se llama así», «Su historia» con su etiqueta de certeza, nota de leyenda/discusión si existe, **mezclas pendientes** («Te quedan N mezclas con X» con N bolas «?» que se van rellenando; ✓ cuando se agotan), chips de las ya sacadas y lista de fuentes enlazadas.
 6. **Gama cromática («quesito»).** Botón «Gama» → rueda de tonos donde cada color ocupa su sitio (ángulo = tono, distancia = luminosidad; los neutros en el centro). Los pendientes salen como huecos oscuros con borde discontinuo: dan pista de dónde buscar sin decir qué son. Se rellenan al descubrirlos. Al lado, contador por familia.
-7. **Barra superior:** nombre, progreso total con una barra de colores descubiertos, botón Gama, Reiniciar y (solo `#dev`) Revelar todo.
+7. **Barra superior:** nombre, progreso total con una barra de colores descubiertos, botón Gama, Reiniciar y (solo `?dev=1`) Revelar todo.
 8. **Móvil:** la paleta pasa abajo; en táctil se arrastra cogiendo la bolita del color (el resto de la fila hace scroll). La ficha se abre como hoja inferior.
 
 ## 4. Datos: `data/colores.json`

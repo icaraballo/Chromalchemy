@@ -1,4 +1,4 @@
-/* ---------- Avisos, barra superior y modo desarrollador (#dev) ---------- */
+/* ---------- Avisos, barra superior y modo desarrollador (?dev=1) ---------- */
 import {DATA,FAMS,BY,BASICS,gen} from './data.js';
 import {st,nodes,order,openFams,logros,addNode,guardar,leerGuardado} from './state.js';
 import {renderPalette,updateProgress} from './palette.js';
@@ -79,10 +79,10 @@ export function restaurar(){const g=leerGuardado();if(!g)return false;
 
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!wheel.hidden)wheel.hidden=true;else closeLore();}});
 
-/* ---------- Modo desarrollador: «Revelar todo» sólo con #dev en la URL ----------
-   No guarda ni da logros: probar con #dev no estropea la partida de verdad, que vuelve al recargar. */
-function syncDev(){$('reveal').hidden=location.hash!=='#dev';}
-window.addEventListener('hashchange',syncDev);syncDev();
+/* ---------- Modo desarrollador: «Revelar todo» sólo con ?dev=1 en la URL ----------
+   Mismo interruptor que en el resto de juegos de Iñigo (p. ej. el de trail).
+   No guarda ni da logros: probar con ?dev=1 no estropea la partida de verdad, que vuelve al recargar. */
+$('reveal').hidden=new URLSearchParams(location.search).get('dev')!=='1';
 $('reveal').onclick=()=>{let i=0;const todo=DATA.filter(d=>!nodes.has(d.id)).sort((a,b)=>gen(a.id)-gen(b.id));
  for(const d of todo){const a=nodes.get(d.p[0]),b=nodes.get(d.p[1]);const ang=Math.random()*TAU;
   addNode(d.id,(a.x+b.x)/2+Math.cos(ang)*30*st.S,(a.y+b.y)/2+Math.sin(ang)*30*st.S,i*.05);openFams.add(d.fam);i++;}
