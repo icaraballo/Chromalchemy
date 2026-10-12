@@ -213,3 +213,47 @@ body.panning,body.panning *{cursor:move!important}
 /* Móviles muy estrechos: la barrita se acorta para que la versión y el contador quepan en una línea. */
 @media (max-width:345px){.bar{width:46px}}
 @media (prefers-reduced-motion:reduce){.pi.new,.toast.show,.logro.show{animation:none}.fam-h .chev{transition:none}}
+/* ---------- Opinar (T-15, v1.11) ----------
+   El botón de la barra, la hoja con las preguntas (viene de La Colmena) y el botón del logro del 25 %. */
+.tools .opinar-btn{color:var(--fg)}
+.tools .opinar-btn svg{color:var(--accent)}
+.op-fondo{position:fixed;inset:0;background:rgba(5,5,10,.6);z-index:60;opacity:0;transition:opacity .25s ease-out}
+.op-fondo.abierta{opacity:1}
+.opinion{position:fixed;left:0;right:0;bottom:0;top:clamp(24px,7dvh,72px);z-index:61;max-width:480px;margin:0 auto;box-sizing:border-box;
+  background:var(--panel-solid);border:1px solid rgba(236,232,255,.14);border-bottom:0;border-radius:18px 18px 0 0;
+  padding:18px 20px calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;
+  box-shadow:0 -10px 40px rgba(0,0,0,.6);transform:translateY(100%);transition:transform .25s ease-out}
+.opinion.abierta{transform:none}
+#opinionForm{display:flex;flex-direction:column;gap:12px;flex:1 1 auto;min-height:0}
+#opinionForm[hidden]{display:none}
+.op-cab{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex:none}
+.op-cab h2{font-family:var(--display);font-weight:400;font-size:28px;line-height:1.1;margin:0}
+.op-sub{color:var(--muted);margin:4px 0 0;font-size:13.5px}
+.op-x{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--muted);font-size:20px;line-height:1;cursor:pointer}
+.op-preguntas{display:flex;flex-direction:column;gap:14px;flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;margin:0 -6px;padding:4px 6px 6px}
+.op-preguntas label{display:flex;flex-direction:column;gap:6px;font-size:13.5px;font-weight:500}
+.op-preguntas textarea,.op-preguntas input{box-sizing:border-box;width:100%;font:inherit;font-size:16px;color:var(--fg);background:rgba(255,255,255,.04);
+  border:1px solid rgba(236,232,255,.14);border-radius:10px;padding:9px 11px;resize:none}
+.op-preguntas textarea{min-height:64px}
+.op-preguntas textarea:focus,.op-preguntas input:focus{outline:none;border-color:var(--accent)}
+.op-preguntas ::placeholder{color:#6f6b86}
+.op-aviso{flex:none;margin:0;font-size:13px;color:#ff9a8a}
+.op-aviso:empty{display:none}
+.op-enviar{flex:none;min-height:48px;border:0;border-radius:12px;background:var(--accent);color:#14131e;font-size:15px;font-weight:700;cursor:pointer}
+.op-enviar:hover{background:#d8d0ff}
+.op-enviar:disabled{opacity:.55;cursor:default}
+.op-privacidad{flex:none;margin:-4px 0 0;font-size:11.5px;line-height:1.4;color:var(--muted);text-align:center}
+.opinion.con-teclado .op-privacidad{display:none}
+.op-gracias{display:flex;flex-direction:column;flex:1 1 auto}
+.op-gracias[hidden]{display:none}
+.op-ok{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center}
+.op-ok h3{font-family:var(--display);font-weight:400;font-size:30px;margin:0}
+.op-ok p{margin:0;font-size:14px;line-height:1.45;color:var(--muted);max-width:260px}
+.op-orbe{width:56px;height:56px;border-radius:50%;background:conic-gradient(#D7263D,#F5C518,#2E9E4A,#2262D6,#9B4FB0,#D7263D);box-shadow:0 0 30px rgba(201,190,255,.45)}
+/* El logro del 25 %: «¿Te está gustando?» con su botón y la ×. Con el borde dentro del ancho, para que en un móvil de 320 px no toque los lados. */
+.logro{box-sizing:border-box}
+.logro .logro-op{background:var(--accent);color:#14131e;border:0;border-radius:9px;padding:8px 13px;font-weight:700;font-size:13px;white-space:nowrap;cursor:pointer;flex:none}
+.logro .logro-x{background:none;border:0;color:var(--muted);font-size:20px;line-height:1;padding:0 2px;cursor:pointer;flex:none}
+/* Móviles estrechos: con «Opinar» son cuatro botones; se aprietan para que quepan en una fila. */
+@media (max-width:380px){.tools{gap:4px}.tools button{padding:6px 7px;gap:5px;font-size:12px}}
+@media (prefers-reduced-motion:reduce){.opinion,.op-fondo{transition:none}}

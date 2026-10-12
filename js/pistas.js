@@ -49,7 +49,7 @@ export function pedir(fam){fallos=0;
   const [,fname]=FAMS.find(f=>f[0]===fam);
   const otra=FAMS.map(f=>[f,alcanzables(f[0]).length]).filter(x=>x[1]).sort((x,y)=>y[1]-x[1])[0];
   toast(`En los <b>${fname.toLowerCase()}</b> aún no puedes hacer nada nuevo: te falta algún ingrediente.`+(otra?` Prueba en los <b>${otra[0][1].toLowerCase()}</b>.`:''));return;}
- st.pista={id,paso:1};abierta=true;hint.hidden=true;guardar();pintar();}
+ st.pista={id,paso:1};st.pistasUsadas++;abierta=true;hint.hidden=true;guardar();pintar();}
 function mas(){const p=st.pista;if(!p)return;p.paso=Math.min(3,p.paso+1);abierta=false;guardar();pintar();}
 function quitar(){st.pista=null;abierta=false;guardar();pintar();}
 

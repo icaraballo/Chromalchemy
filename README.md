@@ -28,6 +28,8 @@ dónde sale cada dato.
 - Hay **logros** al llegar a la mitad y al total de cada familia, al 25, 50 y 75 % de la
   gama y al reunir todos los colores con leyenda, y la partida **se guarda**
   sola en el navegador.
+- **«Opinar»** abre unas pocas preguntas dentro del juego; las respuestas llegan a un
+  formulario de Google sin salir de la partida.
 
 Funciona en el ordenador y en el móvil.
 

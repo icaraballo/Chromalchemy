@@ -6,6 +6,7 @@ import {st} from './state.js';
 import {resize,makeStars,step,draw} from './constellation.js';
 import {reset,restaurar} from './ui.js';
 import './drag.js';
+import './opinion.js';
 import {$} from './utils.js';
 
 resize();makeStars();new ResizeObserver(()=>resize()).observe($('stage'));
