@@ -47,5 +47,13 @@ for (const d of DATA) {
   ok(!d.nota || (CERTS.includes(d.nota.cert) && d.nota.t), `${d.id}: nota sin certeza o sin texto`);
 }
 
+// 4. Cada color se ve distinto: no hay dos con el mismo hex (CB-04)
+const hexes = new Map();
+for (const d of DATA) {
+  const h = String(d.hex).toUpperCase();
+  ok(!hexes.has(h), `${d.id} y ${hexes.get(h)} tienen el mismo hex ${h}`);
+  hexes.set(h, d.id);
+}
+
 console.log(fallos ? `\n${fallos} de ${pruebas} comprobaciones fallan` : `${pruebas} comprobaciones, todas bien: se llega a los ${tengo.size} colores`);
 process.exit(fallos ? 1 : 0);

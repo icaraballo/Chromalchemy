@@ -961,15 +961,15 @@
   "id": "alizarina",
   "name": "Alizarina",
   "fam": "rojos",
-  "hex": "#C41E3A",
+  "hex": "#DB2D43",
   "tipo": "pigmento",
-  "gen": 4,
+  "gen": 3,
   "parents": [
-   "rojo",
-   "carmin"
+   "bermellon",
+   "magenta"
   ],
   "receta": "calculada",
-  "de": 0.4,
+  "de": 4.2,
   "cert": "doc",
   "nombre": "Es el colorante rojo de la raíz de la granza.",
   "historia": "En 1868 los químicos Graebe y Liebermann, de BASF, la fabricaron a partir del alquitrán de hulla: fue el primer tinte natural copiado por síntesis. El mercado de la granza se hundió casi de un día para otro.",
@@ -2027,7 +2027,7 @@
    "espinela"
   ],
   "receta": "calculada",
-  "de": 0.6,
+  "de": 2.6,
   "cert": "doc",
   "nombre": "Probablemente por las sotanas de los cardenales católicos, aunque su color oficial es el escarlata.",
   "historia": "El pájaro cardenal norteamericano también debe su nombre a los cardenales y a su vestimenta roja.",
@@ -2492,13 +2492,13 @@
   "fam": "rojos",
   "hex": "#6D1A2A",
   "tipo": "lugar",
-  "gen": 5,
+  "gen": 4,
   "parents": [
    "negro",
    "alizarina"
   ],
   "receta": "calculada",
-  "de": 1,
+  "de": 3.3,
   "cert": "doc",
   "nombre": "Por la ciudad francesa de Burdeos y el vino de su región.",
   "historia": "Es un rojo oscuro muy parecido al borgoña. Ambos nombres de color vienen del vino.",
@@ -2726,15 +2726,15 @@
   "id": "mandarina",
   "name": "Mandarina",
   "fam": "naranjas",
-  "hex": "#F28500",
+  "hex": "#F37A48",
   "tipo": "natural",
-  "gen": 6,
+  "gen": 4,
   "parents": [
-   "tangerina",
-   "naranja-cadmio"
+   "naranja",
+   "turmalina"
   ],
   "receta": "calculada",
-  "de": 1,
+  "de": 2.5,
   "cert": "doc",
   "nombre": "Por la fruta, que se relaciona con los mandarines: del portugués mandarim, y este del malayo.",
   "historia": "En inglés, mandarin orange es un calco del sueco mandarin apelsin, del siglo XVIII. Apelsin, como el alemán Apfelsine, significa «manzana de China».",
@@ -3183,15 +3183,15 @@
   "id": "orchilla",
   "name": "Orchilla",
   "fam": "violetas",
-  "hex": "#8E4585",
+  "hex": "#A8516E",
   "tipo": "tinte",
-  "gen": 2,
+  "gen": 5,
   "parents": [
-   "purpura",
-   "gris"
+   "rojo-indio",
+   "tornasol"
   ],
   "receta": "calculada",
-  "de": 2.9,
+  "de": 2.5,
   "cert": "doc",
   "nombre": "Nombre canario del liquen Roccella tinctoria.",
   "historia": "Por su tinte rojo violáceo fue muy buscada por los tintoreros europeos a finales de la Edad Media. Desde 1758 se fabricó un tinte de líquenes llamado cudbear.",
@@ -3922,7 +3922,7 @@
   "fam": "marrones",
   "hex": "#6E2E1F",
   "tipo": "natural",
-  "gen": 6,
+  "gen": 5,
   "parents": [
    "burdeos",
    "castano"
@@ -4048,7 +4048,7 @@
   "tipo": "natural",
   "gen": 7,
   "parents": [
-   "mandarina",
+   "tangerina",
    "feldgrau"
   ],
   "receta": "calculada",
@@ -5011,13 +5011,13 @@
   "fam": "naranjas",
   "hex": "#FF7518",
   "tipo": "natural",
-  "gen": 7,
+  "gen": 5,
   "parents": [
-   "mandarina",
-   "coral"
+   "naranja",
+   "mandarina"
   ],
   "receta": "calculada",
-  "de": 2.2,
+  "de": 2.6,
   "cert": "doc",
   "nombre": "Quizá de origen prerromano, según la RAE.",
   "historia": "La tradición de vaciar calabazas viene de Irlanda, donde se tallaban nabos. En América se pasó a la calabaza, más grande y fácil de tallar.",
@@ -5193,7 +5193,7 @@
   "tipo": "pigmento",
   "gen": 7,
   "parents": [
-   "mandarina",
+   "tangerina",
    "topacio"
   ],
   "receta": "calculada",
@@ -5543,7 +5543,7 @@
   "fam": "rojos",
   "hex": "#592720",
   "tipo": "pigmento",
-  "gen": 6,
+  "gen": 5,
   "parents": [
    "burdeos",
    "pardo-van-dyck"
