@@ -151,6 +151,7 @@
   "nombre": "Del occitano granat, por la piedra. Su raíz es el latín granum, «grano», quizá por los granos rojos de la granada.",
   "historia": "Fue la gema más común en el mundo romano tardío. Se engastaba en celdillas de oro, una técnica que se encuentra desde el mar Negro hasta la Inglaterra anglosajona, como en el tesoro de Sutton Hoo.",
   "nota": null,
+  "acertijo": "Mi nombre viene del latín «grano», quizá por los granos rojos de cierta fruta. Me engastaban en celdillas de oro, como en el tesoro de Sutton Hoo.",
   "src": [
    [
     "RAE · granate",
@@ -179,6 +180,7 @@
   "nombre": "Por la flor, del latín rosa. En inglés, pink viene de unos claveles (Dianthus) llamados pinks por el borde rizado de sus pétalos, como el corte en zigzag de unas tijeras dentadas, las pinking shears.",
   "historia": "En la Edad Media los nobles preferían rojos intensos. Madame de Pompadour, favorita de Luis XV, puso de moda el rosa y el azul pálido en Versalles e hizo crear un rosa propio en la porcelana de Sèvres. A finales del XVIII ya era popular en toda Europa.",
   "nota": null,
+  "acertijo": "Me llamo como una flor, en latín igual que en español. En la Edad Media los nobles preferían rojos intensos, pero a finales del XVIII ya me llevaba toda Europa.",
   "src": [
    [
     "Wikipedia · Rose (color)",
@@ -207,6 +209,7 @@
   "nombre": "Por la fruta. La palabra viene del sánscrito nāraṅga, pasó al persa nārang, al árabe nāranǧ y al árabe hispánico naranǧa.",
   "historia": "Antes de que la fruta llegara, el inglés no tenía palabra para este color: decía ġeolurēad, «amarillo-rojo». El primer uso de orange como color en inglés es de 1502, en unas ropas compradas para Margarita Tudor. Por eso en inglés se sigue diciendo red hair o robin redbreast.",
   "nota": null,
+  "acertijo": "Viajé del sánscrito al persa y al árabe antes de llegar al frutero. Hasta que llegó la fruta, el inglés no tenía palabra para mí: decía «amarillo-rojo».",
   "src": [
    [
     "RAE · naranja",
@@ -235,6 +238,7 @@
   "nombre": "Llegaba a Europa desde la India.",
   "historia": "Según una carta de T. N. Mukharji, se hacía con orina de vacas alimentadas solo con hojas de mango. Durante años se dudó: la escritora Victoria Finlay no encontró pruebas. Pero análisis de 2017 y 2018 de una muestra que el propio Mukharji envió a Londres dan la razón a su relato. Dejó de venderse hacia 1921.",
   "nota": null,
+  "acertijo": "Según una carta, me hacían con orina de vacas alimentadas solo con hojas de mango. Durante años se dudó, pero análisis de 2017 y 2018 le dan la razón.",
   "src": [
    [
     "Wikipedia · Indian yellow",
@@ -259,6 +263,7 @@
   "nombre": "Del latín viridis.",
   "historia": "Uno de los verdes más usados durante siglos fue el cardenillo, que se obtenía atacando cobre con vinagre. Aparece en pinturas de Pompeya y en Giotto. Con el tiempo puede oscurecerse y volverse marrón, y en el siglo XIX lo desplazaron verdes más estables.",
   "nota": null,
+  "acertijo": "Mi nombre viene del latín viridis. Durante siglos, uno de mis tonos más usados salía de atacar cobre con vinagre, y podía volverse marrón.",
   "src": [
    [
     "RAE · verde",
@@ -287,6 +292,7 @@
   "nombre": "Por el color de las aceitunas verdes, sin madurar.",
   "historia": "Su versión apagada, el verde oliva militar (olive drab), aparece como nombre de color en inglés en 1892. Vistió al ejército estadounidense durante la Segunda Guerra Mundial y Vietnam, hasta que en 1981 llegó el camuflaje de cuatro colores.",
   "nota": null,
+  "acertijo": "Me llamo como la aceituna sin madurar. Una variante mía vistió al ejército estadounidense hasta que llegó el camuflaje en 1981.",
   "src": [
    [
     "Wikipedia · Olive (color)",
@@ -318,6 +324,7 @@
    "cert": "ley",
    "t": "Se dijo que el papel verde de la casa de Napoleón en Santa Elena lo envenenó con arsénico. Las investigaciones recientes lo descartan: murió de cáncer de estómago."
   },
+  "acertijo": "Me inventó un químico sueco en 1775. Era bonito y venenoso: teñí papeles pintados, vestidos y hasta dulces.",
   "src": [
    [
     "Wikipedia · Scheele’s green",
@@ -345,6 +352,7 @@
    "cert": "disc",
    "t": "Otra teoría dice que «celadón» es una deformación del nombre de Saladino, que en 1171 regaló cuarenta piezas de esta cerámica al sultán de Siria."
   },
+  "acertijo": "Me llamo como un pastor de la novela francesa L’Astrée, publicada entre 1607 y 1627. Otra teoría, discutida, relaciona mi nombre con Saladino.",
   "src": [
    [
     "Wikipedia · Celadon",
@@ -373,6 +381,7 @@
   "nombre": "Del latín caelestis, «del cielo».",
   "historia": "El cielo es azul porque el aire dispersa mucho más la luz azul que la roja. Lord Rayleigh trabajó en ello desde 1871, y en 1899 publicó el modelo que lo explica. El fenómeno se llama dispersión de Rayleigh.",
   "nota": null,
+  "acertijo": "Mi nombre latino quiere decir «del cielo». Lord Rayleigh explicó en 1899 por qué el aire dispersa más la luz azul que la roja.",
   "src": [
    [
     "RAE · celeste",
@@ -401,6 +410,7 @@
   "nombre": "Por la Marina británica. En inglés se llama navy blue, «azul marina».",
   "historia": "El primer reglamento de uniformes para oficiales de la Marina británica, de 1748, fijó el azul oscuro y el blanco. A finales del XVIII lo adoptaron también los marineros, en parte porque el color oscuro disimulaba la suciedad en los viajes largos.",
   "nota": null,
+  "acertijo": "Me fijó en 1748 el primer reglamento de uniformes de los oficiales de la Armada británica. Disimulaba la suciedad en los viajes largos.",
   "src": [
    [
     "Wikipedia · Navy blue",
@@ -429,6 +439,7 @@
   "nombre": "Del francés antiguo turquois, «turco», porque llegaba a Europa a través del Imperio otomano. En realidad se extraía en Persia y en el Sinaí.",
   "historia": "Los mexicas la combinaban con oro, cuarzo, malaquita y conchas para hacer máscaras y objetos ceremoniales de mosaico. Era para ellos una piedra muy valiosa.",
   "nota": null,
+  "acertijo": "Me llaman por el imperio a través del que llegaba a Europa, aunque me extraían en el Sinaí.",
   "src": [
    [
     "Wikipedia · Turquoise",
@@ -456,6 +467,7 @@
    "cert": "disc",
    "t": "Se cuenta que el error vino de una potasa contaminada con sangre que le prestó el alquimista Dippel. Ninguna otra fuente histórica conocida menciona a Dippel en esto."
   },
+  "acertijo": "Nací de un error en Berlín: querían un rojo. Hokusai me usó en La gran ola de Kanagawa.",
   "src": [
    [
     "Wikipedia · Prussian blue",
@@ -483,6 +495,7 @@
    "cert": "disc",
    "t": "Ya en el siglo X había dos explicaciones de «nacido en la púrpura»: por el color imperial o por la sala de pórfido, una piedra púrpura, donde daban a luz las emperatrices."
   },
+  "acertijo": "Salgo de caracoles marinos: 12.000 dan apenas 1,4 gramos. En el siglo IV solo el emperador romano podía vestirme.",
   "src": [
    [
     "Wikipedia · Tyrian purple",
@@ -511,6 +524,7 @@
   "nombre": "Por la flor de la malva, mauve en francés.",
   "historia": "En 1856, William Perkin, de 18 años, intentaba sintetizar quinina contra la malaria y obtuvo un residuo que teñía de púrpura: el primer tinte de anilina. Entre 1859 y 1861 fue tal la moda que la revista Punch hablaba del «sarampión malva».",
   "nota": null,
+  "acertijo": "Me encontró un químico de 18 años que buscaba quinina. La revista Punch llegó a hablar de mi «sarampión».",
   "src": [
    [
     "Wikipedia · Mauve",
@@ -539,6 +553,7 @@
   "nombre": "Del francés marron, «castaña comestible».",
   "historia": "Existió un pigmento llamado «marrón momia», hecho con momias molidas; en 1712 ya lo vendía en París una tienda llamada À la momie. En 1881, cuando Alma-Tadema le confirmó de dónde salía, Edward Burne-Jones enterró su tubo en el jardín. Lo contó su esposa en sus memorias.",
   "nota": null,
+  "acertijo": "Llegué del francés. Hubo una versión de mí hecha con momias molidas, y Burne-Jones, al saber de dónde salía, enterró su tubo en el jardín.",
   "src": [
    [
     "RAE · marrón",
@@ -567,6 +582,7 @@
   "nombre": "Por la ciudad de Siena, en la Toscana, donde se producía en el Renacimiento. «Tostada» porque se obtiene calentando la siena natural.",
   "historia": "Al calentarla, el óxido de hierro se deshidrata y se convierte en parte en hematites, que la vuelve rojiza. Entre los siglos XVI y XIX fue uno de los marrones básicos de cualquier pintor.",
   "nota": null,
+  "acertijo": "Vengo de una ciudad toscana, y me obtienen calentando mi versión natural. Entre los siglos XVI y XIX fui básica en la paleta de cualquier pintor.",
   "src": [
    [
     "Wikipedia · Sienna",
@@ -591,6 +607,7 @@
   "nombre": "Del árabe hispánico ʿaẓm alfíl, «hueso de elefante».",
   "historia": "Moliendo marfil carbonizado se hacía el «negro marfil», uno de los negros de los pintores. Hoy ya no se usa marfil de verdad y el nombre es sinónimo de negro de hueso.",
   "nota": null,
+  "acertijo": "Mi nombre en árabe hispánico alude al elefante. Carbonizado y molido, daba uno de los negros de los pintores.",
   "src": [
    [
     "RAE · marfil",
@@ -619,6 +636,7 @@
   "nombre": "Probablemente del occitano gris.",
   "historia": "Pintar solo en grises se llama grisalla. Van Eyck y otros pintores la usaron en la cara exterior de los retablos, como el de Gante, para imitar estatuas: la escultura era más cara que la pintura.",
   "nota": null,
+  "acertijo": "Pintar solo conmigo tiene nombre propio. Van Eyck me usó por fuera del retablo de Gante para imitar estatuas.",
   "src": [
    [
     "RAE · gris",
@@ -647,6 +665,7 @@
   "nombre": "Por William Payne, acuarelista inglés activo entre 1776 y 1830.",
   "historia": "La receta original mezclaba azul de Prusia, ocre amarillo y laca carmesí. Payne buscaba algo menos duro que el negro para sus clases y para dar profundidad a la media distancia de sus paisajes.",
   "nota": null,
+  "acertijo": "Un acuarelista inglés me mezcló con azul de Prusia, ocre y laca carmesí, para tener algo menos duro que el negro.",
   "src": [
    [
     "Wikipedia · Payne’s grey",
@@ -671,6 +690,7 @@
   "nombre": "Del francés vermillon, y este del latín vermiculus, «gusanito», por el quermes, un insecto del que se sacaba un tinte rojo.",
   "historia": "Se hacía moliendo cinabrio, un mineral de mercurio. La principal fuente de los romanos fue la mina de Almadén, trabajada por presos.",
   "nota": null,
+  "acertijo": "Mi nombre significa «gusanito», aunque a mí me hacían moliendo un mineral. Los romanos lo sacaban de una mina trabajada por presos.",
   "src": [
    [
     "RAE · bermellón",
@@ -699,6 +719,7 @@
   "nombre": "Por la batalla de Magenta (junio de 1859), victoria franco-sarda sobre Austria. El tinte, patentado ese año por François-Emmanuel Verguin, se llamaba fucsina y se rebautizó para celebrarla.",
   "historia": "El magenta no está en el arcoíris: ninguna longitud de onda tiene ese tono. Lo vemos cuando nos llega a la vez luz roja y azul.",
   "nota": null,
+  "acertijo": "Me rebautizaron para celebrar una victoria de 1859 sobre Austria. Ninguna luz del arcoíris tiene mi tono.",
   "src": [
    [
     "Wikipedia · Magenta",
@@ -723,6 +744,7 @@
   "nombre": "Del griego ṓkhra, de ōkhrós, «pálido».",
   "historia": "En la cueva de Blombos, en Sudáfrica, aparecieron trozos de ocre grabados con dibujos abstractos de hace unos 75.000 años. Mucho después, en la década de 1780, Jean-Étienne Astier industrializó su extracción en Rosellón, en Francia.",
   "nota": null,
+  "acertijo": "Mi nombre griego significa «pálido». En la cueva de Blombos aparecieron trozos de mí grabados hace unos 75.000 años.",
   "src": [
    [
     "Wikipedia · Ochre",
@@ -747,6 +769,7 @@
   "nombre": "Del griego indikón phármakon, «tinte de la India», de donde llegaba.",
   "historia": "Newton lo contó como uno de los siete colores del arcoíris, a imagen de las siete notas de la escala musical. Los expertos discuten si su «índigo» era lo que hoy llamamos así. Es el tinte de los vaqueros.",
   "nota": null,
+  "acertijo": "Mi nombre griego significa «tinte de la India». Newton me contó en el arcoíris, aunque se discute si era el mismo tono, y hoy tiño los vaqueros.",
   "src": [
    [
     "Wikipedia · Indigo",
@@ -771,6 +794,7 @@
   "nombre": "Del latín ultramarinus, «de más allá del mar»: el lapislázuli venía de minas de Afganistán.",
   "historia": "En el Renacimiento llegó a valer tanto como el oro y se reservaba para el manto de la Virgen. En 1824 una sociedad francesa ofreció 6.000 francos a quien lo fabricara; Guimet lo logró en 1826 pero lo guardó en secreto, y Gmelin publicó su método en 1828.",
   "nota": null,
+  "acertijo": "En el Renacimiento valía tanto como el oro y se reservaba para el manto de la Virgen. Guimet logró fabricarme en 1826, pero lo guardó en secreto.",
   "src": [
    [
     "Wikipedia · Ultramarine",
@@ -795,6 +819,7 @@
   "nombre": "Del francés taupe, «topo», por el color del pelaje del topo europeo.",
   "historia": "Es uno de los nombres de color más imprecisos: puede ser casi cualquier gris pardo o pardo grisáceo, y ni los diseñadores se ponen de acuerdo. Su significado se amplió en los años cuarenta.",
   "nota": null,
+  "acertijo": "En francés me llamo como el pelaje de un animal que vive bajo tierra. Soy de los nombres más imprecisos: ni los diseñadores se ponen de acuerdo.",
   "src": [
    [
     "Wikipedia · Taupe",
@@ -819,6 +844,7 @@
   "nombre": "Del francés carmin, quizá del mismo origen que «carmesí». La raíz está en el persa medio carmir, «rojo», que también dio el árabe qirmiz.",
   "historia": "Se saca de la cochinilla, un insecto de los cactus que aztecas e incas ya usaban. Fue una gran fuente de ingresos para la Corona española, que tuvo su monopolio en Europa hasta hacia 1820. Hoy sigue en los alimentos con el código E120.",
   "nota": null,
+  "acertijo": "Salgo de un insecto de los cactus que ya usaban aztecas e incas. La Corona española tuvo mi monopolio, y hoy sigo en los alimentos con el código E120.",
   "src": [
    [
     "RAE · carmín",
@@ -847,6 +873,7 @@
   "nombre": "Variedad rosa del cuarzo.",
   "historia": "Su color viene de aluminio y fósforo en el cristal, activados por la radiación natural. Algunas variedades se decoloran con la luz.",
   "nota": null,
+  "acertijo": "Aluminio, fósforo y la radiación natural me dan el color. Con la luz, algunas de mis variedades se apagan.",
   "src": [
    [
     "Wikipedia · Rose quartz",
@@ -874,6 +901,7 @@
    "cert": "disc",
    "t": "En 1887 un rabino propuso la sepia como fuente, pero su azul resultó ser azul de Prusia sintético."
   },
+  "acertijo": "Soy el azul que la Biblia manda usar en los flecos rituales. Mi receta se perdió hacia el siglo VI, y aún se discute de qué caracol salía.",
   "src": [
    [
     "Wikipedia · Tekhelet",
@@ -898,6 +926,7 @@
   "nombre": "Del portugués brasil, un rojo como de brasa, y pau, «madera».",
   "historia": "Los portugueses llegaron a Brasil en 1500 y montaron un comercio muy rentable con esta madera de tinte. Los marinos llamaron a la tierra Terra do Brasil, «tierra del palo brasil», y de ahí el nombre del país.",
   "nota": null,
+  "acertijo": "Soy una madera roja como una brasa. Cuando llegaron los portugueses en 1500, le di mi nombre a un país entero.",
   "src": [
    [
     "Wikipedia · Brazilwood",
@@ -922,6 +951,7 @@
   "nombre": "Del latín ferrumen, de ferrum, «hierro».",
   "historia": "Es óxido de hierro. Ocupa más volumen que el hierro original, y por eso puede llegar a reventar estructuras.",
   "nota": null,
+  "acertijo": "Mi nombre viene del latín «hierro», y soy su óxido. Ocupo más que el hierro original y puedo reventar estructuras.",
   "src": [
    [
     "RAE · herrumbre",
@@ -950,6 +980,7 @@
   "nombre": "Por la cerámica de Talavera de la Reina.",
   "historia": "Tiene unos cinco siglos de historia, con raíz islámica y técnicas renacentistas traídas por artesanos flamencos. Con Felipe II llegó a la vajilla de El Escorial. En 2019 la UNESCO la declaró patrimonio inmaterial junto a la de Puebla y Tlaxcala, en México.",
   "nota": null,
+  "acertijo": "Salgo de la cerámica de una ciudad española que llegó a la vajilla de El Escorial. En 2019 la UNESCO la hizo patrimonio, junto a la de Puebla y Tlaxcala.",
   "src": [
    [
     "Wikipedia · Cerámica de Talavera de la Reina",
@@ -974,6 +1005,7 @@
   "nombre": "Es el colorante rojo de la raíz de la granza.",
   "historia": "En 1868 los químicos Graebe y Liebermann, de BASF, la fabricaron a partir del alquitrán de hulla: fue el primer tinte natural copiado por síntesis. El mercado de la granza se hundió casi de un día para otro.",
   "nota": null,
+  "acertijo": "Soy el rojo de la raíz de la granza. En 1868 dos químicos me fabricaron con alquitrán de hulla: fui el primer tinte natural copiado por síntesis.",
   "src": [
    [
     "Wikipedia · Alizarin",
@@ -1002,6 +1034,7 @@
   "nombre": "Del árabe hispánico qarmazí, «del color del quermes», el insecto del que se sacaba el tinte.",
   "historia": "Hacia el año 1400 la palabra ya designaba en inglés tanto al insecto como a su tinte. En 1868 la síntesis de la alizarina por Graebe y Liebermann desplazó a los carmesíes naturales.",
   "nota": null,
+  "acertijo": "Mi nombre viene del árabe hispánico y alude al insecto del que me sacaban. Hacia 1400, en inglés, mi nombre era a la vez el insecto y su tinte.",
   "src": [
    [
     "RAE · carmesí",
@@ -1030,6 +1063,7 @@
   "nombre": "Del italiano a ventura, «por casualidad».",
   "historia": "En el siglo XVIII se descubrió por accidente en Murano un vidrio con destellos: se cuenta que un operario dejó caer limaduras de cobre en el vidrio fundido. El nombre pasó después al mineral, verde y brillante por la fuchsita.",
   "nota": null,
+  "acertijo": "Mi nombre italiano quiere decir «por casualidad»: en Murano salió por accidente un vidrio con destellos. Luego el nombre pasó a un mineral.",
   "src": [
    [
     "Wikipedia · Aventurine",
@@ -1055,6 +1089,7 @@
   "nombre": "Por el color de algunas flores de genciana: no se hace con gencianas ni con violetas.",
   "historia": "Alfred Kern lo sintetizó en 1883 y el oftalmólogo Jakob Stilling descubrió que era antiséptico. En 1884 Hans Christian Gram lo usó para clasificar bacterias: la tinción de Gram.",
   "nota": null,
+  "acertijo": "Me sintetizaron en 1883, y en 1884 Gram me usó para clasificar bacterias. No me hacen con ninguna de las flores de mi nombre.",
   "src": [
    [
     "Wikipedia · Crystal violet",
@@ -1079,6 +1114,7 @@
   "nombre": "Gentilicio de Nazaret. La RAE define al nazareno como el penitente que en Semana Santa va con túnica, por lo común morada.",
   "historia": "Los nazarenos son miembros de cofradías que hacen la estación de penitencia en Semana Santa. El morado es en la Iglesia el color de la penitencia.",
   "nota": null,
+  "acertijo": "Mi nombre es un gentilicio, y visto la túnica de los penitentes de Semana Santa.",
   "src": [
    [
     "RAE · nazareno",
@@ -1111,6 +1147,7 @@
   "nombre": "Por el pintor veneciano Tiziano, que pintaba a menudo mujeres pelirrojas.",
   "historia": "Es un pelirrojo dorado tirando a castaño. En Ana de las Tejas Verdes, Ana lo explica: Tiziano fue un artista famoso al que le gustaba pintar mujeres pelirrojas.",
   "nota": null,
+  "acertijo": "Llevo el nombre de un pintor. En «Ana de las Tejas Verdes», Ana explica que le gustaba pintar mujeres pelirrojas.",
   "src": [
    [
     "Wikipedia · Titian hair",
@@ -1138,6 +1175,7 @@
    "cert": "ley",
    "t": "Se dice que los holandeses las cultivaron naranjas en honor a Guillermo de Orange. Solo lo sostiene la tradición oral: quizá se prefirieron porque no oscurecían los guisos como las moradas."
   },
+  "acertijo": "Me llamo como una raíz que antes era morada o amarilla. Que los holandeses la cambiaran en honor a Guillermo de Orange es leyenda.",
   "src": [
    [
     "Wikipedia · Carrot",
@@ -1162,6 +1200,7 @@
   "nombre": "Del latín sanguis, «sangre», por su parecido con la sangre seca.",
   "historia": "Es una tiza de ocre rojo, una variedad de hematites. Leonardo da Vinci fue el primer gran artista que dibujó con ella, a finales del siglo XV.",
   "nota": null,
+  "acertijo": "Mi nombre viene de la palabra latina para «sangre». Soy una tiza de ocre rojo, y Leonardo da Vinci fue el primer gran artista que dibujó conmigo.",
   "src": [
    [
     "Wikipedia · Red chalk",
@@ -1186,6 +1225,7 @@
   "nombre": "Por el color de la ceniza.",
   "historia": "El Miércoles de Ceniza se marca la frente con la ceniza de las palmas del Domingo de Ramos del año anterior. En inglés, ash gray aparece como nombre de color en 1374.",
   "nota": null,
+  "acertijo": "Un miércoles al año me ponen en la frente; me hacen con las palmas del Domingo de Ramos anterior.",
   "src": [
    [
     "Wikipedia · Ash Wednesday",
@@ -1214,6 +1254,7 @@
   "nombre": "Diminutivo de «azul». La RAE lo define como el viso azul que se daba a las medias de seda blanca, y en Aragón, la pasta de añil en bolas.",
   "historia": "El azul que se añade al lavado compensa el amarilleo de la ropa blanca y la hace parecer más blanca. Se usaron esmalte, índigo, azul de Prusia y ultramar.",
   "nota": null,
+  "acertijo": "La RAE me define como el viso que se daba a las medias de seda blanca. En el lavado, compenso el amarilleo de la ropa blanca.",
   "src": [
    [
     "RAE · azulete",
@@ -1242,6 +1283,7 @@
   "nombre": "Por Sinope, el puerto turco del mar Negro desde el que se exportaba.",
   "historia": "En el Renacimiento los pintores la usaban para dibujar el boceto directamente sobre el revoque del fresco. Esos dibujos preparatorios se llaman hoy sinopie, el plural italiano del pigmento.",
   "nota": null,
+  "acertijo": "Me exportaban desde un puerto del mar Negro. En el Renacimiento, los pintores me usaban para el boceto de los frescos, directamente sobre el revoque.",
   "src": [
    [
     "Wikipedia · Sinopia",
@@ -1269,6 +1311,7 @@
    "cert": "ley",
    "t": "Se dice que las camisas venían de una fábrica de Montevideo que las hacía para los mataderos argentinos, pero no hay documentos que lo prueben."
   },
+  "acertijo": "Vestí las camisas de los Mil, que en 1860 ayudaron a unificar Italia. Que esas camisas se hicieran para mataderos argentinos es solo leyenda.",
   "src": [
    [
     "Wikipedia · Redshirts (Italy)",
@@ -1293,6 +1336,7 @@
   "nombre": "International orange, el naranja de seguridad de la ingeniería.",
   "historia": "El puente Golden Gate está pintado en un tono algo más claro, hecho a medida contra la corrosión del mar y la niebla. Lo llevan los trajes de escape de la NASA y lo llevó el avión cohete Bell X-1.",
   "nota": null,
+  "acertijo": "Soy el color de seguridad de la ingeniería. Me llevan los trajes de escape de la NASA, y el Golden Gate viste un tono algo más claro.",
   "src": [
    [
     "Wikipedia · International orange",
@@ -1317,6 +1361,7 @@
   "nombre": "Del latín glaucus, y este del griego glaukós: «brillante, plateado», y más tarde «verde azulado» o «gris».",
   "historia": "El epíteto más común de Atenea en Homero es glaukópis, que se traduce como «de ojos brillantes». Glaux es la lechuza, su ave, y se discute si el epíteto alude a sus ojos.",
   "nota": null,
+  "acertijo": "Mi nombre griego significó primero «brillante, plateado». De mi raíz vienen el epíteto de Atenea en Homero y el nombre griego de su lechuza.",
   "src": [
    [
     "RAE · glauco",
@@ -1349,6 +1394,7 @@
   "nombre": "Por la dinastía Han de China.",
   "historia": "Es un silicato de bario y cobre que se fabricó en China desde la dinastía Zhou (1045-771 a. C.) hasta el final de los Han, hacia el 220. Es casi gemelo del azul egipcio, que lleva calcio en lugar de bario.",
   "nota": null,
+  "acertijo": "Soy un silicato de bario y cobre, y llevo el nombre de una dinastía china. Tengo un gemelo casi exacto que lleva calcio en lugar de bario.",
   "src": [
    [
     "Wikipedia · Han purple and Han blue",
@@ -1373,6 +1419,7 @@
   "nombre": "De lapis, «piedra», y del latín medieval lazulum, «cielo».",
   "historia": "La mina de Sar-i Sang, en Afganistán, se explota desde hace más de 6.000 años. Está en la máscara funeraria de Tutankamón.",
   "nota": null,
+  "acertijo": "Mi nombre une «piedra» y «cielo». En Afganistán me sacan desde hace más de 6.000 años, y estoy en la máscara de Tutankamón.",
   "src": [
    [
     "Wikipedia · Lapis lazuli",
@@ -1397,6 +1444,7 @@
   "nombre": "Del cingalés tōramalli, nombre que se daba a las cornalinas.",
   "historia": "Al calentarse se carga de electricidad. Por eso la llamaban el «imán de Ceilán»: atraía y luego repelía la ceniza caliente.",
   "nota": null,
+  "acertijo": "Al calentarme me cargo de electricidad. Me llamaban el «imán de Ceilán» porque atraía y luego repelía la ceniza caliente.",
   "src": [
    [
     "Wikipedia · Tourmaline",
@@ -1421,6 +1469,7 @@
   "nombre": "Probablemente porque al principio se importaba de la India, donde abundan suelos rojos de laterita.",
   "historia": "Es un ocre de óxido férrico. Hoy se fabrica de forma artificial.",
   "nota": null,
+  "acertijo": "Probablemente me llamaron así por el país del que llegaba, de suelos rojos de laterita. Soy un ocre de óxido férrico.",
   "src": [
    [
     "Wikipedia · Indian red (color)",
@@ -1445,6 +1494,7 @@
   "nombre": "Tinte de líquenes que cambia de color.",
   "historia": "Se obtiene de los mismos líquenes que la orchilla. Es rojo en ácido y azul en base: por eso se usa para medir la acidez.",
   "nota": null,
+  "acertijo": "Soy rojo en ácido y azul en base, y por eso me usan para medir la acidez. Salgo de unos líquenes.",
   "src": [
    [
     "Wikipedia · Orcein",
@@ -1470,6 +1520,7 @@
   "nombre": "Del sánscrito kṛmija, «hecho por un gusano».",
   "historia": "Es un insecto que vive en la coscoja mediterránea. Fue el rojo de lujo de la Europa medieval para sedas y paños escarlata, hasta que la cochinilla traída de México, más potente, lo sustituyó.",
   "nota": null,
+  "acertijo": "Mi nombre viene del sánscrito: «hecho por un gusano». Vivo en la coscoja y fui el rojo de lujo medieval, hasta que llegó la cochinilla de México.",
   "src": [
    [
     "Wikipedia · Kermes (dye)",
@@ -1494,6 +1545,7 @@
   "nombre": "Porque el método llegó a Europa desde Esmirna, en el Imperio otomano.",
   "historia": "Se teñía el algodón con raíz de granza en un proceso larguísimo con lejía, aceite y excrementos de oveja. En 1746 dos tintoreros de Esmirna llevaron la receta a Francia. En Escocia hubo fábricas de rojo turco hasta 1961.",
   "nota": null,
+  "acertijo": "Me teñían con raíz de granza, lejía, aceite y excrementos de oveja. En 1746, dos tintoreros de Esmirna llevaron mi receta a Francia.",
   "src": [
    [
     "Wikipedia · Turkey red",
@@ -1518,6 +1570,7 @@
   "nombre": "Del griego amárantos, «que no se marchita»: la flor que no se marchita.",
   "historia": "El colorante E123 se llama amaranto aunque no sale de la planta. En 1976 Estados Unidos lo prohibió como posible cancerígeno tras pruebas con ratas.",
   "nota": null,
+  "acertijo": "Mi nombre griego significa «que no se marchita», como la flor. El colorante E123 se llama como yo, aunque no sale de la planta.",
   "src": [
    [
     "Wikipedia · Amaranth",
@@ -1549,6 +1602,7 @@
    "cert": "disc",
    "t": "Un equipo del Instituto Nacional de Óptica del CNR italiano, dirigido por Sergio Omarini, sostiene que buena parte de esos rojos eran ocre amarillo que el calor de la erupción volvió rojo: el ocre amarillo enrojece por encima de unos 700 °C. La historiadora Mary Beard advierte que no se sabe en qué proporción."
   },
+  "acertijo": "Cubro las paredes de la ciudad que sepultó el Vesubio en el año 79. Se discute cuánto de mí era ocre amarillo que enrojeció con el calor.",
   "src": [
    [
     "Wikipedia · Pompeian red",
@@ -1577,6 +1631,7 @@
   "nombre": "Del latín paeonia, y este del griego paiōnía.",
   "historia": "El médico griego Dioscórides ya relacionaba una hierba llamada aglaofotis con la familia de la peonía.",
   "nota": null,
+  "acertijo": "Soy una flor de nombre griego. El médico Dioscórides ya relacionaba con mi familia una hierba llamada aglaofotis.",
   "src": [
    [
     "RAE · peonía",
@@ -1605,6 +1660,7 @@
   "nombre": "Por Madame de Pompadour, favorita de Luis XV.",
   "historia": "Puso de moda el rosa y el azul pálido en Versalles e hizo crear un rosa propio en la manufactura de porcelana de Sèvres, que ella misma impulsó y acabó comprando en 1759.",
   "nota": null,
+  "acertijo": "Llevo el nombre de la favorita de Luis XV, que mandó crear un tono propio para la porcelana de Sèvres y acabó comprando la fábrica en 1759.",
   "src": [
    [
     "Wikipedia · Pink",
@@ -1633,6 +1689,7 @@
   "nombre": "Del francés framboise.",
   "historia": "Como nombre de color, raspberry aparece en inglés en 1892.",
   "nota": null,
+  "acertijo": "Me llamo como una fruta, con una palabra que nos llegó del francés. Como nombre de color en inglés aparezco en 1892.",
   "src": [
    [
     "RAE · frambuesa",
@@ -1661,6 +1718,7 @@
   "nombre": "Del latín cinnabaris, y este del griego kinnábari.",
   "historia": "Es sulfuro de mercurio, el mineral del que sale el bermellón. La mina de Almadén fue durante siglos el yacimiento de cinabrio más importante del mundo. En China se usó para la famosa laca roja tallada.",
   "nota": null,
+  "acertijo": "Soy sulfuro de mercurio. En China me usaron para hacer una famosa laca tallada.",
   "src": [
    [
     "RAE · cinabrio",
@@ -1689,6 +1747,7 @@
   "nombre": "Del latín minium. Los copistas que lo usaban para pintar iniciales «miniaban» (miniare).",
   "historia": "Se obtiene calentando blanco de plomo al aire. Las pequeñas ilustraciones de los manuscritos pintados con él se llamaron miniaturas: la palabra viene del minio, no de «mínimo».",
   "nota": null,
+  "acertijo": "Me sacan calentando blanco de plomo. Las ilustraciones de los manuscritos pintadas conmigo deben su nombre a mí, y no a que fueran pequeñas.",
   "src": [
    [
     "Wikipedia · Minium (pigment)",
@@ -1713,6 +1772,7 @@
   "nombre": "Por la ciudad holandesa de Delft.",
   "historia": "Cuando la muerte del emperador Wanli en 1620 cortó el suministro de porcelana china, los alfareros holandeses empezaron a imitarla en loza esmaltada azul y blanca.",
   "nota": null,
+  "acertijo": "Cuando en 1620 se cortó la porcelana china, los alfareros de una ciudad holandesa me usaron para imitarla en loza de dos colores.",
   "src": [
    [
     "Wikipedia · Delftware",
@@ -1740,6 +1800,7 @@
    "cert": "disc",
    "t": "Julio César escribió que los britanos se teñían con vitrum, que normalmente significa «vidrio». No está claro que se refiriera al glasto."
   },
+  "acertijo": "Fui el gran tinte azul de la Europa medieval, y Toulouse se enriqueció comerciando conmigo. También me llaman hierba pastel.",
   "src": [
    [
     "RAE · glasto",
@@ -1768,6 +1829,7 @@
   "nombre": "En francés, bleu de France.",
   "historia": "Desde al menos el siglo XII el escudo de los reyes de Francia lleva flores de lis de oro sobre azul. Hoy es el color de los equipos nacionales franceses y su color nacional en las carreras.",
   "nota": null,
+  "acertijo": "Desde el siglo XII soy el fondo de las flores de lis de oro de unos reyes. Hoy visto a sus equipos nacionales.",
   "src": [
    [
     "Wikipedia · Bleu de France (colour)",
@@ -1795,6 +1857,7 @@
    "cert": "disc",
    "t": "Hay cuatro explicaciones populares: que espanta a los mosquitos, que recuerda al cielo, que lo trajeron los judíos llegados en los años treinta, por el hilo azul de sus mantos de oración, o que se pintó en los años setenta para atraer turistas. Ninguna está probada."
   },
+  "acertijo": "Pinto la medina de una ciudad de Marruecos y nadie sabe con certeza por qué: se habla de mosquitos, del cielo o de turistas, pero nada está probado.",
   "src": [
    [
     "Wikipedia · Chefchaouen",
@@ -1824,6 +1887,7 @@
   "nombre": "Por Tanzania. Se lo puso Tiffany & Co., al parecer porque «zoisita azul» no parecía muy vendible.",
   "historia": "Se descubrió en 1967 cerca de las colinas de Mererani y solo existe en una pequeña zona del norte de Tanzania.",
   "nota": null,
+  "acertijo": "Me descubrieron en 1967 y solo existo en una pequeña zona de un país africano. Tiffany me cambió el nombre, al parecer porque el de antes no vendía.",
   "src": [
    [
     "Wikipedia · Tanzanite",
@@ -1848,6 +1912,7 @@
   "nombre": "Por la porcelana azul y blanca de las dinastías Yuan y Ming.",
   "historia": "Se hacía posible gracias al cobalto importado de Persia, llamado huihui qing. Jingdezhen empezó a producirla a principios del siglo XIV.",
   "nota": null,
+  "acertijo": "Llevo el nombre de una dinastía china. Pinto su porcelana con un material importado que llamaban huihui qing, y Jingdezhen me usó desde el siglo XIV.",
   "src": [
    [
     "Wikipedia · Blue and white pottery",
@@ -1872,6 +1937,7 @@
   "nombre": "Por el ceramista inglés Josiah Wedgwood.",
   "historia": "En la década de 1770 creó el jasperware, un gres mate con relieves blancos. Su color más famoso es este azul pálido. En 1790 terminó una copia del Jarrón Portland tras cuatro años de trabajo.",
   "nota": null,
+  "acertijo": "Un ceramista inglés me puso en su jasperware, un gres mate con relieves blancos, en la década de 1770.",
   "src": [
    [
     "Wikipedia · Jasperware",
@@ -1896,6 +1962,7 @@
   "nombre": "Del latín medieval plata, «lámina de metal», del griego platýs, «plano». El latín clásico decía argentum, de ahí su símbolo, Ag.",
   "historia": "Argentina tomó su nombre de argentum, el metal que se pensaba que formaba buena parte de su riqueza.",
   "nota": null,
+  "acertijo": "Mi símbolo es Ag, del latín argentum, y un país sudamericano tomó su nombre de mí.",
   "src": [
    [
     "RAE · plata",
@@ -1924,6 +1991,7 @@
   "nombre": "Del inglés tangerine, «de Tánger», el puerto marroquí del estrecho de Gibraltar.",
   "historia": "El Oxford English Dictionary registra un uso temprano en The Tatler de Addison, en 1710.",
   "nota": null,
+  "acertijo": "Mi nombre en inglés alude a un puerto marroquí del Estrecho. Addison ya me usó en 1710.",
   "src": [
    [
     "Wikipedia · Tangerine",
@@ -1949,6 +2017,7 @@
   "nombre": "Su nombre recuerda al múrex, el caracol de la púrpura de Tiro.",
   "historia": "Proust la obtuvo en 1818 a partir del ácido purpúrico. Hacia 1853 los tintoreros franceses empezaron a fabricarla con guano sudamericano, y se usó hasta 1865: fue el primer tinte sintético de mordiente.",
   "nota": null,
+  "acertijo": "Proust me obtuvo en 1818 a partir de un ácido. Hacia 1853 los tintoreros franceses me fabricaban con guano sudamericano.",
   "src": [
    [
     "CAMEO · Murexide",
@@ -1977,6 +2046,7 @@
   "nombre": "Diminutivo de «cárdeno». La RAE lo define como acetato de cobre usado en pintura.",
   "historia": "En la Edad Media se hacía con tiras de cobre y vinagre enterradas en estiércol. Lo usó Giotto, y en el siglo XIX lo sustituyeron verdes más estables.",
   "nota": null,
+  "acertijo": "La RAE me define como acetato de cobre usado en pintura. En la Edad Media me hacían con tiras de cobre y vinagre enterradas en estiércol.",
   "src": [
    [
     "RAE · cardenillo",
@@ -2008,6 +2078,7 @@
    "cert": "ley",
    "t": "Se cuenta que Pedro I de Castilla se la dio al Príncipe Negro en 1367, como pago por su ayuda en la guerra. Pero el relato no aparece hasta la década de 1760, y la piedra no vuelve a salir en los documentos hasta 1415."
   },
+  "acertijo": "Durante siglos me confundieron con otra gema, y la gran piedra roja de la corona imperial británica soy yo.",
   "src": [
    [
     "Wikipedia · Black Prince's Ruby",
@@ -2032,6 +2103,7 @@
   "nombre": "Probablemente por las sotanas de los cardenales católicos, aunque su color oficial es el escarlata.",
   "historia": "El pájaro cardenal norteamericano también debe su nombre a los cardenales y a su vestimenta roja.",
   "nota": null,
+  "acertijo": "Probablemente me llamaron por las sotanas de unos altos cargos de la Iglesia. Un pájaro norteamericano debe su nombre a esa ropa.",
   "src": [
    [
     "Wikipedia · Cardinal (color)",
@@ -2056,6 +2128,7 @@
   "nombre": "Laca hecha con la raíz de la granza o rubia (Rubia tinctorum).",
   "historia": "La granza ya se cultivaba en Egipto hacia el 1500 a. C. Las primeras lacas eran débiles y se desvanecían enseguida, hasta que el tintorero inglés George Field mejoró el proceso en 1804.",
   "nota": null,
+  "acertijo": "Me hacen con la raíz de una planta que en Egipto ya se cultivaba hacia el 1500 a. C. Me desvanecía enseguida hasta que George Field me mejoró en 1804.",
   "src": [
    [
     "Wikipedia · Rose madder",
@@ -2080,6 +2153,7 @@
   "nombre": "De ababol, su nombre antiguo. En francés, coquelicot.",
   "historia": "Monet pintó Campo de amapolas en 1875. Desde la Primera Guerra Mundial es el símbolo del recuerdo de los soldados caídos, porque brotaba en los campos removidos por la guerra; el poema In Flanders Fields la hizo famosa.",
   "nota": null,
+  "acertijo": "Mi nombre antiguo era ababol. Monet pintó un campo de mis flores en 1875, y desde la Primera Guerra Mundial recuerdo a los soldados caídos.",
   "src": [
    [
     "RAE · amapola",
@@ -2108,6 +2182,7 @@
   "nombre": "Por el color de la carne del salmón.",
   "historia": "El salmón salvaje lo debe a la astaxantina del krill y las gambas que come; el de piscifactoría sería gris, así que se añade al pienso. La industria mide el tono con el SalmoFan, un abanico de muestras del rosa pálido al rojo intenso.",
   "nota": null,
+  "acertijo": "Me llamo como la carne de un pez que me debe al krill y las gambas que come. La industria mide mi tono con un abanico de muestras.",
   "src": [
    [
     "Quartz · Why farmed salmon has color added",
@@ -2136,6 +2211,7 @@
   "nombre": "Extracto vegetal llamado catecú o cachú (en inglés, cutch).",
   "historia": "Es un tinte marrón rico en taninos que sirve para teñir lana, seda y algodón y para curtir pieles. En el sur de Asia forma parte de la mezcla para mascar llamada paan.",
   "nota": null,
+  "acertijo": "Soy un extracto vegetal rico en taninos. Tiño lana y curto pieles, y en el sur de Asia formo parte del paan.",
   "src": [
    [
     "Wikipedia · Catechu",
@@ -2160,6 +2236,7 @@
   "nombre": "Por el cadmio, que con selenio da los tonos naranjas y rojos.",
   "historia": "Los pigmentos de cadmio desplazaron al bermellón, que era de mercurio, porque aguantan mucho mejor la luz.",
   "nota": null,
+  "acertijo": "Un metal con selenio me da el color. Desplacé al bermellón, que era de mercurio, porque aguanto mucho mejor la luz.",
   "src": [
    [
     "Wikipedia · Cadmium orange",
@@ -2188,6 +2265,7 @@
   "nombre": "Por la dinastía Han de China.",
   "historia": "Es un silicato de bario y cobre, hermano del azul Han, fabricado en China desde hace casi 3.000 años. Colorea los pantalones de los guerreros de terracota. En 2006 se descubrió que, en ciertas condiciones, se comporta como si «perdiera una dimensión».",
   "nota": null,
+  "acertijo": "Coloreo los pantalones de los guerreros de terracota. Soy hermano de un azul de la misma dinastía china.",
   "src": [
    [
     "Wikipedia · Han purple and Han blue",
@@ -2212,6 +2290,7 @@
   "nombre": "Del griego alábastros, un frasco de alabastro. Quizá relacionado con la diosa egipcia Bastet.",
   "historia": "Los frascos de alabastro para ungüentos, los alabastra, eran muy apreciados en la Antigüedad. El alabastro egipcio es calcita; el europeo medieval, yeso, más blando.",
   "nota": null,
+  "acertijo": "Los frascos de ungüentos de la Antigüedad se hacían conmigo y me dieron nombre. Quizá venga de la diosa Bastet.",
   "src": [
    [
     "Wikipedia · Alabaster",
@@ -2236,6 +2315,7 @@
   "nombre": "Así llama la RAE al carbonato de calcio usado para limpiar metales, baldosas o zapatos.",
   "historia": "Es creta molida: la creta está hecha sobre todo de diminutas placas de calcita de las conchas de algas del plancton.",
   "nota": null,
+  "acertijo": "Soy creta molida, hecha de conchas diminutas de algas del plancton. Sirvo para limpiar metales, baldosas y zapatos.",
   "src": [
    [
     "RAE · blanco de España",
@@ -2264,6 +2344,7 @@
   "nombre": "Del griego, «de color rosa».",
   "historia": "También se la llama rosa del Inca. Es la piedra nacional de Argentina, y la variedad bandeada se extrae en Capillitas.",
   "nota": null,
+  "acertijo": "Mi nombre viene del griego. Soy la piedra nacional de Argentina, y mi variedad bandeada se extrae en Capillitas.",
   "src": [
    [
     "Wikipedia · Rhodochrosite",
@@ -2288,6 +2369,7 @@
   "nombre": "Del catalán clavell. En inglés carnation viene quizá del latín corona, por las coronas de flores griegas y romanas.",
   "historia": "En 1974 la caída de la dictadura portuguesa se llamó Revolución de los Claveles, por los claveles rojos que lució la gente.",
   "nota": null,
+  "acertijo": "Mi nombre viene del catalán. En 1974 la gente me lució en Portugal, y la caída de la dictadura se llamó como yo.",
   "src": [
    [
     "RAE · clavel",
@@ -2320,6 +2402,7 @@
   "nombre": "Del latín tardío sapphirus, del griego sáppheiros, quizá de origen persa.",
   "historia": "Es corindón, como el rubí. Su azul viene del hierro y el titanio. En la Antigüedad el nombre quizá designaba otra piedra.",
   "nota": null,
+  "acertijo": "Soy corindón, como el rubí, y el hierro y el titanio me dan el color.",
   "src": [
    [
     "RAE · zafiro",
@@ -2348,6 +2431,7 @@
   "nombre": "Por el cobalto, que le da el color.",
   "historia": "Louis Jacques Thénard descubrió en 1802 un azul de cobalto y alúmina, que se empezó a fabricar en Francia en 1807. En 1818 el acuarelista John Varley lo propuso como sustituto del ultramar.",
   "nota": null,
+  "acertijo": "Thénard me descubrió en 1802 con alúmina y el metal que me da el nombre. En 1818 el acuarelista John Varley me propuso como sustituto de otro pigmento.",
   "src": [
    [
     "Wikipedia · Cobalt blue",
@@ -2372,6 +2456,7 @@
   "nombre": "Por Henry Davey, que lo introdujo en Inglaterra.",
   "historia": "Es un pigmento de tierra hecho con arcilla y pizarra muy molidas.",
   "nota": null,
+  "acertijo": "Soy un pigmento de tierra: arcilla y una roca de tejados, muy molidas. Llevo, mal escrito, el apellido de quien me trajo a Inglaterra.",
   "src": [
    [
     "CAMEO · Davey's gray",
@@ -2399,6 +2484,7 @@
    "cert": "ley",
    "t": "Se suele decir que los monjes budistas tiñen sus túnicas con azafrán. En realidad es demasiado caro: usan cúrcuma o madera de jaca."
   },
+  "acertijo": "Hacen falta unas 150 flores de crocus para un gramo de mí. Que los monjes budistas tiñan sus túnicas conmigo es leyenda: soy demasiado caro.",
   "src": [
    [
     "RAE · azafrán",
@@ -2427,6 +2513,7 @@
   "nombre": "Por el licor de ajenjo. La llamaban la fée verte, «el hada verde».",
   "historia": "Fue la bebida de los artistas y escritores parisinos de finales del XIX. Francia la prohibió hacia 1914-1915 y no levantó la prohibición hasta 2011. Su verde viene de la clorofila de las hierbas.",
   "nota": null,
+  "acertijo": "Me llamaban «el hada verde». Fui la bebida de muchos artistas y escritores del XIX, y Francia me tuvo prohibida hasta 2011.",
   "src": [
    [
     "Wikipedia · Absinthe",
@@ -2451,6 +2538,7 @@
   "nombre": "Por la calcarenita amarilla de las canteras de Los Alcores, como Alcalá de Guadaíra.",
   "historia": "Molida, cubre el ruedo de las plazas de toros y las calles de la Feria de Sevilla.",
   "nota": null,
+  "acertijo": "Soy una piedra amarilla molida de las canteras de Los Alcores. Cubro el ruedo de las plazas de toros y las calles de la Feria de Sevilla.",
   "src": [
    [
     "Wikipedia · Albero",
@@ -2475,6 +2563,7 @@
   "nombre": "Del italiano terracotta, y este del latín terra cocta, «tierra cocida».",
   "historia": "El ejército de terracota del emperador Qin Shi Huang, de hacia el 210 a. C., es su ejemplo más famoso.",
   "nota": null,
+  "acertijo": "Mi nombre viene del italiano. Hacia el 210 a. C., un emperador chino se hizo enterrar con un ejército hecho de mí.",
   "src": [
    [
     "RAE · terracota",
@@ -2503,6 +2592,7 @@
   "nombre": "Por la ciudad francesa de Burdeos y el vino de su región.",
   "historia": "Es un rojo oscuro muy parecido al borgoña. Ambos nombres de color vienen del vino.",
   "nota": null,
+  "acertijo": "Me llamo como una ciudad francesa y el vino de su región.",
   "src": [
    [
     "Wikipedia · Burdeos (color)",
@@ -2531,6 +2621,7 @@
   "nombre": "Del latín tardío cuprum, de aes cyprium, «metal de Chipre».",
   "historia": "Chipre fue una de las grandes fuentes de cobre del mundo romano. Su símbolo químico, Cu, viene de ahí.",
   "nota": null,
+  "acertijo": "Mi nombre viene de «metal de Chipre», una gran fuente del mundo romano. Por eso mi símbolo químico es Cu.",
   "src": [
    [
     "RAE · cobre",
@@ -2559,6 +2650,7 @@
   "nombre": "Del italiano bronzo, y este del latín aes Brundusi, «bronce de Brindisi», ciudad famosa por el suyo.",
   "historia": "Es una aleación de cobre con estaño u otros metales. Dio nombre a la Edad del Bronce, que empezó hacia el 3000 a. C. en gran parte del Viejo Mundo.",
   "nota": null,
+  "acertijo": "Soy cobre con estaño, y di nombre a una edad que empezó hacia el 3000 a. C.",
   "src": [
    [
     "RAE · bronce",
@@ -2587,6 +2679,7 @@
   "nombre": "Del latín tardío camox, nombre del rebeco.",
   "historia": "La piel curtida del rebeco queda suave, aterciopelada y amarillo pálido. De ahí pasó el nombre a la tela y a las bayetas de limpiar.",
   "nota": null,
+  "acertijo": "Me llamo como la piel curtida del rebeco, suave y aterciopelada. De ahí pasé a la tela y a las bayetas de limpiar.",
   "src": [
    [
     "RAE · gamuza",
@@ -2611,6 +2704,7 @@
   "nombre": "Del árabe ḥinnāʾ.",
   "historia": "Es el polvo de las hojas de Lawsonia inermis. En el antiguo Egipto se usó en algunas momias: la de Henuttamehu tiene el pelo teñido de rojo intenso, probablemente con henna.",
   "nota": null,
+  "acertijo": "Soy el polvo de las hojas de Lawsonia inermis. En el antiguo Egipto probablemente teñí de rojo el pelo de una momia.",
   "src": [
    [
     "Wikipedia · Henna",
@@ -2635,6 +2729,7 @@
   "nombre": "Del latín caeruleus, «azul oscuro, azul o azul verdoso».",
   "historia": "El pigmento, un estannato de cobalto, lo sintetizó el químico suizo Albrecht Höpfner en 1789. Monet lo usó en las sombras de La estación de Saint-Lazare.",
   "nota": null,
+  "acertijo": "El químico suizo Höpfner sintetizó mi pigmento, un estannato, en 1789. Monet me usó en las sombras de La estación de Saint-Lazare.",
   "src": [
    [
     "Wikipedia · Cerulean",
@@ -2659,6 +2754,7 @@
   "nombre": "La palabra viene del portugués o español flamengo, «color de llama», del provenzal flamenc. La RAE lo deriva del neerlandés flaming.",
   "historia": "Los flamencos son rosas por los carotenoides de lo que comen, como la artemia y las algas: su hígado los convierte en pigmento.",
   "nota": null,
+  "acertijo": "Mi nombre quiere decir «color de llama». Un ave me lleva gracias a la artemia y las algas que come.",
   "src": [
    [
     "Wikipedia · Flamingo",
@@ -2687,6 +2783,7 @@
   "nombre": "Del francés lilac, del árabe līlak, del persa lilang y del sánscrito nîla, «azul oscuro».",
   "historia": "Como nombre de color en inglés aparece en 1775.",
   "nota": null,
+  "acertijo": "Mi nombre viajó desde el sánscrito «azul oscuro» por el persa, el árabe y el francés. En inglés soy color desde 1775.",
   "src": [
    [
     "RAE · lila",
@@ -2715,6 +2812,7 @@
   "nombre": "Por las rosas de té, llamadas así por su aroma, que recuerda al té negro chino.",
   "historia": "Llegaron a Occidente desde Cantón a principios del siglo XIX; una de las primeras, la Hume's Blush Tea-scented China, es de 1809.",
   "nota": null,
+  "acertijo": "Me llamo como unas flores cuyo aroma recuerda al té negro chino. Llegaron desde Cantón a principios del siglo XIX.",
   "src": [
    [
     "Wikipedia · Tea rose",
@@ -2742,6 +2840,7 @@
    "cert": "disc",
    "t": "Se suele decir que la fruta se llama así por el color de las túnicas de los mandarines chinos. No está claro: no se sabe por qué se le puso ese nombre."
   },
+  "acertijo": "Me llamo como una fruta que se relaciona con unos altos funcionarios chinos. Que fuera por el color de sus túnicas no está claro.",
   "src": [
    [
     "RAE · mandarín",
@@ -2770,6 +2869,7 @@
   "nombre": "Por el color del hábito de los frailes capuchinos.",
   "historia": "A finales del siglo XVIII los cafés de Viena servían el Kapuziner, llamado así por el hábito de los capuchinos. De ahí viene el capuchino.",
   "nota": null,
+  "acertijo": "Me llamo como el hábito de unos frailes, y una bebida de Viena tomó mi nombre a finales del siglo XVIII.",
   "src": [
    [
     "Wikipedia · Cappuccino",
@@ -2794,6 +2894,7 @@
   "nombre": "Del náhuatl achiyotl, de achi-, «semilla».",
   "historia": "Sale de las semillas de Bixa orellana, árbol de México a Brasil. Pueblos indígenas de Brasil lo usaban para pintarse el cuerpo y como repelente. Hoy es el colorante E160b y da su color a muchos quesos.",
   "nota": null,
+  "acertijo": "Salgo de las semillas de Bixa orellana. Pueblos de Brasil se pintaban el cuerpo conmigo, y hoy coloreo muchos quesos como E160b.",
   "src": [
    [
     "RAE · achiote",
@@ -2822,6 +2923,7 @@
   "nombre": "Polvo de pimientos rojos secos y molidos.",
   "historia": "El pimentón de la Vera se seca con humo, de ahí su sabor ahumado. Es denominación de origen registrada en la Unión Europea desde 2007.",
   "nota": null,
+  "acertijo": "Soy pimiento rojo, seco y molido. El de la Vera se seca con humo, y por eso sabe ahumado.",
   "src": [
    [
     "RAE · pimentón",
@@ -2850,6 +2952,7 @@
   "nombre": "Del árabe hispánico iškarláṭa, del griego bizantino sigillâtos, un tejido marcado con anillos, y este del latín sigillatum, «paño sellado».",
   "historia": "Durante la Edad Media «escarlata» era también el nombre de un paño de lujo, casi siempre rojo. La RAE aún recoge ese sentido de tela. Como nombre de color en inglés aparece hacia 1250.",
   "nota": null,
+  "acertijo": "En la Edad Media también fui un paño de lujo, casi siempre rojo. Mi nombre viene del latín «paño sellado».",
   "src": [
    [
     "RAE · escarlata",
@@ -2878,6 +2981,7 @@
   "nombre": "En español, rejalgar: del árabe hispánico ráhǧ alḡár, «polvo de la cueva».",
   "historia": "Es sulfuro de arsénico, muy venenoso. En el Imperio romano se comerciaba como pigmento rojo anaranjado. Con la luz se descompone en un polvo amarillo, el pararrejalgar.",
   "nota": null,
+  "acertijo": "Mi nombre viene del árabe «polvo de la cueva». Soy sulfuro de arsénico, muy venenoso, y con la luz me deshago en un polvo amarillo.",
   "src": [
    [
     "RAE · rejalgar",
@@ -2906,6 +3010,7 @@
   "nombre": "Por Andreas Cassius, médico de Hamburgo.",
   "historia": "Son partículas diminutas de oro sobre óxido de estaño. Cassius estudió la reacción en 1665. Da el color rojo al vidrio rubí y sirve como prueba química del oro.",
   "nota": null,
+  "acertijo": "Un médico de Hamburgo estudió en 1665 cómo el oro sobre óxido de estaño daba color. Doy el rojo al vidrio rubí.",
   "src": [
    [
     "Wikipedia · Purple of Cassius",
@@ -2930,6 +3035,7 @@
   "nombre": "«Laca» viene del árabe hispánico lákk, del persa lāk y del sánscrito lākṣā.",
   "historia": "Es una resina que segregan unos insectos sobre los árboles; refinada, es la goma laca. Se cree que su nombre en la India, lakh, «cien mil», alude a la cantidad enorme de insectos que cubren cada árbol.",
   "nota": null,
+  "acertijo": "Soy la resina que segregan unos insectos sobre los árboles. Se cree que mi nombre en la India, lakh, «cien mil», alude a cuántos cubren cada árbol.",
   "src": [
    [
     "RAE · laca",
@@ -2962,6 +3068,7 @@
   "nombre": "Por sus elementos: itrio (Y), indio (In) y manganeso (Mn).",
   "historia": "Lo encontraron por casualidad Mas Subramanian y Andrew Smith en la Universidad Estatal de Oregón en 2009. Crayola sacó una cera «inspirada» en él, Bluetiful, que no lo lleva.",
   "nota": null,
+  "acertijo": "Me llamo por tres elementos químicos. Me encontraron por casualidad en Oregón en 2009, y Crayola sacó una cera inspirada en mí que no me lleva.",
   "src": [
    [
     "Wikipedia · YInMn Blue",
@@ -2986,6 +3093,7 @@
   "nombre": "Del griego chrysos, «oro», y prasinon, «verde».",
   "historia": "Es una calcedonia verde manzana. Su color viene de trazas de níquel, a diferencia de la esmeralda, que lo debe al cromo.",
   "nota": null,
+  "acertijo": "Mi nombre griego une «oro» y «verde». Soy una calcedonia, y el níquel me da el color.",
   "src": [
    [
     "Wikipedia · Chrysoprase",
@@ -3010,6 +3118,7 @@
   "nombre": "Del francés eau de Nil, «agua del Nilo».",
   "historia": "El nombre entró en el vocabulario del color a finales del siglo XIX, en pleno auge de la egiptomanía. Se puso de moda en la decoración y la joyería art déco, y Hitchcock vistió con él a Grace Kelly en La ventana indiscreta.",
   "nota": null,
+  "acertijo": "En francés soy el «agua» de un río de Egipto. Hitchcock vistió conmigo a Grace Kelly en La ventana indiscreta.",
   "src": [
    [
     "The Paris Review · Eau de Nil",
@@ -3034,6 +3143,7 @@
   "nombre": "De mora: el color de la fruta.",
   "historia": "La RAE lo define como el color que está entre el rojo y el azul. En el rito romano es el color litúrgico del Adviento y la Cuaresma, tiempos de penitencia.",
   "nota": null,
+  "acertijo": "Me llamo por una fruta. Soy el color de la Iglesia para el Adviento y la Cuaresma.",
   "src": [
    [
     "RAE · morado",
@@ -3065,6 +3175,7 @@
    "cert": "ley",
    "t": "Heródoto contaba que unas aves gigantes recogían la canela para hacer sus nidos. Plinio ya decía que era un cuento de los comerciantes."
   },
+  "acertijo": "Soy una corteza seca en forma de canuto. Heródoto contaba que unas aves gigantes me usaban para sus nidos; ya Plinio lo llamó cuento.",
   "src": [
    [
     "RAE · canela",
@@ -3093,6 +3204,7 @@
   "nombre": "Etimología discutida, según la RAE. Se compara con el náhuatl xocoatl, de xoco, «amargo», y atl, «agua».",
   "historia": "La palabra llegó a Europa desde el náhuatl a través del español.",
   "nota": null,
+  "acertijo": "Mi palabra llegó a Europa desde el náhuatl a través del español. Quizá venga de «agua amarga», pero se discute.",
   "src": [
    [
     "RAE · chocolate",
@@ -3120,6 +3232,7 @@
    "cert": "ley",
    "t": "Algunas enciclopedias medievales decían que era la sangre de dragones y elefantes muertos en combate."
   },
+  "acertijo": "Soy la resina roja de unos árboles de Socotra y de Canarias. Algunas enciclopedias medievales decían que salía de fieras muertas en combate: es leyenda.",
   "src": [
    [
     "Wikipedia · Dragon's blood",
@@ -3144,6 +3257,7 @@
   "nombre": "Del portugués lacre, variante de «laca».",
   "historia": "El lacre medieval era cera de abeja y resina, teñido de rojo con bermellón. En el siglo XVI llegó la goma laca de las Indias y se convirtió en su base. Servía para cerrar documentos y demostrar que nadie los había abierto.",
   "nota": null,
+  "acertijo": "Sirvo para cerrar documentos y demostrar que nadie los ha abierto. En la Edad Media me hacían con cera de abeja y resina.",
   "src": [
    [
     "RAE · lacre",
@@ -3172,6 +3286,7 @@
   "nombre": "Del latín plumbum, de donde viene su símbolo, Pb, y la palabra inglesa plumbing, «fontanería».",
   "historia": "Escritores griegos y romanos ya advirtieron que era tóxico, pero en Europa no se reconoció de forma general hasta finales del siglo XIX.",
   "nota": null,
+  "acertijo": "Mi símbolo es Pb, y de mí viene la palabra inglesa para la fontanería. Griegos y romanos ya sabían que era tóxico.",
   "src": [
    [
     "Wikipedia · Lead",
@@ -3196,6 +3311,7 @@
   "nombre": "Nombre canario del liquen Roccella tinctoria.",
   "historia": "Por su tinte rojo violáceo fue muy buscada por los tintoreros europeos a finales de la Edad Media. Desde 1758 se fabricó un tinte de líquenes llamado cudbear.",
   "nota": null,
+  "acertijo": "Soy el nombre canario de un liquen. Los tintoreros europeos me buscaban a finales de la Edad Media, y desde 1758 se hizo con líquenes el cudbear.",
   "src": [
    [
     "Wikipedia · Roccella tinctoria",
@@ -3224,6 +3340,7 @@
   "nombre": "Por Venecia. También se le llamaba sinopia, porque el mejor venía del puerto de Sinope.",
   "historia": "Es un óxido de hierro rojo apagado. Cennino Cennini, pintor del siglo XIV, recomendaba mezclarlo con blanco de cal para pintar la piel.",
   "nota": null,
+  "acertijo": "Me llaman como a una ciudad italiana. Cennino Cennini, pintor del siglo XIV, recomendaba mezclarme con blanco de cal para pintar la piel.",
   "src": [
    [
     "Wikipedia · Venetian red",
@@ -3248,6 +3365,7 @@
   "nombre": "Del latín aurum, de una raíz que significa «brillar», la misma de aurora.",
   "historia": "Es de los elementos menos reactivos: no reacciona con el oxígeno a ninguna temperatura. Por eso no se oxida ni pierde el brillo.",
   "nota": null,
+  "acertijo": "Mi nombre latino viene de una raíz que significa «brillar», la misma de aurora. No me oxido a ninguna temperatura.",
   "src": [
    [
     "Wikipedia · Gold",
@@ -3272,6 +3390,7 @@
   "nombre": "En inglés gamboge, de Camboja, el antiguo nombre de Camboya.",
   "historia": "Es la resina de árboles Garcinia de Camboya y Tailandia. Ha teñido túnicas de monjes budistas, y es tóxica: en dosis altas puede ser mortal.",
   "nota": null,
+  "acertijo": "Mi nombre inglés viene del antiguo nombre de Camboya. Soy la resina de unos árboles, he teñido túnicas de monjes y soy tóxica.",
   "src": [
    [
     "Wikipedia · Gamboge",
@@ -3296,6 +3415,7 @@
   "nombre": "Por la piel blanca de invierno del armiño, con la punta de la cola negra.",
   "historia": "Forraba los mantos de coronación y las túnicas de reyes y altos nobles. En heráldica se asocia sobre todo al ducado de Bretaña.",
   "nota": null,
+  "acertijo": "Me llamo como la piel de invierno de un animal, con la punta de la cola negra. Forraba los mantos de coronación.",
   "src": [
    [
     "Wikipedia · Ermine (heraldry)",
@@ -3320,6 +3440,7 @@
   "nombre": "De origen incierto, según la RAE.",
   "historia": "Es una aleación de estaño que antes podía llevar hasta un 40 % de plomo. En Europa se usó para platos y jarras desde la Edad Media hasta que la sustituyeron la loza y el vidrio.",
   "nota": null,
+  "acertijo": "Soy una aleación de estaño. En Europa fui platos y jarras desde la Edad Media hasta que llegaron la loza y el vidrio.",
   "src": [
    [
     "RAE · peltre",
@@ -3348,6 +3469,7 @@
   "nombre": "Por Egipto, donde se fabricó por primera vez.",
   "historia": "Está considerado el primer pigmento sintético. El ejemplo más antiguo es un cuenco de alabastro de hacia el 3250 a. C., hallado en Hieracómpolis.",
   "nota": null,
+  "acertijo": "Me consideran el primer pigmento sintético. Mi ejemplo más antiguo, de hacia el 3250 a. C., está en un cuenco de Hieracómpolis.",
   "src": [
    [
     "Wikipedia · Egyptian blue",
@@ -3372,6 +3494,7 @@
   "nombre": "Por el azul de la cerámica persa y los azulejos de mezquitas y palacios de Irán.",
   "historia": "También evoca el lapislázuli de Persia y Afganistán. Como nombre de color en inglés aparece en 1669.",
   "nota": null,
+  "acertijo": "Evoco la cerámica y los azulejos de las mezquitas de Irán. En inglés soy color desde 1669.",
   "src": [
    [
     "Wikipedia · Persian blue",
@@ -3396,6 +3519,7 @@
   "nombre": "Vidrio de cobalto molido como pigmento.",
   "historia": "El ejemplo más antiguo es un trozo mesopotámico de hace unos 4.000 años. Se usó mucho en la pintura europea de los siglos XV al XVII y en Inglaterra se añadía al almidón de la ropa. En los cuadros suele haberse decolorado.",
   "nota": null,
+  "acertijo": "Soy vidrio molido para pintar. En Inglaterra me añadían al almidón de la ropa, y en los cuadros suelo haberme decolorado.",
   "src": [
    [
     "Wikipedia · Smalt",
@@ -3420,6 +3544,7 @@
   "nombre": "Por el artista Yves Klein. Su nombre oficial es International Klein Blue.",
   "historia": "Lo desarrolló con el proveedor de pinturas Edouard Adam: ultramar en un aglutinante sintético que no apaga el color. En mayo de 1960 registró la fórmula con un sobre Soleau, un depósito con fecha que no es una patente.",
   "nota": null,
+  "acertijo": "Un artista me puso su apellido y registró mi fórmula en 1960, en un sobre con fecha que no es una patente.",
   "src": [
    [
     "Wikipedia · International Klein Blue",
@@ -3444,6 +3569,7 @@
   "nombre": "Por la fruta. En francés, cerise.",
   "historia": "Como nombre de color, cerise aparece en el Times de Londres en 1858, aunque ya se usaba en 1845 en un libro de patrones de ganchillo.",
   "nota": null,
+  "acertijo": "Me llamo como una fruta. Como color, el Times de Londres me nombró en 1858, aunque ya salía en 1845 en un libro de patrones de ganchillo.",
   "src": [
    [
     "Wikipedia · Cerise (color)",
@@ -3471,6 +3597,7 @@
    "cert": "ley",
    "t": "Se repite que en las tumbas egipcias se halló miel todavía comestible. No es así: no se ha encontrado miel comestible en ninguna tumba egipcia."
   },
+  "acertijo": "En una tumba de Georgia quedaban restos de mí en unas vasijas de hace milenios. Que en Egipto se hallara aún comestible es un mito.",
   "src": [
    [
     "Wikipedia · Honey",
@@ -3495,6 +3622,7 @@
   "nombre": "Del árabe clásico kurkum, y este del pelvi kurkum, «azafrán». En inglés, turmeric quizá venga del latín terra merita, «tierra merecida».",
   "historia": "Como tinte no aguanta la luz, pero tiñe saris y túnicas de monjes budistas. Como colorante alimentario es el E100.",
   "nota": null,
+  "acertijo": "Mi nombre árabe viene de una palabra persa para «azafrán». Tiño saris aunque no aguanto la luz, y en la comida soy el E100.",
   "src": [
    [
     "RAE · cúrcuma",
@@ -3523,6 +3651,7 @@
   "nombre": "Por la mina de cobre de Falun, en Suecia, de cuyos residuos se obtenía.",
   "historia": "Desde el siglo XVI se mezclaban los residuos de la mina con aceite de linaza y harina de centeno. En el siglo XVII empezó a pintarse en las casas de madera para imitar el ladrillo, y sigue siendo el rojo típico del campo sueco.",
   "nota": null,
+  "acertijo": "Vengo de los residuos de una mina de cobre sueca. Desde el siglo XVII me pintan en las casas de madera del campo sueco.",
   "src": [
    [
     "Wikipedia · Falu red",
@@ -3547,6 +3676,7 @@
   "nombre": "De rubín, y en última instancia del latín ruber, «rojo».",
   "historia": "Es corindón, el mismo mineral que el zafiro: el rojo se lo da el cromo. Por eso a veces se le llama «zafiro rojo».",
   "nota": null,
+  "acertijo": "Soy corindón, el mismo mineral que el zafiro, y el cromo me da el color. Por eso a veces me llaman «zafiro rojo».",
   "src": [
    [
     "RAE · rubí",
@@ -3575,6 +3705,7 @@
   "nombre": "Del francés sang de bœuf, «sangre de buey».",
   "historia": "Es un vidriado rojo de óxido de cobre que se cuece sin oxígeno. Nació en los hornos de Jingdezhen durante el reinado del emperador Kangxi (1662-1722) y sus efectos nunca salen dos veces iguales.",
   "nota": null,
+  "acertijo": "Soy un vidriado de óxido de cobre que se cuece sin oxígeno. Nací en Jingdezhen en tiempos del emperador Kangxi, y nunca salgo dos veces igual.",
   "src": [
    [
     "Wikipedia · Sang de boeuf glaze",
@@ -3599,6 +3730,7 @@
   "nombre": "Del mismo origen que «azul», por su color.",
   "historia": "Fue una de las grandes fuentes de azul de los pintores medievales: era un mineral común en Europa y mucho más barato que el ultramar. Con el tiempo puede verdear, porque se transforma en malaquita.",
   "nota": null,
+  "acertijo": "Fui una de las grandes fuentes de azul de los pintores medievales: un mineral común y barato. Con el tiempo puedo verdear y convertirme en malaquita.",
   "src": [
    [
     "Wikipedia · Azurite",
@@ -3623,6 +3755,7 @@
   "nombre": "Por la ropa y los paños de los quirófanos.",
   "historia": "A principios del siglo XX un cirujano cambió el blanco por el verde: la luz intensa sobre el blanco cansaba la vista, y el verde reduce las imágenes residuales tras mirar sangre. En los años cincuenta y sesenta casi todos los hospitales habían dejado el blanco.",
   "nota": null,
+  "acertijo": "Un cirujano me eligió en lugar del blanco, que cansaba la vista bajo la luz intensa. Reduzco las imágenes residuales tras mirar sangre.",
   "src": [
    [
     "Wikipedia · Scrubs",
@@ -3647,6 +3780,7 @@
   "nombre": "Del latín cereola pruna, «ciruelas de color de cera».",
   "historia": "Como nombre de color, prune aparece en inglés en 1789, por el color de la ciruela pasa cocida.",
   "nota": null,
+  "acertijo": "Mi nombre latino quiere decir «de color de cera». En inglés me nombran en 1789, por la fruta pasa cocida.",
   "src": [
    [
     "RAE · ciruela",
@@ -3675,6 +3809,7 @@
   "nombre": "Por la Universidad de Cambridge.",
   "historia": "Es el azul claro del rival de Oxford en la regata. Se dice que deriva del azul del colegio de Eton.",
   "nota": null,
+  "acertijo": "Soy el color de una universidad con una regata famosa. Dicen que derivo del color del colegio de Eton.",
   "src": [
    [
     "Wikipedia · Oxford Blue (colour)",
@@ -3702,6 +3837,7 @@
    "cert": "ley",
    "t": "En griego el coral se llamaba gorgeia: según el mito, nació de la sangre de la Gorgona Medusa."
   },
+  "acertijo": "Los romanos me colgaban al cuello de los niños para protegerlos. Dicen que nací de la sangre de Medusa, pero es mito.",
   "src": [
    [
     "Wikipedia · Precious coral",
@@ -3726,6 +3862,7 @@
   "nombre": "Del latín mustum, «mosto».",
   "historia": "Los romanos hacían la salsa mezclando semillas de mostaza molidas con mosto de uva, y de ahí el nombre.",
   "nota": null,
+  "acertijo": "Los romanos me hacían mezclando semillas molidas con zumo de uva sin fermentar, y de ahí viene mi nombre.",
   "src": [
    [
     "Wikipedia · Mustard (condiment)",
@@ -3750,6 +3887,7 @@
   "nombre": "Del latín auripigmentum, «pigmento de oro»: por su color y porque se creía que contenía oro.",
   "historia": "Es sulfuro de arsénico. En una tumba egipcia del siglo XIV a. C. aparecieron terrones de oropimente, y Rafael lo usó en la Madonna Sixtina. Fue uno de los pocos amarillos intensos hasta el siglo XIX.",
   "nota": null,
+  "acertijo": "Mi nombre latino dice que llevo un metal precioso, porque se creía que lo contenía. Soy sulfuro de arsénico, y Rafael me usó en la Madonna Sixtina.",
   "src": [
    [
     "Wikipedia · Orpiment",
@@ -3777,6 +3915,7 @@
    "cert": "disc",
    "t": "Se suele relacionar con la batalla de Marengo, ganada por Napoleón en 1800. La RAE solo menciona la ciudad."
   },
+  "acertijo": "Me llamo como una ciudad italiana. Suele relacionarse con una batalla de Napoleón en 1800, pero la RAE solo menciona la ciudad.",
   "src": [
    [
     "RAE · marengo",
@@ -3801,6 +3940,7 @@
   "nombre": "Por William Hooker (1779-1832), ilustrador oficial de la Royal Horticultural Society.",
   "historia": "Lo inventó mezclando azul de Prusia y gutagamba, y lo usaba para pintar las hojas en sus famosas láminas de frutas.",
   "nota": null,
+  "acertijo": "Un ilustrador de la Royal Horticultural Society me inventó mezclando azul de Prusia y gutagamba, para pintar las hojas de sus láminas.",
   "src": [
    [
     "Wikipedia · William Hooker",
@@ -3825,6 +3965,7 @@
   "nombre": "Quizá del vasco lapitzarri, «piedra de pizarra», de lapitz, «pizarra», y harri, «piedra». El la- inicial se tomó por el artículo.",
   "historia": "Se parte en láminas finas y sus tejados duran siglos. En las escuelas de los siglos XVIII y XIX se escribía en pizarras y pizarrines.",
   "nota": null,
+  "acertijo": "Me parto en láminas finas, mis tejados duran siglos y en las escuelas se escribía sobre mí. Mi nombre quizá venga del vasco.",
   "src": [
    [
     "RAE · pizarra",
@@ -3853,6 +3994,7 @@
   "nombre": "«Acero» viene del latín tardío aciarium, de acies, «filo».",
   "historia": "El acero es hierro con un poco de carbono. Los famosos aceros de Damasco tienen origen en la India, y el proceso Bessemer de 1855 permitió fabricarlo en masa.",
   "nota": null,
+  "acertijo": "Soy hierro con un poco de carbono. Los más famosos, los de Damasco, vienen de la India, y el proceso Bessemer me hizo en masa desde 1855.",
   "src": [
    [
     "RAE · acero",
@@ -3881,6 +4023,7 @@
   "nombre": "De cornelina, por el fruto rojo del cornejo, al que se parece.",
   "historia": "Los romanos tallaban sellos de cornalina porque la cera caliente no se pega a ella. En el valle del Indo ya se hacían cuentas grabadas hace más de 4.000 años.",
   "nota": null,
+  "acertijo": "Mi nombre viene del fruto del cornejo. Los romanos tallaban sellos conmigo porque la cera caliente no se me pega.",
   "src": [
    [
     "Wikipedia · Carnelian",
@@ -3905,6 +4048,7 @@
   "nombre": "Del latín castanea, y este del griego kastáneia, «nueces del castaño».",
   "historia": "En español convive con «marrón», que llegó del francés marron, «castaña»: los dos nombres vienen del mismo fruto.",
   "nota": null,
+  "acertijo": "Mi nombre griego aludía a las nueces de un árbol. Comparto fruto con otro color que llegó del francés.",
   "src": [
    [
     "RAE · castaño",
@@ -3933,6 +4077,7 @@
   "nombre": "De origen caribe.",
   "historia": "En el siglo XVIII los ebanistas británicos la preferían para los muebles de calidad; Jamaica y las Bahamas eran las principales fuentes.",
   "nota": null,
+  "acertijo": "Mi nombre es de origen caribe. Los ebanistas británicos del siglo XVIII me preferían para sus mejores muebles.",
   "src": [
    [
     "RAE · caoba",
@@ -3961,6 +4106,7 @@
   "nombre": "Del griego haima, «sangre».",
   "historia": "Aunque se ve negra o gris acero, al rayarla deja siempre un trazo rojo. Molida es ocre rojo. El robot Opportunity la encontró en Marte en unas bolitas apodadas «arándanos».",
   "nota": null,
+  "acertijo": "Al rayarme dejo siempre un trazo rojo. Mi nombre griego viene de «sangre», y el robot Opportunity me encontró en Marte.",
   "src": [
    [
     "Wikipedia · Hematite",
@@ -3985,6 +4131,7 @@
   "nombre": "Del árabe clásico ṭubbāq, nombre que antes del descubrimiento de América se daba a hierbas medicinales que mareaban, como la olivarda.",
   "historia": "Al llegar la planta americana, los españoles le aplicaron ese nombre árabe que ya existía.",
   "nota": null,
+  "acertijo": "Mi nombre árabe era el de unas hierbas medicinales que mareaban. Los españoles se lo pusieron a una planta americana.",
   "src": [
    [
     "RAE · tabaco",
@@ -4009,6 +4156,7 @@
   "nombre": "Del alemán, «gris de campaña».",
   "historia": "Prusia lo estrenó en 1907 y en 1910 era el uniforme de campaña del ejército alemán. Siguió siéndolo hasta 1945.",
   "nota": null,
+  "acertijo": "Mi nombre es alemán. Prusia me estrenó en 1907, y de 1910 a 1945 fui el uniforme del ejército alemán.",
   "src": [
    [
     "Wikipedia · Feldgrau",
@@ -4033,6 +4181,7 @@
   "nombre": "Por los uniformes del ejército confederado en la guerra de Secesión.",
   "historia": "Se eligió el gris porque era barato de teñir y era el color de las milicias estatales. Con el tiempo los tejidos se desteñían hasta un pardo amarillento.",
   "nota": null,
+  "acertijo": "Vestí a un ejército de la guerra de Secesión porque era barato de teñir, y con el tiempo me desteñía a pardo amarillento.",
   "src": [
    [
     "Wikipedia · Uniforms of the Confederate States Armed Forces",
@@ -4057,6 +4206,7 @@
   "nombre": "Del latín abellana nux, «nuez de Avella», ciudad de Campania famosa por estos frutos.",
   "historia": "El nombre científico del avellano, Corylus avellana, conserva el de la ciudad.",
   "nota": null,
+  "acertijo": "Mi nombre latino recuerda a una ciudad de Campania famosa por estos frutos, y mi árbol aún la lleva en su nombre científico.",
   "src": [
    [
     "RAE · avellana",
@@ -4085,6 +4235,7 @@
   "nombre": "Dióxido de titanio.",
   "historia": "Se fabrica en masa desde 1916 y es el pigmento blanco más usado del mundo por su brillo. Como aditivo alimentario, el E171, la Unión Europea lo prohibió en 2022.",
   "nota": null,
+  "acertijo": "De los pigmentos de mi familia, soy el más usado del mundo; me fabrican en masa desde 1916. Como aditivo, el E171, la UE me prohibió en 2022.",
   "src": [
    [
     "Wikipedia · Titanium dioxide",
@@ -4109,6 +4260,7 @@
   "nombre": "Óxido de zinc. En acuarela se vendió como «blanco chino».",
   "historia": "Winsor & Newton lo promocionó en la década de 1830. Su gran ventaja era que no es tan tóxico como el blanco de plomo; su defecto, que al óleo se vuelve quebradizo y puede agrietarse.",
   "nota": null,
+  "acertijo": "En acuarela me vendieron como «chino». Era menos tóxico que el de plomo, pero al óleo me vuelvo quebradizo.",
   "src": [
    [
     "Wikipedia · Zinc white",
@@ -4133,6 +4285,7 @@
   "nombre": "Por el color del hueso.",
   "historia": "Como nombre de color, bone aparece en inglés en la primera década del siglo XIX.",
   "nota": null,
+  "acertijo": "Me llamo como lo que sostiene el cuerpo por dentro. En inglés soy color desde principios del siglo XIX.",
   "src": [
    [
     "Wikipedia · Bone (color)",
@@ -4157,6 +4310,7 @@
   "nombre": "Por la perla.",
   "historia": "Se forma dentro de moluscos vivos, capa a capa de nácar. La perla Peregrina se ofreció a Felipe II, que la quiso para sí y acabó entre las joyas de la Corona española.",
   "nota": null,
+  "acertijo": "Nazco dentro de un molusco vivo, capa a capa. A Felipe II le ofrecieron una llamada Peregrina, y acabó entre las joyas de la Corona.",
   "src": [
    [
     "Wikipedia · Pearl",
@@ -4181,6 +4335,7 @@
   "nombre": "Del catalán nacra o nacre, del árabe hispánico náqra, «tamboril».",
   "historia": "Es la capa interior de algunas conchas. Brilla con colores porque sus láminas de aragonito tienen un grosor parecido a la longitud de onda de la luz.",
   "nota": null,
+  "acertijo": "Soy la capa interior de algunas conchas, y brillo de colores por mis láminas de aragonito. Mi nombre árabe quería decir «tamboril».",
   "src": [
    [
     "RAE · nácar",
@@ -4209,6 +4364,7 @@
   "nombre": "Nombre de la planta Reseda luteola, la «reseda de tintoreros».",
   "historia": "Se usa como tinte desde el primer milenio a. C., quizá antes que el glasto o la granza. Mezclada con el azul del glasto daba verdes como el verde Lincoln.",
   "nota": null,
+  "acertijo": "Soy la «reseda de tintoreros». Mezclada con el azul del glasto, daba verdes como el de Lincoln.",
   "src": [
    [
     "Wikipedia · Reseda luteola",
@@ -4233,6 +4389,7 @@
   "nombre": "Del persa medio pistakē, a través del griego, el latín y el italiano.",
   "historia": "Hay pruebas arqueológicas de que ya se comía hacia el 6750 a. C.",
   "nota": null,
+  "acertijo": "Mi nombre viajó desde el persa medio por el griego, el latín y el italiano. Ya me comían hacia el 6750 a. C.",
   "src": [
    [
     "Wikipedia · Pistachio",
@@ -4257,6 +4414,7 @@
   "nombre": "Por su composición, plomo y estaño. Lo llaman el «amarillo de los viejos maestros».",
   "historia": "Fue muy usado en el Renacimiento y el Barroco, pero hacia 1750 cayó en el olvido sin que se sepa por qué. Richard Jacobi lo redescubrió en 1941.",
   "nota": null,
+  "acertijo": "Me llaman «el de los viejos maestros». Hacia 1750 caí en el olvido sin que se sepa por qué, y Richard Jacobi me redescubrió en 1941.",
   "src": [
    [
     "Wikipedia · Lead-tin-yellow",
@@ -4281,6 +4439,7 @@
   "nombre": "Por los taxis amarillos.",
   "historia": "El 2 de agosto de 1915 salieron en Chicago los primeros 45 Yellow Cabs de la compañía de John Hertz, pintados de amarillo para que se vieran al máximo.",
   "nota": null,
+  "acertijo": "El 2 de agosto de 1915 salieron en Chicago 45 coches de John Hertz pintados de mi color, para que se vieran al máximo.",
   "src": [
    [
     "Wikipedia · Yellow Cab Company",
@@ -4308,6 +4467,7 @@
    "cert": "ley",
    "t": "Se dice que era el color favorito de María Antonieta, pero no hay ningún retrato suyo vestida de ese color."
   },
+  "acertijo": "Me dio nombre un bicho que salta, y fui moda en la corte de Luis XVI. Que fuera el favorito de María Antonieta es solo leyenda.",
   "src": [
    [
     "Wikipedia · Puce",
@@ -4335,6 +4495,7 @@
    "cert": "ley",
    "t": "Se dice que algunas «esmeraldas» de Cleopatra eran peridotos. No hay prueba de ello."
   },
+  "acertijo": "En la Antigüedad me sacaban de la isla de Zabargad y me llamaban «topacio». Que algunas joyas de Cleopatra fueran en realidad mías es leyenda.",
   "src": [
    [
     "Wikipedia · Peridot",
@@ -4367,6 +4528,7 @@
   "nombre": "Unos lo relacionan con la región italiana de Umbría y otros con el latín umbra, «sombra».",
   "historia": "Es una tierra con mucho manganeso, lo que la hace más oscura que el ocre o la siena. Los pintores la aprecian porque seca rápido y la usan para la primera capa del cuadro.",
   "nota": null,
+  "acertijo": "Quizá me llamo por una región italiana. Tengo mucho manganeso, seco rápido y los pintores me usan para la primera capa.",
   "src": [
    [
     "Wikipedia · Umber",
@@ -4391,6 +4553,7 @@
   "nombre": "Del italiano caffè, del turco kahve y del árabe clásico qahwah.",
   "historia": "El nombre hizo el mismo viaje que la bebida: de Arabia a Turquía, de Turquía a Italia y de ahí al resto de Europa.",
   "nota": null,
+  "acertijo": "Mi nombre viajó con la bebida: de Arabia a Turquía, de Turquía a Italia y de ahí al resto de Europa.",
   "src": [
    [
     "RAE · café",
@@ -4415,6 +4578,7 @@
   "nombre": "Del griego anthrakítēs, «parecido al carbón».",
   "historia": "Es el carbón de mayor calidad: entre un 86 y un 97 % de carbono, con pocas impurezas y la mayor energía de todos.",
   "nota": null,
+  "acertijo": "Mi nombre griego quiere decir «parecido al carbón», y soy el de mayor calidad: casi todo carbono.",
   "src": [
    [
     "Wikipedia · Anthracite",
@@ -4439,6 +4603,7 @@
   "nombre": "Por la pintura de los acorazados.",
   "historia": "Es el gris de la pintura antióxido con que se protegía el casco de hierro y acero de los buques de guerra.",
   "nota": null,
+  "acertijo": "Soy la pintura antióxido de los cascos de los buques de guerra.",
   "src": [
    [
     "Wikipedia · Battleship grey",
@@ -4463,6 +4628,7 @@
   "nombre": "Del inglés khaki, del hindi khākī y del pelvi xāk, «polvo».",
   "historia": "Lo vistió por primera vez el Cuerpo de Guías del ejército británico de la India, creado en diciembre de 1846. El ejército británico lo adoptó después en campañas como la guerra de los bóers.",
   "nota": null,
+  "acertijo": "Mi nombre viene del hindi y del pelvi «polvo». Me estrenó en 1846 el Cuerpo de Guías del ejército británico de la India.",
   "src": [
    [
     "RAE · caqui",
@@ -4491,6 +4657,7 @@
   "nombre": "Por la civilización maya.",
   "historia": "Es índigo fijado en una arcilla, la paligorskita, y resiste de forma extraordinaria: hay murales de Chichén Itzá de más de mil años que conservan el color. Se pintaba con él a quienes se arrojaban al cenote sagrado en honor del dios de la lluvia, Chaac.",
   "nota": null,
+  "acertijo": "Soy un tinte fijado en una arcilla, y en los murales de Chichén Itzá aguanto más de mil años. Pintaban conmigo a quienes arrojaban al cenote en honor de Chaac.",
   "src": [
    [
     "Wikipedia · Maya blue",
@@ -4515,6 +4682,7 @@
   "nombre": "Por el pelo de camello, una fibra textil para abrigos y jerséis.",
   "historia": "Los pinceles llamados «de pelo de camello» suelen ser de pelo de buey y nunca llevan pelo de camello.",
   "nota": null,
+  "acertijo": "Me llamo por el pelo de un animal, una fibra para abrigos. Los pinceles que dicen llevarlo suelen ser de buey.",
   "src": [
    [
     "Wikipedia · Camel hair",
@@ -4543,6 +4711,7 @@
   "nombre": "Por el pintor Anton van Dyck. Antes se llamaba tierra de Cassel o de Colonia, por su ciudad de origen.",
   "historia": "El pigmento es siglos más antiguo que el pintor: el nombre se lo pusieron después.",
   "nota": null,
+  "acertijo": "Llevo el apellido de un pintor, pero soy siglos más antiguo que él. Antes me llamaban tierra de Cassel o de Colonia.",
   "src": [
    [
     "Wikipedia · Van Dyke brown",
@@ -4567,6 +4736,7 @@
   "nombre": "Del latín tardío nucalis, «relativo a la nuez».",
   "historia": "La cáscara verde de la nuez tiene un tinte que va del amarillo pardo al marrón oscuro y se ha usado para teñir tela.",
   "nota": null,
+  "acertijo": "Mi nombre viene de «relativo a la nuez», y la cáscara verde del fruto da un tinte marrón.",
   "src": [
    [
     "RAE · nogal",
@@ -4595,6 +4765,7 @@
   "nombre": "Del francés jade, y este del español «piedra de la ijada»: los conquistadores lo usaban como remedio para el costado.",
   "historia": "El nombre científico nefrita viene de lapis nephriticus, la traducción latina de esa misma expresión española, y del griego nephrós, «riñón».",
   "nota": null,
+  "acertijo": "Los conquistadores me usaban como remedio para el costado. Mi nombre científico, nefrita, viene del griego «riñón».",
   "src": [
    [
     "RAE · jade",
@@ -4623,6 +4794,7 @@
   "nombre": "Por el futuro zar Alejandro II, a quien la dedicó el mineralogista Nils Gustaf Nordenskiöld.",
   "historia": "Es verdosa a la luz del día y rojiza con luz incandescente. Las primeras se hallaron en los Urales, en la década de 1830.",
   "nota": null,
+  "acertijo": "Me dedicó a un futuro zar el mineralogista Nordenskiöld. Aparecí en los Urales hacia 1830, y cambio de color según la luz que me ilumina.",
   "src": [
    [
     "Wikipedia · Alexandrite",
@@ -4647,6 +4819,7 @@
   "nombre": "Del latín viridis, «verde».",
   "historia": "Es óxido de cromo hidratado. Pannetier y Binet lo prepararon en París en 1838, con un método caro y secreto. En 1859 C. E. Guignet patentó uno más barato.",
   "nota": null,
+  "acertijo": "Soy óxido de cromo hidratado. Me prepararon en 1838 con un método caro y secreto, y en 1859 Guignet patentó uno más barato.",
   "src": [
    [
     "Wikipedia · Viridian",
@@ -4671,6 +4844,7 @@
   "nombre": "También verde de Rinman, por su descubridor.",
   "historia": "Lo descubrió el químico sueco Sven Rinman en 1780. Es óxido de zinc con cobalto. Apenas se usa porque colorea poco y es caro.",
   "nota": null,
+  "acertijo": "Me descubrió el químico sueco Sven Rinman en 1780. Apenas se me usa: coloreo poco y soy caro.",
   "src": [
    [
     "Wikipedia · Cobalt green",
@@ -4695,6 +4869,7 @@
   "nombre": "Por el vino de Borgoña, en Francia.",
   "historia": "El primer uso registrado de burgundy como nombre de color en inglés es de 1881.",
   "nota": null,
+  "acertijo": "Me llamo como una región francesa y su vino. Como nombre de color en inglés aparezco por primera vez en 1881.",
   "src": [
    [
     "Wikipedia · Burgundy (color)",
@@ -4719,6 +4894,7 @@
   "nombre": "En latín, Wisteria: Thomas Nuttall bautizó el género en 1818 en honor del anatomista Caspar Wistar.",
   "historia": "Cuando le preguntaron por qué escribió Wisteria y no Wistaria, Nuttall dijo que por eufonía. Su biógrafo cree que pensaba en un amigo suyo apellidado Wister.",
   "nota": null,
+  "acertijo": "Mi nombre latino honra al anatomista Caspar Wistar. Nuttall lo escribió con otra vocal «por eufonía», aunque quizá pensaba en un amigo suyo.",
   "src": [
    [
     "Wikipedia · Wisteria",
@@ -4746,6 +4922,7 @@
    "cert": "ley",
    "t": "Se creía que protegía de la borrachera a quien la llevaba."
   },
+  "acertijo": "Mi nombre griego significa «no ebrio»: se creía que protegía de la borrachera a quien me llevaba.",
   "src": [
    [
     "Wikipedia · Amethyst",
@@ -4770,6 +4947,7 @@
   "nombre": "Por el pintor francés Jacques Majorelle, que lo patentó.",
   "historia": "En 1923 empezó a crear su jardín de Marrakech y le dedicó casi cuarenta años. En los años ochenta lo compraron y restauraron Yves Saint Laurent y Pierre Bergé.",
   "nota": null,
+  "acertijo": "Un pintor francés me usó en su jardín de Marrakech, que luego compraron y restauraron Yves Saint Laurent y Pierre Bergé.",
   "src": [
    [
     "Wikipedia · Majorelle Garden",
@@ -4794,6 +4972,7 @@
   "nombre": "Del latín moderno fuchsia, por Leonhart Fuchs (1501-1566), médico y botánico alemán. El botánico francés Charles Plumier le dedicó la flor.",
   "historia": "En 1859 se patentó un tinte de anilina llamado fucsina, por la flor. Ese mismo año se rebautizó como magenta.",
   "nota": null,
+  "acertijo": "Me llamo como una flor que el botánico francés Charles Plumier dedicó a un médico alemán del siglo XVI.",
   "src": [
    [
     "RAE · fucsia",
@@ -4822,6 +5001,7 @@
   "nombre": "Lo dio a conocer el periodista, pintor y diseñador Ramón Valdiosera.",
   "historia": "A mediados de los años cuarenta Valdiosera recorrió México recogiendo ropa tradicional y luego abrió un taller en Ciudad de México para llevar sus telas y colores a la moda.",
   "nota": null,
+  "acertijo": "Me dio a conocer Ramón Valdiosera, que en los años cuarenta recorrió su país recogiendo ropa tradicional.",
   "src": [
    [
     "Wikipedia · Mexican pink",
@@ -4846,6 +5026,7 @@
   "nombre": "La RAE lo define como «amarillo rojizo, como el del pelo del león».",
   "historia": "Es el color del pelaje del león; la RAE da como sinónimos aleonado, rojizo y rubio.",
   "nota": null,
+  "acertijo": "Me llamo por el pelaje de un gran felino, tal como me define la RAE.",
   "src": [
    [
     "RAE · leonado",
@@ -4870,6 +5051,7 @@
   "nombre": "Por el río Moldava (Vltava), en Bohemia. Zippe usó el nombre en 1836.",
   "historia": "Es vidrio verde formado cuando un meteorito cayó en lo que hoy es el cráter de Nördlinger Ries, en Alemania, hace unos 15 millones de años.",
   "nota": null,
+  "acertijo": "Soy un vidrio que nació cuando cayó un meteorito en Alemania, hace unos 15 millones de años. Me llaman como un río de Bohemia.",
   "src": [
    [
     "Wikipedia · Moldavite",
@@ -4895,6 +5077,7 @@
   "nombre": "Del árabe hispánico 'ánbar, del árabe clásico 'anbar, que también designaba el ámbar gris.",
   "historia": "En griego el ámbar se llamaba ēlektron. En 1600 William Gilbert llamó electricus, «como el ámbar», a los cuerpos que atraen cosas al frotarlos: de ahí viene la palabra «electricidad».",
   "nota": null,
+  "acertijo": "En griego me llamaba ēlektron, y por mí se llamó «eléctricos» a los cuerpos que atraen cosas al frotarlos.",
   "src": [
    [
     "RAE · ámbar",
@@ -4926,6 +5109,7 @@
    "cert": "ley",
    "t": "Los primeros teóricos del color creyeron que venía de Nápoles o del Vesubio. Su origen real es incierto."
   },
+  "acertijo": "Soy uno de los pigmentos sintéticos más antiguos, de hace unos 3.500 años. Llevo el nombre de una ciudad italiana, pero mi origen es incierto.",
   "src": [
    [
     "Wikipedia · Naples yellow",
@@ -4950,6 +5134,7 @@
   "nombre": "Del francés beige, que designaba la lana natural, sin blanquear ni teñir.",
   "historia": "Como nombre de color en inglés aparece en 1887.",
   "nota": null,
+  "acertijo": "En francés, mi nombre era la lana natural, sin blanquear ni teñir. En inglés soy color desde 1887.",
   "src": [
    [
     "Wikipedia · Beige",
@@ -4974,6 +5159,7 @@
   "nombre": "Por el vidrio verde de las botellas.",
   "historia": "Bottle green aparece como nombre de color en inglés en 1816.",
   "nota": null,
+  "acertijo": "Me llamo como el vidrio de unos recipientes. En inglés soy nombre de color desde 1816.",
   "src": [
    [
     "Wikipedia · Bottle green",
@@ -4998,6 +5184,7 @@
   "nombre": "Por las plumas del pavo real.",
   "historia": "Su pigmento es marrón: el azul y el verde salen de la estructura microscópica de la pluma. Robert Hooke lo observó al microscopio en 1665 y Newton lo explicó en 1704.",
   "nota": null,
+  "acertijo": "Mi pigmento es marrón: el color sale de la estructura de unas plumas. Hooke las miró al microscopio en 1665.",
   "src": [
    [
     "Wikipedia · Structural coloration",
@@ -5022,6 +5209,7 @@
   "nombre": "Quizá de origen prerromano, según la RAE.",
   "historia": "La tradición de vaciar calabazas viene de Irlanda, donde se tallaban nabos. En América se pasó a la calabaza, más grande y fácil de tallar.",
   "nota": null,
+  "acertijo": "En Irlanda tallaban nabos; en América me eligieron a mí, más grande y fácil de tallar.",
   "src": [
    [
     "RAE · calabaza",
@@ -5050,6 +5238,7 @@
   "nombre": "Pigmento de hollín de madera.",
   "historia": "Se quemaba madera de haya, se recogía el hollín y se hervía con agua. Muchos viejos maestros lo usaron como tinta para sus dibujos a la aguada.",
   "nota": null,
+  "acertijo": "Soy hollín de madera de haya hervido con agua. Muchos viejos maestros me usaron como tinta para sus dibujos a la aguada.",
   "src": [
    [
     "Wikipedia · Bistre",
@@ -5074,6 +5263,7 @@
   "nombre": "Del latín sepia, y este del griego sēpía, la sepia.",
   "historia": "El pigmento se sacaba de la bolsa de tinta del animal. El virado al sepia es un proceso químico que vuelve marrones las fotos en blanco y negro, y por eso asociamos este color a las fotos antiguas.",
   "nota": null,
+  "acertijo": "Me sacaban de la bolsa de tinta de un animal marino, y por mí las fotos antiguas se ven marrones.",
   "src": [
    [
     "RAE · sepia",
@@ -5102,6 +5292,7 @@
   "nombre": "Por el cadmio, el metal que da el color.",
   "historia": "El cadmio se descubrió en 1817 y enseguida se vio su potencial como pigmento, aunque no se extrajo a gran escala hasta la década de 1840. Pintores como Van Gogh y Monet usaron pigmentos de cadmio.",
   "nota": null,
+  "acertijo": "Me da el color un metal descubierto en 1817. Van Gogh y Monet pintaron con pigmentos de ese metal.",
   "src": [
    [
     "Wikipedia · Cadmium pigments",
@@ -5126,6 +5317,7 @@
   "nombre": "Probablemente del griego Topazios, una isla del mar Rojo que Plinio consideraba legendaria. Otra hipótesis lo relaciona con el sánscrito tapas, «calor».",
   "historia": "El «topacio» de la Antigüedad era otra piedra amarilla, probablemente crisolita (peridoto). El nombre no se aplicó al mineral actual hasta 1737.",
   "nota": null,
+  "acertijo": "Quizá me llamo como una isla del mar Rojo que Plinio creía legendaria. El de la Antigüedad era otra piedra; el nombre me tocó a mí en 1737.",
   "src": [
    [
     "Wikipedia · Topaz",
@@ -5150,6 +5342,7 @@
   "nombre": "Del latín malum cotonium, «membrillo».",
   "historia": "Según la RAE, el nombre se explica porque el melocotonero se injerta en el membrillo para obtener las mejores variedades.",
   "nota": null,
+  "acertijo": "Mi nombre latino significa «membrillo»: según la RAE, porque mi árbol se injerta en él para sacar las mejores variedades.",
   "src": [
    [
     "RAE · melocotón",
@@ -5174,6 +5367,7 @@
   "nombre": "Del latín salvia. Plinio cuenta que así la llamaban los romanos; a veces se la llamaba salvatrix, «la salvadora».",
   "historia": "Tuvo gran fama medicinal durante toda la Edad Media, con muchos refranes sobre su poder curativo.",
   "nota": null,
+  "acertijo": "Los romanos a veces me llamaban «la salvadora». En la Edad Media tuve gran fama medicinal y muchos refranes.",
   "src": [
    [
     "RAE · salvia",
@@ -5202,6 +5396,7 @@
   "nombre": "Por el cromo, que identificó el químico francés Vauquelin estudiando la crocoíta.",
   "historia": "Es cromato de plomo. Los estudios de los Girasoles de Van Gogh muestran que sus amarillos de cromo se están oscureciendo y volviendo marrones.",
   "nota": null,
+  "acertijo": "Vauquelin identificó el metal que me da el color. En los Girasoles de Van Gogh me estoy oscureciendo y volviendo marrón.",
   "src": [
    [
     "Wikipedia · Chrome yellow",
@@ -5226,6 +5421,7 @@
   "nombre": "Por el color del vino espumoso de Champaña.",
   "historia": "El primer uso de champagne como nombre de color en inglés es de 1915.",
   "nota": null,
+  "acertijo": "Me llamo como un vino espumoso francés. En inglés soy nombre de color desde 1915.",
   "src": [
    [
     "Wikipedia · Champagne (color)",
@@ -5250,6 +5446,7 @@
   "nombre": "Por el color de la paja. En latín ya existía stramineus con ese sentido.",
   "historia": "El primer uso de straw como nombre de color en inglés es de 1589.",
   "nota": null,
+  "acertijo": "Me llamo como los tallos secos del cereal. En latín ya me decían stramineus, y en inglés soy color desde 1589.",
   "src": [
    [
     "Wikipedia · Straw (colour)",
@@ -5274,6 +5471,7 @@
   "nombre": "Por el vidrio de uranio.",
   "historia": "Brilla en verde con luz ultravioleta. Estuvo de moda entre 1880 y 1920 y en los años treinta le llamaron «vidrio vaselina». Algunas piezas dan lectura en un contador Geiger, pero se consideran inofensivas.",
   "nota": null,
+  "acertijo": "Soy un vidrio que brilla en verde con luz ultravioleta. En los años treinta me llamaron «vidrio vaselina», y algunas piezas dan lectura en un contador Geiger.",
   "src": [
    [
     "Wikipedia · Uranium glass",
@@ -5298,6 +5496,7 @@
   "nombre": "Del latín citrus, a través del francés citrin, «limón».",
   "historia": "El citrino natural es raro: casi todo el que se vende es amatista calentada.",
   "nota": null,
+  "acertijo": "Soy una piedra rara al natural: casi toda la que se vende con mi nombre es amatista calentada. Mi nombre llegó por el francés.",
   "src": [
    [
     "Wikipedia · Citrine (quartz)",
@@ -5322,6 +5521,7 @@
   "nombre": "Del francés malachite, del griego molochites lithos, «piedra verde malva», por el color de las hojas de malva.",
   "historia": "En el antiguo Egipto se molía para hacer pintura de ojos, también en los ritos funerarios. El Hermitage de San Petersburgo tiene una Sala de Malaquita con un jarrón enorme.",
   "nota": null,
+  "acertijo": "Mi nombre griego me compara con las hojas de la malva. En el antiguo Egipto me molían para pintarse los ojos.",
   "src": [
    [
     "RAE · malaquita",
@@ -5350,6 +5550,7 @@
   "nombre": "Del francés antiguo esmeralde, del latín smaragdus y del griego smáragdos, «gema verde».",
   "historia": "En Egipto se extraía desde hacia el 1500 a. C. en el monte Smaragdus. Colombia, con minas como Muzo, ha sido históricamente el mayor productor del mundo. Como nombre de color en inglés aparece en 1598.",
   "nota": null,
+  "acertijo": "Mi nombre griego quiere decir «gema verde». Colombia, con minas como Muzo, ha sido mi mayor productor.",
   "src": [
    [
     "RAE · esmeralda",
@@ -5382,6 +5583,7 @@
   "nombre": "Por su uso como veneno para ratas en las alcantarillas de París.",
   "historia": "Es acetoarsenito de cobre. Fue de los primeros insecticidas, contra el escarabajo de la patata. Monet y Gauguin apreciaban su verde intenso, pero causó muchas intoxicaciones en las fábricas.",
   "nota": null,
+  "acertijo": "Me usaban como veneno para ratas en las alcantarillas de una capital. Fui de los primeros insecticidas, y Monet y Gauguin me apreciaban.",
   "src": [
    [
     "Wikipedia · Paris green",
@@ -5406,6 +5608,7 @@
   "nombre": "En francés, terre verte: una tierra verde de celadonita y glauconita.",
   "historia": "Los romanos la usaron en Pompeya. En la Edad Media se aplicaba debajo de las carnaciones para pintar la piel. Cennino Cennini decía que «los antiguos nunca doraban sino con este verde».",
   "nota": null,
+  "acertijo": "Los romanos me usaron en Pompeya. En la Edad Media me ponían debajo de la piel pintada, y Cennini decía que los antiguos solo doraban conmigo.",
   "src": [
    [
     "Wikipedia · Green earth",
@@ -5430,6 +5633,7 @@
   "nombre": "Del árabe laymūn y el persa līmūn, un nombre general para los cítricos.",
   "historia": "Llegó a Europa por el sur de Italia, como muy tarde en el siglo II, en tiempos de Roma.",
   "nota": null,
+  "acertijo": "Mi nombre árabe valía para cualquier cítrico. Llegué a Europa por el sur de Italia, en tiempos de Roma.",
   "src": [
    [
     "Wikipedia · Lemon",
@@ -5454,6 +5658,7 @@
   "nombre": "Por las túnicas de los emperadores chinos.",
   "historia": "En China, el amarillo era símbolo de la majestad y el favor imperiales. El estandarte imperial de la dinastía Qing era amarillo.",
   "nota": null,
+  "acertijo": "Me vestían los emperadores chinos: era el color de la majestad y del estandarte de la dinastía Qing.",
   "src": [
    [
     "Wikipedia · Imperial yellow",
@@ -5478,6 +5683,7 @@
   "nombre": "También se llama amarillo de cobalto.",
   "historia": "Lo obtuvo por primera vez Nikolaus Wolfgang Fischer en Breslavia en 1831. Edouard Saint-Evre lo sintetizó por su cuenta en 1851-1852 y lo introdujo como pigmento para artistas.",
   "nota": null,
+  "acertijo": "Me obtuvo Nikolaus Fischer en Breslavia en 1831, y Saint-Evre me llevó a la paleta de los artistas. Me da el color el cobalto.",
   "src": [
    [
     "Wikipedia · Aureolin",
@@ -5502,6 +5708,7 @@
   "nombre": "Por el pájaro, que lleva el nombre de las islas Canarias, en latín canariae insulae, «islas de los perros».",
   "historia": "El canario salvaje es verdoso. El amarillo de los canarios domésticos viene de una mutación que eliminó sus melaninas.",
   "nota": null,
+  "acertijo": "Me llamo como un pájaro que lleva el nombre de unas islas, «islas de los perros». En estado salvaje es verdoso.",
   "src": [
    [
     "Wikipedia · Atlantic canary",
@@ -5526,6 +5733,7 @@
   "nombre": "Por el sulfuro de cadmio.",
   "historia": "El cadmio se descubrió en 1817, pero hasta la década de 1840 no hubo bastante para fabricar pigmento. Fue el amarillo luminoso de los impresionistas.",
   "nota": null,
+  "acertijo": "El metal que me da el color se descubrió en 1817, pero hasta la década de 1840 no hubo bastante para fabricarme. Los impresionistas me usaron mucho.",
   "src": [
    [
     "Wikipedia · Cadmium yellow",
@@ -5554,6 +5762,7 @@
   "nombre": "«Cabeza muerta» en latín: el término alquímico para el residuo inútil que quedaba tras una operación.",
   "historia": "Los alquimistas lo representaban con una calavera, símbolo de la decadencia. En la química del siglo XVIII también designaba restos rojizo-pardos de compuestos de hierro, y de ahí el pigmento.",
   "nota": null,
+  "acertijo": "Los alquimistas me dibujaban con una calavera: yo era el residuo inútil que quedaba al final.",
   "src": [
    [
     "Wikipedia · Caput mortuum",
@@ -5578,6 +5787,7 @@
   "nombre": "Por el paño de las mesas de billar.",
   "historia": "El paño es verde en homenaje a la hierba de los juegos al aire libre de los que nació el billar.",
   "nota": null,
+  "acertijo": "Visto el paño de unas mesas en homenaje a la hierba de los juegos al aire libre de los que nacieron.",
   "src": [
    [
     "Wikipedia · Billiard table",
@@ -5605,6 +5815,7 @@
    "cert": "disc",
    "t": "Se repite que antes era al revés, rosa para niños. La historiadora Paoletti no halló normas fijas hacia 1900, y Del Giudice no encontró pruebas de esa inversión antes de los años cuarenta."
   },
+  "acertijo": "Me llaman por la ropa de los recién nacidos. Se repite que antes me vestían los niños y no las niñas, pero nadie ha encontrado pruebas.",
   "src": [
    [
     "Wikipedia · Gendered associations of pink and blue",
@@ -5629,6 +5840,7 @@
   "nombre": "Del árabe al-barqūq, del griego bizantino, y en origen del latín praecoquus, «precoz», porque madura pronto.",
   "historia": "El inglés apricot tomó la palabra a través del francés y del español albaricoque.",
   "nota": null,
+  "acertijo": "Mi nombre viene del latín «precoz», porque maduro pronto. El inglés lo tomó a través del francés y del español.",
   "src": [
    [
     "Wikipedia · Apricot",
@@ -5653,6 +5865,7 @@
   "nombre": "De hierro y agallas de roble.",
   "historia": "Fue la tinta estándar de Europa del siglo V al XIX: con ella se escribieron el Códice Sinaítico y muchos dibujos de Leonardo. Es ácida y con el tiempo puede comerse el papel.",
   "nota": null,
+  "acertijo": "Me hacen con hierro y agallas de roble. Conmigo se escribió el Códice Sinaítico, y con el tiempo puedo comerme el papel.",
   "src": [
    [
     "Wikipedia · Iron gall ink",
@@ -5677,6 +5890,7 @@
   "nombre": "Del latín onyx, y este del griego ónyx, «garra» o «uña».",
   "historia": "La palabra inglesa nail, «uña», es pariente de la griega.",
   "nota": null,
+  "acertijo": "Mi nombre griego quiere decir «garra» o «uña», y la palabra inglesa nail es pariente.",
   "src": [
    [
     "Wikipedia · Onyx",
@@ -5701,6 +5915,7 @@
   "nombre": "Huesos calcinados. También se llama negro marfil.",
   "historia": "Lo usaron Rembrandt, Velázquez, Manet y Picasso. Durante mucho tiempo también se empleó para refinar el azúcar.",
   "nota": null,
+  "acertijo": "Salgo del esqueleto calcinado. Rembrandt, Velázquez y Picasso me usaron, y durante mucho tiempo serví para refinar el azúcar.",
   "src": [
    [
     "Wikipedia · Bone char",
@@ -5725,6 +5940,7 @@
   "nombre": "Por Marte, dios romano de la guerra y patrón del hierro.",
   "historia": "Es un pigmento de óxido de hierro creado en el siglo XX.",
   "nota": null,
+  "acertijo": "Llevo el nombre del dios romano de la guerra, patrón del hierro. Soy un óxido de hierro del siglo XX.",
   "src": [
    [
     "Wikipedia · Mars black",
@@ -5749,6 +5965,7 @@
   "nombre": "Del árabe hispánico azzabáǧ, del árabe clásico sabaǧ y del pelvi šabag.",
   "historia": "A finales de la Edad Media Santiago de Compostela era un gran centro de amuletos de azabache para los peregrinos, hechos con piedra de Asturias. En la Inglaterra victoriana el azabache de Whitby se puso de moda como joya de luto.",
   "nota": null,
+  "acertijo": "Fui amuleto de peregrinos en Santiago, tallado con piedra de Asturias. En la Inglaterra victoriana fui la joya de quien guardaba duelo.",
   "src": [
    [
     "RAE · azabache",
@@ -5777,6 +5994,7 @@
   "nombre": "Del francés lavande o el italiano lavanda. Se suele explicar por el latín lavare, «lavar», por las infusiones que se usaban en el baño, pero no es seguro.",
   "historia": "Sus flores secas se meten en saquitos entre la ropa guardada para perfumarla y espantar a las polillas.",
   "nota": null,
+  "acertijo": "Mis flores secas van en saquitos entre la ropa para perfumarla y espantar a las polillas. Quizá mi nombre venga de «lavar», pero no es seguro.",
   "src": [
    [
     "RAE · lavanda",
@@ -5805,6 +6023,7 @@
   "nombre": "Por la Universidad de Oxford.",
   "historia": "Lo eligieron Charles Wordsworth y Thomas Garnier, remeros de la primera regata contra Cambridge en 1829, basándose en la camiseta de Christ Church. De ahí el apodo de los «azules oscuros».",
   "nota": null,
+  "acertijo": "Me eligieron dos remeros para la primera regata contra una universidad rival, en 1829. Se basaron en la camiseta de Christ Church.",
   "src": [
    [
     "Wikipedia · Oxford Blue (colour)",
@@ -5829,6 +6048,7 @@
   "nombre": "Del griego kyanos, «esmalte azul oscuro, lapislázuli».",
   "historia": "Es una de las cuatro tintas de la imprenta, junto a magenta, amarillo y negro. Como nombre de color en inglés aparece en 1879.",
   "nota": null,
+  "acertijo": "Soy una de las cuatro tintas de la imprenta. Como nombre de color en inglés aparezco desde 1879.",
   "src": [
    [
     "Wikipedia · Cyan",
@@ -5856,6 +6076,7 @@
    "cert": "ley",
    "t": "En el mito griego, Minta era una ninfa amada por Hades a la que Perséfone o Deméter convirtieron en planta."
   },
+  "acertijo": "Soy una de las plantas aromáticas más antiguas. Según el mito griego, fui una ninfa amada por Hades a la que una diosa convirtió en planta.",
   "src": [
    [
     "Wikipedia · Mentha",
@@ -5880,6 +6101,7 @@
   "nombre": "Del árabe hispánico lima, y este del árabe līmah.",
   "historia": "En el siglo XIX los marineros británicos tomaban cítricos, entre ellos lima, contra el escorbuto. De ahí el mote limey para los británicos.",
   "nota": null,
+  "acertijo": "Los marineros británicos me tomaban contra el escorbuto, y por eso les llaman limeys.",
   "src": [
    [
     "RAE · lima",
@@ -5908,6 +6130,7 @@
   "nombre": "Por el licor de los monjes cartujos de la Grande Chartreuse.",
   "historia": "Lo elaboran desde 1737 con una receta ligada a un manuscrito de 1605. Lleva 130 plantas y la fórmula solo la conocen unos pocos monjes. Como nombre de color aparece en 1884.",
   "nota": null,
+  "acertijo": "Me llamo como un licor de monjes cartujos con 130 plantas, cuya fórmula solo conocen unos pocos.",
   "src": [
    [
     "Wikipedia · Chartreuse (liqueur)",
@@ -5932,6 +6155,7 @@
   "nombre": "Del latín sulpur.",
   "historia": "En la Antigüedad se quemaba para purificar las casas. En la Biblia, Sodoma y Gomorra caen bajo «azufre y fuego», y el Apocalipsis habla de un «lago de fuego y azufre»: por eso huele a infierno.",
   "nota": null,
+  "acertijo": "Me quemaban para purificar las casas. Sodoma y Gomorra cayeron bajo fuego y yo, y por eso huelo a infierno.",
   "src": [
    [
     "Wikipedia · Sulfur",
@@ -5956,6 +6180,7 @@
   "nombre": "Por Campeche, en México. Su nombre científico es Haematoxylum campechianum.",
   "historia": "Entre los siglos XVII y XIX se exportaba a Europa como valioso tinte. Belice nació de campamentos ingleses de corta de palo de Campeche, cuyos leñadores eran a menudo antiguos marineros y piratas. Hoy da la hematoxilina, un tinte de laboratorio.",
   "nota": null,
+  "acertijo": "Soy una madera de tinte de México. Belice nació de campamentos ingleses que me cortaban, con leñadores que a menudo habían sido piratas.",
   "src": [
    [
     "Wikipedia · Haematoxylum campechianum",
@@ -5980,6 +6205,7 @@
   "nombre": "Carbón de sarmientos de vid quemados.",
   "historia": "Es un nombre del siglo XIX. Daba un negro más débil que el de humo o el de marfil, pero aguanta muy bien la luz.",
   "nota": null,
+  "acertijo": "Soy carbón de sarmientos quemados. Mi nombre es del siglo XIX, y aunque soy débil, aguanto muy bien la luz.",
   "src": [
    [
     "CAMEO · Vine black",
@@ -6004,6 +6230,7 @@
   "nombre": "Del árabe hispánico baḏinǧána, del árabe clásico y del persa bātingān.",
   "historia": "Llegó a la península con los árabes, y su nombre hizo el mismo camino.",
   "nota": null,
+  "acertijo": "Mi nombre viajó del persa al árabe y llegó a la península con los árabes, igual que yo.",
   "src": [
    [
     "RAE · berenjena",
@@ -6031,6 +6258,7 @@
    "cert": "ley",
    "t": "La leyenda dice que la infanta Isabel Clara Eugenia juró no cambiarse de camisa hasta que acabara el sitio de Ostende (1601-1604), o Isabel la Católica hasta tomar Granada (1491-1492). Ninguna se sostiene: la palabra ya se usaba en 1600, antes del sitio de Ostende, y la de Granada también se tiene por falsa."
   },
+  "acertijo": "Una reina de Inglaterra guardaba en 1600 un vestido de satén de mi color. Lo de la que juró no cambiarse de camisa hasta ganar un sitio es solo leyenda.",
   "src": [
    [
     "Wikipedia · Isabelline (colour)",
@@ -6055,6 +6283,7 @@
   "nombre": "Del francés crème, la nata.",
   "historia": "Es el color de la nata de la leche, un blanco con un toque amarillo.",
   "nota": null,
+  "acertijo": "Me llamo como la nata de la leche, con una palabra que llegó del francés.",
   "src": [
    [
     "RAE · crema",
@@ -6079,6 +6308,7 @@
   "nombre": "Por la diseñadora surrealista Elsa Schiaparelli. En inglés se llama shocking pink.",
   "historia": "Viene de su perfume Shocking (1937): era el rosa de las letras de la caja. Se inspiró en un diamante rosa de Cartier, el Tête de Bélier, de una de sus mejores clientas, Daisy Fellowes.",
   "nota": null,
+  "acertijo": "Una diseñadora surrealista me puso en la caja de su perfume Shocking, en 1937. Se inspiró en un diamante de Cartier.",
   "src": [
    [
     "Wikipedia · Shocking pink",
@@ -6103,6 +6333,7 @@
   "nombre": "Del latín ebenus, del griego ébenos, palabra de origen nubio. En egipcio antiguo era hbny.",
   "historia": "Algunas especies son tan densas que se hunden en el agua. Con él se hacen las teclas negras de pianos y clavecines.",
   "nota": null,
+  "acertijo": "Soy una madera tan densa que a veces se hunde en el agua. Con ella se hacen las teclas negras del piano.",
   "src": [
    [
     "RAE · ébano",
@@ -6131,6 +6362,7 @@
   "nombre": "Probablemente del sánscrito upala, «piedra preciosa», aunque se discute.",
   "historia": "Sus destellos de colores salen de esferas de sílice ordenadas que difractan la luz. Se suele decir que Australia produce el 95-97 % del ópalo precioso del mundo.",
   "nota": null,
+  "acertijo": "Mis destellos de colores salen de esferas de sílice ordenadas. Se suele decir que Australia produce casi todo el precioso del mundo.",
   "src": [
    [
     "Wikipedia · Opal",
@@ -6155,6 +6387,7 @@
   "nombre": "Por Alice Roosevelt Longworth, hija del presidente Theodore Roosevelt; era su color favorito.",
   "historia": "En 1919 el musical Irene lanzó la canción Alice Blue Gown. La obra hizo 670 funciones y mantuvo un récord durante 18 años.",
   "nota": null,
+  "acertijo": "Fui el favorito de la hija de Theodore Roosevelt. En 1919 un musical me dedicó una canción.",
   "src": [
    [
     "Wikipedia · Alice blue",
@@ -6179,6 +6412,7 @@
   "nombre": "Del latín lapis obsidianus: según Plinio, la descubrió en Etiopía un romano llamado Obsidio.",
   "historia": "Es vidrio volcánico y se rompe en filos cortantes. Los aztecas la usaban en las hojas de sus espadas macuahuitl y en espejos rituales ligados a Tezcatlipoca, el «espejo humeante».",
   "nota": null,
+  "acertijo": "Soy vidrio volcánico y me rompo en filos cortantes. Los aztecas me ponían en sus espadas y en espejos para Tezcatlipoca.",
   "src": [
    [
     "Wikipedia · Obsidian",
@@ -6203,6 +6437,7 @@
   "nombre": "Hollín de lámparas de aceite.",
   "historia": "Los negros de carbón se usan como pigmento desde la prehistoria. Rembrandt y Vermeer pintaron con ellos.",
   "nota": null,
+  "acertijo": "Soy hollín de lámparas de aceite. Los pigmentos de carbón como yo se usan desde la prehistoria, y Vermeer pintó con ellos.",
   "src": [
    [
     "Wikipedia · Carbon black",
@@ -6227,6 +6462,7 @@
   "nombre": "Del latín luctus, «dolor». La RAE lo define también como el vestido negro que se lleva por la muerte de alguien.",
   "historia": "El duelo largo y visible de la reina Victoria tras la muerte del príncipe Alberto en 1861 marcó las costumbres de luto de toda una época.",
   "nota": null,
+  "acertijo": "Mi nombre latino quiere decir «dolor». La reina Victoria me llevó durante años por el príncipe Alberto.",
   "src": [
    [
     "RAE · luto",
@@ -6258,6 +6494,7 @@
    "cert": "ley",
    "t": "Se asocia a Robin Hood y al bosque de Sherwood. Es tradición de baladas y leyendas, no un hecho histórico."
   },
+  "acertijo": "Una gran ciudad pañera inglesa me teñía con glasto y gualda. Que Robin Hood me vistiera es cosa de baladas, no de historia.",
   "src": [
    [
     "Wikipedia · Lincoln green",
@@ -6282,6 +6519,7 @@
   "nombre": "Diminutivo de viola, por la flor.",
   "historia": "Es el color del extremo del espectro visible, entre unos 380 y 435 nanómetros. Justo detrás empieza el ultravioleta, que ya no vemos.",
   "nota": null,
+  "acertijo": "Estoy en el extremo del espectro visible. Justo detrás empieza una luz que ya no vemos y que lleva mi nombre.",
   "src": [
    [
     "RAE · violeta",
@@ -6310,6 +6548,7 @@
   "nombre": "De VANTA, siglas en inglés de «matrices de nanotubos alineados verticalmente».",
   "historia": "Surrey NanoSystems lo presentó en 2014: absorbe hasta el 99,965 % de la luz. En 2016 cedió en exclusiva su uso artístico a Anish Kapoor, lo que enfadó a otros artistas y acabó en una «pelea» con el rosa más rosa de Stuart Semple.",
   "nota": null,
+  "acertijo": "Absorbo hasta el 99,965 % de la luz. Anish Kapoor se quedó con mi uso artístico, y otro artista respondió con el rosa más rosa.",
   "src": [
    [
     "Wikipedia · Vantablack",
@@ -6334,6 +6573,7 @@
   "nombre": "Del griego helios, «sol», y trepein, «girar».",
   "historia": "Se creía que sus flores giraban hacia el sol. En medicina, la erupción violácea de la dermatomiositis se llama «eritema en heliotropo» por su parecido con la planta.",
   "nota": null,
+  "acertijo": "Mi nombre griego quiere decir «que gira hacia el sol», como se creía de mis flores.",
   "src": [
    [
     "Wikipedia · Heliotropium",
@@ -6358,6 +6598,7 @@
   "nombre": "Del latín aqua marina, «agua de mar».",
   "historia": "Es un berilo, de la misma familia que la esmeralda. La aguamarina Dom Pedro, de 10.363 quilates, es la mayor tallada del mundo.",
   "nota": null,
+  "acertijo": "Soy un berilo, como la esmeralda. La mayor gema tallada de mi clase se llama Dom Pedro y pesa 10.363 quilates.",
   "src": [
    [
     "Wikipedia · Aquamarine (gem)",

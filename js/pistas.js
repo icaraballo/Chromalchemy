@@ -4,8 +4,8 @@
    «Pista» (elige el más fácil) o tocando un «?» de la paleta (uno de esa familia). La pista se
    queda fija hasta descubrir ese color: pedir otra sube un escalón, no cambia de color.
    Son libres; tras FALLOS mezclas seguidas que no dan nada, el botón brilla.
-   El acertijo: el campo `acertijo` del JSON cuando exista; mientras, el «Por qué se llama así»
-   con el nombre tapado. */
+   El acertijo: el campo `acertijo` del JSON (lo tienen los 241, v1.12); si faltara, el «Por qué
+   se llama así» con el nombre tapado. */
 import {DATA,FAMS,BY,gen} from './data.js';
 import {st,nodes,guardar} from './state.js';
 import {toast,hint} from './ui.js';

@@ -55,5 +55,19 @@ for (const d of DATA) {
   hexes.set(h, d.id);
 }
 
+// 5. Cada color con receta tiene su acertijo (T-14): no dice el nombre (la misma regla que
+// tapar() de js/pistas.js) y cabe en la tarjeta (163 caracteres como mucho)
+const norm = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+const VACIAS = new Set(['de','del','la','el','los','las','y','en','con']);
+for (const d of DATA) {
+  if (!d.parents) { ok(!d.acertijo, `${d.id}: los básicos no llevan acertijo`); continue; }
+  ok(typeof d.acertijo === 'string' && d.acertijo.trim(), `${d.id}: falta el acertijo`);
+  if (!d.acertijo) continue;
+  ok(d.acertijo.length <= 163, `${d.id}: el acertijo tiene ${d.acertijo.length} caracteres (máx. 163)`);
+  const ws = d.name.split(/[\s-]+/).filter(w => w.length > 2 && !VACIAS.has(norm(w))).map(norm);
+  const dice = (d.acertijo.match(/[\p{L}·]+/gu) || []).filter(m => { const a = norm(m); return ws.some(b => a === b || (b.length > 4 && a.startsWith(b.slice(0, -1)))); });
+  ok(!dice.length, `${d.id}: el acertijo dice el nombre (${dice.join(', ')})`);
+}
+
 console.log(fallos ? `\n${fallos} de ${pruebas} comprobaciones fallan` : `${pruebas} comprobaciones, todas bien: se llega a los ${tengo.size} colores`);
 process.exit(fallos ? 1 : 0);
