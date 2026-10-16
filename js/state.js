@@ -11,7 +11,8 @@ export const st={
  effects:[],                 // explosiones, pulsos y nubecillas en curso
  selected:null,              // id del color con la ficha abierta
  hover:null,                 // nodo bajo el puntero (o bajo lo que se arrastra)
- drag:null,                  // arrastre en curso
+ drag:null,                  // arrastre en curso (una muestra para mezclar)
+ mueve:null,                 // bola que se está moviendo a mano: {id, pid, x, y} (T-17)
  lastNew:null,               // último color descubierto (anima su entrada en la paleta)
  pista:null,                 // la pista en curso: {id, paso 1-3} (pistas.js)
  pistasUsadas:0,             // cuántas pistas se han pedido en la partida (se envía al opinar)
@@ -38,10 +39,11 @@ export function ahora(){const k=order.length+':'+order[order.length-1];
  return cache;}
 
 /* ---------- Guardado en el navegador ----------
-   Se guarda qué se ha descubierto (en orden) y qué logros ya salieron; las posiciones no, se
-   recolocan al cargar. localStorage puede fallar (navegación privada, almacenamiento lleno):
+   Se guarda qué se ha descubierto (en orden) y qué logros ya salieron. De las posiciones, sólo
+   las de las bolas movidas a mano (v1.14, `fijas`: id → [x, y] en fracciones del lienzo); las
+   demás se recolocan al cargar. localStorage puede fallar (navegación privada, almacenamiento lleno):
    entonces se juega igual, sólo que sin guardar. */
 const CLAVE='chromalchemy';
-export function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify({v:1,order,logros:[...logros],pista:st.pista,pistas:st.pistasUsadas}));}catch{}}
+export function guardar(){try{localStorage.setItem(CLAVE,JSON.stringify({v:1,order,logros:[...logros],pista:st.pista,pistas:st.pistasUsadas,fijas:Object.fromEntries([...nodes.values()].filter(n=>n.fija).map(n=>[n.id,n.fija.map(v=>+v.toFixed(4))]))}));}catch{}}
 export function leerGuardado(){try{const g=JSON.parse(localStorage.getItem(CLAVE));if(g&&Array.isArray(g.order))return g;}catch{}return null;}
 export function addNode(id,x,y,delay){const n={id,x,y,vx:0,vy:0,r:0,born:st.now+(delay||0),pulse:0,shake:0,ph:Math.random()*TAU};nodes.set(id,n);order.push(id);return n;}

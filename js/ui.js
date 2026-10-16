@@ -48,7 +48,7 @@ export function logroLeyendas(n){mostrarLogro({color:'#C79BFF',eb:'leyendas',tit
 logroEl.onclick=e=>{const op=e.target.closest('[data-l="op"]');clearTimeout(logroT);siguienteLogro();if(op)abrirOpinion();};
 
 /* ---------- Partida nueva: los cinco básicos en pentágono ---------- */
-export function reset(){resetCam();st.pista=null;st.pistasUsadas=0;nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;quitarLogros();openFams.clear();
+export function reset(){resetCam();st.mueve=null;st.pista=null;st.pistasUsadas=0;nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;quitarLogros();openFams.clear();
  BASICS.forEach((id,i)=>{const a=-Math.PI/2+i*TAU/5;addNode(id,st.W/2+Math.cos(a)*120*st.S,st.H/2+Math.sin(a)*120*st.S,i*.09);openFams.add(BY[id].fam);});
  renderPalette();updateProgress();hint.hidden=false;guardar();dispatchEvent(new Event('pistas'));}
 // Con la partida guardada, reiniciar borra de verdad: se pregunta antes si hay algo que perder.
@@ -66,6 +66,9 @@ export function restaurar(){const g=leerGuardado();if(!g)return false;
  for(const id of g.order){const d=BY[id];if(!d||nodes.has(id)||!d.p)continue;
   const a=nodes.get(d.p[0]),b=nodes.get(d.p[1]);if(!a||!b)continue; // guardado raro: se salta lo que no encaja
   const ang=Math.random()*TAU;addNode(id,(a.x+b.x)/2+Math.cos(ang)*30*st.S,(a.y+b.y)/2+Math.sin(ang)*30*st.S,.45+i*.01);i++;}
+ // Las bolas movidas a mano, donde se dejaron (v1.14); lo raro se ignora.
+ for(const [id,f] of Object.entries(g.fijas&&typeof g.fijas==='object'?g.fijas:{})){const n=nodes.get(id);
+  if(n&&Array.isArray(f)&&f.length===2&&f.every(v=>typeof v==='number'&&v>=0&&v<=1)){n.fija=f;n.x=f[0]*st.W;n.y=f[1]*st.H;}}
  (g.logros||[]).forEach(k=>{if(typeof k==='string')logros.add(k);});
  // Partidas de antes de la v1.9: lo de la gama y las leyendas que ya estuviera conseguido se
  // da por visto, para que no salten todos de golpe en el siguiente color.

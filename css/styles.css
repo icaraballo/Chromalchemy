@@ -107,10 +107,12 @@ a{color:var(--accent)}
 .ppill .x{position:static;width:26px;height:26px;padding:0;font-size:16px;background:none;color:var(--muted)}
 /* Con la pastilla arriba, el logro y «Ver toda» se apartan; con la tarjeta, «Ver toda» espera. */
 .stage:has(#pPill:not([hidden])) .logro{top:60px}
-.stage:has(#pPill:not([hidden])) .zoom-out{top:60px}
-.stage:has(#pCard:not([hidden])) .zoom-out{display:none}
+.stage:has(#pPill:not([hidden])) .vista{top:60px}
+.stage:has(#pCard:not([hidden])) .vista:not(.dcha){display:none}
 /* Con zoom, volver a ver la constelación entera (T-12) */
-.zoom-out{position:absolute;left:14px;top:14px;z-index:5;background:var(--panel-solid);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--fg);cursor:pointer;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}
+.vista{position:absolute;left:14px;top:14px;z-index:5;display:flex;gap:8px}
+.vista.dcha{left:auto;right:14px}
+.zoom-out{background:var(--panel-solid);border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12.5px;color:var(--fg);cursor:pointer;box-shadow:0 10px 30px -12px rgba(0,0,0,.7)}
 /* lore card */
 .lore{position:absolute;top:16px;right:16px;width:min(380px,calc(100% - 32px));max-height:calc(100% - 32px);overflow-y:auto;background:var(--panel);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;z-index:4;box-shadow:0 24px 60px -20px rgba(0,0,0,.7)}
 .x{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.05);cursor:pointer;font-size:18px;line-height:1;color:var(--muted)}
@@ -169,9 +171,9 @@ a{color:var(--accent)}
 .logro small:last-child{letter-spacing:.04em;text-transform:none}
 .logro em{display:block;font-family:var(--display);font-style:normal;font-size:20px;line-height:1.15;margin:1px 0}
 .ghost{position:fixed;left:0;top:0;width:42px;height:42px;border-radius:50%;pointer-events:none;z-index:50;transform:translate(-50%,-50%)}
-body.dragging,body.dragging *{cursor:grabbing!important}
+body.dragging,body.dragging *,body.moviendo,body.moviendo *{cursor:grabbing!important}
 /* Mientras se arrastra un color o el fondo, que no se seleccione texto por el camino. */
-body.dragging,body.panning{user-select:none;-webkit-user-select:none}
+body.dragging,body.moviendo,body.panning{user-select:none;-webkit-user-select:none}
 body.panning,body.panning *{cursor:move!important}
 @media (max-width:760px){
   /* La paleta es una hoja que sale de abajo, encima de la constelación (T-10, sheet.js). Plegada

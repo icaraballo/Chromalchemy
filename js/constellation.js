@@ -27,14 +27,31 @@ const targetR=n=>(10+Math.min(degree(n.id),9)*1.8)*st.S*crowd();
 const rz=()=>1/Math.sqrt(cam.z);
 const birthScale=n=>{const t=st.now-n.born;if(t<0)return 0;return reduce?1:elastic(t/.7);};
 export function hit(x,y,exclude){let best=null,bd=1e9;for(const n of nodes.values()){if(n.id===exclude||st.now<n.born)continue;const d=Math.hypot(n.x-x,n.y-y);const lim=Math.max(n.r*rz()*1.5,24*st.S/cam.z);if(d<lim&&d<bd){bd=d;best=n;}}return best;}
+/* ---------- Bolas movidas a mano (T-17, v1.14) ----------
+   La que se arrastra sigue al dedo (st.mueve); al soltarla se queda anclada en ese punto
+   (n.fija = [x, y] en fracciones del lienzo, para que valga al girar el móvil o en otra ventana)
+   y deja de ir a la zona de su familia. Ni una ni otra se mueven con las fuerzas: las demás sí,
+   y sus unidas las siguen por los muelles. Mientras se arrastra, las unidas de su familia tiran
+   más fuerte (la siguen de cerca) que las de otras familias. «Reordenar» las suelta todas. */
+const reordenar=$('reordenar');
+const quieta=n=>st.mueve&&st.mueve.id===n.id||!!n.fija;
+const SIGUE_FAM=3.2, SIGUE_OTRA=1.3; // cuánto más tiran los muelles de la que se arrastra
+export function hayFijas(){for(const n of nodes.values())if(n.fija)return true;return false;}
+export function soltarTodas(){for(const n of nodes.values())delete n.fija;}
 export function step(dt){const S=st.S,f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.values()];
+ const m0=st.mueve&&nodes.get(st.mueve.id);
+ for(const n of arr)if(n.fija&&n!==m0){n.x=n.fija[0]*st.W;n.y=n.fija[1]*st.H;}
+ if(m0){m0.x=st.mueve.x;m0.y=st.mueve.y;}
+ const hay=arr.some(n=>n.fija);if(reordenar.hidden===hay)reordenar.hidden=!hay;
  for(const n of arr){n.pulse=Math.max(0,n.pulse-dt*1.5);n.shake=Math.max(0,n.shake-dt);const tr=targetR(n);n.r=n.r?n.r+(tr-n.r)*Math.min(1,dt*8):tr;}
  const corte=3.2*Math.sqrt(st.W*st.H/Math.max(arr.length,1)); // alcance de la repulsión: unas 3 distancias típicas
  for(let i=0;i<arr.length;i++)for(let j=i+1;j<arr.length;j++){const a=arr[i],b=arr[j];let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy;
   if(d2<1){dx=Math.random()-.5;dy=Math.random()-.5;d2=1;}const d=Math.sqrt(d2);if(d>corte)continue;let fr=1500*S*S*crowd()*crowd()/d2*(1-d/corte);const minD=a.r+b.r+10*S*crowd();if(d<minD)fr+=(minD-d)*.06;
   const ux=dx/d,uy=dy/d;a.vx-=ux*fr*f;a.vy-=uy*fr*f;b.vx+=ux*fr*f;b.vy+=uy*fr*f;}
  for(const n of arr){const p=BY[n.id].p;if(!p)continue;for(const pid of p){const q=nodes.get(pid);if(!q)continue;const dx=n.x-q.x,dy=n.y-q.y,d=Math.hypot(dx,dy)||1;
-  const k=(d-88*S*crowd())*.0032*f,ux=dx/d,uy=dy/d;n.vx-=ux*k;n.vy-=uy*k;q.vx+=ux*k*.4;q.vy+=uy*k*.4;}}
+  let k=(d-88*S*crowd())*.0032*f;const ux=dx/d,uy=dy/d;
+  if(m0&&(m0===n||m0===q))k*=BY[n.id].fam===BY[q.id].fam?SIGUE_FAM:SIGUE_OTRA;
+  n.vx-=ux*k;n.vy-=uy*k;q.vx+=ux*k*(m0===n?1:.4);q.vy+=uy*k*(m0===n?1:.4);}}
  const damp=Math.pow(.86,f);
  const g=.00144/crowd(),R=Math.min(st.W,st.H)*.34,m=36*S;
  for(const n of arr){const[ang,rf]=ZONA[BY[n.id].fam],a=ang*Math.PI/180;
@@ -42,6 +59,7 @@ export function step(dt){const S=st.S,f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.
   // Bordes blandos: cerca del borde, un empujón hacia dentro (el clamp de abajo queda de tope).
   if(n.x<m)n.vx+=(m-n.x)*.03*f;if(n.x>st.W-m)n.vx-=(n.x-st.W+m)*.03*f;if(n.y<m)n.vy+=(m-n.y)*.03*f;if(n.y>st.H-m)n.vy-=(n.y-st.H+m)*.03*f;
   n.vx*=damp;n.vy*=damp;
+  if(quieta(n)){n.vx=n.vy=0;continue;}
   n.x+=n.vx*f;n.y+=n.vy*f;n.x=clamp(n.x,20,st.W-20);n.y=clamp(n.y,20,st.H-20);}}
 
 /* ---------- Dibujo ---------- */
@@ -68,8 +86,10 @@ function drawNode(n){const sc=birthScale(n)*rz();if(sc<=0)return;const hex=BY[n.
  if(dark){ctx.strokeStyle='rgba(220,218,240,.35)';ctx.lineWidth=1;circle(x,y,r);ctx.stroke();}
  if(!pending(n.id).length&&KIDS[n.id].length&&sc>=1){ctx.strokeStyle=rgba(hex,.35);ctx.lineWidth=1;ctx.setLineDash([2,4]);circle(x,y,r+4*st.S*rz());ctx.stroke();ctx.setLineDash([]);}}
 function drawRings(){const {selected,hover,drag,S}=st;
- // La bola de la que sale la muestra que se arrastra (T-11): un anillo discontinuo, para saber de dónde viene.
- if(drag&&drag.started&&drag.from==='node'&&nodes.has(drag.id)){const n=nodes.get(drag.id);const[x,y]=nodePos(n);ctx.strokeStyle=rgba(BY[n.id].hex,.8);ctx.lineWidth=1.4;ctx.setLineDash([3,4]);circle(x,y,(n.r+6*S)*rz());ctx.stroke();ctx.setLineDash([]);}
+ // La bola cogida para mezclar (mantener pulsado 0,5 s, T-17): un anillo discontinuo que entra
+ // creciendo, para que se note el instante en que «ya la tienes», y se queda mientras se arrastra la muestra.
+ if(drag&&drag.cogida&&nodes.has(drag.id)){const n=nodes.get(drag.id);const[x,y]=nodePos(n),e=reduce?1:elastic(Math.min(1,(st.now-drag.cogida)/.35));
+  ctx.strokeStyle=rgba(BY[n.id].hex,.8);ctx.lineWidth=1.4;ctx.setLineDash([3,4]);circle(x,y,(n.r*e+6*S)*rz());ctx.stroke();ctx.setLineDash([]);}
  if(selected&&nodes.has(selected)){const n=nodes.get(selected);const[x,y]=nodePos(n);ctx.strokeStyle='rgba(236,232,255,.75)';ctx.lineWidth=1.4;circle(x,y,(n.r*birthScale(n)+7*S)*rz());ctx.stroke();}
  // Los ingredientes de la pista (T-09): un aro que late, del color de acento.
  for(const id of st.pistaIngr){const n=nodes.get(id);if(!n)continue;const[x,y]=nodePos(n),k=Math.sin(st.now*3.2)*.5+.5,r=(n.r+9*S)*rz()+k*3*S/cam.z;
