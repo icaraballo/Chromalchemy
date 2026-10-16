@@ -72,7 +72,7 @@ export function restaurar(){const g=leerGuardado();if(!g)return false;
  for(const pct of [25,50,75])if(order.length>=Math.ceil(DATA.length*pct/100))logros.add('gama:'+pct);
  if(DATA.filter(d=>d.cert==='ley'||(d.nota&&d.nota.cert==='ley')).every(d=>nodes.has(d.id)))logros.add('leyendas');
  st.pistasUsadas=g.pistas|0;
- const p=g.pista;st.pista=p&&BY[p.id]&&BY[p.id].p&&!nodes.has(p.id)&&p.paso>=1&&p.paso<=3?{id:p.id,paso:p.paso|0}:null;
+ const p=g.pista;st.pista=p&&BY[p.id]&&BY[p.id].p&&!nodes.has(p.id)&&p.paso>=1&&p.paso<=3?{id:p.id,paso:p.paso|0,...(BY[p.desde]&&!nodes.has(p.desde)?{desde:p.desde}:{})}:null;
  dispatchEvent(new Event('pistas'));
  renderPalette();updateProgress();hint.hidden=order.length>BASICS.length;
  return true;}

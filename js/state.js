@@ -1,7 +1,8 @@
 /* ---------- Estado compartido ----------
    Lo que cambia durante la partida vive en `st`, un único objeto que todos los módulos
    importan y modifican (un `let` exportado no se puede reasignar desde otro módulo). */
-import {KIDS} from './data.js';
+import {DATA,KIDS} from './data.js';
+import {crear} from './posibles.js';
 import {TAU} from './utils.js';
 
 export const st={
@@ -24,6 +25,17 @@ export const openFams=new Set();// familias desplegadas en la paleta
 export const logros=new Set();  // logros ya mostrados: 'rojos:50', 'rojos:100'…
 
 export const pending=id=>KIDS[id].filter(k=>!nodes.has(k));
+
+/* ---------- Qué se puede hacer ahora (T-16), sobre lo descubierto ----------
+   La constelación lo consulta en cada fotograma: lo que vale para toda la partida (qué colores
+   tienen alguna mezcla posible y qué familias algún color posible) se recalcula sólo cuando
+   cambia lo descubierto. */
+const motor=crear(DATA);
+export const posible=id=>motor.posible(id,nodes), mezclas=id=>motor.mezclas(id,nodes), cadena=id=>motor.cadena(id,nodes);
+let clave='',cache=null;
+export function ahora(){const k=order.length+':'+order[order.length-1];
+ if(k!==clave){clave=k;cache={colores:new Set(order.filter(id=>motor.mezclas(id,nodes).ahora.length)),fams:new Set(DATA.filter(d=>motor.posible(d.id,nodes)).map(d=>d.fam))};}
+ return cache;}
 
 /* ---------- Guardado en el navegador ----------
    Se guarda qué se ha descubierto (en orden) y qué logros ya salieron; las posiciones no, se

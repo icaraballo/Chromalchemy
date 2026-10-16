@@ -1,6 +1,6 @@
 /* ---------- Ficha de historia ---------- */
 import {FAMS,CERT,BY,KIDS,gen,GEN_LABEL} from './data.js';
-import {st,nodes,pending} from './state.js';
+import {st,nodes,pending,mezclas} from './state.js';
 import {rgb,rgba,lighten,darken,lum,esc,$} from './utils.js';
 
 export const lore=$('lore');
@@ -19,7 +19,13 @@ export function openLore(id){const d=BY[id];st.selected=id;const dark=lum(d.hex)
  const kids=KIDS[id],pen=pending(id),known=kids.filter(k=>nodes.has(k));
  let ph='';
  if(!kids.length)ph=`<div class="pend-t">De este color no sale ninguna mezcla nueva.</div>`;
- else if(pen.length)ph=`<div class="pend-t">Te quedan <b>${pen.length} ${pen.length===1?'mezcla':'mezclas'}</b> por descubrir con ${esc(d.name)}.</div><div class="qrow">${'<span>?</span>'.repeat(pen.length)}</div>`;
+ else if(pen.length){
+  // Partidas en las que ya se pueden hacer y las que necesitan un color que aún no tienes (T-16).
+  const {ahora,luego}=mezclas(id),q=`<b>${pen.length} ${pen.length===1?'mezcla':'mezclas'}</b>`,nm=esc(d.name);
+  const t=!luego.length?`Te quedan ${q} con ${nm}, y ya ${pen.length===1?'puedes hacerla':'puedes hacerlas'}.`
+   :!ahora.length?`Te quedan ${q} con ${nm}, pero antes necesitas otros colores.`
+   :`Te quedan ${q} con ${nm}: <b>${ahora.length}</b> ya ${ahora.length===1?'se puede hacer':'se pueden hacer'} y ${luego.length} ${luego.length===1?'necesita':'necesitan'} un color que aún no tienes.`;
+  ph=`<div class="pend-t">${t}</div><div class="qrow">${'<span class="ya">?</span>'.repeat(ahora.length)}${'<span>?</span>'.repeat(luego.length)}</div>`;}
  else ph=`<div class="pend-t"><b style="color:var(--doc)">✓</b> Has sacado todas las mezclas de ${esc(d.name)}.</div>`;
  if(known.length)ph+=`<div class="done-list"><span class="lbl">Ya sacadas:</span>${known.map(chip).join('')}</div>`;
  $('lPend').innerHTML=ph;

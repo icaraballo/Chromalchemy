@@ -2,6 +2,7 @@
 // orden del JSON, se llega a los 246 colores. Y el catálogo cumple sus reglas (CH-DESIGN §2).
 // Uso: npm test   (o node tests/recetas.test.mjs)
 import {readFileSync} from 'node:fs';
+import {crear} from '../js/posibles.js';
 
 const DATA = JSON.parse(readFileSync(new URL('../data/colores.json', import.meta.url), 'utf8'));
 const BASICS = ['rojo', 'amarillo', 'azul', 'blanco', 'negro'];
@@ -67,6 +68,45 @@ for (const d of DATA) {
   const ws = d.name.split(/[\s-]+/).filter(w => w.length > 2 && !VACIAS.has(norm(w))).map(norm);
   const dice = (d.acertijo.match(/[\p{L}·]+/gu) || []).filter(m => { const a = norm(m); return ws.some(b => a === b || (b.length > 4 && a.startsWith(b.slice(0, -1)))); });
   ok(!dice.length, `${d.id}: el acertijo dice el nombre (${dice.join(', ')})`);
+}
+
+// 6. Qué se puede hacer ahora (T-16, js/posibles.js), en partidas a medias: se descubre, uno a
+// uno, un color al azar (semilla fija) entre los que ya se pueden hacer, y se mira a los 30, 62,
+// 100, 150 y 220 colores.
+const motor = crear(DATA.map(d => ({id: d.id, p: d.parents, fam: d.fam})));
+const BYID = Object.fromEntries(DATA.map(d => [d.id, d]));
+let semilla = 7;
+const azar = () => (semilla = (semilla * 16807) % 2147483647) / 2147483647;
+function faltanAntes(id, tengo) {   // antepasados sin descubrir, contados aparte de posibles.js
+  const vistos = new Set(), pila = [id];
+  while (pila.length) for (const x of BYID[pila.pop()].parents || []) if (!tengo.has(x) && !vistos.has(x)) { vistos.add(x); pila.push(x); }
+  return vistos.size;
+}
+const partida = new Set(BASICS);
+for (const meta of [30, 62, 100, 150, 220]) {
+  while (partida.size < meta) {
+    const c = DATA.filter(d => motor.posible(d.id, partida));
+    partida.add(c[Math.floor(azar() * c.length)].id);
+  }
+  const tag = `[${meta} colores]`;
+  for (const d of DATA) {
+    if (partida.has(d.id)) {
+      const {ahora, luego} = motor.mezclas(d.id, partida);
+      const hijos = DATA.filter(c => c.parents && c.parents.includes(d.id) && !partida.has(c.id)).map(c => c.id);
+      ok([...ahora, ...luego].sort().join() === hijos.sort().join(), `${tag} ${d.id}: ahora + más adelante no son sus hijos sin descubrir`);
+      ok(ahora.every(k => motor.posible(k, partida)) && luego.every(k => !motor.posible(k, partida)), `${tag} ${d.id}: «ahora» mal partido`);
+      ok(motor.cadena(d.id, partida) === null, `${tag} ${d.id}: un color descubierto no tiene cadena`);
+      continue;
+    }
+    const c = motor.cadena(d.id, partida), c2 = motor.cadena(d.id, partida);
+    ok(c && motor.posible(c.t, partida), `${tag} ${d.id}: la cadena no acaba en un color posible`);
+    if (!c) continue;
+    ok(c.t === c2.t && c.n === c2.n, `${tag} ${d.id}: la cadena cambia al repetirla`);
+    ok(c.n === faltanAntes(d.id, partida), `${tag} ${d.id}: N = ${c.n}, pero le faltan ${faltanAntes(d.id, partida)} antepasados`);
+    if (motor.posible(d.id, partida)) ok(c.t === d.id && c.n === 0, `${tag} ${d.id}: posible, pero su cadena no es él mismo con N = 0`);
+    else ok(c.n > 0, `${tag} ${d.id}: no es posible y N = 0`);
+  }
+  for (const f of FAMS) ok(motor.famPosible(f, partida) === DATA.some(d => d.fam === f && motor.posible(d.id, partida)), `${tag} ${f}: el punto de familia no cuadra`);
 }
 
 console.log(fallos ? `\n${fallos} de ${pruebas} comprobaciones fallan` : `${pruebas} comprobaciones, todas bien: se llega a los ${tengo.size} colores`);

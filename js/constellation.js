@@ -1,6 +1,6 @@
 /* ---------- Constelación: simulación de fuerzas y dibujo en canvas ---------- */
 import {BY,KIDS} from './data.js';
-import {st,nodes,order,pending} from './state.js';
+import {st,nodes,order,pending,ahora} from './state.js';
 import {cam,clampCam} from './camera.js';
 import {rgba,lighten,lum,TAU,clamp,elastic,reduce,$} from './utils.js';
 
@@ -57,10 +57,12 @@ function drawLinks(){const {selected,hover}=st;ctx.globalCompositeOperation='lig
    ctx.strokeStyle=g;ctx.lineWidth=(hl?1.8:1.1)*Math.max(st.S,.8)/Math.sqrt(cam.z);ctx.beginPath();ctx.moveTo(q.x,q.y);ctx.lineTo(n.x,n.y);ctx.stroke();}}
  ctx.globalCompositeOperation='source-over';}
 const nodePos=n=>[n.x+(n.shake?Math.sin(st.now*55)*n.shake*7*st.S:0),n.y];
-function drawNode(n){const sc=birthScale(n)*rz();if(sc<=0)return;const hex=BY[n.id].hex,[x,y]=nodePos(n);
- const r=n.r*sc*(reduce?1:1+.035*Math.sin(st.now*1.8+n.ph))*(1+n.pulse*.35);const dark=lum(hex)<.16;
+// Las bolas con alguna mezcla posible ahora (T-16) laten el doble de amplio y con el halo algo
+// más vivo: sutil, para quien se fije. Con «reducir movimiento», sólo el halo.
+function drawNode(n){const sc=birthScale(n)*rz();if(sc<=0)return;const hex=BY[n.id].hex,[x,y]=nodePos(n),vivo=ahora().colores.has(n.id);
+ const r=n.r*sc*(reduce?1:1+(vivo?.07:.035)*Math.sin(st.now*1.8+n.ph))*(1+n.pulse*.35);const dark=lum(hex)<.16,h=vivo?1.4:1;
  ctx.globalCompositeOperation='lighter';const g=ctx.createRadialGradient(x,y,r*.2,x,y,r*3.4);
- const hc=dark?'#8c8aa8':hex;g.addColorStop(0,rgba(hc,dark?.3:.55));g.addColorStop(.35,rgba(hc,dark?.1:.17));g.addColorStop(1,rgba(hc,0));ctx.fillStyle=g;circle(x,y,r*3.4);ctx.fill();
+ const hc=dark?'#8c8aa8':hex;g.addColorStop(0,rgba(hc,(dark?.3:.55)*h));g.addColorStop(.35,rgba(hc,(dark?.1:.17)*h));g.addColorStop(1,rgba(hc,0));ctx.fillStyle=g;circle(x,y,r*3.4);ctx.fill();
  ctx.globalCompositeOperation='source-over';
  const c=ctx.createRadialGradient(x-r*.25,y-r*.25,0,x,y,r);c.addColorStop(0,lighten(hex,dark?.25:.62));c.addColorStop(.55,hex);c.addColorStop(1,hex);ctx.fillStyle=c;circle(x,y,r);ctx.fill();
  if(dark){ctx.strokeStyle='rgba(220,218,240,.35)';ctx.lineWidth=1;circle(x,y,r);ctx.stroke();}
