@@ -7,21 +7,26 @@
 ![Chromalchemy: la constelación de colores descubiertos y la ficha del azul de Prusia](img/captura.jpg)
 
 Un juego web de descubrir colores mezclándolos, en la línea de *Little Alchemy*, pero con
-colores que existen de verdad. Empiezas con rojo, amarillo, azul, blanco y negro. Arrastras
+colores que existen de verdad. Empiezas con rojo, amarillo, azul, blanco y negro. Sueltas
 uno sobre otro y, si la pareja tiene receta, aparece un color nuevo: el bermellón, el azul de
 Prusia, el verde París… Cada uno trae su ficha: por qué se llama así, su historia y de
 dónde sale cada dato.
 
 ## Cómo se juega
 
-- **Arrastra un color sobre otro**, desde la paleta o desde la propia constelación: llevas una
-  muestra y la sueltas encima. Si reaccionan, explosión y color nuevo; si no, tiemblan.
+- **Mezcla soltando un color sobre otro.** Desde la paleta, arrástralo sin más; en la
+  constelación, **mantén pulsada la bola medio segundo** para coger una muestra. Si reaccionan,
+  explosión y color nuevo; si no, tiemblan.
+- **Coloca las bolas a tu gusto**: en la constelación, arrastrar una bola sin esperar la mueve
+  y se queda donde la dejas. «Reordenar» las devuelve a su sitio por familias.
 - **Acércate** a la constelación con dos dedos (o la rueda del ratón) y muévete arrastrando el
   fondo: de cerca se leen todos los nombres. «Ver toda» vuelve a la vista entera.
 - En el móvil, la paleta es una **hoja que se desliza** desde abajo: plegada, una tira con tus
   colores; abierta, la paleta por familias.
-- **¿Atascado? Pide una pista** con el botón o tocando un «?» de la paleta: primero un
-  acertijo, luego un ingrediente, luego los dos.
+- **¿Atascado?** Las bolas con las que puedes descubrir algo laten más, y un **puntito** marca
+  en la paleta los «?» que ya están a tu alcance. **Pide una pista** con el botón o tocando un
+  «?»: primero un acertijo, luego un ingrediente, luego los dos. Si ese color aún no se puede
+  hacer, la pista te lleva al primero que te falta.
 - **Toca un color** para leer su historia y ver cuántas mezclas le quedan por descubrir.
 - **«Gama»** abre una rueda de tonos con huecos donde faltan colores: te dice por dónde
   buscar, no qué buscar.
@@ -39,7 +44,7 @@ Funciona en el ordenador y en el móvil.
 
 - **Historias con rigor.** Cada ficha dice cuánto se sabe de lo que cuenta: *documentado*,
   *discutido* o *leyenda*. Lo dudoso va aparte y marcado; nunca se presenta una leyenda como
-  hecho. 344 fuentes enlazadas (RAE, Wikipedia, el CAMEO del Museum of Fine Arts de Boston…).
+  hecho. 347 fuentes enlazadas (RAE, Wikipedia, el CAMEO del Museum of Fine Arts de Boston…).
 - **Mezcla de pintura, no de luz.** Las recetas se calcularon con
   [Mixbox](https://github.com/scrtwpns/mixbox), que imita pigmentos reales (azul y amarillo
   dan verde de verdad). 26 se eligieron a mano por su historia —el azul de Prusia sale de rojo

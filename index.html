@@ -23,36 +23,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=1.14">
+<link rel="stylesheet" href="css/styles.css?v=1.15">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/camera.js": "./js/camera.js?v=1.14",
-  "./js/constellation.js": "./js/constellation.js?v=1.14",
-  "./js/data.js": "./js/data.js?v=1.14",
-  "./js/drag.js": "./js/drag.js?v=1.14",
-  "./js/effects.js": "./js/effects.js?v=1.14",
-  "./js/game.js": "./js/game.js?v=1.14",
-  "./js/lore.js": "./js/lore.js?v=1.14",
-  "./js/main.js": "./js/main.js?v=1.14",
-  "./js/opinion.js": "./js/opinion.js?v=1.14",
-  "./js/palette.js": "./js/palette.js?v=1.14",
-  "./js/pistas.js": "./js/pistas.js?v=1.14",
-  "./js/posibles.js": "./js/posibles.js?v=1.14",
-  "./js/sheet.js": "./js/sheet.js?v=1.14",
-  "./js/state.js": "./js/state.js?v=1.14",
-  "./js/ui.js": "./js/ui.js?v=1.14",
-  "./js/utils.js": "./js/utils.js?v=1.14",
-  "./js/wheel.js": "./js/wheel.js?v=1.14"
+  "./js/camera.js": "./js/camera.js?v=1.15",
+  "./js/constellation.js": "./js/constellation.js?v=1.15",
+  "./js/data.js": "./js/data.js?v=1.15",
+  "./js/drag.js": "./js/drag.js?v=1.15",
+  "./js/effects.js": "./js/effects.js?v=1.15",
+  "./js/game.js": "./js/game.js?v=1.15",
+  "./js/lore.js": "./js/lore.js?v=1.15",
+  "./js/main.js": "./js/main.js?v=1.15",
+  "./js/opinion.js": "./js/opinion.js?v=1.15",
+  "./js/palette.js": "./js/palette.js?v=1.15",
+  "./js/pistas.js": "./js/pistas.js?v=1.15",
+  "./js/posibles.js": "./js/posibles.js?v=1.15",
+  "./js/sheet.js": "./js/sheet.js?v=1.15",
+  "./js/state.js": "./js/state.js?v=1.15",
+  "./js/ui.js": "./js/ui.js?v=1.15",
+  "./js/utils.js": "./js/utils.js?v=1.15",
+  "./js/wheel.js": "./js/wheel.js?v=1.15"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.14"></script>
+<script type="module" src="js/main.js?v=1.15"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.14</span></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.15</span></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -70,7 +70,7 @@
   </aside>
   <main class="stage" id="stage">
     <canvas id="cv" aria-label="Constelación de colores descubiertos"></canvas>
-    <div class="hint" id="hint">Arrastra un color <b>de la paleta o de la propia constelación</b> y suéltalo <b>encima de otro</b>. Toca cualquier color para leer su historia.</div>
+    <div class="hint" id="hint" hidden></div>
     <!-- Arriba a la izquierda, «Ver toda» con zoom (T-12); a la derecha, «Reordenar» con alguna bola movida (T-17). -->
     <div class="vista"><button type="button" class="zoom-out" id="zoomOut" hidden>Ver toda</button></div>
     <div class="vista dcha"><button type="button" class="zoom-out" id="reordenar" hidden>Reordenar</button></div>
@@ -127,7 +127,7 @@
 </div>
 <script>
 // Los módulos no cargan abriendo el archivo con doble clic (file://): avisarlo en vez de dejar la pantalla vacía.
-if(location.protocol==='file:')document.getElementById('hint').textContent='Ábrelo desde un servidor (python3 -m http.server) o en GitHub Pages: con doble clic el navegador no carga el juego.';
+if(location.protocol==='file:')Object.assign(document.getElementById('hint'),{hidden:false}).textContent='Ábrelo desde un servidor (python3 -m http.server) o en GitHub Pages: con doble clic el navegador no carga el juego.';
 </script>
 </body>
 </html>

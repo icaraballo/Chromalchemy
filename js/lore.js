@@ -29,7 +29,7 @@ export function openLore(id){const d=BY[id];st.selected=id;const dark=lum(d.hex)
  else ph=`<div class="pend-t"><b style="color:var(--doc)">✓</b> Has sacado todas las mezclas de ${esc(d.name)}.</div>`;
  if(known.length)ph+=`<div class="done-list"><span class="lbl">Ya sacadas:</span>${known.map(chip).join('')}</div>`;
  $('lPend').innerHTML=ph;
- $('lSrc').innerHTML=d.src.map(x=>`<li><a href="${x.u}" target="_blank" rel="noopener">${esc(x.t)}</a></li>`).join('');
+ $('lSrc').innerHTML=d.src.map(x=>`<li><a href="${esc(x.u)}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a></li>`).join('');
  lore.hidden=false;}
 export function closeLore(){lore.hidden=true;st.selected=null;}
 $('loreClose').onclick=closeLore;

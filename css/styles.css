@@ -63,10 +63,10 @@ a{color:var(--accent)}
 .pi .nm{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1;min-width:0}
 .pi .bd{font-family:var(--mono);font-size:10.5px;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:1px 6px;font-variant-numeric:tabular-nums}
 .pi .bd.done{color:var(--doc);border-color:transparent}
-/* El puntito (T-16): «aquí hay algo que puedes descubrir ya», en tus colores y en las familias.
-   Lavanda de acento: ni el verde del ✓ ni el dorado de las familias completas. */
+/* El puntito (T-16): «aquí hay algo que puedes descubrir ya», en los «?» que ya se pueden hacer
+   (v1.15) y en las familias. Lavanda de acento: ni el verde del ✓ ni el dorado de las familias
+   completas. */
 .pt{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px rgba(201,190,255,.7);flex:0 0 auto}
-.pi .bd.pt{padding:0;border:0;margin-right:6px}
 .fam-h .fn{white-space:nowrap}
 .fam-h .pt{margin-left:6px;vertical-align:2px}
 .pi.new{animation:popin .6s cubic-bezier(.2,1.4,.4,1)}
@@ -74,6 +74,9 @@ a{color:var(--accent)}
 .slots{display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:6px 8px 2px 10px}
 .slot{width:20px;height:20px;border-radius:50%;border:1px dashed rgba(236,232,255,.22);display:grid;place-items:center;font-family:var(--mono);font-size:10px;color:rgba(236,232,255,.3)}
 .slots small{font-size:11.5px;color:var(--muted);margin-left:4px}
+/* Un «?» que ya se puede descubrir: borde continuo y el puntito en la esquina. */
+.slot.pos{border:1px solid rgba(201,190,255,.55);color:var(--accent);position:relative}
+.slot.pos::after{content:"";position:absolute;top:-2px;right:-2px;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px rgba(201,190,255,.7)}
 /* El «?» del color de la pista: el aro que late de los ingredientes de la constelación. */
 .slot.ilum{border:1.5px solid var(--accent);color:var(--accent);animation:ilum 1.96s ease-in-out infinite}
 @keyframes ilum{0%,100%{box-shadow:0 0 0 2px rgba(201,190,255,.12)}50%{box-shadow:0 0 0 5px rgba(201,190,255,.3)}}
@@ -210,8 +213,6 @@ body.panning,body.panning *{cursor:move!important}
   .pi .nm{font-size:11px;max-width:62px;text-align:center;flex:none}
   .pi{position:relative}
   .pi .bd{display:none}
-  /* El puntito sí se ve en el móvil: en la esquina de la bolita. */
-  .pi .bd.pt{display:block;position:absolute;top:5px;left:calc(50% + 10px);margin:0}
   .slots{width:100%}
   .lore{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70%;z-index:30;border-radius:18px 18px 0 0;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
   .hint{border-radius:14px;width:auto}
@@ -224,6 +225,9 @@ body.panning,body.panning *{cursor:move!important}
      la vista, en vez de taparla; y si también hay un logro, debajo de él (CB-02). */
   .stage:has(.lore:not([hidden])) .toast{top:16px;bottom:auto}
   .stage:has(.lore:not([hidden])):has(.logro:not([hidden])) .toast{top:96px}
+  /* …y si además hay una pista en la pastilla de arriba, debajo de ella (v1.15). */
+  .stage:has(.lore:not([hidden])):has(#pPill:not([hidden])) .toast{top:60px}
+  .stage:has(.lore:not([hidden])):has(#pPill:not([hidden])):has(.logro:not([hidden])) .toast{top:140px}
 }
 /* Móviles muy estrechos: la barrita se acorta para que la versión y el contador quepan en una línea. */
 @media (max-width:345px){.bar{width:46px}}

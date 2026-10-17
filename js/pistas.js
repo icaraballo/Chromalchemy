@@ -75,6 +75,8 @@ export function alMezclar(nuevo){if(!nuevo){fallos++;pintar();return;}
  fallos=0;if(st.pista&&nodes.has(st.pista.id)){st.pista=null;abierta=false;}pintar();}
 
 btn.onclick=()=>pedir();
+// Escape con la tarjeta del acertijo a la vista: la recoge en la pastilla, como «Lo intento» (v1.15).
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!card.hidden){e.stopImmediatePropagation();abierta=false;pintar();}},true);
 // Un «?» de la paleta pide la pista de su color.
 $('palList').addEventListener('click',e=>{const s=e.target.closest('.slot');if(s)pedirColor(s.dataset.id);});
 $('palList').addEventListener('keydown',e=>{const s=e.target.closest('.slot');if(s&&(e.key==='Enter'||e.key===' ')){e.preventDefault();pedirColor(s.dataset.id);}});

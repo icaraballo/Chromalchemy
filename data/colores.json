@@ -234,7 +234,7 @@
   ],
   "receta": "historia",
   "de": 6.4,
-  "cert": "disc",
+  "cert": "doc",
   "nombre": "Llegaba a Europa desde la India.",
   "historia": "Según una carta de T. N. Mukharji, se hacía con orina de vacas alimentadas solo con hojas de mango. Durante años se dudó: la escritora Victoria Finlay no encontró pruebas. Pero análisis de 2017 y 2018 de una muestra que el propio Mukharji envió a Londres dan la razón a su relato. Dejó de venderse hacia 1921.",
   "nota": null,
@@ -2092,13 +2092,13 @@
   "fam": "rojos",
   "hex": "#C41E3A",
   "tipo": "cultura",
-  "gen": 6,
+  "gen": 4,
   "parents": [
-   "alizarina",
-   "espinela"
+   "rojo",
+   "carmin"
   ],
   "receta": "calculada",
-  "de": 2.6,
+  "de": 0.4,
   "cert": "doc",
   "nombre": "Probablemente por las sotanas de los cardenales católicos, aunque su color oficial es el escarlata.",
   "historia": "El pájaro cardenal norteamericano también debe su nombre a los cardenales y a su vestimenta roja.",
@@ -2306,11 +2306,11 @@
   "tipo": "pigmento",
   "gen": 3,
   "parents": [
-   "blanco",
-   "alabastro"
+   "marfil",
+   "ceniza"
   ],
   "receta": "calculada",
-  "de": 1,
+  "de": 8.5,
   "cert": "doc",
   "nombre": "Así llama la RAE al carbonato de calcio usado para limpiar metales, baldosas o zapatos.",
   "historia": "Es creta molida: la creta está hecha sobre todo de diminutas placas de calcita de las conchas de algas del plancton.",
@@ -3404,13 +3404,13 @@
   "fam": "blancos",
   "hex": "#F7F5F0",
   "tipo": "cultura",
-  "gen": 4,
+  "gen": 3,
   "parents": [
-   "blanco",
-   "blanco-de-espana"
+   "plata",
+   "alabastro"
   ],
   "receta": "calculada",
-  "de": 1.7,
+  "de": 7.1,
   "cert": "doc",
   "nombre": "Por la piel blanca de invierno del armiño, con la punta de la cola negra.",
   "historia": "Forraba los mantos de coronación y las túnicas de reyes y altos nobles. En heráldica se asocia sobre todo al ducado de Bretaña.",
@@ -3485,11 +3485,11 @@
   "tipo": "lugar",
   "gen": 4,
   "parents": [
-   "ultramar",
+   "violeta-de-genciana",
    "azul-egipcio"
   ],
   "receta": "calculada",
-  "de": 0.7,
+  "de": 2.5,
   "cert": "doc",
   "nombre": "Por el azul de la cerámica persa y los azulejos de mezquitas y palacios de Irán.",
   "historia": "También evoca el lapislázuli de Persia y Afganistán. Como nombre de color en inglés aparece en 1669.",
@@ -3535,11 +3535,11 @@
   "tipo": "persona",
   "gen": 5,
   "parents": [
-   "azul-egipcio",
-   "esmalte"
+   "indigo",
+   "azul-persa"
   ],
   "receta": "calculada",
-  "de": 1.9,
+  "de": 2.8,
   "cert": "doc",
   "nombre": "Por el artista Yves Klein. Su nombre oficial es International Klein Blue.",
   "historia": "Lo desarrolló con el proveedor de pinturas Edouard Adam: ultramar en un aglutinante sintético que no apaga el color. En mayo de 1960 registró la fórmula con un sobre Soleau, un depósito con fecha que no es una patente.",
@@ -3558,10 +3558,10 @@
   "fam": "rojos",
   "hex": "#C4183C",
   "tipo": "natural",
-  "gen": 7,
+  "gen": 4,
   "parents": [
-   "espinela",
-   "rojo-cardenal"
+   "carmin",
+   "alizarina"
   ],
   "receta": "calculada",
   "de": 0.8,
@@ -4224,7 +4224,7 @@
   "fam": "blancos",
   "hex": "#FCFCF7",
   "tipo": "pigmento",
-  "gen": 5,
+  "gen": 4,
   "parents": [
    "blanco-de-espana",
    "armino"
@@ -4249,13 +4249,13 @@
   "fam": "blancos",
   "hex": "#FEFEFA",
   "tipo": "pigmento",
-  "gen": 6,
+  "gen": 4,
   "parents": [
-   "armino",
-   "blanco-de-titanio"
+   "alabastro",
+   "blanco-de-espana"
   ],
   "receta": "calculada",
-  "de": 1.3,
+  "de": 4.2,
   "cert": "doc",
   "nombre": "Óxido de zinc. En acuarela se vendió como «blanco chino».",
   "historia": "Winsor & Newton lo promocionó en la década de 1830. Su gran ventaja era que no es tan tóxico como el blanco de plomo; su defecto, que al óleo se vuelve quebradizo y puede agrietarse.",
@@ -4324,7 +4324,7 @@
   "fam": "blancos",
   "hex": "#EFE7DD",
   "tipo": "gema/mineral",
-  "gen": 5,
+  "gen": 4,
   "parents": [
    "armino",
    "hueso"
@@ -4646,7 +4646,7 @@
   "fam": "azules",
   "hex": "#73C2FB",
   "tipo": "pigmento",
-  "gen": 6,
+  "gen": 5,
   "parents": [
    "azurita",
    "blanco-de-titanio"
@@ -5095,7 +5095,7 @@
   "fam": "amarillos",
   "hex": "#F8DE7E",
   "tipo": "pigmento",
-  "gen": 6,
+  "gen": 5,
   "parents": [
    "oro",
    "blanco-de-titanio"
@@ -5697,13 +5697,13 @@
   "fam": "amarillos",
   "hex": "#FFEF00",
   "tipo": "natural",
-  "gen": 7,
+  "gen": 5,
   "parents": [
-   "limon",
-   "aureolina"
+   "blanco-de-espana",
+   "citrino"
   ],
   "receta": "calculada",
-  "de": 0.9,
+  "de": 5.2,
   "cert": "doc",
   "nombre": "Por el pájaro, que lleva el nombre de las islas Canarias, en latín canariae insulae, «islas de los perros».",
   "historia": "El canario salvaje es verdoso. El amarillo de los canarios domésticos viene de una mutación que eliminó sus melaninas.",
@@ -5722,7 +5722,7 @@
   "fam": "amarillos",
   "hex": "#FFF600",
   "tipo": "pigmento",
-  "gen": 8,
+  "gen": 6,
   "parents": [
    "limon",
    "canario"
@@ -5929,13 +5929,13 @@
   "fam": "negros",
   "hex": "#262323",
   "tipo": "pigmento",
-  "gen": 9,
+  "gen": 5,
   "parents": [
-   "tinta-ferrogalica",
-   "negro-de-hueso"
+   "negro",
+   "pardo-van-dyck"
   ],
   "receta": "calculada",
-  "de": 1.5,
+  "de": 4.5,
   "cert": "doc",
   "nombre": "Por Marte, dios romano de la guerra y patrón del hierro.",
   "historia": "Es un pigmento de óxido de hierro creado en el siglo XX.",
@@ -5954,7 +5954,7 @@
   "fam": "negros",
   "hex": "#242124",
   "tipo": "gema/mineral",
-  "gen": 10,
+  "gen": 9,
   "parents": [
    "negro-de-hueso",
    "negro-marte"
@@ -6119,7 +6119,7 @@
   "fam": "verdes",
   "hex": "#DFFF00",
   "tipo": "cultura",
-  "gen": 9,
+  "gen": 8,
   "parents": [
    "amarillo-cadmio",
    "lima"
@@ -6351,7 +6351,7 @@
   "fam": "blancos",
   "hex": "#E8EEF0",
   "tipo": "gema/mineral",
-  "gen": 6,
+  "gen": 5,
   "parents": [
    "plata",
    "blanco-de-titanio"
@@ -6376,7 +6376,7 @@
   "fam": "azules",
   "hex": "#F0F8FF",
   "tipo": "persona",
-  "gen": 7,
+  "gen": 6,
   "parents": [
    "blanco-de-zinc",
    "opalo"

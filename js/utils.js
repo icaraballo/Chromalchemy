@@ -10,5 +10,5 @@ export const TAU=Math.PI*2, clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export const easeOut=p=>1-Math.pow(1-p,3);
 export const elastic=p=>p<=0?0:p>=1?1:Math.pow(2,-10*p)*Math.sin((p*10-.75)*TAU/3)+1;
 export const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-export const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+export const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const $=id=>document.getElementById(id);

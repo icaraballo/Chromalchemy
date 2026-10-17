@@ -37,6 +37,12 @@ for (const d of conReceta) {
   ok(!parejas.has(k), `${d.id} y ${parejas.get(k)} salen de la misma pareja`);
   parejas.set(k, d.id);
 }
+// El nivel escrito en el JSON cuadra con las recetas (protege los cambios de receta a mano, como CB-04 y CB-05)
+const GEN = {};
+for (const d of DATA) {
+  GEN[d.id] = d.parents ? Math.max(GEN[d.parents[0]] ?? -99, GEN[d.parents[1]] ?? -99) + 1 : 0;
+  ok(d.gen === GEN[d.id], `${d.id}: gen ${d.gen} en el JSON, pero por sus padres le toca ${GEN[d.id]}`);
+}
 
 // 3. Cada ficha completa y con su certeza
 for (const d of DATA) {
@@ -44,7 +50,7 @@ for (const d of DATA) {
   ok(/^#[0-9A-Fa-f]{6}$/.test(d.hex), `${d.id}: hex inválido`);
   ok(CERTS.includes(d.cert), `${d.id}: certeza inválida`);
   ok(d.nombre && d.historia, `${d.id}: falta nombre o historia`);
-  ok(Array.isArray(d.src) && d.src.length > 0 && d.src.every(s => s.length === 2 && /^https?:\/\//.test(s[1])), `${d.id}: fuentes vacías o mal formadas`);
+  ok(Array.isArray(d.src) && d.src.length > 0 && d.src.every(s => s.length === 2 && /^https?:\/\//.test(s[1]) && !/["<>\\\s]/.test(s[1])), `${d.id}: fuentes vacías o mal formadas`);
   ok(!d.nota || (CERTS.includes(d.nota.cert) && d.nota.t), `${d.id}: nota sin certeza o sin texto`);
 }
 

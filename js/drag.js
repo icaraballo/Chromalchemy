@@ -16,7 +16,7 @@ import {cam,toWorld,zoomTo,panBy} from './camera.js';
 import {palList,strip} from './palette.js';
 import {plegar} from './sheet.js';
 import {openLore,closeLore} from './lore.js';
-import {hint} from './ui.js';
+import {hint,ayuda} from './ui.js';
 import {mix} from './game.js';
 import {rgba,lighten,darken,clamp,$} from './utils.js';
 
@@ -46,12 +46,12 @@ cv.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)r
  if(dedos.size>2)return;
  const p=local(e),n=hit(p.x,p.y);
  if(n){const d=st.drag={id:n.id,from:'node',pid:e.pointerId,sx:e.clientX,sy:e.clientY,type:e.pointerType,started:false,cogida:0,dx:n.x-p.x,dy:n.y-p.y};
-  clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;hint.hidden=true;if(navigator.vibrate)try{navigator.vibrate(15);}catch{}},MANTENER);}
+  clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;if(navigator.vibrate)try{navigator.vibrate(15);}catch{}},MANTENER);}
  else fondo={pid:e.pointerId,sx:e.clientX,sy:e.clientY,lx:e.clientX,ly:e.clientY,movido:false};});
 cv.addEventListener('contextmenu',e=>e.preventDefault()); // mantener pulsado no saca el menú del navegador
 cv.addEventListener('wheel',e=>{e.preventDefault();const s=scr(e);zoomTo(cam.z*Math.exp(-e.deltaY*.0015),toWorld(s.x,s.y),s.x,s.y);},{passive:false});
 
-function startDrag(){const drag=st.drag;drag.started=true;document.body.classList.add('dragging');hint.hidden=true;
+function startDrag(){const drag=st.drag;drag.started=true;document.body.classList.add('dragging');
  const hex=BY[drag.id].hex;ghost.style.background=`radial-gradient(circle at 34% 30%, ${lighten(hex,.55)}, ${hex} 55%, ${darken(hex,.4)})`;ghost.style.boxShadow=`0 0 26px ${rgba(hex,.8)}`;ghost.hidden=false;
  if(drag.from==='pal')plegar();} // en el móvil la hoja se baja, para ver dónde se suelta
 window.addEventListener('pointermove',e=>{
@@ -73,7 +73,7 @@ window.addEventListener('pointermove',e=>{
 // Pasar de «arrastre» a mover la bola: la bola sigue al dedo, sin la muestra.
 function mover(d,e){clearTimeout(reloj);st.drag=null;const p=local(e);
  st.mueve={id:d.id,pid:d.pid,dx:d.dx,dy:d.dy,x:p.x+d.dx,y:p.y+d.dy};
- document.body.classList.add("moviendo");hint.hidden=true;}
+ document.body.classList.add("moviendo");if(!hint.hidden&&hint.dataset.k==='inicio')ayuda('movida');}
 // Al soltarla (o si un segundo dedo lo corta): se queda anclada donde está, y se guarda.
 function anclar(){const mv=st.mueve;if(!mv)return;st.mueve=null;document.body.classList.remove('moviendo');
  const n=nodes.get(mv.id);if(n){n.x=clamp(mv.x,20,st.W-20);n.y=clamp(mv.y,20,st.H-20);n.vx=n.vy=0;n.fija=[n.x/st.W,n.y/st.H];guardar();}}
