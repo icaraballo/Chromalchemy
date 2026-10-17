@@ -40,8 +40,7 @@ export function abrirOpinion(){clearTimeout(cierre);abierta=true;origen=document
   const campo=p.largo?`<textarea name="${p.entry}" rows="2" maxlength="${MAX.largo}"${ph}></textarea>`
    :`<input name="${p.entry}" type="text" maxlength="${MAX.corto}" autocomplete="${i===PREGUNTAS.length-1?'email':'name'}"${ph}>`;
   return `<label>${p.texto}${campo}</label>`;}).join('');
- const d=datos();
- $('opinionDatos').textContent=`Va a un formulario de Google con la versión (${d.version}), cuántos colores llevas (${order.length} de ${DATA.length}) y si has usado pistas. Nombre y contacto, sólo si los pones.`;
+ $('opinionDatos').textContent='Se envía a un formulario de Google con la versión y la partida. Nombre y contacto, sólo si los pones.'; // la misma frase que La Colmena
  form.hidden=false;gracias.hidden=true;aviso.textContent='';enviar.disabled=false;enviar.textContent='Enviar';
  hoja.hidden=velo.hidden=false;hoja.getBoundingClientRect();   // para que haya transición
  hoja.classList.add('abierta');velo.classList.add('abierta');caja.scrollTop=0;ajustar();}
