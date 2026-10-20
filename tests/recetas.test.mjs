@@ -46,11 +46,13 @@ for (const d of DATA) {
 
 // 3. Cada ficha completa y con su certeza
 for (const d of DATA) {
+  // El id va dentro de atributos (data-id, data-go) sin escapar: sólo letras, números y guiones.
+  ok(/^[a-z0-9-]+$/.test(d.id), `${d.id}: id con caracteres no permitidos`);
   ok(FAMS.includes(d.fam), `${d.id}: familia desconocida «${d.fam}»`);
   ok(/^#[0-9A-Fa-f]{6}$/.test(d.hex), `${d.id}: hex inválido`);
   ok(CERTS.includes(d.cert), `${d.id}: certeza inválida`);
   ok(d.nombre && d.historia, `${d.id}: falta nombre o historia`);
-  ok(Array.isArray(d.src) && d.src.length > 0 && d.src.every(s => s.length === 2 && /^https?:\/\//.test(s[1]) && !/["<>\\\s]/.test(s[1])), `${d.id}: fuentes vacías o mal formadas`);
+  ok(Array.isArray(d.src) && d.src.length > 0 && d.src.every(s => s.length === 2 && /^https:\/\//.test(s[1]) && !/["<>\\\s]/.test(s[1])), `${d.id}: fuentes vacías o mal formadas`);
   ok(!d.nota || (CERTS.includes(d.nota.cert) && d.nota.t), `${d.id}: nota sin certeza o sin texto`);
 }
 

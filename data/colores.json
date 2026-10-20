@@ -18,7 +18,7 @@
    ],
    [
     "Wikipedia · Basic Color Terms",
-    "https://en.wikipedia.org/wiki/Basic_Color_Terms:_Their_Universality_and_Evolution"
+    "https://en.wikipedia.org/wiki/Basic_Color_Terms"
    ],
    [
     "Wikipedia · Cave of Altamira",
@@ -72,7 +72,7 @@
    ],
    [
     "Wikipedia · Wine-dark sea",
-    "https://en.wikipedia.org/wiki/Wine-dark_sea_(Homer)"
+    "https://en.wikipedia.org/wiki/Wine-dark_sea"
    ],
    [
     "Wikipedia · Egyptian blue",
@@ -123,10 +123,6 @@
    [
     "Wikipedia · Black",
     "https://en.wikipedia.org/wiki/Black"
-   ],
-   [
-    "Prehistour · Santimamiñe",
-    "https://www.prehistour.eu/fr/portfolio-item/santimamine-cave"
    ],
    [
     "Wikipedia · Santimamiñe",
@@ -300,7 +296,7 @@
    ],
    [
     "Wikipedia · Olive drab",
-    "https://en.wikipedia.org/wiki/Olive_drab"
+    "https://en.wikipedia.org/wiki/Olive_(color)#Olive_drab"
    ]
   ]
  },
@@ -614,8 +610,8 @@
     "https://dle.rae.es/marfil"
    ],
    [
-    "Wikipedia · Ivory black",
-    "https://en.wikipedia.org/wiki/Ivory_black"
+    "Wikipedia · Bone char",
+    "https://en.wikipedia.org/wiki/Bone_char"
    ]
   ]
  },
@@ -929,8 +925,8 @@
   "acertijo": "Soy una madera roja como una brasa. Cuando llegaron los portugueses en 1500, le di mi nombre a un país entero.",
   "src": [
    [
-    "Wikipedia · Brazilwood",
-    "https://en.wikipedia.org/wiki/Brazilwood"
+    "Wikipedia · Paubrasilia",
+    "https://en.wikipedia.org/wiki/Paubrasilia"
    ]
   ]
  },
@@ -1233,7 +1229,7 @@
    ],
    [
     "Wikipedia · Battleship grey",
-    "https://en.wikipedia.org/wiki/Battleship_grey"
+    "https://en.wikipedia.org/wiki/Shades_of_gray#Battleship_gray"
    ]
   ]
  },
@@ -1261,8 +1257,8 @@
     "https://dle.rae.es/azulete"
    ],
    [
-    "Wikipedia · Laundry bluing",
-    "https://en.wikipedia.org/wiki/Laundry_bluing"
+    "Wikipedia · Bluing (fabric)",
+    "https://en.wikipedia.org/wiki/Bluing_(fabric)"
    ]
   ]
  },
@@ -1472,8 +1468,8 @@
   "acertijo": "Probablemente me llamaron así por el país del que llegaba, de suelos rojos de laterita. Soy un ocre de óxido férrico.",
   "src": [
    [
-    "Wikipedia · Indian red (color)",
-    "https://en.wikipedia.org/wiki/Indian_red_(color)"
+    "Wikipedia · Iron oxide red",
+    "https://en.wikipedia.org/wiki/Iron_oxide_red"
    ]
   ]
  },
@@ -2239,8 +2235,8 @@
   "acertijo": "Un metal con selenio me da el color. Desplacé al bermellón, que era de mercurio, porque aguanto mucho mejor la luz.",
   "src": [
    [
-    "Wikipedia · Cadmium orange",
-    "https://en.wikipedia.org/wiki/Cadmium_orange"
+    "Wikipedia · Cadmium pigments",
+    "https://en.wikipedia.org/wiki/Cadmium_pigments"
    ],
    [
     "Wikipedia · Cadmium pigments",
@@ -2816,7 +2812,7 @@
   "src": [
    [
     "Wikipedia · Tea rose",
-    "https://en.wikipedia.org/wiki/Tea_rose"
+    "https://en.wikipedia.org/wiki/Garden_roses#Tea"
    ]
   ]
  },
@@ -3418,8 +3414,8 @@
   "acertijo": "Me llamo como la piel de invierno de un animal, con la punta de la cola negra. Forraba los mantos de coronación.",
   "src": [
    [
-    "Wikipedia · Ermine (heraldry)",
-    "https://en.wikipedia.org/wiki/Ermine_(heraldry)"
+    "Wikipedia · Ermine (tincture)",
+    "https://en.wikipedia.org/wiki/Ermine_(tincture)"
    ]
   ]
  },
@@ -3517,13 +3513,17 @@
   "de": 1.8,
   "cert": "doc",
   "nombre": "Vidrio de cobalto molido como pigmento.",
-  "historia": "El ejemplo más antiguo es un trozo mesopotámico de hace unos 4.000 años. Se usó mucho en la pintura europea de los siglos XV al XVII y en Inglaterra se añadía al almidón de la ropa. En los cuadros suele haberse decolorado.",
+  "historia": "Aparece en cuadros europeos desde el siglo XV y fue muy usado hasta el XVIII, cuando lo desplazó el azul de Prusia. También se echaba al agua de aclarar la ropa para blanquearla. En los cuadros al óleo suele haberse decolorado.",
   "nota": null,
-  "acertijo": "Soy vidrio molido para pintar. En Inglaterra me añadían al almidón de la ropa, y en los cuadros suelo haberme decolorado.",
+  "acertijo": "Soy vidrio molido para pintar. Me echaban al agua de aclarar la ropa, y en los cuadros al óleo suelo haberme decolorado.",
   "src": [
    [
-    "Wikipedia · Smalt",
-    "https://en.wikipedia.org/wiki/Smalt"
+    "ColourLex · Smalt",
+    "https://colourlex.com/project/smalt/"
+   ],
+   [
+    "Wikipedia · Bluing (fabric)",
+    "https://en.wikipedia.org/wiki/Bluing_(fabric)"
    ]
   ]
  },
@@ -3654,8 +3654,8 @@
   "acertijo": "Vengo de los residuos de una mina de cobre sueca. Desde el siglo XVII me pintan en las casas de madera del campo sueco.",
   "src": [
    [
-    "Wikipedia · Falu red",
-    "https://en.wikipedia.org/wiki/Falu_red"
+    "Wikipedia · Falun red",
+    "https://en.wikipedia.org/wiki/Falun_red"
    ]
   ]
  },
@@ -4184,8 +4184,8 @@
   "acertijo": "Vestí a un ejército de la guerra de Secesión porque era barato de teñir, y con el tiempo me desteñía a pardo amarillento.",
   "src": [
    [
-    "Wikipedia · Uniforms of the Confederate States Armed Forces",
-    "https://en.wikipedia.org/wiki/Uniforms_of_the_Confederate_States_Armed_Forces"
+    "Wikipedia · Military uniforms of the Confederate States",
+    "https://en.wikipedia.org/wiki/Military_uniforms_of_the_Confederate_States"
    ]
   ]
  },
@@ -4289,7 +4289,7 @@
   "src": [
    [
     "Wikipedia · Bone (color)",
-    "https://en.wikipedia.org/wiki/Bone_(color)"
+    "https://en.wikipedia.org/wiki/Shades_of_white#Bone"
    ]
   ]
  },
@@ -4417,8 +4417,8 @@
   "acertijo": "Me llaman «el de los viejos maestros». Hacia 1750 caí en el olvido sin que se sepa por qué, y Richard Jacobi me redescubrió en 1941.",
   "src": [
    [
-    "Wikipedia · Lead-tin-yellow",
-    "https://en.wikipedia.org/wiki/Lead-tin-yellow"
+    "Wikipedia · Lead-tin yellow",
+    "https://en.wikipedia.org/wiki/Lead-tin_yellow"
    ]
   ]
  },
@@ -4607,7 +4607,7 @@
   "src": [
    [
     "Wikipedia · Battleship grey",
-    "https://en.wikipedia.org/wiki/Battleship_grey"
+    "https://en.wikipedia.org/wiki/Shades_of_gray#Battleship_gray"
    ]
   ]
  },
@@ -4797,8 +4797,8 @@
   "acertijo": "Me dedicó a un futuro zar el mineralogista Nordenskiöld. Aparecí en los Urales hacia 1830, y cambio de color según la luz que me ilumina.",
   "src": [
    [
-    "Wikipedia · Alexandrite",
-    "https://en.wikipedia.org/wiki/Alexandrite"
+    "Wikipedia · Chrysoberyl",
+    "https://en.wikipedia.org/wiki/Chrysoberyl"
    ]
   ]
  },
@@ -5163,7 +5163,7 @@
   "src": [
    [
     "Wikipedia · Bottle green",
-    "https://en.wikipedia.org/wiki/Bottle_green"
+    "https://en.wikipedia.org/wiki/Spring_green#Bottle_green"
    ]
   ]
  },
@@ -5499,8 +5499,8 @@
   "acertijo": "Soy una piedra rara al natural: casi toda la que se vende con mi nombre es amatista calentada. Mi nombre llegó por el francés.",
   "src": [
    [
-    "Wikipedia · Citrine (quartz)",
-    "https://en.wikipedia.org/wiki/Citrine_(quartz)"
+    "Wikipedia · Citrine",
+    "https://en.wikipedia.org/wiki/Citrine"
    ]
   ]
  },
@@ -5562,7 +5562,7 @@
    ],
    [
     "Wikipedia · Moss green",
-    "https://en.wikipedia.org/wiki/Moss_green"
+    "https://en.wikipedia.org/wiki/Shades_of_green#Moss_green"
    ]
   ]
  },
@@ -5736,8 +5736,8 @@
   "acertijo": "El metal que me da el color se descubrió en 1817, pero hasta la década de 1840 no hubo bastante para fabricarme. Los impresionistas me usaron mucho.",
   "src": [
    [
-    "Wikipedia · Cadmium yellow",
-    "https://en.wikipedia.org/wiki/Cadmium_yellow"
+    "Wikipedia · Cadmium pigments",
+    "https://en.wikipedia.org/wiki/Cadmium_pigments"
    ],
    [
     "Wikipedia · Cadmium pigments",
@@ -5943,8 +5943,8 @@
   "acertijo": "Llevo el nombre del dios romano de la guerra, patrón del hierro. Soy un óxido de hierro del siglo XX.",
   "src": [
    [
-    "Wikipedia · Mars black",
-    "https://en.wikipedia.org/wiki/Mars_black"
+    "Wikipedia · Mars Black (pigment)",
+    "https://en.wikipedia.org/wiki/Mars_Black_(pigment)"
    ]
   ]
  },
@@ -6312,7 +6312,7 @@
   "src": [
    [
     "Wikipedia · Shocking pink",
-    "https://en.wikipedia.org/wiki/Shocking_pink"
+    "https://en.wikipedia.org/wiki/Shades_of_pink#Shocking_pink"
    ]
   ]
  },

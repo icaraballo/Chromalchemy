@@ -20,39 +20,40 @@
 <link rel="icon" href="img/icono.svg" type="image/svg+xml">
 <link rel="icon" href="img/icono-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="img/icono-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="css/styles.css?v=1.15.1">
+<!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
+<link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fuentes.css?v=1.16">
+<link rel="stylesheet" href="css/styles.css?v=1.16">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/camera.js": "./js/camera.js?v=1.15.1",
-  "./js/constellation.js": "./js/constellation.js?v=1.15.1",
-  "./js/data.js": "./js/data.js?v=1.15.1",
-  "./js/drag.js": "./js/drag.js?v=1.15.1",
-  "./js/effects.js": "./js/effects.js?v=1.15.1",
-  "./js/game.js": "./js/game.js?v=1.15.1",
-  "./js/lore.js": "./js/lore.js?v=1.15.1",
-  "./js/main.js": "./js/main.js?v=1.15.1",
-  "./js/opinion.js": "./js/opinion.js?v=1.15.1",
-  "./js/palette.js": "./js/palette.js?v=1.15.1",
-  "./js/pistas.js": "./js/pistas.js?v=1.15.1",
-  "./js/posibles.js": "./js/posibles.js?v=1.15.1",
-  "./js/sheet.js": "./js/sheet.js?v=1.15.1",
-  "./js/state.js": "./js/state.js?v=1.15.1",
-  "./js/ui.js": "./js/ui.js?v=1.15.1",
-  "./js/utils.js": "./js/utils.js?v=1.15.1",
-  "./js/wheel.js": "./js/wheel.js?v=1.15.1"
+  "./js/camera.js": "./js/camera.js?v=1.16",
+  "./js/constellation.js": "./js/constellation.js?v=1.16",
+  "./js/data.js": "./js/data.js?v=1.16",
+  "./js/drag.js": "./js/drag.js?v=1.16",
+  "./js/effects.js": "./js/effects.js?v=1.16",
+  "./js/game.js": "./js/game.js?v=1.16",
+  "./js/lore.js": "./js/lore.js?v=1.16",
+  "./js/main.js": "./js/main.js?v=1.16",
+  "./js/opinion.js": "./js/opinion.js?v=1.16",
+  "./js/palette.js": "./js/palette.js?v=1.16",
+  "./js/pistas.js": "./js/pistas.js?v=1.16",
+  "./js/posibles.js": "./js/posibles.js?v=1.16",
+  "./js/sheet.js": "./js/sheet.js?v=1.16",
+  "./js/state.js": "./js/state.js?v=1.16",
+  "./js/ui.js": "./js/ui.js?v=1.16",
+  "./js/utils.js": "./js/utils.js?v=1.16",
+  "./js/wheel.js": "./js/wheel.js?v=1.16"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.15.1"></script>
+<script type="module" src="js/main.js?v=1.16"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.15.1</span></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.16</span></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -64,7 +65,7 @@
   </header>
   <aside class="palette">
     <!-- En el móvil, la cabecera es el tirador de la hoja y la tira son tus colores en una fila (T-10). -->
-    <div class="pal-head" id="palHead" role="button" tabindex="0" aria-label="Tu paleta: abrir o cerrar"><span class="grab"></span><span class="pal-t">Tu paleta</span><span class="pal-got" id="palGot"></span><span class="pal-left" id="palLeft"></span></div>
+    <div class="pal-head" id="palHead" role="button" tabindex="0"><span class="grab"></span><span class="pal-t">Tu paleta</span><span class="pal-got" id="palGot"></span><span class="pal-left" id="palLeft"></span></div>
     <div class="strip" id="strip"></div>
     <div class="pal-list" id="palList"></div>
   </aside>

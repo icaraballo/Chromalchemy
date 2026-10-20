@@ -60,6 +60,7 @@ Funciona en el ordenador y en el móvil.
 | Ruta | Qué es |
 |---|---|
 | `index.html`, `css/`, `js/` | El juego. `js/main.js` arranca; cada módulo lleva su cabecera |
+| `fonts/` | Las tipografías, con su licencia |
 | `data/colores.json` | Los 246 colores: familia, color, receta, historia, certeza y fuentes |
 | `tests/recetas.test.mjs` | Comprueba que desde los 5 básicos se llega a los 246 |
 | `tools/calcular-recetas.js` | El script que generó las recetas (Node + Mixbox) |
@@ -94,11 +95,18 @@ node tools/calcular-recetas.js entrada.json salida.json
 ## Licencia
 
 - **Código**: MIT ([`LICENSE`](LICENSE)).
-- **Textos de las fichas** (`nombre`, `historia` y `nota` en `data/colores.json`): CC BY 4.0
-  ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)).
+- **Textos de las fichas** (`nombre`, `historia`, `nota` y `acertijo` en `data/colores.json`):
+  CC BY 4.0 ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)).
 - **Mixbox**, que sólo usa `tools/calcular-recetas.js` y no va incluido, es de Secret Weapons
   con licencia CC BY-NC 4.0 (uso no comercial).
-- Tipografías de Google Fonts (Instrument Serif, Karla e IBM Plex Mono), con licencia SIL Open
-  Font License.
+- **Tipografías** (Instrument Serif, Karla e IBM Plex Mono), en `fonts/` con su licencia: SIL
+  Open Font License 1.1.
 
-Hecho por Iñigo Caraballo.
+## Privacidad
+
+Sin cookies ni analítica. La partida se guarda solo en tu navegador. Las letras se sirven desde
+el propio juego. Si pulsas «Enviar» en «Opinar», tus respuestas, la versión y cuántos colores
+llevas van a un formulario de Google; nombre y contacto, solo si los pones. En Safari, si pasas
+más de 7 días sin abrirlo, el navegador puede borrar la partida.
+
+Hecho por Iñigo Caraballo con Claude (Anthropic).

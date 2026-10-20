@@ -1,2 +1,10 @@
 .DS_Store
+Thumbs.db
 node_modules/
+# Secretos y ajustes locales: nunca al repo público
+.env*
+.claude/settings.local.json
+*.log
+# Editores
+.vscode/
+.idea/

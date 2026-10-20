@@ -1,7 +1,7 @@
 # Licencia de los textos
 
 Los textos de las fichas de color de `data/colores.json` —los campos `nombre` («por qué se
-llama así»), `historia` y `nota`— son © 2026 Iñigo Caraballo y se publican con la licencia
+llama así»), `historia`, `nota` y `acertijo` (la pista)— son © 2026 Iñigo Caraballo y se publican con la licencia
 **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**:
 https://creativecommons.org/licenses/by/4.0/deed.es
 
