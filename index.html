@@ -23,37 +23,38 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.16">
-<link rel="stylesheet" href="css/styles.css?v=1.16">
+<link rel="stylesheet" href="css/fuentes.css?v=1.16.1">
+<link rel="stylesheet" href="css/styles.css?v=1.16.1">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/camera.js": "./js/camera.js?v=1.16",
-  "./js/constellation.js": "./js/constellation.js?v=1.16",
-  "./js/data.js": "./js/data.js?v=1.16",
-  "./js/drag.js": "./js/drag.js?v=1.16",
-  "./js/effects.js": "./js/effects.js?v=1.16",
-  "./js/game.js": "./js/game.js?v=1.16",
-  "./js/lore.js": "./js/lore.js?v=1.16",
-  "./js/main.js": "./js/main.js?v=1.16",
-  "./js/opinion.js": "./js/opinion.js?v=1.16",
-  "./js/palette.js": "./js/palette.js?v=1.16",
-  "./js/pistas.js": "./js/pistas.js?v=1.16",
-  "./js/posibles.js": "./js/posibles.js?v=1.16",
-  "./js/sheet.js": "./js/sheet.js?v=1.16",
-  "./js/state.js": "./js/state.js?v=1.16",
-  "./js/ui.js": "./js/ui.js?v=1.16",
-  "./js/utils.js": "./js/utils.js?v=1.16",
-  "./js/wheel.js": "./js/wheel.js?v=1.16"
+  "./js/camera.js": "./js/camera.js?v=1.16.1",
+  "./js/constellation.js": "./js/constellation.js?v=1.16.1",
+  "./js/data.js": "./js/data.js?v=1.16.1",
+  "./js/drag.js": "./js/drag.js?v=1.16.1",
+  "./js/effects.js": "./js/effects.js?v=1.16.1",
+  "./js/game.js": "./js/game.js?v=1.16.1",
+  "./js/lore.js": "./js/lore.js?v=1.16.1",
+  "./js/main.js": "./js/main.js?v=1.16.1",
+  "./js/opinion.js": "./js/opinion.js?v=1.16.1",
+  "./js/palette.js": "./js/palette.js?v=1.16.1",
+  "./js/pistas.js": "./js/pistas.js?v=1.16.1",
+  "./js/posibles.js": "./js/posibles.js?v=1.16.1",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.16.1",
+  "./js/sheet.js": "./js/sheet.js?v=1.16.1",
+  "./js/state.js": "./js/state.js?v=1.16.1",
+  "./js/ui.js": "./js/ui.js?v=1.16.1",
+  "./js/utils.js": "./js/utils.js?v=1.16.1",
+  "./js/wheel.js": "./js/wheel.js?v=1.16.1"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.16"></script>
+<script type="module" src="js/main.js?v=1.16.1"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.16</span></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.16.1</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -119,12 +120,27 @@
     <div class="op-preguntas" id="opinionPreguntas"></div>
     <p class="op-aviso" id="opinionAviso" role="status"></p>
     <button type="submit" class="op-enviar" id="opinionEnviar">Enviar</button>
-    <p class="op-privacidad" id="opinionDatos"></p>
+    <p class="op-privacidad">Se envía a un formulario de Google con la versión y la partida. Nombre y contacto, sólo si los pones. <button type="button" class="enlace-priv" id="privacidadOpinion">Privacidad</button></p>
   </form>
   <div class="op-gracias" id="opinionGracias" hidden>
     <div class="op-ok"><span class="op-orbe" aria-hidden="true"></span><h3>¡Gracias!</h3><p>Lo leo todo. Tu opinión ayuda a que el juego mejore.</p></div>
     <button type="button" class="op-enviar" id="opinionVolver">Volver al juego</button>
   </div>
+</div>
+<!-- Privacidad (v1.16.1): lo mismo que el apartado «Privacidad» del README. Si cambia qué se
+     guarda o qué se envía, cambiar los dos. Se abre desde la cabecera y desde opinar, encima de opinar. -->
+<div class="op-fondo priv-fondo" id="privacidadFondo" hidden></div>
+<div class="opinion privacidad" id="privacidad" role="dialog" aria-modal="true" aria-labelledby="privacidadTitulo" hidden>
+  <div class="op-cab"><h2 id="privacidadTitulo">Privacidad</h2>
+    <button type="button" class="op-x" id="privacidadCerrar" aria-label="Cerrar">×</button></div>
+  <div class="priv-texto">
+    <p>Chromalchemy <b>no tiene servidor, ni cuentas, ni analítica, ni cookies</b>.</p>
+    <p>Tu partida se guarda <b>sólo en este navegador</b>. Si borras los datos del sitio, se borra. En Safari, si pasas más de 7 días sin abrir el juego, el navegador puede borrarla.</p>
+    <p>Las letras y los colores vienen del propio juego: mientras juegas no se pide nada a otras webs.</p>
+    <p>Si mandas una opinión, va a un <b>formulario de Google</b> con tus respuestas, la versión del juego, cuántos colores llevas y si has usado pistas. Tu nombre y tu contacto, sólo si los escribes.</p>
+    <p>GitHub, que aloja la página, y Google, al opinar, ven tu dirección IP, como cualquier web.</p>
+  </div>
+  <button type="button" class="op-enviar" id="privacidadOk">Entendido</button>
 </div>
 <script>
 // Los módulos no cargan abriendo el archivo con doble clic (file://): avisarlo en vez de dejar la pantalla vacía.

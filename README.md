@@ -105,8 +105,9 @@ node tools/calcular-recetas.js entrada.json salida.json
 ## Privacidad
 
 Sin cookies ni analítica. La partida se guarda solo en tu navegador. Las letras se sirven desde
-el propio juego. Si pulsas «Enviar» en «Opinar», tus respuestas, la versión y cuántos colores
-llevas van a un formulario de Google; nombre y contacto, solo si los pones. En Safari, si pasas
-más de 7 días sin abrirlo, el navegador puede borrar la partida.
+el propio juego. Si pulsas «Enviar» en «Opinar», tus respuestas, la versión, cuántos colores
+llevas y si has usado pistas van a un formulario de Google; nombre y contacto, solo si los
+pones. En Safari, si pasas más de 7 días sin abrirlo, el navegador puede borrar la partida. Lo
+mismo se lee en el juego, en el enlace «Privacidad» junto a la versión.
 
 Hecho por Iñigo Caraballo con Claude (Anthropic).

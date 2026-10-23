@@ -2,6 +2,7 @@
    Si hay partida guardada se sigue; si no, una nueva.
    Importar drag.js (y con él el resto) engancha todos los eventos; data.js espera a que
    llegue colores.json antes de que se ejecute nada de esto. */
+import './privacidad.js';   // el primero: su Escape va antes que el de opinar y el de la pista
 import {st} from './state.js';
 import {resize,makeStars,step,draw} from './constellation.js';
 import {reset,restaurar} from './ui.js';
