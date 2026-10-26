@@ -23,40 +23,40 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.17">
-<link rel="stylesheet" href="css/styles.css?v=1.17">
+<link rel="stylesheet" href="css/fuentes.css?v=1.18">
+<link rel="stylesheet" href="css/styles.css?v=1.18">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/camera.js": "./js/camera.js?v=1.17",
-  "./js/constellation.js": "./js/constellation.js?v=1.17",
-  "./js/data.js": "./js/data.js?v=1.17",
-  "./js/drag.js": "./js/drag.js?v=1.17",
-  "./js/effects.js": "./js/effects.js?v=1.17",
-  "./js/game.js": "./js/game.js?v=1.17",
-  "./js/gesto.js": "./js/gesto.js?v=1.17",
-  "./js/lore.js": "./js/lore.js?v=1.17",
-  "./js/main.js": "./js/main.js?v=1.17",
-  "./js/opinion.js": "./js/opinion.js?v=1.17",
-  "./js/palette.js": "./js/palette.js?v=1.17",
-  "./js/pistas.js": "./js/pistas.js?v=1.17",
-  "./js/portada.js": "./js/portada.js?v=1.17",
-  "./js/posibles.js": "./js/posibles.js?v=1.17",
-  "./js/privacidad.js": "./js/privacidad.js?v=1.17",
-  "./js/sheet.js": "./js/sheet.js?v=1.17",
-  "./js/state.js": "./js/state.js?v=1.17",
-  "./js/ui.js": "./js/ui.js?v=1.17",
-  "./js/utils.js": "./js/utils.js?v=1.17",
-  "./js/wheel.js": "./js/wheel.js?v=1.17"
+  "./js/camera.js": "./js/camera.js?v=1.18",
+  "./js/constellation.js": "./js/constellation.js?v=1.18",
+  "./js/data.js": "./js/data.js?v=1.18",
+  "./js/drag.js": "./js/drag.js?v=1.18",
+  "./js/effects.js": "./js/effects.js?v=1.18",
+  "./js/game.js": "./js/game.js?v=1.18",
+  "./js/gesto.js": "./js/gesto.js?v=1.18",
+  "./js/lore.js": "./js/lore.js?v=1.18",
+  "./js/main.js": "./js/main.js?v=1.18",
+  "./js/opinion.js": "./js/opinion.js?v=1.18",
+  "./js/palette.js": "./js/palette.js?v=1.18",
+  "./js/pistas.js": "./js/pistas.js?v=1.18",
+  "./js/portada.js": "./js/portada.js?v=1.18",
+  "./js/posibles.js": "./js/posibles.js?v=1.18",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.18",
+  "./js/sheet.js": "./js/sheet.js?v=1.18",
+  "./js/state.js": "./js/state.js?v=1.18",
+  "./js/ui.js": "./js/ui.js?v=1.18",
+  "./js/utils.js": "./js/utils.js?v=1.18",
+  "./js/wheel.js": "./js/wheel.js?v=1.18"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.17"></script>
+<script type="module" src="js/main.js?v=1.18"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.17</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.18</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -87,19 +87,19 @@
     <div class="logro" id="logro" role="status" hidden></div>
     <section class="lore" id="lore" hidden aria-live="polite">
       <button type="button" class="x" id="loreClose" aria-label="Cerrar ficha">×</button>
+      <!-- La ficha como «libro de pigmentos» (T-20, v1.18): la muestra pegada, el número, el nombre en cursiva,
+           la receta, el porqué del nombre como cita, la historia con capital y las fuentes como notas al pie. -->
       <div class="lore-top">
-        <div class="lore-orb" id="lOrb"></div>
-        <div style="min-width:0"><div class="eyebrow" id="lGen"></div><h2 id="lName"></h2><div class="hex" id="lHex"></div></div>
+        <div class="lore-muestra" id="lMuestra"></div>
+        <div class="lore-id"><div class="lore-num" id="lNum"></div><h2 id="lName"></h2><div class="hex" id="lGen"></div><div class="hex" id="lHex"></div></div>
       </div>
       <div class="recipe" id="lRecipe"></div>
-      <h3>Por qué se llama así</h3>
-      <p id="lNombre"></p>
+      <blockquote class="lore-cita" id="lNombre"></blockquote>
       <h3>Su historia <span class="cert" id="lCert"></span></h3>
-      <p id="lHist"></p>
+      <p class="lore-hist" id="lHist"></p>
       <div id="lNota"></div>
       <div class="pend" id="lPend"></div>
-      <h3>Fuentes</h3>
-      <ol class="src" id="lSrc"></ol>
+      <ol class="src" id="lSrc" aria-label="Fuentes"></ol>
     </section>
     <section class="wheel" id="wheel" hidden>
       <div class="wheel-card">

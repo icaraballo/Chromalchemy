@@ -1,19 +1,28 @@
 /* ---------- Ficha de historia ---------- */
-import {FAMS,CERT,BY,KIDS,gen,GEN_LABEL} from './data.js';
+import {DATA,FAMS,CERT,BY,KIDS,gen,GEN_LABEL} from './data.js';
 import {st,nodes,pending,mezclas} from './state.js';
-import {rgb,rgba,lighten,darken,lum,esc,$} from './utils.js';
+import {rgb,lighten,lum,esc,$} from './utils.js';
 
 export const lore=$('lore');
 
 const chip=id=>{const d=BY[id];return`<button type="button" class="chip" data-go="${id}"><i style="--c:${d.hex}"></i>${esc(d.name)}</button>`;};
 const badge=c=>`<span class="cert ${c}">${CERT[c]}</span>`;
-export function openLore(id){const d=BY[id];st.selected=id;const dark=lum(d.hex)<.16;
- $('lOrb').style.background=`radial-gradient(circle at 34% 30%, ${lighten(d.hex,.55)}, ${d.hex} 52%, ${darken(d.hex,.45)})`;
- $('lOrb').style.boxShadow=`0 0 36px -4px ${dark?'rgba(150,148,180,.5)':rgba(d.hex,.75)}, inset 0 0 0 1px rgba(255,255,255,.12)`;
- $('lGen').textContent=GEN_LABEL[gen(id)]+' · '+FAMS.find(f=>f[0]===d.fam)[1];$('lName').textContent=d.name;
+// La capital de «Su historia» (T-20): un tono aclarado del color, que se lea sobre el panel con un
+// contraste de 3:1 como mínimo; si ni aclarado llega, el color de acento.
+const PANEL=[20,19,30];
+const lumRel=c=>{const[r,g,b]=c.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4);});return .2126*r+.7152*g+.0722*b;};
+const contraste=(a,b)=>{const x=lumRel(a),y=lumRel(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05);};
+const deRgb=s=>s.match(/\d+/g).map(Number);
+function capital(hex){for(let t=.25;t<=.85;t+=.05){const c=lighten(hex,t);if(contraste(deRgb(c),PANEL)>=3)return c;}return 'var(--accent)';}
+const NUM=Object.fromEntries(DATA.map((d,i)=>[d.id,i+1]));
+export function openLore(id){const d=BY[id];st.selected=id;
+ // La muestra pegada en el muestrario: el color tal cual, con un borde claro si es muy oscuro.
+ $('lMuestra').style.setProperty('--c',d.hex);$('lMuestra').classList.toggle('oscura',lum(d.hex)<.16);
+ $('lNum').textContent=`Muestra nº ${NUM[id]}`;
+ $('lGen').textContent=FAMS.find(f=>f[0]===d.fam)[1]+' · '+GEN_LABEL[gen(id)];$('lName').textContent=d.name;
  const[r,g,b]=rgb(d.hex);$('lHex').textContent=`${d.hex.toUpperCase()} · rgb ${r} ${g} ${b}`;
  $('lRecipe').innerHTML=d.p?`${chip(d.p[0])}<span>+</span>${chip(d.p[1])}`:`<span>Uno de los cinco colores con los que empieza la partida.</span>`;
- $('lNombre').textContent=d.nombre;$('lHist').textContent=d.historia;
+ $('lNombre').textContent=d.nombre;$('lHist').textContent=d.historia;$('lHist').style.setProperty('--cap',capital(d.hex));
  const c=$('lCert');c.className='cert '+d.cert;c.textContent=CERT[d.cert];
  $('lNota').innerHTML=d.nota?`<div class="nota">${badge(d.nota.cert)}${esc(d.nota.t)}</div>`:'';
  const kids=KIDS[id],pen=pending(id),known=kids.filter(k=>nodes.has(k));

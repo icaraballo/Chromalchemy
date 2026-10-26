@@ -119,10 +119,19 @@ a{color:var(--accent)}
 /* lore card */
 .lore{position:absolute;top:16px;right:16px;width:min(380px,calc(100% - 32px));max-height:calc(100% - 32px);overflow-y:auto;background:var(--panel);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;padding:20px 20px 18px;z-index:4;box-shadow:0 24px 60px -20px rgba(0,0,0,.7)}
 .x{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.05);cursor:pointer;font-size:18px;line-height:1;color:var(--muted)}
-.lore-top{display:flex;gap:16px;align-items:center;margin-bottom:14px;padding-right:28px}
-.lore-orb{width:64px;height:64px;border-radius:50%;flex:0 0 auto}
-.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.lore h2{font-family:var(--display);font-weight:400;font-size:34px;line-height:1.02;margin:2px 0 4px;text-wrap:balance}
+/* La ficha como «libro de pigmentos» (T-20, v1.18): una muestra rectangular pegada y algo
+   torcida, como en un muestrario; a su lado el número, el nombre en cursiva y los datos en mono. */
+.lore-top{display:flex;gap:18px;align-items:flex-start;margin:4px 0 16px;padding-right:28px}
+.lore-muestra{width:104px;height:128px;flex:0 0 auto;border-radius:3px;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 82%,white) 0%,var(--c) 38%,var(--c) 100%);transform:rotate(-2.5deg);box-shadow:0 14px 26px -10px rgba(0,0,0,.85),0 2px 4px rgba(0,0,0,.4),inset 0 0 0 1px rgba(255,255,255,.08)}
+.lore-muestra.oscura{box-shadow:0 14px 26px -10px rgba(0,0,0,.85),0 2px 4px rgba(0,0,0,.4),inset 0 0 0 1px rgba(220,218,240,.28)}
+.lore-id{min-width:0;padding-top:4px}
+.lore-num{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lore h2{font-family:var(--display);font-weight:400;font-style:italic;font-size:36px;line-height:1.02;margin:6px 0 8px;text-wrap:balance}
+.lore-id .hex{line-height:1.5}
+/* «Por qué se llama así», como cita entre dos líneas finas, sin título. */
+.lore-cita{margin:16px 0 4px;padding:12px 2px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-family:var(--display);font-style:italic;font-size:18px;line-height:1.4;color:#E4E1EE}
+/* «Su historia» con letra capital, en un tono aclarado del color de la ficha (lore.js). */
+.lore-hist::first-letter{float:left;font-family:var(--display);font-size:3.3em;line-height:.82;margin:.06em .1em 0 0;color:var(--cap,var(--accent))}
 .hex{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
 .recipe,.done-list{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
 .recipe{padding:10px 0 14px;border-bottom:1px solid var(--line)}
@@ -142,7 +151,8 @@ a{color:var(--accent)}
 .qrow span{width:26px;height:26px;border-radius:50%;border:1px dashed rgba(236,232,255,.28);display:grid;place-items:center;font-family:var(--mono);font-size:11px;color:rgba(236,232,255,.45)}
 .qrow span.ya{border-color:rgba(201,190,255,.75);color:var(--accent)}
 .done-list .lbl{font-size:12px;margin-right:2px}
-.src{margin:4px 0 0;padding-left:18px;font-size:12.5px;line-height:1.55;color:var(--muted)}
+/* Las fuentes, como notas al pie: una línea fina y la lista numerada, sin superíndices en el texto. */
+.src{margin:16px 0 0;padding:10px 0 0 18px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.55;color:var(--muted)}
 .src a{color:var(--muted);text-decoration-color:rgba(201,190,255,.4)}
 .src a:hover{color:var(--accent)}
 /* wheel modal */
@@ -221,6 +231,10 @@ body.panning,body.panning *{cursor:move!important}
   .pi .bd{display:none}
   .slots{width:100%}
   .lore{position:fixed;top:auto;left:0;right:0;bottom:0;width:auto;max-height:70%;z-index:30;border-radius:18px 18px 0 0;padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+  /* En la hoja del móvil, la muestra algo más pequeña: a 360 px caben la muestra y el nombre. */
+  .lore-top{gap:14px}
+  .lore-muestra{width:78px;height:96px}
+  .lore h2{font-size:30px}
   .hint{border-radius:14px;width:auto}
   .wheel{z-index:30}
   .wheel-card{grid-template-columns:minmax(0,1fr)}
@@ -325,7 +339,7 @@ body.panning,body.panning *{cursor:move!important}
 .por-cero:hover{color:var(--fg)}
 .por-pie{margin:22px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:#7d7996}
 /* ---------- El texto del gesto guiado (T-20, v1.17): abajo, junto a las bolas, con borde de acento. */
-.gesto{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:5;width:max-content;max-width:min(380px,calc(100% - 32px));box-sizing:border-box;background:var(--panel-solid);border:1px solid rgba(201,190,255,.55);border-radius:14px;padding:11px 16px;text-align:center;pointer-events:none;box-shadow:0 0 24px -10px rgba(201,190,255,.5),0 16px 40px -16px rgba(0,0,0,.8)}
+.gesto{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:max-content;max-width:min(380px,calc(100% - 32px));box-sizing:border-box;background:var(--panel-solid);border:1px solid rgba(201,190,255,.55);border-radius:14px;padding:11px 16px;text-align:center;pointer-events:none;box-shadow:0 0 24px -10px rgba(201,190,255,.5),0 16px 40px -16px rgba(0,0,0,.8)}
 .gesto p{margin:0;font-size:14.5px;line-height:1.4}
 .gesto small{display:block;margin-top:3px;font-size:12.5px;color:var(--muted)}
 /* ---------- «¿Empezar de cero?» (T-20, v1.17): la hoja de opinar, del alto de su texto. */
