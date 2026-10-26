@@ -1,7 +1,7 @@
 /* ---------- Mezcla: qué pasa al soltar un color sobre otro ---------- */
 import {DATA,BY,REC,key} from './data.js';
 import {st,nodes,order,openFams,logros,addNode,guardar} from './state.js';
-import {burst,puff,ping} from './effects.js';
+import {burst,puff,ping,chispa} from './effects.js';
 import {renderPalette,updateProgress} from './palette.js';
 import {openLore} from './lore.js';
 import {toast,hint,logro,logroGama,logroLeyendas} from './ui.js';
@@ -16,7 +16,7 @@ export function mix(aId,bId){const tgt=nodes.get(bId);if(!tgt)return;
  discover(res,tgt.x,tgt.y,aId,bId);}
 function discover(id,x,y,a,b){const col=BY[id].hex;
  const ang=Math.random()*TAU;const n=addNode(id,x+Math.cos(ang)*8,y+Math.sin(ang)*8,.12);n.vx=Math.cos(ang)*4;n.vy=Math.sin(ang)*4;
- burst(x,y,[BY[a].hex,BY[b].hex,col,col],col);
+ burst(x,y,[BY[a].hex,BY[b].hex,col,col],col);chispa(id,a,b);
  st.lastNew=id;openFams.add(BY[id].fam);renderPalette();updateProgress();if(st.selected)openLore(st.selected);
  hint.hidden=true;
  comprobarLogro(BY[id].fam);comprobarGama(BY[id]);alMezclar(true);guardar();

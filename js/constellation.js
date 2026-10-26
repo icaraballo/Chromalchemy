@@ -1,9 +1,9 @@
 /* ---------- Constelación: simulación de fuerzas y dibujo en canvas ---------- */
-import {BY,KIDS} from './data.js';
+import {DATA,BY,KIDS} from './data.js';
 import {st,nodes,order,pending,ahora} from './state.js';
 import {cam,clampCam} from './camera.js';
 import {drawGesto} from './gesto.js';
-import {rgba,lighten,lum,TAU,clamp,elastic,reduce,$} from './utils.js';
+import {rgb,rgba,lighten,lum,TAU,clamp,elastic,reduce,$} from './utils.js';
 
 const stage=$('stage');
 export const cv=$('cv'), ctx=cv.getContext('2d');
@@ -65,14 +65,44 @@ export function step(dt){const S=st.S,f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.
 
 /* ---------- Dibujo ---------- */
 export function circle(x,y,r){ctx.beginPath();ctx.arc(x,y,Math.max(0,r),0,TAU);}
-function drawBg(){const W=st.W,H=st.H;ctx.fillStyle='#06070d';ctx.fillRect(0,0,W,H);
- const recent=order.slice(-2);const spots=[[.28,.32],[.74,.7]];
- recent.forEach((id,i)=>{const[x,y]=spots[i];const g=ctx.createRadialGradient(W*x,H*y,0,W*x,H*y,Math.max(W,H)*.6);g.addColorStop(0,rgba(BY[id].hex,.09));g.addColorStop(1,rgba(BY[id].hex,0));ctx.fillStyle=g;ctx.fillRect(0,0,W,H);});
+// Las estrellas, fijas en la pantalla. El color de fondo va con las nebulosas (drawNebulas).
+function drawStars(){const W=st.W,H=st.H;
  for(const s of st.stars){const a=.2+.25*(reduce?1:Math.sin(st.now*s.sp+s.ph)*.5+.5);ctx.fillStyle=`rgba(220,225,255,${a})`;circle(s.x*W,s.y*H,s.r);ctx.fill();}}
+/* ---------- El cielo que se va pintando (T-20, v1.19) ----------
+   Una nebulosa por familia, en su zona (ZONA), del color medio de lo que ya tienes de ella; crece
+   y se aviva con la parte descubierta de la familia. Son del mundo (se mueven con la cámara) y van
+   debajo de los hilos. Se pintan aparte, en un lienzo fuera de pantalla, y sólo se rehacen al
+   descubrir un color, al reiniciar o al cambiar el tamaño: no en cada fotograma. Ese lienzo lleva
+   también el color de fondo, así que pintarlo sustituye al relleno del fondo en vez de sumar otra
+   pasada de pantalla entera (con 246 bolas y la CPU ×4 bajaba de 59 a 51 imágenes por segundo), y
+   va a media resolución: son degradados, no se nota. Con zoom, el mundo sigue cubriendo la
+   pantalla entera (clampCam), así que el fondo nunca queda al aire. */
+const FAM_TOTAL={};for(const d of DATA)FAM_TOTAL[d.fam]=(FAM_TOTAL[d.fam]||0)+1;
+const NEB_R=[.13,.46], NEB_A=[.07,.3];   // radio (× el lado corto) e intensidad en el centro, de poco a la familia entera
+const aHex=c=>'#'+c.map(v=>Math.round(v).toString(16).padStart(2,'0')).join('');
+const neb=document.createElement('canvas'),nctx=neb.getContext('2d');let nebClave='';
+const NEB_RES=.5;
+function pintarNebulosas(){const W=st.W,H=st.H,D=NEB_RES;neb.width=Math.max(1,Math.round(W*D));neb.height=Math.max(1,Math.round(H*D));
+ nctx.setTransform(D,0,0,D,0,0);nctx.fillStyle='#06070d';nctx.fillRect(0,0,W,H);
+ const suma={};for(const id of order){const d=BY[id],c=rgb(d.hex),s=suma[d.fam]||(suma[d.fam]={n:0,r:0,g:0,b:0});s.n++;s.r+=c[0];s.g+=c[1];s.b+=c[2];}
+ const R=Math.min(W,H)*.34,lado=Math.min(W,H);
+ for(const[fam,s]of Object.entries(suma)){const f=s.n/FAM_TOTAL[fam],[ang,rf]=ZONA[fam],a=ang*Math.PI/180;
+  // El color medio de la familia; el de los negros, aclarado para que se vea sobre el fondo.
+  let c=[s.r,s.g,s.b].map(v=>v/s.n);if(lum(aHex(c))<.16)c=c.map(v=>v+(255-v)*.35);
+  const hex=aHex(c);
+  const x=W/2+Math.cos(a)*R*rf,y=H/2+Math.sin(a)*R*rf,r=lado*(NEB_R[0]+(NEB_R[1]-NEB_R[0])*f),al=NEB_A[0]+(NEB_A[1]-NEB_A[0])*f;
+  const g=nctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(hex,al));g.addColorStop(.45,rgba(hex,al*.45));g.addColorStop(1,rgba(hex,0));
+  nctx.fillStyle=g;nctx.beginPath();nctx.arc(x,y,r,0,TAU);nctx.fill();}}
+export function drawNebulas(c=ctx){const k=order.length+':'+order[order.length-1]+':'+st.W+'x'+st.H;
+ if(k!==nebClave){nebClave=k;pintarNebulosas();}
+ c.drawImage(neb,0,0,st.W,st.H);}
+// El brillo de más de un hilo recién encendido por la chispa (n.chispa = instante en que llega).
+function encendido(n){if(!n.chispa)return 0;const t=st.now-n.chispa;return t<0?0:t>1?(delete n.chispa,0):1-t;}
 function drawLinks(){const {selected,hover}=st;ctx.globalCompositeOperation='lighter';
  for(const n of nodes.values()){const p=BY[n.id].p;if(!p)continue;const sc=birthScale(n);if(sc<=0)continue;
-  for(const pid of p){const q=nodes.get(pid);if(!q)continue;const hl=selected===n.id||selected===pid||(hover&&(hover.id===n.id||hover.id===pid));
-   const g=ctx.createLinearGradient(q.x,q.y,n.x,n.y);const a=(hl?.75:.26)*Math.min(1,sc);g.addColorStop(0,rgba(BY[pid].hex,a));g.addColorStop(1,rgba(BY[n.id].hex,a));
+  const en=encendido(n);
+  for(const pid of p){const q=nodes.get(pid);if(!q)continue;const sel=selected===n.id||selected===pid||(hover&&(hover.id===n.id||hover.id===pid)),hl=sel||en>0;
+   const g=ctx.createLinearGradient(q.x,q.y,n.x,n.y);const a=(.26+.49*(sel?1:en))*Math.min(1,sc);g.addColorStop(0,rgba(BY[pid].hex,a));g.addColorStop(1,rgba(BY[n.id].hex,a));
    ctx.strokeStyle=g;ctx.lineWidth=(hl?1.8:1.1)*Math.max(st.S,.8)/Math.sqrt(cam.z);ctx.beginPath();ctx.moveTo(q.x,q.y);ctx.lineTo(n.x,n.y);ctx.stroke();}}
  ctx.globalCompositeOperation='source-over';}
 const nodePos=n=>[n.x+(n.shake?Math.sin(st.now*55)*n.shake*7*st.S:0),n.y];
@@ -104,9 +134,10 @@ function drawLabels(){const S=st.S,k=1/cam.z,hueco=Math.sqrt(st.W*st.H/Math.max(
  ctx.font=`500 ${Math.round(11.5*Math.max(S,.9))*k}px Karla, system-ui, sans-serif`;ctx.textAlign='center';ctx.textBaseline='top';
  for(const n of nodes.values()){const sc=birthScale(n);if(sc<.6)continue;const on=st.selected===n.id||st.hover===n||st.pistaIngr.includes(n.id);if(!showAll&&!on)continue;
   const[x,y]=nodePos(n);ctx.fillStyle=on?'rgba(244,242,250,.95)':'rgba(220,216,236,.58)';ctx.fillText(BY[n.id].name,x,y+n.r*sc*rz()+7*S*k+(st.pistaIngr.includes(n.id)?12*S*rz():0));}}
-export function draw(){ctx.setTransform(st.DPR,0,0,st.DPR,0,0);drawBg();
- // El fondo de estrellas no se mueve; lo demás, con la cámara.
- ctx.setTransform(st.DPR*cam.z,0,0,st.DPR*cam.z,st.DPR*cam.x,st.DPR*cam.y);drawLinks();
+export function draw(){const mundo=()=>ctx.setTransform(st.DPR*cam.z,0,0,st.DPR*cam.z,st.DPR*cam.x,st.DPR*cam.y);
+ // El fondo y las nebulosas, con la cámara; las estrellas no se mueven; lo demás, con la cámara.
+ mundo();drawNebulas();ctx.setTransform(st.DPR,0,0,st.DPR,0,0);drawStars();
+ mundo();drawLinks();
  for(const n of nodes.values())drawNode(n);
  st.effects=st.effects.filter(e=>{const el=st.now-e.t0;if(el>e.dur)return false;e.draw(el);return true;});
  drawRings();drawGesto(ctx);drawLabels();}
