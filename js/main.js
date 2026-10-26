@@ -9,6 +9,7 @@ import {reset,restaurar} from './ui.js';
 import {iniciarPortada} from './portada.js';
 import './drag.js';
 import './opinion.js';
+import './poster.js';
 import {$} from './utils.js';
 
 resize();makeStars();new ResizeObserver(()=>resize()).observe($('stage'));

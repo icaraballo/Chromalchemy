@@ -83,19 +83,21 @@ const aHex=c=>'#'+c.map(v=>Math.round(v).toString(16).padStart(2,'0')).join('');
 const neb=document.createElement('canvas'),nctx=neb.getContext('2d');let nebClave='';
 const NEB_RES=.5;
 function pintarNebulosas(){const W=st.W,H=st.H,D=NEB_RES;neb.width=Math.max(1,Math.round(W*D));neb.height=Math.max(1,Math.round(H*D));
- nctx.setTransform(D,0,0,D,0,0);nctx.fillStyle='#06070d';nctx.fillRect(0,0,W,H);
+ nctx.setTransform(D,0,0,D,0,0);nctx.fillStyle='#06070d';nctx.fillRect(0,0,W,H);dibujarNebulosas(nctx);}
+// Sólo las nebulosas, en coordenadas del mundo y sin el fondo (también para el póster).
+export function dibujarNebulosas(c){const W=st.W,H=st.H;
  const suma={};for(const id of order){const d=BY[id],c=rgb(d.hex),s=suma[d.fam]||(suma[d.fam]={n:0,r:0,g:0,b:0});s.n++;s.r+=c[0];s.g+=c[1];s.b+=c[2];}
  const R=Math.min(W,H)*.34,lado=Math.min(W,H);
  for(const[fam,s]of Object.entries(suma)){const f=s.n/FAM_TOTAL[fam],[ang,rf]=ZONA[fam],a=ang*Math.PI/180;
   // El color medio de la familia; el de los negros, aclarado para que se vea sobre el fondo.
-  let c=[s.r,s.g,s.b].map(v=>v/s.n);if(lum(aHex(c))<.16)c=c.map(v=>v+(255-v)*.35);
-  const hex=aHex(c);
+  let m=[s.r,s.g,s.b].map(v=>v/s.n);if(lum(aHex(m))<.16)m=m.map(v=>v+(255-v)*.35);
+  const hex=aHex(m);
   const x=W/2+Math.cos(a)*R*rf,y=H/2+Math.sin(a)*R*rf,r=lado*(NEB_R[0]+(NEB_R[1]-NEB_R[0])*f),al=NEB_A[0]+(NEB_A[1]-NEB_A[0])*f;
-  const g=nctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(hex,al));g.addColorStop(.45,rgba(hex,al*.45));g.addColorStop(1,rgba(hex,0));
-  nctx.fillStyle=g;nctx.beginPath();nctx.arc(x,y,r,0,TAU);nctx.fill();}}
-export function drawNebulas(c=ctx){const k=order.length+':'+order[order.length-1]+':'+st.W+'x'+st.H;
+  const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(hex,al));g.addColorStop(.45,rgba(hex,al*.45));g.addColorStop(1,rgba(hex,0));
+  c.fillStyle=g;c.beginPath();c.arc(x,y,r,0,TAU);c.fill();}}
+function drawNebulas(){const k=order.length+':'+order[order.length-1]+':'+st.W+'x'+st.H;
  if(k!==nebClave){nebClave=k;pintarNebulosas();}
- c.drawImage(neb,0,0,st.W,st.H);}
+ ctx.drawImage(neb,0,0,st.W,st.H);}
 // El brillo de más de un hilo recién encendido por la chispa (n.chispa = instante en que llega).
 function encendido(n){if(!n.chispa)return 0;const t=st.now-n.chispa;return t<0?0:t>1?(delete n.chispa,0):1-t;}
 function drawLinks(){const {selected,hover}=st;ctx.globalCompositeOperation='lighter';
