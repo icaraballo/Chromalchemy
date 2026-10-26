@@ -2,6 +2,7 @@
 import {BY,KIDS} from './data.js';
 import {st,nodes,order,pending,ahora} from './state.js';
 import {cam,clampCam} from './camera.js';
+import {drawGesto} from './gesto.js';
 import {rgba,lighten,lum,TAU,clamp,elastic,reduce,$} from './utils.js';
 
 const stage=$('stage');
@@ -108,4 +109,4 @@ export function draw(){ctx.setTransform(st.DPR,0,0,st.DPR,0,0);drawBg();
  ctx.setTransform(st.DPR*cam.z,0,0,st.DPR*cam.z,st.DPR*cam.x,st.DPR*cam.y);drawLinks();
  for(const n of nodes.values())drawNode(n);
  st.effects=st.effects.filter(e=>{const el=st.now-e.t0;if(el>e.dur)return false;e.draw(el);return true;});
- drawRings();drawLabels();}
+ drawRings();drawGesto(ctx);drawLabels();}

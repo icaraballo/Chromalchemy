@@ -6,19 +6,17 @@ import {openLore,closeLore} from './lore.js';
 import {wheel} from './wheel.js';
 import {resetCam} from './camera.js';
 import {abrirOpinion,yaOpino} from './opinion.js';
+import {quitarGesto} from './gesto.js';
 import {TAU,$} from './utils.js';
 
 export const hint=$('hint');
 const toastEl=$('toast');
 
 /* ---------- La ayuda de arriba (v1.15) ----------
-   Al empezar explica los dos gestos de la v1.14: mantener pulsado para mezclar y arrastrar para
-   mover. No se va al primer toque sino con el primer color nuevo, y si mueves una bola antes de
-   mezclar cambia para recordar cómo se mezcla. A quien ya tenía partida se le enseña una vez,
-   como novedad, al abrir el juego. */
+   A quien ya tenía partida de antes de la v1.14 se le enseña una vez, como novedad, al abrir el
+   juego, que arrastrar ahora mueve. En partida nueva, desde la v1.17, lo explica el gesto guiado
+   (gesto.js), que sustituye a la ayuda de inicio. */
 const AYUDA={
- inicio:'Para mezclar, <b>mantén pulsado un color</b> medio segundo y <b>suéltalo encima de otro</b>. Si lo arrastras sin esperar, lo mueves. Toca un color para leer su historia.',
- movida:'Así se mueve. Para mezclar, <b>mantén pulsado el color medio segundo</b> antes de arrastrarlo.',
  novedad:'<b>Novedad</b>: arrastrar una bola la mueve. Para mezclar, <b>mantenla pulsada medio segundo</b> y suéltala encima de otra.'};
 const VISTA='chromalchemy-novedad-mover';
 export function ayuda(k){hint.innerHTML=AYUDA[k];hint.dataset.k=k;hint.hidden=false;}
@@ -60,14 +58,12 @@ export function logroLeyendas(n){mostrarLogro({color:'#C79BFF',eb:'leyendas',tit
 // Tocar un logro lo quita; en el del 25 %, «Opinar» además abre la hoja.
 logroEl.onclick=e=>{const op=e.target.closest('[data-l="op"]');clearTimeout(logroT);siguienteLogro();if(op)abrirOpinion();};
 
-/* ---------- Partida nueva: los cinco básicos en pentágono ---------- */
-export function reset(){resetCam();st.revelado=false;st.mueve=null;st.pista=null;st.pistasUsadas=0;nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;quitarLogros();openFams.clear();
+/* ---------- Partida nueva: los cinco básicos en pentágono ----------
+   La explicación la da el gesto guiado, que arranca portada.js al empezar. */
+export function reset(){quitarGesto();resetCam();st.revelado=false;st.mueve=null;st.pista=null;st.pistasUsadas=0;nodes.clear();order.length=0;logros.clear();st.effects=[];st.selected=null;st.hover=null;closeLore();toastEl.hidden=true;quitarLogros();openFams.clear();
  BASICS.forEach((id,i)=>{const a=-Math.PI/2+i*TAU/5;addNode(id,st.W/2+Math.cos(a)*120*st.S,st.H/2+Math.sin(a)*120*st.S,i*.09);openFams.add(BY[id].fam);});
- renderPalette();updateProgress();ayuda('inicio');novedadVista();guardar();dispatchEvent(new Event('pistas'));}
-// Con la partida guardada, reiniciar borra de verdad: se pregunta antes si hay algo que perder.
-$('reset').onclick=()=>{const n=order.length-BASICS.length;
- if(n>0&&!confirm(`¿Empezar de cero? Se borrarán los ${n} ${n===1?'color descubierto':'colores descubiertos'}.`))return;
- reset();};
+ renderPalette();updateProgress();hint.hidden=true;novedadVista();guardar();dispatchEvent(new Event('pistas'));}
+// «Reiniciar» pregunta con la hoja de «¿Empezar de cero?» (portada.js, v1.17).
 
 /* ---------- Seguir la partida guardada ----------
    Los básicos en su pentágono y cada color junto a sus padres, en el orden en que se
@@ -92,7 +88,8 @@ export function restaurar(){const g=leerGuardado();if(!g)return false;
  const p=g.pista;st.pista=p&&BY[p.id]&&BY[p.id].p&&!nodes.has(p.id)&&p.paso>=1&&p.paso<=3?{id:p.id,paso:p.paso|0,...(BY[p.desde]&&!nodes.has(p.desde)?{desde:p.desde}:{})}:null;
  dispatchEvent(new Event('pistas'));
  renderPalette();updateProgress();
- if(order.length===BASICS.length){ayuda('inicio');novedadVista();}else if(!novedadVista())ayuda('novedad');else hint.hidden=true;
+ // Sin nada descubierto es una partida nueva: la portada ofrece «Empezar a mezclar» y el gesto.
+ if(order.length===BASICS.length){hint.hidden=true;novedadVista();}else if(!novedadVista())ayuda('novedad');else hint.hidden=true;
  return true;}
 
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!wheel.hidden)wheel.hidden=true;else closeLore();}});

@@ -23,38 +23,40 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.16.1">
-<link rel="stylesheet" href="css/styles.css?v=1.16.1">
+<link rel="stylesheet" href="css/fuentes.css?v=1.17">
+<link rel="stylesheet" href="css/styles.css?v=1.17">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/camera.js": "./js/camera.js?v=1.16.1",
-  "./js/constellation.js": "./js/constellation.js?v=1.16.1",
-  "./js/data.js": "./js/data.js?v=1.16.1",
-  "./js/drag.js": "./js/drag.js?v=1.16.1",
-  "./js/effects.js": "./js/effects.js?v=1.16.1",
-  "./js/game.js": "./js/game.js?v=1.16.1",
-  "./js/lore.js": "./js/lore.js?v=1.16.1",
-  "./js/main.js": "./js/main.js?v=1.16.1",
-  "./js/opinion.js": "./js/opinion.js?v=1.16.1",
-  "./js/palette.js": "./js/palette.js?v=1.16.1",
-  "./js/pistas.js": "./js/pistas.js?v=1.16.1",
-  "./js/posibles.js": "./js/posibles.js?v=1.16.1",
-  "./js/privacidad.js": "./js/privacidad.js?v=1.16.1",
-  "./js/sheet.js": "./js/sheet.js?v=1.16.1",
-  "./js/state.js": "./js/state.js?v=1.16.1",
-  "./js/ui.js": "./js/ui.js?v=1.16.1",
-  "./js/utils.js": "./js/utils.js?v=1.16.1",
-  "./js/wheel.js": "./js/wheel.js?v=1.16.1"
+  "./js/camera.js": "./js/camera.js?v=1.17",
+  "./js/constellation.js": "./js/constellation.js?v=1.17",
+  "./js/data.js": "./js/data.js?v=1.17",
+  "./js/drag.js": "./js/drag.js?v=1.17",
+  "./js/effects.js": "./js/effects.js?v=1.17",
+  "./js/game.js": "./js/game.js?v=1.17",
+  "./js/gesto.js": "./js/gesto.js?v=1.17",
+  "./js/lore.js": "./js/lore.js?v=1.17",
+  "./js/main.js": "./js/main.js?v=1.17",
+  "./js/opinion.js": "./js/opinion.js?v=1.17",
+  "./js/palette.js": "./js/palette.js?v=1.17",
+  "./js/pistas.js": "./js/pistas.js?v=1.17",
+  "./js/portada.js": "./js/portada.js?v=1.17",
+  "./js/posibles.js": "./js/posibles.js?v=1.17",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.17",
+  "./js/sheet.js": "./js/sheet.js?v=1.17",
+  "./js/state.js": "./js/state.js?v=1.17",
+  "./js/ui.js": "./js/ui.js?v=1.17",
+  "./js/utils.js": "./js/utils.js?v=1.17",
+  "./js/wheel.js": "./js/wheel.js?v=1.17"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.16.1"></script>
+<script type="module" src="js/main.js?v=1.17"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.16.1</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.17</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -73,6 +75,8 @@
   <main class="stage" id="stage">
     <canvas id="cv" aria-label="Constelación de colores descubiertos"></canvas>
     <div class="hint" id="hint" hidden></div>
+    <!-- El gesto guiado de la partida nueva (T-20, v1.17): el dedo lo pinta la constelación; esto es el texto. -->
+    <div class="gesto" id="gesto" role="status" hidden><p>Mantén pulsado un color medio segundo y suéltalo encima de otro.</p><small>Si lo arrastras sin esperar, lo mueves.</small></div>
     <!-- Arriba a la izquierda, «Ver toda» con zoom (T-12); a la derecha, «Reordenar» con alguna bola movida (T-17). -->
     <div class="vista"><button type="button" class="zoom-out" id="zoomOut" hidden>Ver toda</button></div>
     <div class="vista dcha"><button type="button" class="zoom-out" id="reordenar" hidden>Reordenar</button></div>
@@ -142,7 +146,38 @@
   </div>
   <button type="button" class="op-enviar" id="privacidadOk">Entendido</button>
 </div>
+<!-- La portada (T-20, v1.17): sale siempre al abrir, con partida y sin ella. Va pintada aquí para
+     no esperar a los módulos; el script de abajo elige los botones y portada.js los hace funcionar. -->
+<section class="portada" id="portada" aria-labelledby="portadaTitulo">
+  <svg class="por-cielo" id="porCielo" aria-hidden="true"></svg>
+  <div class="por-cont">
+    <svg class="por-penta" viewBox="-60 -60 120 120" aria-hidden="true"><line class="por-h" style="--i:0" x1="0" y1="-42" x2="39.94" y2="-12.98"/><line class="por-h" style="--i:1" x1="39.94" y1="-12.98" x2="24.69" y2="33.98"/><line class="por-h" style="--i:2" x1="24.69" y1="33.98" x2="-24.69" y2="33.98"/><line class="por-h" style="--i:3" x1="-24.69" y1="33.98" x2="-39.94" y2="-12.98"/><line class="por-h" style="--i:4" x1="-39.94" y1="-12.98" x2="0" y2="-42"/><circle class="por-b" style="--i:0;--c:#F2F0EA" cx="0" cy="-42" r="7"/><circle class="por-b" style="--i:1;--c:#D7263D" cx="39.94" cy="-12.98" r="7"/><circle class="por-b" style="--i:2;--c:#F5C518" cx="24.69" cy="33.98" r="7"/><circle class="por-b oscura" style="--i:3;--c:#1B1B22" cx="-24.69" cy="33.98" r="7"/><circle class="por-b" style="--i:4;--c:#2262D6" cx="-39.94" cy="-12.98" r="7"/></svg>
+    <h1 class="por-titulo" id="portadaTitulo">Chrom<i>alchemy</i></h1>
+    <p class="por-sub">Descubre 246 colores reales mezclándolos, cada uno con su historia.</p>
+    <div class="por-acciones">
+      <button type="button" class="por-btn" id="porEmpezar">Empezar a mezclar</button>
+      <button type="button" class="por-btn" id="porSeguir" hidden>Seguir mi partida<small id="porN"></small></button>
+      <button type="button" class="por-cero" id="porCero" hidden>Empezar de cero</button>
+    </div>
+    <p class="por-pie">Hecho por Iñigo Caraballo con Claude</p>
+  </div>
+</section>
+<!-- «¿Empezar de cero?»: desde la portada y desde «Reiniciar» (portada.js). -->
+<div class="op-fondo cero-fondo" id="ceroFondo" hidden></div>
+<div class="opinion cero" id="cero" role="alertdialog" aria-modal="true" aria-labelledby="ceroTitulo" aria-describedby="ceroTexto" hidden>
+  <h2 id="ceroTitulo">¿Empezar de cero?</h2>
+  <p id="ceroTexto"></p>
+  <button type="button" class="op-enviar" id="ceroNo">No, seguir mi partida</button>
+  <button type="button" class="cero-si" id="ceroSi">Sí, borrar y empezar</button>
+</div>
 <script>
+// La portada, antes de que carguen los módulos: con partida guardada, «Seguir mi partida»; y el
+// cielo de estrellas. portada.js lo corrige si lo guardado no se puede seguir.
+(()=>{let o=null;try{o=JSON.parse(localStorage.getItem('chromalchemy'));}catch(e){}
+ const n=o&&Array.isArray(o.order)?o.order.length:0,id=x=>document.getElementById(x);
+ if(n>5){id('porEmpezar').hidden=true;id('porSeguir').hidden=false;id('porCero').hidden=false;id('porN').textContent=n+' de 246 colores';}
+ let s='';for(let i=0;i<110;i++)s+='<circle cx="'+(Math.random()*100).toFixed(2)+'%" cy="'+(Math.random()*100).toFixed(2)+'%" r="'+(Math.random()*1.1+.2).toFixed(2)+'" opacity="'+(.2+Math.random()*.45).toFixed(2)+'"/>';
+ id('porCielo').innerHTML=s;})();
 // Los módulos no cargan abriendo el archivo con doble clic (file://): avisarlo en vez de dejar la pantalla vacía.
 if(location.protocol==='file:')Object.assign(document.getElementById('hint'),{hidden:false}).textContent='Ábrelo desde un servidor (python3 -m http.server) o en GitHub Pages: con doble clic el navegador no carga el juego.';
 </script>
