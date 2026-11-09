@@ -4,7 +4,8 @@
    nebulosas (sin nombres, aros ni ayudas); abajo «N / 246 colores» y la dirección del juego. Se
    dibuja y se descarga en el propio navegador: nada sale de él. En los navegadores de dentro de
    las apps (LinkedIn, Facebook, Instagram) no se puede descargar: se abre la imagen para
-   guardarla con una pulsación larga, y se dice. El botón va en la ventana de la gama. */
+   guardarla con una pulsación larga, y se dice. En la app de Android abre «Compartir» (v1.21).
+   El botón va en la ventana de la gama. */
 import {DATA,BY} from './data.js';
 import {st,nodes,order} from './state.js';
 import {dibujarNebulosas} from './constellation.js';
@@ -56,10 +57,20 @@ export async function dibujarPoster(){
  return cv;}
 
 const vista=$('poster');
+// En la app de Android (v1.21) no hay descargas: el póster se guarda en la caché de la app y se abre
+// el menú «Compartir» de Android (guardar en Fotos, WhatsApp…). Plugins Filesystem y Share de Capacitor.
+const cap=window.Capacitor,nativa=cap&&cap.isNativePlatform&&cap.isNativePlatform();
+async function compartir(cv){const {Filesystem,Share}=cap.Plugins;
+ const data=cv.toDataURL('image/png').split(',')[1];
+ const {uri}=await Filesystem.writeFile({path:'chromalchemy-constelacion.png',data,directory:'CACHE'});
+ await Share.share({title:'Mi constelación de Chromalchemy',files:[uri],dialogTitle:'Guardar o compartir el póster'});}
+
 async function descargar(){const cv=await dibujarPoster();
+ if(nativa)return compartir(cv);
  const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const url=URL.createObjectURL(blob);
  if(enApp){$('posterImg').src=url;vista.hidden=false;return;}
  const a=document.createElement('a');a.href=url;a.download='chromalchemy-constelacion.png';document.body.appendChild(a);a.click();a.remove();
  setTimeout(()=>URL.revokeObjectURL(url),4000);}
+if(nativa)$('posterBtn').textContent='Compartir póster';
 $('posterBtn').onclick=()=>{descargar().catch(()=>{});};
 $('posterCerrar').onclick=()=>{vista.hidden=true;URL.revokeObjectURL($('posterImg').src);};

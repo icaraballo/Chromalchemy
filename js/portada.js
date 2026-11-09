@@ -41,6 +41,9 @@ window.addEventListener('keydown',e=>{if(e.key==='Escape'&&abierta){e.stopImmedi
 // «Reiniciar» de la barra: con algo que perder, la misma hoja; si no, partida nueva sin preguntar.
 $('reset').onclick=()=>{if(descubiertos()>0)abrirCero();else nueva();};
 
+// Volver a la portada desde la partida: el «atrás» de Android en la app (atras.js, v1.21).
+export function abrirPortada(){iniciarPortada();portada.hidden=false;portada.getBoundingClientRect();portada.classList.remove('fuera');}
+
 // El script en línea ya ha elegido los botones con lo guardado; si al cargar no cuadra (guardado
 // raro que restaurar() ha descartado), manda lo que hay de verdad.
 export function iniciarPortada(){const n=descubiertos(),hay=n>0;

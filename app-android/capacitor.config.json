@@ -1,0 +1,13 @@
+{
+  "appId": "icaraballo.chromalchemy",
+  "appName": "Chromalchemy",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#0a0a10"
+  },
+  "plugins": {
+    "SystemBars": {
+      "style": "DARK"
+    }
+  }
+}

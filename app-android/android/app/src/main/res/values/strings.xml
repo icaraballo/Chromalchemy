@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Chromalchemy</string>
+    <string name="title_activity_main">Chromalchemy</string>
+    <string name="package_name">icaraballo.chromalchemy</string>
+    <string name="custom_url_scheme">icaraballo.chromalchemy</string>
+</resources>

@@ -66,6 +66,8 @@ Funciona en el ordenador y en el móvil.
 | `tools/calcular-recetas.js` | El script que generó las recetas (Node + Mixbox) |
 | `tools/version.sh` | Cambia la versión antes de publicar |
 | `reference/` | El prototipo de un solo archivo del que salió el juego |
+| `app-android/` | El juego como app de Android (Capacitor): copia la web y la empaqueta. Ver su README |
+| `privacidad.html` | La política de privacidad con dirección propia, para Google Play |
 
 ## Probar en local
 
@@ -108,6 +110,8 @@ Sin cookies ni analítica. La partida se guarda solo en tu navegador. Las letras
 el propio juego. Si pulsas «Enviar» en «Opinar», tus respuestas, la versión, cuántos colores
 llevas y si has usado pistas van a un formulario de Google; nombre y contacto, solo si los
 pones. En Safari, si pasas más de 7 días sin abrirlo, el navegador puede borrar la partida. Lo
-mismo se lee en el juego, en el enlace «Privacidad» junto a la versión.
+mismo se lee en el juego, en el enlace «Privacidad» junto a la versión, y en
+[privacidad.html](https://icaraballo.github.io/Chromalchemy/privacidad.html), la dirección que usa Google Play
+(cubre también la app de Android, donde la partida se guarda dentro de la app).
 
 Hecho por Iñigo Caraballo con Claude (Anthropic).
