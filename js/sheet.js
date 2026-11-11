@@ -18,6 +18,9 @@ function poner(a,guardar){abierta=a;pal.classList.toggle('half',a);head.setAttri
 // Al arrastrar un color desde la paleta: se baja sola, y se queda así para ver el resultado.
 export function plegar(){if(movil.matches&&abierta)poner(false,false);}
 
+// Para el botón «atrás» (v1.24): pliega la hoja si está abierta y dice si lo hizo.
+export function plegarAtras(){if(movil.matches&&abierta){poner(false,true);return true;}return false;}
+
 // Cuánto baja la hoja plegada: su alto menos lo que asoma (el hueco que la constelación deja abajo).
 const bajada=()=>pal.offsetHeight-parseFloat(getComputedStyle(stage).marginBottom);
 let g=null;
