@@ -2,26 +2,30 @@
    Arrastrar un color desde la paleta lleva una muestra (la bola fantasma) y la suelta encima de
    otro (T-11, v1.6). Sobre una bola de la constelación hay tres gestos (T-17, v1.14):
    - arrastrar enseguida (más de 6 px antes de 0,5 s): mueve la bola, y se queda donde se suelta;
-   - mantener pulsado 0,5 s sin moverse: sale el anillo (y vibra en Android) y desde ahí se
-     arrastra la muestra para mezclar, como desde la paleta;
+   - mantener pulsado 0,5 s sin moverse: la bola salta y brilla, el móvil vibra, y desde ahí se
+     arrastra la muestra para mezclar, como desde la paleta (si se suelta sin moverla, un aviso
+     explica qué hacer);
    - un toque (soltar antes de 0,5 s sin moverse): abre la ficha.
    Un toque sin mover (< 6 px) en la paleta también abre la ficha. En táctil, desde la paleta sólo arrastra la bolita del
    color: el resto de la fila deja hacer scroll.
    En la constelación (T-12): un dedo en el fondo la desplaza, dos dedos hacen zoom; con ratón,
-   la rueda hace zoom y arrastrar el fondo la desplaza. */
+   la rueda hace zoom y arrastrar el fondo la desplaza. Alejar más allá de «toda» encoge las bolas
+   (v1.22, camera.js). */
 import {BY} from './data.js';
 import {st,nodes,guardar} from './state.js';
 import {cv,hit,soltarTodas} from './constellation.js';
-import {cam,toWorld,zoomTo,panBy} from './camera.js';
+import {toWorld,zoomTo,panBy,vista,asentar} from './camera.js';
 import {palList,strip} from './palette.js';
 import {plegar} from './sheet.js';
 import {openLore,closeLore} from './lore.js';
 import {alCoger} from './gesto.js';
 import {mix} from './game.js';
+import {toast} from './ui.js';
 import {rgba,lighten,darken,clamp,$} from './utils.js';
 
 const ghost=$('ghost');
 const MANTENER=500; // ms para coger la muestra desde una bola
+const VIBRA=35;     // ms de vibración al cogerla (15 casi no se notaba)
 let reloj=null;
 
 const scr=e=>{const r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};};
@@ -42,14 +46,15 @@ let pellizco=null, fondo=null;
 cv.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();
  dedos.set(e.pointerId,scr(e));
  if(dedos.size===2){cancelar();fondo=null;const[a,b]=[...dedos.values()];   // segundo dedo: zoom, y se olvida lo demás
-  pellizco={d:Math.hypot(a.x-b.x,a.y-b.y)||1,z:cam.z,w:toWorld((a.x+b.x)/2,(a.y+b.y)/2)};return;}
+  pellizco={d:Math.hypot(a.x-b.x,a.y-b.y)||1,z:vista(),w:toWorld((a.x+b.x)/2,(a.y+b.y)/2)};return;}
  if(dedos.size>2)return;
  const p=local(e),n=hit(p.x,p.y);
  if(n){const d=st.drag={id:n.id,from:'node',pid:e.pointerId,sx:e.clientX,sy:e.clientY,type:e.pointerType,started:false,cogida:0,dx:n.x-p.x,dy:n.y-p.y};
-  clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;alCoger();if(navigator.vibrate)try{navigator.vibrate(15);}catch{}},MANTENER);}
+  clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;alCoger();if(navigator.vibrate)try{navigator.vibrate(VIBRA);}catch{}},MANTENER);}
  else fondo={pid:e.pointerId,sx:e.clientX,sy:e.clientY,lx:e.clientX,ly:e.clientY,movido:false};});
 cv.addEventListener('contextmenu',e=>e.preventDefault()); // mantener pulsado no saca el menú del navegador
-cv.addEventListener('wheel',e=>{e.preventDefault();const s=scr(e);zoomTo(cam.z*Math.exp(-e.deltaY*.0015),toWorld(s.x,s.y),s.x,s.y);},{passive:false});
+let ruedaT=null;
+cv.addEventListener('wheel',e=>{e.preventDefault();const s=scr(e);zoomTo(vista()*Math.exp(-e.deltaY*.0015),toWorld(s.x,s.y),s.x,s.y);clearTimeout(ruedaT);ruedaT=setTimeout(asentar,300);},{passive:false});
 
 function startDrag(){const drag=st.drag;drag.started=true;document.body.classList.add('dragging');
  const hex=BY[drag.id].hex;ghost.style.background=`radial-gradient(circle at 34% 30%, ${lighten(hex,.55)}, ${hex} 55%, ${darken(hex,.4)})`;ghost.style.boxShadow=`0 0 26px ${rgba(hex,.8)}`;ghost.hidden=false;
@@ -62,7 +67,7 @@ window.addEventListener('pointermove',e=>{
  const mv=st.mueve;
  if(mv&&e.pointerId===mv.pid){const p=local(e);mv.x=p.x+mv.dx;mv.y=p.y+mv.dy;return;}
  const drag=st.drag;
- if(!drag){if(e.target===cv){const p=local(e);st.hover=hit(p.x,p.y);cv.style.cursor=st.hover?'grab':cam.z>1?'move':'default';}return;}
+ if(!drag){if(e.target===cv){const p=local(e);st.hover=hit(p.x,p.y);cv.style.cursor=st.hover?'grab':vista()>1?'move':'default';}return;}
  if(e.pointerId!==drag.pid)return;
  if(!drag.started){if(Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)<6)return;if(drag.tapOnly){st.drag=null;return;}
   if(drag.from==='node'&&!drag.cogida){mover(drag,e);return;}   // enseguida: se mueve la bola
@@ -79,11 +84,12 @@ function anclar(){const mv=st.mueve;if(!mv)return;st.mueve=null;document.body.cl
  const n=nodes.get(mv.id);if(n){n.x=clamp(mv.x,20,st.W-20);n.y=clamp(mv.y,20,st.H-20);n.vx=n.vy=0;n.fija=[n.x/st.W,n.y/st.H];guardar();}}
 $('reordenar').onclick=()=>{soltarTodas();guardar();};
 function cancelar(){clearTimeout(reloj);anclar();if(!st.drag)return;st.drag=null;st.hover=null;ghost.hidden=true;document.body.classList.remove('dragging');}
-function soltar(e,cancel){dedos.delete(e.pointerId);if(dedos.size<2)pellizco=null;
+function soltar(e,cancel){dedos.delete(e.pointerId);if(dedos.size<2&&pellizco){pellizco=null;asentar();}
  if(fondo&&e.pointerId===fondo.pid){if(!fondo.movido&&!cancel)closeLore();fondo=null;document.body.classList.remove('panning');return;} // un toque en el fondo cierra la ficha
  if(st.mueve&&e.pointerId===st.mueve.pid){anclar();return;}
  const d=st.drag;if(!d||e.pointerId!==d.pid)return;clearTimeout(reloj);st.drag=null;ghost.hidden=true;document.body.classList.remove('dragging');
  if(d.started){if(st.hover&&!cancel)mix(d.id,st.hover.id);st.hover=null;}
- else if(!cancel&&!d.cogida)openLore(d.id);}   // mantener y soltar sin moverse: nada
+ else if(!cancel&&!d.cogida)openLore(d.id);   // mantener y soltar sin moverse: se explica qué hacer
+ else if(!cancel)toast('Ahora arrástrala hasta otro color para mezclarlas.');}
 window.addEventListener('pointerup',e=>soltar(e,false));
 window.addEventListener('pointercancel',e=>soltar(e,true));

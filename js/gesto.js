@@ -29,7 +29,7 @@ const POSA=.5, COGE=POSA+.5, SALE=COGE+.35, LLEGA=SALE+1.5, SUELTA=LLEGA+.7, FUE
 export function drawGesto(ctx){if(t0===null||reduce)return;
  const a=nodes.get(DE),b=nodes.get(A);if(!a||!b||st.now<a.born||st.now<b.born)return;
  const t=(st.now-t0)%VUELTA;if(t>FUERA)return;
- const S=st.S,k=1/cam.z,rz=1/Math.sqrt(cam.z),hex=BY[DE].hex;
+ const S=st.S,k=1/cam.z,rz=cam.b/Math.sqrt(cam.z),hex=BY[DE].hex;
  const p=clamp((t-SALE)/(LLEGA-SALE),0,1),q=suave(p);
  const x=a.x+(b.x-a.x)*q,y=a.y+(b.y-a.y)*q;
  const alfa=t<POSA?t/POSA:t>SUELTA?1-(t-SUELTA)/(FUERA-SUELTA):1;

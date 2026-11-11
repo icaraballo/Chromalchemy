@@ -33,4 +33,6 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Vibrar al coger una bola (navigator.vibrate en el WebView; sin esto no hace nada) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
 </manifest>

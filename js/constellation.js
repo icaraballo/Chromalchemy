@@ -3,7 +3,7 @@ import {DATA,BY,KIDS} from './data.js';
 import {st,nodes,order,pending,ahora} from './state.js';
 import {cam,clampCam} from './camera.js';
 import {drawGesto} from './gesto.js';
-import {rgb,rgba,lighten,lum,TAU,clamp,elastic,reduce,$} from './utils.js';
+import {rgb,rgba,lighten,lum,TAU,clamp,elastic,easeOut,reduce,$} from './utils.js';
 
 const stage=$('stage');
 export const cv=$('cv'), ctx=cv.getContext('2d');
@@ -25,7 +25,14 @@ function degree(id){let c=BY[id].p?2:0;for(const o of order){const p=BY[o].p;if(
 const crowd=()=>Math.min(clamp(1.15-order.length/260,.55,1),clamp(Math.sqrt(st.W*st.H/(Math.max(order.length,1)*2600)),.42,1));
 const targetR=n=>(10+Math.min(degree(n.id),9)*1.8)*st.S*crowd();
 // Con zoom las bolas crecen menos que las distancias (√z en vez de z): así se separan y caben los nombres.
-const rz=()=>1/Math.sqrt(cam.z);
+// cam.b (v1.22) es el tamaño de bola elegido al alejar más allá de «toda»: sólo cambia el dibujo.
+const rz=()=>cam.b/Math.sqrt(cam.z);
+/* La bola cogida para mezclar (v1.22, opción D del prototipo): al cogerla da un salto y suelta
+   una onda de su color; mientras se tiene, el halo late más fuerte y un aro gira a su alrededor.
+   Devuelve cuánto crece (esc), cuánto brilla el halo (brillo) y desde cuándo está cogida (t). */
+function agarre(n){const d=st.drag;if(!d||!d.cogida||d.id!==n.id)return null;const t=st.now-d.cogida;
+ if(reduce)return{t,esc:1,brillo:1.4};
+ return{t,esc:1+.15*elastic(Math.min(1,t/.45))+.2*Math.max(0,1-t/.18)*Math.min(1,t/.06),brillo:1+Math.min(1,t/.4)*(.35+.2*Math.sin(st.now*5))};}
 const birthScale=n=>{const t=st.now-n.born;if(t<0)return 0;return reduce?1:elastic(t/.7);};
 export function hit(x,y,exclude){let best=null,bd=1e9;for(const n of nodes.values()){if(n.id===exclude||st.now<n.born)continue;const d=Math.hypot(n.x-x,n.y-y);const lim=Math.max(n.r*rz()*1.5,24*st.S/cam.z);if(d<lim&&d<bd){bd=d;best=n;}}return best;}
 /* ---------- Bolas movidas a mano (T-17, v1.14) ----------
@@ -110,19 +117,21 @@ function drawLinks(){const {selected,hover}=st;ctx.globalCompositeOperation='lig
 const nodePos=n=>[n.x+(n.shake?Math.sin(st.now*55)*n.shake*7*st.S:0),n.y];
 // Las bolas con alguna mezcla posible ahora (T-16) laten el doble de amplio y con el halo algo
 // más vivo: sutil, para quien se fije. Con «reducir movimiento», sólo el halo.
-function drawNode(n){const sc=birthScale(n)*rz();if(sc<=0)return;const hex=BY[n.id].hex,[x,y]=nodePos(n),vivo=ahora().colores.has(n.id);
- const r=n.r*sc*(reduce?1:1+(vivo?.07:.035)*Math.sin(st.now*1.8+n.ph))*(1+n.pulse*.35);const dark=lum(hex)<.16,h=vivo?1.4:1;
- ctx.globalCompositeOperation='lighter';const g=ctx.createRadialGradient(x,y,r*.2,x,y,r*3.4);
- const hc=dark?'#8c8aa8':hex;g.addColorStop(0,rgba(hc,(dark?.3:.55)*h));g.addColorStop(.35,rgba(hc,(dark?.1:.17)*h));g.addColorStop(1,rgba(hc,0));ctx.fillStyle=g;circle(x,y,r*3.4);ctx.fill();
+function drawNode(n){const sc=birthScale(n)*rz();if(sc<=0)return;const hex=BY[n.id].hex,[x,y]=nodePos(n),vivo=ahora().colores.has(n.id),ag=agarre(n);
+ const r=n.r*sc*(reduce?1:1+(vivo?.07:.035)*Math.sin(st.now*1.8+n.ph))*(1+n.pulse*.35)*(ag?ag.esc:1);const dark=lum(hex)<.16,h=(vivo?1.4:1)*(ag?ag.brillo:1),hr=r*3.4*(ag?ag.brillo:1);
+ ctx.globalCompositeOperation='lighter';const g=ctx.createRadialGradient(x,y,r*.2,x,y,hr);
+ const hc=dark?'#8c8aa8':hex;g.addColorStop(0,rgba(hc,(dark?.3:.55)*h));g.addColorStop(.35,rgba(hc,(dark?.1:.17)*h));g.addColorStop(1,rgba(hc,0));ctx.fillStyle=g;circle(x,y,hr);ctx.fill();
  ctx.globalCompositeOperation='source-over';
  const c=ctx.createRadialGradient(x-r*.25,y-r*.25,0,x,y,r);c.addColorStop(0,lighten(hex,dark?.25:.62));c.addColorStop(.55,hex);c.addColorStop(1,hex);ctx.fillStyle=c;circle(x,y,r);ctx.fill();
  if(dark){ctx.strokeStyle='rgba(220,218,240,.35)';ctx.lineWidth=1;circle(x,y,r);ctx.stroke();}
  if(!pending(n.id).length&&KIDS[n.id].length&&sc>=1){ctx.strokeStyle=rgba(hex,.35);ctx.lineWidth=1;ctx.setLineDash([2,4]);circle(x,y,r+4*st.S*rz());ctx.stroke();ctx.setLineDash([]);}}
 function drawRings(){const {selected,hover,drag,S}=st;
- // La bola cogida para mezclar (mantener pulsado 0,5 s, T-17): un anillo discontinuo que entra
- // creciendo, para que se note el instante en que «ya la tienes», y se queda mientras se arrastra la muestra.
- if(drag&&drag.cogida&&nodes.has(drag.id)){const n=nodes.get(drag.id);const[x,y]=nodePos(n),e=reduce?1:elastic(Math.min(1,(st.now-drag.cogida)/.35));
-  ctx.strokeStyle=rgba(BY[n.id].hex,.8);ctx.lineWidth=1.4;ctx.setLineDash([3,4]);circle(x,y,(n.r*e+6*S)*rz());ctx.stroke();ctx.setLineDash([]);}
+ // La bola cogida para mezclar (mantener pulsado 0,5 s, T-17): un aro discontinuo que gira mientras
+ // se tiene y, al cogerla, una onda de su color que se abre (v1.22, ver agarre()).
+ if(drag&&drag.cogida&&nodes.has(drag.id)){const n=nodes.get(drag.id),ag=agarre(n),hex=BY[n.id].hex;const[x,y]=nodePos(n),r=n.r*ag.esc*rz(),w=1/Math.sqrt(cam.z);
+  ctx.strokeStyle=rgba(hex,.95);ctx.lineWidth=2*w;ctx.setLineDash([5*w,5*w]);ctx.lineDashOffset=reduce?0:-st.now*20*w;circle(x,y,r+8*S*w);ctx.stroke();ctx.setLineDash([]);ctx.lineDashOffset=0;
+  if(!reduce&&ag.t<.6){const p=ag.t/.6,e=easeOut(p);ctx.strokeStyle=rgba(hex,.9*(1-p));ctx.lineWidth=(3*(1-p)+.5)*w;circle(x,y,n.r*rz()+e*46*S*w);ctx.stroke();
+   ctx.strokeStyle=`rgba(255,255,255,${.35*(1-p)})`;ctx.lineWidth=w;circle(x,y,n.r*rz()+e*32*S*w);ctx.stroke();}}
  if(selected&&nodes.has(selected)){const n=nodes.get(selected);const[x,y]=nodePos(n);ctx.strokeStyle='rgba(236,232,255,.75)';ctx.lineWidth=1.4;circle(x,y,(n.r*birthScale(n)+7*S)*rz());ctx.stroke();}
  // Los ingredientes de la pista (T-09): un aro que late, del color de acento.
  for(const id of st.pistaIngr){const n=nodes.get(id);if(!n)continue;const[x,y]=nodePos(n),k=Math.sin(st.now*3.2)*.5+.5,r=(n.r+9*S)*rz()+k*3*S/cam.z;
