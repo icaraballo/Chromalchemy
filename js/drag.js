@@ -9,12 +9,12 @@
    Un toque sin mover (< 6 px) en la paleta también abre la ficha. En táctil, desde la paleta sólo arrastra la bolita del
    color: el resto de la fila deja hacer scroll.
    En la constelación (T-12): un dedo en el fondo la desplaza, dos dedos hacen zoom; con ratón,
-   la rueda hace zoom y arrastrar el fondo la desplaza. Alejar más allá de «toda» encoge las bolas
-   (v1.22, camera.js). */
+   la rueda hace zoom y arrastrar el fondo la desplaza. Se puede alejar más allá de «toda» (v1.23,
+   camera.js) y mover el mapa pequeño por la pantalla. */
 import {BY} from './data.js';
 import {st,nodes,guardar} from './state.js';
 import {cv,hit,soltarTodas} from './constellation.js';
-import {toWorld,zoomTo,panBy,vista,asentar} from './camera.js';
+import {toWorld,zoomTo,panBy,vista} from './camera.js';
 import {palList,strip} from './palette.js';
 import {plegar} from './sheet.js';
 import {openLore,closeLore} from './lore.js';
@@ -54,8 +54,7 @@ cv.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)r
   clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;alCoger();vibrar(VIBRA);},MANTENER);}
  else fondo={pid:e.pointerId,sx:e.clientX,sy:e.clientY,lx:e.clientX,ly:e.clientY,movido:false};});
 cv.addEventListener('contextmenu',e=>e.preventDefault()); // mantener pulsado no saca el menú del navegador
-let ruedaT=null;
-cv.addEventListener('wheel',e=>{e.preventDefault();const s=scr(e);zoomTo(vista()*Math.exp(-e.deltaY*.0015),toWorld(s.x,s.y),s.x,s.y);clearTimeout(ruedaT);ruedaT=setTimeout(asentar,300);},{passive:false});
+cv.addEventListener('wheel',e=>{e.preventDefault();const s=scr(e);zoomTo(vista()*Math.exp(-e.deltaY*.0015),toWorld(s.x,s.y),s.x,s.y);},{passive:false});
 
 function startDrag(){const drag=st.drag;drag.started=true;document.body.classList.add('dragging');
  const hex=BY[drag.id].hex;ghost.style.background=`radial-gradient(circle at 34% 30%, ${lighten(hex,.55)}, ${hex} 55%, ${darken(hex,.4)})`;ghost.style.boxShadow=`0 0 26px ${rgba(hex,.8)}`;ghost.hidden=false;
@@ -68,7 +67,7 @@ window.addEventListener('pointermove',e=>{
  const mv=st.mueve;
  if(mv&&e.pointerId===mv.pid){const p=local(e);mv.x=p.x+mv.dx;mv.y=p.y+mv.dy;return;}
  const drag=st.drag;
- if(!drag){if(e.target===cv){const p=local(e);st.hover=hit(p.x,p.y);cv.style.cursor=st.hover?'grab':vista()>1?'move':'default';}return;}
+ if(!drag){if(e.target===cv){const p=local(e);st.hover=hit(p.x,p.y);cv.style.cursor=st.hover?'grab':vista()!==1?'move':'default';}return;}
  if(e.pointerId!==drag.pid)return;
  if(!drag.started){if(Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)<6)return;if(drag.tapOnly){st.drag=null;return;}
   if(drag.from==='node'&&!drag.cogida){mover(drag,e);return;}   // enseguida: se mueve la bola
@@ -85,7 +84,7 @@ function anclar(){const mv=st.mueve;if(!mv)return;st.mueve=null;document.body.cl
  const n=nodes.get(mv.id);if(n){n.x=clamp(mv.x,20,st.W-20);n.y=clamp(mv.y,20,st.H-20);n.vx=n.vy=0;n.fija=[n.x/st.W,n.y/st.H];guardar();}}
 $('reordenar').onclick=()=>{soltarTodas();guardar();};
 function cancelar(){clearTimeout(reloj);anclar();if(!st.drag)return;st.drag=null;st.hover=null;ghost.hidden=true;document.body.classList.remove('dragging');}
-function soltar(e,cancel){dedos.delete(e.pointerId);if(dedos.size<2&&pellizco){pellizco=null;asentar();}
+function soltar(e,cancel){dedos.delete(e.pointerId);if(dedos.size<2&&pellizco)pellizco=null;
  if(fondo&&e.pointerId===fondo.pid){if(!fondo.movido&&!cancel)closeLore();fondo=null;document.body.classList.remove('panning');return;} // un toque en el fondo cierra la ficha
  if(st.mueve&&e.pointerId===st.mueve.pid){anclar();return;}
  const d=st.drag;if(!d||e.pointerId!==d.pid)return;clearTimeout(reloj);st.drag=null;ghost.hidden=true;document.body.classList.remove('dragging');

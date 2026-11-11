@@ -14,13 +14,15 @@ html,body{margin:0}[hidden]{display:none!important}
   --display:"Instrument Serif", "Iowan Old Style", Georgia, serif;
   --body:"Karla", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  /* Hueco de la barra de estado del sistema: en el APK (Capacitor 8) llega en --safe-area-inset-top; en el navegador, en env() */
+  --sat:max(env(safe-area-inset-top,0px),var(--safe-area-inset-top,0px));
 }
 html,body{height:100%}
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:14px;overflow:hidden}
 button{font:inherit;color:inherit}
 a{color:var(--accent)}
 .app{height:100%;display:grid;grid-template-columns:232px minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
-.top{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--bg);position:relative;z-index:3}
+.top{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;padding:calc(10px + var(--sat)) 16px 10px;border-bottom:1px solid var(--line);background:var(--bg);position:relative;z-index:3}
 .brand{display:flex;align-items:baseline;gap:10px;margin-right:auto}
 .brand h1{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.01em;margin:0;line-height:1}
 .brand h1 i{font-style:italic;background:linear-gradient(90deg,#ff6a7a,#ffc65a,#5fd3a8,#6aa0ff,#c58cff);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -194,7 +196,7 @@ body.panning,body.panning *{cursor:move!important}
   :root{--peek:calc(118px + env(safe-area-inset-bottom,0px));--hoja:56vh}
   .app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
   .stage{margin-bottom:var(--peek)}
-  .top{gap:8px 12px;padding:8px 16px}
+  .top{gap:8px 12px;padding:calc(8px + var(--sat)) 16px 8px}
   .brand h1{font-size:22px}
   /* La versión, también en el móvil (T-13): pequeña y discreta, pero legible. */
   .brand{gap:7px}

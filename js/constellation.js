@@ -25,8 +25,8 @@ function degree(id){let c=BY[id].p?2:0;for(const o of order){const p=BY[o].p;if(
 const crowd=()=>Math.min(clamp(1.15-order.length/260,.55,1),clamp(Math.sqrt(st.W*st.H/(Math.max(order.length,1)*2600)),.42,1));
 const targetR=n=>(10+Math.min(degree(n.id),9)*1.8)*st.S*crowd();
 // Con zoom las bolas crecen menos que las distancias (√z en vez de z): así se separan y caben los nombres.
-// cam.b (v1.22) es el tamaño de bola elegido al alejar más allá de «toda»: sólo cambia el dibujo.
-const rz=()=>cam.b/Math.sqrt(cam.z);
+// Al alejar (z < 1) las bolas encogen igual que el mapa (zoom de verdad, v1.23).
+const rz=()=>cam.z>1?1/Math.sqrt(cam.z):1;
 /* La bola cogida para mezclar (v1.22, opción D del prototipo): al cogerla da un salto y suelta
    una onda de su color; mientras se tiene, el halo late más fuerte y un aro gira a su alrededor.
    Devuelve cuánto crece (esc), cuánto brilla el halo (brillo) y desde cuándo está cogida (t). */
