@@ -367,4 +367,11 @@ body.panning,body.panning *{cursor:move!important}
 .poster-vista img{max-width:100%;max-height:calc(100% - 130px);border-radius:10px;box-shadow:0 20px 50px -18px rgba(0,0,0,.9)}
 .poster-vista .op-enviar{width:min(300px,100%)}
 
-.aviso-salir{position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:90;background:var(--panel-solid);border:1px solid var(--line);border-radius:14px;padding:10px 16px;font-size:13.5px;color:var(--fg);box-shadow:0 8px 24px rgba(0,0,0,.5);pointer-events:none;animation:toastin .35s ease-out}
+.salir-velo{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:16px;background:rgba(5,5,10,.72)}
+.salir-velo[hidden]{display:none}
+.salir-caja{width:100%;max-width:340px;background:var(--panel-solid);border:1px solid var(--line);border-radius:16px;padding:20px 18px 16px;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.salir-t{font-family:var(--display);font-size:24px;margin:6px 0 2px}
+.salir-caja p{font-size:14px;line-height:1.4;color:var(--muted);margin:12px 0 16px}
+.salir-bot{display:flex;gap:10px}
+.salir-bot button{flex:1;min-height:48px;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;background:rgba(201,190,255,.1);border:1px solid var(--line)}
+.salir-bot .si{flex:1.2;background:var(--accent);color:#14131e;border:0;font-weight:700}
