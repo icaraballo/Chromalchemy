@@ -26,6 +26,10 @@ import {rgba,lighten,darken,clamp,$} from './utils.js';
 const ghost=$('ghost');
 const MANTENER=500; // ms para coger la muestra desde una bola
 const VIBRA=35;     // ms de vibración al cogerla (15 casi no se notaba)
+// En la app, con el plugin Haptics de Capacitor (el vibrador de Android): navigator.vibrate en el
+// WebView no vibraba en el Samsung ni con el permiso (v1.22.1). En la web, navigator.vibrate.
+const cap=window.Capacitor, Haptics=cap&&cap.isNativePlatform&&cap.isNativePlatform()&&cap.Plugins.Haptics;
+function vibrar(){try{if(Haptics)Haptics.vibrate({duration:VIBRA}).catch(()=>{});else if(navigator.vibrate)navigator.vibrate(VIBRA);}catch{}}
 let reloj=null;
 
 const scr=e=>{const r=cv.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};};
@@ -50,7 +54,7 @@ cv.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)r
  if(dedos.size>2)return;
  const p=local(e),n=hit(p.x,p.y);
  if(n){const d=st.drag={id:n.id,from:'node',pid:e.pointerId,sx:e.clientX,sy:e.clientY,type:e.pointerType,started:false,cogida:0,dx:n.x-p.x,dy:n.y-p.y};
-  clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;alCoger();if(navigator.vibrate)try{navigator.vibrate(VIBRA);}catch{}},MANTENER);}
+  clearTimeout(reloj);reloj=setTimeout(()=>{if(st.drag!==d||st.mueve)return;d.cogida=st.now;alCoger();vibrar();},MANTENER);}
  else fondo={pid:e.pointerId,sx:e.clientX,sy:e.clientY,lx:e.clientX,ly:e.clientY,movido:false};});
 cv.addEventListener('contextmenu',e=>e.preventDefault()); // mantener pulsado no saca el menú del navegador
 let ruedaT=null;
