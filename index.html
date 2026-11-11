@@ -23,42 +23,43 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.22.1">
-<link rel="stylesheet" href="css/styles.css?v=1.22.1">
+<link rel="stylesheet" href="css/fuentes.css?v=1.22.2">
+<link rel="stylesheet" href="css/styles.css?v=1.22.2">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/atras.js": "./js/atras.js?v=1.22.1",
-  "./js/camera.js": "./js/camera.js?v=1.22.1",
-  "./js/constellation.js": "./js/constellation.js?v=1.22.1",
-  "./js/data.js": "./js/data.js?v=1.22.1",
-  "./js/drag.js": "./js/drag.js?v=1.22.1",
-  "./js/effects.js": "./js/effects.js?v=1.22.1",
-  "./js/game.js": "./js/game.js?v=1.22.1",
-  "./js/gesto.js": "./js/gesto.js?v=1.22.1",
-  "./js/lore.js": "./js/lore.js?v=1.22.1",
-  "./js/main.js": "./js/main.js?v=1.22.1",
-  "./js/opinion.js": "./js/opinion.js?v=1.22.1",
-  "./js/palette.js": "./js/palette.js?v=1.22.1",
-  "./js/pistas.js": "./js/pistas.js?v=1.22.1",
-  "./js/portada.js": "./js/portada.js?v=1.22.1",
-  "./js/poster.js": "./js/poster.js?v=1.22.1",
-  "./js/posibles.js": "./js/posibles.js?v=1.22.1",
-  "./js/privacidad.js": "./js/privacidad.js?v=1.22.1",
-  "./js/sheet.js": "./js/sheet.js?v=1.22.1",
-  "./js/state.js": "./js/state.js?v=1.22.1",
-  "./js/ui.js": "./js/ui.js?v=1.22.1",
-  "./js/utils.js": "./js/utils.js?v=1.22.1",
-  "./js/wheel.js": "./js/wheel.js?v=1.22.1"
+  "./js/atras.js": "./js/atras.js?v=1.22.2",
+  "./js/camera.js": "./js/camera.js?v=1.22.2",
+  "./js/constellation.js": "./js/constellation.js?v=1.22.2",
+  "./js/data.js": "./js/data.js?v=1.22.2",
+  "./js/drag.js": "./js/drag.js?v=1.22.2",
+  "./js/effects.js": "./js/effects.js?v=1.22.2",
+  "./js/game.js": "./js/game.js?v=1.22.2",
+  "./js/gesto.js": "./js/gesto.js?v=1.22.2",
+  "./js/lore.js": "./js/lore.js?v=1.22.2",
+  "./js/main.js": "./js/main.js?v=1.22.2",
+  "./js/opinion.js": "./js/opinion.js?v=1.22.2",
+  "./js/palette.js": "./js/palette.js?v=1.22.2",
+  "./js/pistas.js": "./js/pistas.js?v=1.22.2",
+  "./js/portada.js": "./js/portada.js?v=1.22.2",
+  "./js/poster.js": "./js/poster.js?v=1.22.2",
+  "./js/posibles.js": "./js/posibles.js?v=1.22.2",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.22.2",
+  "./js/sheet.js": "./js/sheet.js?v=1.22.2",
+  "./js/state.js": "./js/state.js?v=1.22.2",
+  "./js/ui.js": "./js/ui.js?v=1.22.2",
+  "./js/utils.js": "./js/utils.js?v=1.22.2",
+  "./js/vibra.js": "./js/vibra.js?v=1.22.2",
+  "./js/wheel.js": "./js/wheel.js?v=1.22.2"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.22.1"></script>
+<script type="module" src="js/main.js?v=1.22.2"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.22.1</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.22.2</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -162,6 +163,8 @@
       <button type="button" class="por-btn" id="porEmpezar">Empezar a mezclar</button>
       <button type="button" class="por-btn" id="porSeguir" hidden>Seguir mi partida<small id="porN"></small></button>
       <button type="button" class="por-cero" id="porCero" hidden>Empezar de cero</button>
+      <!-- Apagar la vibración (v1.22.2, vibra.js): sólo sale donde se puede vibrar. -->
+      <button type="button" class="por-vibra" id="porVibra" aria-pressed="true" hidden><svg class="v-si" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 9v6M20 9v6M1.5 11v2M22.5 11v2"/></svg><svg class="v-no" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 9v6M20 9v6M3 3l18 18"/></svg><span>Vibración: <b id="porVibraTxt">sí</b></span></button>
     </div>
     <p class="por-pie">Hecho por Iñigo Caraballo con Claude</p>
   </div>

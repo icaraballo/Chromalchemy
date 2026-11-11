@@ -337,6 +337,13 @@ body.panning,body.panning *{cursor:move!important}
 .por-btn small{font-family:var(--mono);font-size:11.5px;font-weight:500;color:#3b3758;letter-spacing:.02em}
 .por-cero{background:none;border:0;padding:10px 14px;font-size:13.5px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .por-cero:hover{color:var(--fg)}
+/* «Vibración: sí / no» (v1.22.2, vibra.js) */
+.por-vibra{margin-top:4px;display:flex;align-items:center;gap:8px;background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--muted);font-size:13px;cursor:pointer}
+.por-vibra[hidden]{display:none}
+.por-vibra b{color:var(--fg);font-weight:600}
+.por-vibra .v-no,.por-vibra.apagada .v-si{display:none}
+.por-vibra.apagada .v-no{display:block}
+.por-vibra:hover{color:var(--fg);border-color:rgba(236,232,255,.2)}
 .por-pie{margin:22px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:#7d7996}
 /* ---------- El texto del gesto guiado (T-20, v1.17): abajo, junto a las bolas, con borde de acento. */
 .gesto{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:max-content;max-width:min(380px,calc(100% - 32px));box-sizing:border-box;background:var(--panel-solid);border:1px solid rgba(201,190,255,.55);border-radius:14px;padding:11px 16px;text-align:center;pointer-events:none;box-shadow:0 0 24px -10px rgba(201,190,255,.5),0 16px 40px -16px rgba(0,0,0,.8)}
