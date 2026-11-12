@@ -9,6 +9,7 @@ import {reset,restaurar} from './ui.js';
 import {iniciarPortada} from './portada.js';
 import './drag.js';
 import './opinion.js';
+import './ajustes.js';
 import './poster.js';
 import './atras.js';
 import {$} from './utils.js';

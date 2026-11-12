@@ -339,14 +339,7 @@ body.panning,body.panning *{cursor:move!important}
 .por-btn small{font-family:var(--mono);font-size:11.5px;font-weight:500;color:#3b3758;letter-spacing:.02em}
 .por-cero{background:none;border:0;padding:10px 14px;font-size:13.5px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 .por-cero:hover{color:var(--fg)}
-/* «Vibración: sí / no» (v1.22.2, vibra.js) */
-.por-vibra{margin-top:4px;display:flex;align-items:center;gap:8px;background:none;border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--muted);font-size:13px;cursor:pointer}
-.por-vibra[hidden]{display:none}
-.por-vibra b{color:var(--fg);font-weight:600}
-.por-vibra .v-no,.por-vibra.apagada .v-si{display:none}
-.por-vibra.apagada .v-no{display:block}
-.por-vibra:hover{color:var(--fg);border-color:rgba(236,232,255,.2)}
-.por-pie{margin:22px 0 0;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:#7d7996}
+/* Antes aquí estaba «Vibración: sí / no»; desde v1.26 es un interruptor en Ajustes (ajustes.js). */
 /* ---------- El texto del gesto guiado (T-20, v1.17): abajo, junto a las bolas, con borde de acento. */
 .gesto{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;width:max-content;max-width:min(380px,calc(100% - 32px));box-sizing:border-box;background:var(--panel-solid);border:1px solid rgba(201,190,255,.55);border-radius:14px;padding:11px 16px;text-align:center;pointer-events:none;box-shadow:0 0 24px -10px rgba(201,190,255,.5),0 16px 40px -16px rgba(0,0,0,.8)}
 .gesto p{margin:0;font-size:14.5px;line-height:1.4}
@@ -375,3 +368,30 @@ body.panning,body.panning *{cursor:move!important}
 .salir-bot{display:flex;gap:10px}
 .salir-bot button{flex:1;min-height:48px;border-radius:12px;font-size:15px;font-weight:600;cursor:pointer;background:rgba(201,190,255,.1);border:1px solid var(--line)}
 .salir-bot .si{flex:1.2;background:var(--accent);color:#14131e;border:0;font-weight:700}
+
+/* ---------- Ajustes y «Sobre este juego» (v1.26, ajustes.js) ---------- */
+.tools .ajustes-btn{color:var(--fg)}
+.tools .ajustes-btn svg{color:var(--accent)}
+@media (max-width:420px){.tools .ajustes-btn span{display:none}.tools .ajustes-btn{padding:6px 9px}}   /* en móvil, sólo el icono: así «Reiniciar» no baja de fila */
+.sobre-fondo{z-index:61}
+.opinion.corta{top:auto;max-height:calc(100dvh - 24px);gap:14px;z-index:61}
+.opinion.sobre{z-index:62}
+.aj-lista{display:flex;flex-direction:column}
+.aj-fila{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:8px 2px;border-top:1px solid var(--line)}
+.aj-fila[hidden]{display:none}
+.aj-enlace{cursor:pointer}
+.aj-enlace:focus-visible{outline:2px solid var(--accent);border-radius:6px}
+.aj-txt{display:flex;flex-direction:column;gap:2px;font-size:15px}
+.aj-txt b{font-weight:500;color:var(--fg)}
+.aj-txt small{font-size:12.5px;color:var(--muted)}
+.aj-flecha{font-size:22px;color:var(--muted)}
+.aj-inter{all:unset;box-sizing:border-box;flex:none;width:46px;height:27px;border-radius:14px;background:rgba(236,232,255,.18);position:relative;cursor:pointer;transition:background .2s}
+.aj-inter::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:var(--fg);transition:transform .2s}
+.aj-inter[aria-checked="true"]{background:var(--accent)}
+.aj-inter[aria-checked="true"]::after{transform:translateX(19px);background:#14131e}
+.aj-inter:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.priv-texto a{color:var(--accent)}
+.aj-botones{display:flex;gap:10px;flex:none}
+.aj-sec{flex:1;min-height:46px;border:1px solid var(--line);border-radius:12px;background:none;color:var(--fg);font:inherit;font-size:14.5px;cursor:pointer}
+.aj-sec:hover{border-color:rgba(236,232,255,.25)}
+@media (prefers-reduced-motion:reduce){.aj-inter,.aj-inter::after{transition:none}}

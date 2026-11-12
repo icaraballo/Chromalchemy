@@ -23,48 +23,50 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.25">
-<link rel="stylesheet" href="css/styles.css?v=1.25">
+<link rel="stylesheet" href="css/fuentes.css?v=1.26">
+<link rel="stylesheet" href="css/styles.css?v=1.26">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/atras.js": "./js/atras.js?v=1.25",
-  "./js/camera.js": "./js/camera.js?v=1.25",
-  "./js/constellation.js": "./js/constellation.js?v=1.25",
-  "./js/data.js": "./js/data.js?v=1.25",
-  "./js/drag.js": "./js/drag.js?v=1.25",
-  "./js/effects.js": "./js/effects.js?v=1.25",
-  "./js/game.js": "./js/game.js?v=1.25",
-  "./js/gesto.js": "./js/gesto.js?v=1.25",
-  "./js/lore.js": "./js/lore.js?v=1.25",
-  "./js/main.js": "./js/main.js?v=1.25",
-  "./js/opinion.js": "./js/opinion.js?v=1.25",
-  "./js/palette.js": "./js/palette.js?v=1.25",
-  "./js/pistas.js": "./js/pistas.js?v=1.25",
-  "./js/portada.js": "./js/portada.js?v=1.25",
-  "./js/poster.js": "./js/poster.js?v=1.25",
-  "./js/posibles.js": "./js/posibles.js?v=1.25",
-  "./js/privacidad.js": "./js/privacidad.js?v=1.25",
-  "./js/sheet.js": "./js/sheet.js?v=1.25",
-  "./js/state.js": "./js/state.js?v=1.25",
-  "./js/ui.js": "./js/ui.js?v=1.25",
-  "./js/utils.js": "./js/utils.js?v=1.25",
-  "./js/vibra.js": "./js/vibra.js?v=1.25",
-  "./js/wheel.js": "./js/wheel.js?v=1.25"
+  "./js/atras.js": "./js/atras.js?v=1.26",
+  "./js/camera.js": "./js/camera.js?v=1.26",
+  "./js/constellation.js": "./js/constellation.js?v=1.26",
+  "./js/data.js": "./js/data.js?v=1.26",
+  "./js/drag.js": "./js/drag.js?v=1.26",
+  "./js/effects.js": "./js/effects.js?v=1.26",
+  "./js/game.js": "./js/game.js?v=1.26",
+  "./js/gesto.js": "./js/gesto.js?v=1.26",
+  "./js/lore.js": "./js/lore.js?v=1.26",
+  "./js/main.js": "./js/main.js?v=1.26",
+  "./js/opinion.js": "./js/opinion.js?v=1.26",
+  "./js/palette.js": "./js/palette.js?v=1.26",
+  "./js/pistas.js": "./js/pistas.js?v=1.26",
+  "./js/portada.js": "./js/portada.js?v=1.26",
+  "./js/poster.js": "./js/poster.js?v=1.26",
+  "./js/posibles.js": "./js/posibles.js?v=1.26",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.26",
+  "./js/sheet.js": "./js/sheet.js?v=1.26",
+  "./js/state.js": "./js/state.js?v=1.26",
+  "./js/ui.js": "./js/ui.js?v=1.26",
+  "./js/utils.js": "./js/utils.js?v=1.26",
+  "./js/ajustes.js": "./js/ajustes.js?v=1.26",
+  "./js/vibra.js": "./js/vibra.js?v=1.26",
+  "./js/wheel.js": "./js/wheel.js?v=1.26"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.25"></script>
+<script type="module" src="js/main.js?v=1.26"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.25</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.26</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
       <button type="button" class="pista-btn" id="pistaBtn"><i>?</i>Pista</button>
       <button type="button" class="opinar-btn" id="opinarBtn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg>Opinar</button>
+      <button type="button" class="ajustes-btn" id="ajustesBtn" aria-label="Ajustes"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2.4" fill="#14131e"/><circle cx="15.5" cy="12" r="2.4" fill="#14131e"/><circle cx="7.5" cy="18" r="2.4" fill="#14131e"/></svg><span>Ajustes</span></button>
       <button type="button" id="reset">Reiniciar</button>
       <button type="button" class="dev" id="reveal" hidden>Revelar todo (dev)</button>
     </div>
@@ -136,6 +138,35 @@
     <button type="button" class="op-enviar" id="opinionVolver">Volver al juego</button>
   </div>
 </div>
+<!-- Ajustes y «Sobre este juego» (ajustes.js): la vibración y los datos del juego. Sobre va encima de
+     Ajustes, y Privacidad encima de las dos. -->
+<div class="op-fondo" id="ajustesFondo" hidden></div>
+<div class="opinion corta" id="ajustes" role="dialog" aria-modal="true" aria-labelledby="ajustesTitulo" hidden>
+  <div class="op-cab"><h2 id="ajustesTitulo">Ajustes</h2>
+    <button type="button" class="op-x" id="ajustesCerrar" aria-label="Cerrar">×</button></div>
+  <div class="aj-lista">
+    <div class="aj-fila" id="ajVibraFila" hidden>
+      <div class="aj-txt"><b>Vibración</b><small>Al coger una bola</small></div>
+      <button type="button" class="aj-inter" id="ajVibra" role="switch" aria-checked="true" aria-label="Vibración"></button>
+    </div>
+    <button type="button" class="aj-fila aj-enlace" id="ajSobre"><span class="aj-txt"><b>Sobre este juego</b></span><span class="aj-flecha" aria-hidden="true">›</span></button>
+  </div>
+</div>
+<div class="op-fondo sobre-fondo" id="sobreFondo" hidden></div>
+<div class="opinion corta sobre" id="sobre" role="dialog" aria-modal="true" aria-labelledby="sobreTitulo" hidden>
+  <div class="op-cab"><h2 id="sobreTitulo">Sobre este juego</h2>
+    <button type="button" class="op-x" id="sobreCerrar" aria-label="Cerrar">×</button></div>
+  <div class="priv-texto">
+    <p><b>Qué es.</b> Mezclas pinturas en la paleta y descubres 246 colores reales, cada uno con su historia.</p>
+    <p><b>Tu partida.</b> Se guarda sólo en este dispositivo. Reiniciar la borra; la vibración no.</p>
+    <p><b>Versión.</b> <span id="sobreVersion"></span></p>
+    <p><b>Créditos y licencia.</b> Hecho por Iñigo Caraballo con Claude. Código con licencia MIT; los textos de las fichas, CC BY 4.0. <a href="https://github.com/icaraballo/Chromalchemy" target="_blank" rel="noopener">Código en GitHub</a>.</p>
+  </div>
+  <div class="aj-botones">
+    <button type="button" class="aj-sec" id="sobrePriv">Privacidad</button>
+    <button type="button" class="aj-sec" id="sobreOpinar">Opinar</button>
+  </div>
+</div>
 <!-- Privacidad (v1.16.1): lo mismo que el apartado «Privacidad» del README. Si cambia qué se
      guarda o qué se envía, cambiar los dos. Se abre desde la cabecera y desde opinar, encima de opinar. -->
 <div class="op-fondo priv-fondo" id="privacidadFondo" hidden></div>
@@ -163,10 +194,7 @@
       <button type="button" class="por-btn" id="porEmpezar">Empezar a mezclar</button>
       <button type="button" class="por-btn" id="porSeguir" hidden>Seguir mi partida<small id="porN"></small></button>
       <button type="button" class="por-cero" id="porCero" hidden>Empezar de cero</button>
-      <!-- Apagar la vibración (v1.22.2, vibra.js): sólo sale donde se puede vibrar. -->
-      <button type="button" class="por-vibra" id="porVibra" aria-pressed="true" hidden><svg class="v-si" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 9v6M20 9v6M1.5 11v2M22.5 11v2"/></svg><svg class="v-no" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 9v6M20 9v6M3 3l18 18"/></svg><span>Vibración: <b id="porVibraTxt">sí</b></span></button>
     </div>
-    <p class="por-pie">Hecho por Iñigo Caraballo con Claude</p>
   </div>
 </section>
 <!-- En los navegadores de dentro de las apps no se puede descargar: la imagen, para guardarla a mano. -->
