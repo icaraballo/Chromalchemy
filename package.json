@@ -1,6 +1,7 @@
 {
   "name": "chromalchemy",
   "private": true,
+  "license": "UNLICENSED",
   "description": "Atajos. El juego no tiene dependencias: npm install no hace falta.",
   "scripts": {
     "test": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON tests/recetas.test.mjs",

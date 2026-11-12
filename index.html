@@ -23,44 +23,44 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.26">
-<link rel="stylesheet" href="css/styles.css?v=1.26">
+<link rel="stylesheet" href="css/fuentes.css?v=1.27">
+<link rel="stylesheet" href="css/styles.css?v=1.27">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/atras.js": "./js/atras.js?v=1.26",
-  "./js/camera.js": "./js/camera.js?v=1.26",
-  "./js/constellation.js": "./js/constellation.js?v=1.26",
-  "./js/data.js": "./js/data.js?v=1.26",
-  "./js/drag.js": "./js/drag.js?v=1.26",
-  "./js/effects.js": "./js/effects.js?v=1.26",
-  "./js/game.js": "./js/game.js?v=1.26",
-  "./js/gesto.js": "./js/gesto.js?v=1.26",
-  "./js/lore.js": "./js/lore.js?v=1.26",
-  "./js/main.js": "./js/main.js?v=1.26",
-  "./js/opinion.js": "./js/opinion.js?v=1.26",
-  "./js/palette.js": "./js/palette.js?v=1.26",
-  "./js/pistas.js": "./js/pistas.js?v=1.26",
-  "./js/portada.js": "./js/portada.js?v=1.26",
-  "./js/poster.js": "./js/poster.js?v=1.26",
-  "./js/posibles.js": "./js/posibles.js?v=1.26",
-  "./js/privacidad.js": "./js/privacidad.js?v=1.26",
-  "./js/sheet.js": "./js/sheet.js?v=1.26",
-  "./js/state.js": "./js/state.js?v=1.26",
-  "./js/ui.js": "./js/ui.js?v=1.26",
-  "./js/utils.js": "./js/utils.js?v=1.26",
-  "./js/ajustes.js": "./js/ajustes.js?v=1.26",
-  "./js/vibra.js": "./js/vibra.js?v=1.26",
-  "./js/wheel.js": "./js/wheel.js?v=1.26"
+  "./js/atras.js": "./js/atras.js?v=1.27",
+  "./js/camera.js": "./js/camera.js?v=1.27",
+  "./js/constellation.js": "./js/constellation.js?v=1.27",
+  "./js/data.js": "./js/data.js?v=1.27",
+  "./js/drag.js": "./js/drag.js?v=1.27",
+  "./js/effects.js": "./js/effects.js?v=1.27",
+  "./js/game.js": "./js/game.js?v=1.27",
+  "./js/gesto.js": "./js/gesto.js?v=1.27",
+  "./js/lore.js": "./js/lore.js?v=1.27",
+  "./js/main.js": "./js/main.js?v=1.27",
+  "./js/opinion.js": "./js/opinion.js?v=1.27",
+  "./js/palette.js": "./js/palette.js?v=1.27",
+  "./js/pistas.js": "./js/pistas.js?v=1.27",
+  "./js/portada.js": "./js/portada.js?v=1.27",
+  "./js/poster.js": "./js/poster.js?v=1.27",
+  "./js/posibles.js": "./js/posibles.js?v=1.27",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.27",
+  "./js/sheet.js": "./js/sheet.js?v=1.27",
+  "./js/state.js": "./js/state.js?v=1.27",
+  "./js/ui.js": "./js/ui.js?v=1.27",
+  "./js/utils.js": "./js/utils.js?v=1.27",
+  "./js/ajustes.js": "./js/ajustes.js?v=1.27",
+  "./js/vibra.js": "./js/vibra.js?v=1.27",
+  "./js/wheel.js": "./js/wheel.js?v=1.27"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.26"></script>
+<script type="module" src="js/main.js?v=1.27"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.26</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.27</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -138,8 +138,8 @@
     <button type="button" class="op-enviar" id="opinionVolver">Volver al juego</button>
   </div>
 </div>
-<!-- Ajustes y «Sobre este juego» (ajustes.js): la vibración y los datos del juego. Sobre va encima de
-     Ajustes, y Privacidad encima de las dos. -->
+<!-- Ajustes (ajustes.js): la vibración y, debajo, «Sobre este juego», en la misma hoja, como en los
+     otros juegos (12-11). Privacidad va encima. -->
 <div class="op-fondo" id="ajustesFondo" hidden></div>
 <div class="opinion corta" id="ajustes" role="dialog" aria-modal="true" aria-labelledby="ajustesTitulo" hidden>
   <div class="op-cab"><h2 id="ajustesTitulo">Ajustes</h2>
@@ -149,22 +149,12 @@
       <div class="aj-txt"><b>Vibración</b><small>Al coger una bola</small></div>
       <button type="button" class="aj-inter" id="ajVibra" role="switch" aria-checked="true" aria-label="Vibración"></button>
     </div>
-    <button type="button" class="aj-fila aj-enlace" id="ajSobre"><span class="aj-txt"><b>Sobre este juego</b></span><span class="aj-flecha" aria-hidden="true">›</span></button>
   </div>
-</div>
-<div class="op-fondo sobre-fondo" id="sobreFondo" hidden></div>
-<div class="opinion corta sobre" id="sobre" role="dialog" aria-modal="true" aria-labelledby="sobreTitulo" hidden>
-  <div class="op-cab"><h2 id="sobreTitulo">Sobre este juego</h2>
-    <button type="button" class="op-x" id="sobreCerrar" aria-label="Cerrar">×</button></div>
-  <div class="priv-texto">
+  <div class="aj-sobre priv-texto">
+    <h3 class="aj-sobre-tit">Sobre este juego</h3>
     <p><b>Qué es.</b> Mezclas pinturas en la paleta y descubres 246 colores reales, cada uno con su historia.</p>
     <p><b>Tu partida.</b> Se guarda sólo en este dispositivo. Reiniciar la borra; la vibración no.</p>
-    <p><b>Versión.</b> <span id="sobreVersion"></span></p>
-    <p><b>Créditos y licencia.</b> Hecho por Iñigo Caraballo con Claude. Código con licencia MIT; los textos de las fichas, CC BY 4.0. <a href="https://github.com/icaraballo/Chromalchemy" target="_blank" rel="noopener">Código en GitHub</a>.</p>
-  </div>
-  <div class="aj-botones">
-    <button type="button" class="aj-sec" id="sobrePriv">Privacidad</button>
-    <button type="button" class="aj-sec" id="sobreOpinar">Opinar</button>
+    <p>© 2026 Iñigo Caraballo · Todos los derechos reservados</p>
   </div>
 </div>
 <!-- Privacidad (v1.16.1): lo mismo que el apartado «Privacidad» del README. Si cambia qué se

@@ -373,9 +373,9 @@ body.panning,body.panning *{cursor:move!important}
 .tools .ajustes-btn{color:var(--fg)}
 .tools .ajustes-btn svg{color:var(--accent)}
 @media (max-width:420px){.tools .ajustes-btn span{display:none}.tools .ajustes-btn{padding:6px 9px}}   /* en móvil, sólo el icono: así «Reiniciar» no baja de fila */
-.sobre-fondo{z-index:61}
 .opinion.corta{top:auto;max-height:calc(100dvh - 24px);gap:14px;z-index:61}
-.opinion.sobre{z-index:62}
+.aj-sobre{border-top:1px solid var(--line);padding-top:14px}
+.aj-sobre-tit{margin:0;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .aj-lista{display:flex;flex-direction:column}
 .aj-fila{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:8px 2px;border-top:1px solid var(--line)}
 .aj-fila[hidden]{display:none}
@@ -391,7 +391,4 @@ body.panning,body.panning *{cursor:move!important}
 .aj-inter[aria-checked="true"]::after{transform:translateX(19px);background:#14131e}
 .aj-inter:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .priv-texto a{color:var(--accent)}
-.aj-botones{display:flex;gap:10px;flex:none}
-.aj-sec{flex:1;min-height:46px;border:1px solid var(--line);border-radius:12px;background:none;color:var(--fg);font:inherit;font-size:14.5px;cursor:pointer}
-.aj-sec:hover{border-color:rgba(236,232,255,.25)}
 @media (prefers-reduced-motion:reduce){.aj-inter,.aj-inter::after{transition:none}}

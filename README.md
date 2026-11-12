@@ -96,9 +96,8 @@ node tools/calcular-recetas.js entrada.json salida.json
 
 ## Licencia
 
-- **Código**: MIT ([`LICENSE`](LICENSE)).
-- **Textos de las fichas** (`nombre`, `historia`, `nota` y `acertijo` en `data/colores.json`):
-  CC BY 4.0 ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)).
+- **Código y textos de las fichas**: todos los derechos reservados ([`LICENSE`](LICENSE)). Hasta la
+  v1.26 se publicaron con MIT (código) y CC BY 4.0 (textos); lo publicado entonces conserva esas licencias.
 - **Mixbox**, que sólo usa `tools/calcular-recetas.js` y no va incluido, es de Secret Weapons
   con licencia CC BY-NC 4.0 (uso no comercial).
 - **Tipografías** (Instrument Serif, Karla e IBM Plex Mono), en `fonts/` con su licencia: SIL

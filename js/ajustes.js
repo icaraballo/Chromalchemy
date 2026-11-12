@@ -1,11 +1,9 @@
-/* ---------- Ajustes y «Sobre este juego» (v1.26) ----------
-   El botón «Ajustes» de la barra, junto a «Opinar», abre una hoja con la vibración (vibra.js) y la
-   entrada a «Sobre este juego». Las dos hojas son como la de opinar: suben desde abajo, se cierran con
-   la ×, tocando fuera, con Escape y con el «atrás» de Android (atras.js). «Sobre» va encima de
-   Ajustes y Privacidad encima de las dos; «Opinar» se abre desde «Sobre», cerrando antes las otras. */
+/* ---------- Ajustes y «Sobre este juego» (v1.26; Sobre dentro de Ajustes desde el 12-11) ----------
+   El botón «Ajustes» de la barra, junto a «Opinar», abre una hoja con la vibración (vibra.js) y, debajo,
+   «Sobre este juego», como en La Colmena y La Última Gota. Sube desde abajo como la de opinar y se
+   cierra con la ×, tocando fuera, con Escape y con el «atrás» de Android (atras.js). Privacidad va
+   junto a la versión y Opinar en la barra: no se repiten aquí. */
 import {$} from './utils.js';
-import {abrirPrivacidad} from './privacidad.js';
-import {abrirOpinion} from './opinion.js';
 
 function hoja(id){const h=$(id),velo=$(id+'Fondo');let abierta=false,origen=null,cierre=0;
  const abrir=()=>{clearTimeout(cierre);abierta=true;origen=document.activeElement;
@@ -20,8 +18,5 @@ function hoja(id){const h=$(id),velo=$(id+'Fondo');let abierta=false,origen=null
  window.addEventListener('keydown',e=>{if(e.key==='Escape'&&abierta){e.stopImmediatePropagation();cerrar();}},true);
  return {abrir,cerrar,abierta:()=>abierta};}
 
-const sobre=hoja('sobre'),ajustes=hoja('ajustes');   // Sobre primero: su Escape va antes que el de Ajustes
+const ajustes=hoja('ajustes');
 $('ajustesBtn').onclick=ajustes.abrir;
-$('ajSobre').onclick=()=>{$('sobreVersion').textContent=document.querySelector('.tag').textContent.trim();sobre.abrir();};
-$('sobrePriv').onclick=abrirPrivacidad;
-$('sobreOpinar').onclick=()=>{sobre.cerrar(true);ajustes.cerrar(true);abrirOpinion();};
