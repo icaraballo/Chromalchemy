@@ -13,7 +13,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         // versionCode sube en 1 con cada .aab que se sube a Play; versionName = la versión del juego.
-        versionCode 4
+        versionCode 5
         versionName "1.28"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
