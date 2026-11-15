@@ -45,6 +45,7 @@ for(const el of [palList,strip]){el.addEventListener('pointerdown',palDown);el.a
 const dedos=new Map(); // punteros apoyados en el lienzo: id → punto de la pantalla
 let pellizco=null, fondo=null;
 cv.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;e.preventDefault();
+ if(e.isPrimary||e.pointerType==='mouse'){dedos.clear();pellizco=null;}
  dedos.set(e.pointerId,scr(e));
  if(dedos.size===2){cancelar();fondo=null;const[a,b]=[...dedos.values()];   // segundo dedo: zoom, y se olvida lo demás
   pellizco={d:Math.hypot(a.x-b.x,a.y-b.y)||1,z:vista(),w:toWorld((a.x+b.x)/2,(a.y+b.y)/2)};return;}
@@ -93,3 +94,6 @@ function soltar(e,cancel){dedos.delete(e.pointerId);if(dedos.size<2&&pellizco)pe
  else if(!cancel)toast('Ahora arrástrala hasta otro color para mezclarlas.');}
 window.addEventListener('pointerup',e=>soltar(e,false));
 window.addEventListener('pointercancel',e=>soltar(e,true));
+function limpiarPunteros(){dedos.clear();pellizco=null;if(fondo){fondo=null;document.body.classList.remove('panning');}cancelar();}
+window.addEventListener('blur',limpiarPunteros);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)limpiarPunteros();});

@@ -1,9 +1,18 @@
 /* ---------- Datos: colores, recetas, historias verificadas ----------
    Se cargan de data/colores.json (módulo con await en la raíz: el resto de módulos
    no arranca hasta que los datos están). cert: doc = Documentado · disc = Discutido · ley = Leyenda */
-const res = await fetch(new URL('../data/colores.json', import.meta.url));
-if (!res.ok) throw new Error('No se pudo cargar data/colores.json (' + res.status + ')');
-const raw = await res.json();
+let raw;
+try{
+ const res=await fetch(new URL('../data/colores.json?v=1.28',import.meta.url));
+ if(!res.ok)throw new Error('No se pudo cargar data/colores.json ('+res.status+')');
+ raw=await res.json();
+}catch(e){
+ const msg='No se ha podido cargar el catálogo de colores: comprueba la conexión y recarga la página.';
+ const h=typeof document!=='undefined'&&document.getElementById('hint'),s=typeof document!=='undefined'&&document.querySelector('.por-sub');
+ if(h){h.textContent=msg;h.hidden=false;}
+ if(s)s.textContent=msg;
+ throw e;
+}
 
 // El JSON guarda la receta en `parents` y las fuentes como [título, url]; el juego usa `p` y {t, u}.
 export const DATA = raw.map(d => ({...d, p: d.parents, src: d.src.map(([t, u]) => ({t, u}))}));

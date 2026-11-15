@@ -21,5 +21,6 @@ Necesita Java 21 y el Android SDK (plataforma 36). La clave de firma vive fuera 
   `npx capacitor-assets generate --android`.
 
 Plugins de Capacitor que usa el juego (los llama `window.Capacitor.Plugins`, sin importarlos):
-`App` para el botón «atrás» de Android (`js/atras.js`), y `Filesystem` + `Share` para que
-«Compartir póster» abra el menú de compartir (`js/poster.js`). En la web no se usan.
+`App` para el botón «atrás» de Android (`js/atras.js`), `Haptics` para vibrar al coger una bola
+(`js/vibra.js`), y `Filesystem` + `Share` para que «Compartir póster» abra el menú de compartir
+(`js/poster.js`). En la web no se usan.

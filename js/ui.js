@@ -1,13 +1,13 @@
 /* ---------- Avisos, barra superior y modo desarrollador (?dev=1) ---------- */
 import {DATA,FAMS,BY,BASICS,gen} from './data.js';
-import {st,nodes,order,openFams,logros,addNode,guardar,leerGuardado} from './state.js';
+import {st,nodes,order,openFams,logros,addNode,guardar,leerGuardado,reconstruir} from './state.js';
 import {renderPalette,updateProgress} from './palette.js';
 import {openLore,closeLore} from './lore.js';
 import {wheel} from './wheel.js';
 import {resetCam} from './camera.js';
 import {abrirOpinion,yaOpino} from './opinion.js';
 import {quitarGesto} from './gesto.js';
-import {TAU,$} from './utils.js';
+import {TAU,esc,$} from './utils.js';
 
 export const hint=$('hint');
 const toastEl=$('toast');
@@ -26,10 +26,11 @@ const novedadVista=()=>{try{const v=localStorage.getItem(VISTA);localStorage.set
 let toastT;
 // Un mensaje de texto suelto va en un solo <span>: si no, cada trozo («Ya tienes», la negrita, el punto) sería una columna del flex (CB-02).
 export function toast(html,id,label){const body=html.startsWith('<span')?html:`<span>${html}</span>`;
- toastEl.innerHTML=`<span style="display:flex;gap:10px;align-items:center;min-width:0">${body}</span>`+(id?`<button type="button">${label}</button>`:'');
+ toastEl.innerHTML=`<span style="display:flex;gap:10px;align-items:center;min-width:0">${body}</span>`+(id?`<button type="button">${esc(label)}</button>`:'');
  toastEl.hidden=false;toastEl.classList.remove('show');void toastEl.offsetWidth;toastEl.classList.add('show');clearTimeout(toastT);
  toastT=setTimeout(()=>{toastEl.hidden=true;},id?5200:2800);
  if(id)toastEl.querySelector('button').onclick=()=>{openLore(id);toastEl.hidden=true;};}
+addEventListener('guardado-fallo',()=>toast('Este navegador no deja guardar la partida: se perderá al cerrar.'));
 
 /* ---------- Logros ----------
    La mitad y el total de cada familia (v1.1); el 25, 50 y 75 % de la gama y todas las
@@ -67,30 +68,38 @@ export function reset(){quitarGesto();resetCam();st.revelado=false;st.mueve=null
 
 /* ---------- Seguir la partida guardada ----------
    Los básicos en su pentágono y cada color junto a sus padres, en el orden en que se
-   descubrieron; la simulación los asienta. Devuelve false si no hay nada que cargar. */
-export function restaurar(){const g=leerGuardado();if(!g)return false;
+   descubrieron; la simulación los asienta. Si cambió una receta entre versiones, ningún color
+   descubierto se pierde (reconstruir, en posibles.js). Devuelve false si no hay nada que cargar. */
+function posPadre(id){const d=BY[id],a=d.p&&nodes.get(d.p[0]),b=d.p&&nodes.get(d.p[1]),ang=Math.random()*TAU,r=30*st.S;
+ const x=a&&b?(a.x+b.x)/2:a?a.x:b?b.x:st.W/2,y=a&&b?(a.y+b.y)/2:a?a.y:b?b.y:st.H/2;
+ return[x+Math.cos(ang)*r,y+Math.sin(ang)*r];}
+export function restaurar(){const r=reconstruir(leerGuardado());if(!r)return false;
  st.revelado=false;nodes.clear();order.length=0;logros.clear();openFams.clear();
  // Las bolas movidas a mano (v1.14) nacen ya donde se dejaron, y sus hijas junto a ellas (lo raro se ignora).
- const fijas=g.fijas&&typeof g.fijas==='object'?g.fijas:{};
- const poner=(id,x,y,delay)=>{const f=fijas[id],n=Array.isArray(f)&&f.length===2&&f.every(v=>typeof v==='number'&&v>=0&&v<=1);
-  const nodo=addNode(id,n?f[0]*st.W:x,n?f[1]*st.H:y,delay);if(n)nodo.fija=f;return nodo;};
+ const poner=(id,x,y,delay)=>{const f=r.fijas[id];
+  const nodo=addNode(id,f?f[0]*st.W:x,f?f[1]*st.H:y,delay);if(f)nodo.fija=f;return nodo;};
  BASICS.forEach((id,i)=>{const a=-Math.PI/2+i*TAU/5;poner(id,st.W/2+Math.cos(a)*120*st.S,st.H/2+Math.sin(a)*120*st.S,i*.09);openFams.add(BY[id].fam);});
  let i=0;
- for(const id of g.order){const d=BY[id];if(!d||nodes.has(id)||!d.p)continue;
-  const a=nodes.get(d.p[0]),b=nodes.get(d.p[1]);if(!a||!b)continue; // guardado raro: se salta lo que no encaja
-  const ang=Math.random()*TAU;poner(id,(a.x+b.x)/2+Math.cos(ang)*30*st.S,(a.y+b.y)/2+Math.sin(ang)*30*st.S,.45+i*.01);i++;}
- (g.logros||[]).forEach(k=>{if(typeof k==='string')logros.add(k);});
+ for(const id of r.order){if(nodes.has(id))continue;
+  const[x,y]=posPadre(id);poner(id,x,y,.45+i*.01);i++;}
+ r.logros.forEach(k=>logros.add(k));
  // Partidas de antes de la v1.9: lo de la gama y las leyendas que ya estuviera conseguido se
  // da por visto, para que no salten todos de golpe en el siguiente color.
  for(const pct of [25,50,75])if(order.length>=Math.ceil(DATA.length*pct/100))logros.add('gama:'+pct);
  if(DATA.filter(d=>d.cert==='ley'||(d.nota&&d.nota.cert==='ley')).every(d=>nodes.has(d.id)))logros.add('leyendas');
- st.pistasUsadas=g.pistas|0;
- const p=g.pista;st.pista=p&&BY[p.id]&&BY[p.id].p&&!nodes.has(p.id)&&p.paso>=1&&p.paso<=3?{id:p.id,paso:p.paso|0,...(BY[p.desde]&&!nodes.has(p.desde)?{desde:p.desde}:{})}:null;
+ st.pistasUsadas=r.pistas;st.pista=r.pista;
+ if(!r.limpio)guardar();
  dispatchEvent(new Event('pistas'));
  renderPalette();updateProgress();
  // Sin nada descubierto es una partida nueva: la portada ofrece «Empezar a mezclar» y el gesto.
  if(order.length===BASICS.length){hint.hidden=true;novedadVista();}else if(!novedadVista())ayuda('novedad');else hint.hidden=true;
  return true;}
+
+// Con dos pestañas abiertas (H-04), lo descubierto en una entra en la otra sin pisarse.
+window.addEventListener('storage',e=>{if(e.key!=='chromalchemy'||st.revelado)return;
+ const r=reconstruir(leerGuardado());if(!r)return;let nuevo=false;
+ for(const id of r.order)if(!nodes.has(id)){const[x,y]=posPadre(id),n=addNode(id,x,y,0);if(r.fijas[id])n.fija=r.fijas[id];openFams.add(BY[id].fam);nuevo=true;}
+ if(nuevo){r.logros.forEach(k=>logros.add(k));renderPalette();updateProgress();dispatchEvent(new Event('pistas'));}});
 
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){if(!wheel.hidden)wheel.hidden=true;else closeLore();}});
 

@@ -8,7 +8,8 @@ import {rgb,rgba,lighten,lum,TAU,clamp,elastic,easeOut,reduce,$} from './utils.j
 const stage=$('stage');
 export const cv=$('cv'), ctx=cv.getContext('2d');
 
-export function resize(){const r=stage.getBoundingClientRect();st.W=r.width;st.H=r.height;st.DPR=Math.min(2,window.devicePixelRatio||1);
+export function resize(){const r=stage.getBoundingClientRect(),w0=st.W,h0=st.H;st.W=r.width;st.H=r.height;st.DPR=Math.min(2,window.devicePixelRatio||1);
+ if(w0>0&&h0>0&&st.W>0&&st.H>0&&(st.W!==w0||st.H!==h0)){const kx=st.W/w0,ky=st.H/h0;for(const n of nodes.values())if(!n.fija){n.x*=kx;n.y*=ky;}}
  cv.width=Math.round(st.W*st.DPR);cv.height=Math.round(st.H*st.DPR);cv.style.width=st.W+'px';cv.style.height=st.H+'px';
  st.S=clamp(Math.min(st.W,st.H)/680,.6,1.1);clampCam();}
 export function makeStars(){st.stars=[];for(let i=0;i<160;i++)st.stars.push({x:Math.random(),y:Math.random(),r:Math.random()*1.1+.2,ph:Math.random()*TAU,sp:.5+Math.random()*1.5});}
@@ -20,10 +21,15 @@ export function makeStars(){st.stars=[];for(let i=0;i<160;i++)st.stars.push({x:M
 // Zona de cada familia: [ángulo en grados, distancia al centro en fracciones de R]. Los tonos
 // en círculo, como en la gama; blancos arriba, negros abajo y grises en el centro.
 const ZONA={rojos:[0,1],marrones:[25,.55],naranjas:[40,1],amarillos:[80,1],verdes:[140,1],azules:[215,1],violetas:[265,1],rosas:[320,1],blancos:[270,.35],grises:[0,0],negros:[90,.35]};
-function degree(id){let c=BY[id].p?2:0;for(const o of order){const p=BY[o].p;if(p&&(p[0]===id||p[1]===id))c++;}return c;}
+// El grado de cada bola sólo cambia cuando cambia lo descubierto (st.ver), no en cada fotograma.
+let degVer=-1;const degMap=new Map();
+function degree(id){if(st.ver!==degVer){degVer=st.ver;degMap.clear();
+ for(const o of order)degMap.set(o,BY[o].p?2:0);
+ for(const o of order){const p=BY[o].p;if(p){degMap.set(p[0],(degMap.get(p[0])||0)+1);degMap.set(p[1],(degMap.get(p[1])||0)+1);}}}
+ return degMap.get(id)||0;}
 // Cuánto se encoge todo: por el número de bolas y por el sitio que hay (área por bola).
 const crowd=()=>Math.min(clamp(1.15-order.length/260,.55,1),clamp(Math.sqrt(st.W*st.H/(Math.max(order.length,1)*2600)),.42,1));
-const targetR=n=>(10+Math.min(degree(n.id),9)*1.8)*st.S*crowd();
+const targetR=(n,cr)=>(10+Math.min(degree(n.id),9)*1.8)*st.S*cr;
 // Con zoom las bolas crecen menos que las distancias (√z en vez de z): así se separan y caben los nombres.
 // Al alejar (z < 1) las bolas encogen igual que el mapa (zoom de verdad, v1.23).
 const rz=()=>cam.z>1?1/Math.sqrt(cam.z):1;
@@ -46,22 +52,22 @@ const quieta=n=>st.mueve&&st.mueve.id===n.id||!!n.fija;
 const SIGUE_FAM=3.2, SIGUE_OTRA=1.3; // cuánto más tiran los muelles de la que se arrastra
 export function hayFijas(){for(const n of nodes.values())if(n.fija)return true;return false;}
 export function soltarTodas(){for(const n of nodes.values())delete n.fija;}
-export function step(dt){const S=st.S,f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.values()];
+export function step(dt){const S=st.S,cr=crowd(),f=dt*60,cx=st.W/2,cy=st.H/2,arr=[...nodes.values()];
  const m0=st.mueve&&nodes.get(st.mueve.id);
  for(const n of arr)if(n.fija&&n!==m0){n.x=n.fija[0]*st.W;n.y=n.fija[1]*st.H;}
  if(m0){m0.x=st.mueve.x;m0.y=st.mueve.y;}
  const hay=arr.some(n=>n.fija);if(reordenar.hidden===hay)reordenar.hidden=!hay;
- for(const n of arr){n.pulse=Math.max(0,n.pulse-dt*1.5);n.shake=Math.max(0,n.shake-dt);const tr=targetR(n);n.r=n.r?n.r+(tr-n.r)*Math.min(1,dt*8):tr;}
- const corte=3.2*Math.sqrt(st.W*st.H/Math.max(arr.length,1)); // alcance de la repulsión: unas 3 distancias típicas
+ for(const n of arr){n.pulse=Math.max(0,n.pulse-dt*1.5);n.shake=Math.max(0,n.shake-dt);const tr=targetR(n,cr);n.r=n.r?n.r+(tr-n.r)*Math.min(1,dt*8):tr;}
+ const corte=3.2*Math.sqrt(st.W*st.H/Math.max(arr.length,1)),corte2=corte*corte,kRep=1500*S*S*cr*cr,pad=10*S*cr; // alcance de la repulsión: unas 3 distancias típicas
  for(let i=0;i<arr.length;i++)for(let j=i+1;j<arr.length;j++){const a=arr[i],b=arr[j];let dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy;
-  if(d2<1){dx=Math.random()-.5;dy=Math.random()-.5;d2=1;}const d=Math.sqrt(d2);if(d>corte)continue;let fr=1500*S*S*crowd()*crowd()/d2*(1-d/corte);const minD=a.r+b.r+10*S*crowd();if(d<minD)fr+=(minD-d)*.06;
+  if(d2>corte2)continue;if(d2<1){dx=Math.random()-.5;dy=Math.random()-.5;d2=1;}const d=Math.sqrt(d2);let fr=kRep/d2*(1-d/corte);const minD=a.r+b.r+pad;if(d<minD)fr+=(minD-d)*.06;
   const ux=dx/d,uy=dy/d;a.vx-=ux*fr*f;a.vy-=uy*fr*f;b.vx+=ux*fr*f;b.vy+=uy*fr*f;}
  for(const n of arr){const p=BY[n.id].p;if(!p)continue;for(const pid of p){const q=nodes.get(pid);if(!q)continue;const dx=n.x-q.x,dy=n.y-q.y,d=Math.hypot(dx,dy)||1;
-  let k=(d-88*S*crowd())*.0032*f;const ux=dx/d,uy=dy/d;
+  let k=(d-88*S*cr)*.0032*f;const ux=dx/d,uy=dy/d;
   if(m0&&(m0===n||m0===q))k*=BY[n.id].fam===BY[q.id].fam?SIGUE_FAM:SIGUE_OTRA;
   n.vx-=ux*k;n.vy-=uy*k;q.vx+=ux*k*(m0===n?1:.4);q.vy+=uy*k*(m0===n?1:.4);}}
  const damp=Math.pow(.86,f);
- const g=.00144/crowd(),R=Math.min(st.W,st.H)*.34,m=36*S;
+ const g=.00144/cr,R=Math.min(st.W,st.H)*.34,m=36*S;
  for(const n of arr){const[ang,rf]=ZONA[BY[n.id].fam],a=ang*Math.PI/180;
   n.vx+=(cx+Math.cos(a)*R*rf-n.x)*g*f;n.vy+=(cy+Math.sin(a)*R*rf-n.y)*g*f;
   // Bordes blandos: cerca del borde, un empujón hacia dentro (el clamp de abajo queda de tope).
@@ -102,7 +108,7 @@ export function dibujarNebulosas(c){const W=st.W,H=st.H;
   const x=W/2+Math.cos(a)*R*rf,y=H/2+Math.sin(a)*R*rf,r=lado*(NEB_R[0]+(NEB_R[1]-NEB_R[0])*f),al=NEB_A[0]+(NEB_A[1]-NEB_A[0])*f;
   const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,rgba(hex,al));g.addColorStop(.45,rgba(hex,al*.45));g.addColorStop(1,rgba(hex,0));
   c.fillStyle=g;c.beginPath();c.arc(x,y,r,0,TAU);c.fill();}}
-function drawNebulas(){const k=order.length+':'+order[order.length-1]+':'+st.W+'x'+st.H;
+function drawNebulas(){const k=st.ver+':'+st.W+'x'+st.H;
  if(k!==nebClave){nebClave=k;pintarNebulosas();}
  ctx.drawImage(neb,0,0,st.W,st.H);}
 // El brillo de más de un hilo recién encendido por la chispa (n.chispa = instante en que llega).

@@ -9,6 +9,7 @@
 import {DATA,BY} from './data.js';
 import {st,nodes,order} from './state.js';
 import {dibujarNebulosas} from './constellation.js';
+import {toast} from './ui.js';
 import {rgba,lighten,lum,TAU,$} from './utils.js';
 
 const PW=1080, PH=1350, MARGEN=70, ARRIBA=250, ABAJO=150;
@@ -28,7 +29,7 @@ export async function dibujarPoster(){
  let x0=Math.min(...ns.map(n=>n.x-n.r*3)),x1=Math.max(...ns.map(n=>n.x+n.r*3)),y0=Math.min(...ns.map(n=>n.y-n.r*3)),y1=Math.max(...ns.map(n=>n.y+n.r*3));
  const aw=PW-2*MARGEN,ah=PH-ARRIBA-ABAJO,k=Math.min(aw/(x1-x0),ah/(y1-y0),3.2);
  const ox=MARGEN+(aw-(x1-x0)*k)/2-x0*k,oy=ARRIBA+(ah-(y1-y0)*k)/2-y0*k;
- c.save();c.setTransform(k,0,0,k,ox,oy);
+ c.save();c.beginPath();c.rect(0,ARRIBA-20,PW,ah+40);c.clip();c.setTransform(k,0,0,k,ox,oy);
  dibujarNebulosas(c);
  c.globalCompositeOperation='lighter';
  for(const n of ns){const p=BY[n.id].p;if(!p)continue;for(const pid of p){const q=nodes.get(pid);if(!q)continue;
@@ -67,10 +68,12 @@ async function compartir(cv){const {Filesystem,Share}=cap.Plugins;
 
 async function descargar(){const cv=await dibujarPoster();
  if(nativa)return compartir(cv);
- const blob=await new Promise(r=>cv.toBlob(r,'image/png'));const url=URL.createObjectURL(blob);
- if(enApp){$('posterImg').src=url;vista.hidden=false;return;}
+ const blob=await new Promise(r=>cv.toBlob(r,'image/png'));if(!blob){toast('No se ha podido crear la imagen.');return;}
+ const url=URL.createObjectURL(blob);
+ if(enApp){const img=$('posterImg');if(img.src.startsWith('blob:'))URL.revokeObjectURL(img.src);img.src=url;vista.hidden=false;return;}
  const a=document.createElement('a');a.href=url;a.download='chromalchemy-constelacion.png';document.body.appendChild(a);a.click();a.remove();
  setTimeout(()=>URL.revokeObjectURL(url),4000);}
 if(nativa)$('posterBtn').textContent='Compartir póster';
-$('posterBtn').onclick=()=>{descargar().catch(()=>{});};
-$('posterCerrar').onclick=()=>{vista.hidden=true;URL.revokeObjectURL($('posterImg').src);};
+$('posterBtn').onclick=()=>{descargar().catch(()=>toast('No se ha podido crear la imagen.'));};
+$('posterCerrar').onclick=()=>{vista.hidden=true;const img=$('posterImg');if(img.src.startsWith('blob:'))URL.revokeObjectURL(img.src);img.removeAttribute('src');};
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!vista.hidden){e.stopImmediatePropagation();$('posterCerrar').click();}},true);

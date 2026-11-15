@@ -3,11 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <style>html,body{margin:0}[hidden]{display:none!important}</style>
 <title>Chromalchemy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/fuentes.css">
 <style>
 /* Layout: one-screen game. Paleta por familias a la izquierda (abajo en móvil) + constelación + ficha flotante + rueda cromática en modal. Tema oscuro único, a propósito. */
 :root{
@@ -230,7 +229,7 @@ const easeOut=p=>1-Math.pow(1-p,3);
 const elastic=p=>p<=0?0:p>=1?1:Math.pow(2,-10*p)*Math.sin((p*10-.75)*TAU/3)+1;
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const mq=matchMedia('(max-width: 760px)');
-const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc=t=>String(t).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
 
 /* ---------- Estado ---------- */
 const $=id=>document.getElementById(id);
@@ -366,7 +365,7 @@ function openLore(id){const d=BY[id];selected=id;const dark=lum(d.hex)<.16;
  else ph=`<div class="pend-t"><b style="color:var(--doc)">✓</b> Has sacado todas las mezclas de ${esc(d.name)}.</div>`;
  if(known.length)ph+=`<div class="done-list"><span class="lbl">Ya sacadas:</span>${known.map(chip).join('')}</div>`;
  $('lPend').innerHTML=ph;
- $('lSrc').innerHTML=d.src.map(x=>`<li><a href="${x.u}" target="_blank" rel="noopener">${esc(x.t)}</a></li>`).join('');
+ $('lSrc').innerHTML=d.src.map(x=>`<li><a href="${esc(x.u)}" target="_blank" rel="noopener noreferrer">${esc(x.t)}</a></li>`).join('');
  lore.hidden=false;}
 function closeLore(){lore.hidden=true;selected=null;}
 $('loreClose').onclick=closeLore;

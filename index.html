@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' blob: data:; connect-src 'self' https://docs.google.com; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Chromalchemy</title>
 <meta name="description" content="Descubre 246 colores reales mezclándolos, cada uno con su historia.">
 <!-- Tarjeta del enlace (LinkedIn, WhatsApp, X…): las URL de imagen tienen que ser absolutas. -->
@@ -23,44 +24,44 @@
 <!-- Tipografías desde el repo (v1.16): nada sale a Google al jugar. Se adelantan las dos que se ven al abrir. -->
 <link rel="preload" href="fonts/karla-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/instrument-serif-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/fuentes.css?v=1.27">
-<link rel="stylesheet" href="css/styles.css?v=1.27">
+<link rel="stylesheet" href="css/fuentes.css?v=1.28">
+<link rel="stylesheet" href="css/styles.css?v=1.28">
 <!-- Versión en la dirección de cada archivo: GitHub Pages los deja en caché hasta 10 min y,
      sin esto, el navegador podría mezclar módulos de dos versiones. tools/version.sh la cambia. -->
 <script type="importmap">
 {"imports": {
-  "./js/atras.js": "./js/atras.js?v=1.27",
-  "./js/camera.js": "./js/camera.js?v=1.27",
-  "./js/constellation.js": "./js/constellation.js?v=1.27",
-  "./js/data.js": "./js/data.js?v=1.27",
-  "./js/drag.js": "./js/drag.js?v=1.27",
-  "./js/effects.js": "./js/effects.js?v=1.27",
-  "./js/game.js": "./js/game.js?v=1.27",
-  "./js/gesto.js": "./js/gesto.js?v=1.27",
-  "./js/lore.js": "./js/lore.js?v=1.27",
-  "./js/main.js": "./js/main.js?v=1.27",
-  "./js/opinion.js": "./js/opinion.js?v=1.27",
-  "./js/palette.js": "./js/palette.js?v=1.27",
-  "./js/pistas.js": "./js/pistas.js?v=1.27",
-  "./js/portada.js": "./js/portada.js?v=1.27",
-  "./js/poster.js": "./js/poster.js?v=1.27",
-  "./js/posibles.js": "./js/posibles.js?v=1.27",
-  "./js/privacidad.js": "./js/privacidad.js?v=1.27",
-  "./js/sheet.js": "./js/sheet.js?v=1.27",
-  "./js/state.js": "./js/state.js?v=1.27",
-  "./js/ui.js": "./js/ui.js?v=1.27",
-  "./js/utils.js": "./js/utils.js?v=1.27",
-  "./js/ajustes.js": "./js/ajustes.js?v=1.27",
-  "./js/vibra.js": "./js/vibra.js?v=1.27",
-  "./js/wheel.js": "./js/wheel.js?v=1.27"
+  "./js/atras.js": "./js/atras.js?v=1.28",
+  "./js/camera.js": "./js/camera.js?v=1.28",
+  "./js/constellation.js": "./js/constellation.js?v=1.28",
+  "./js/data.js": "./js/data.js?v=1.28",
+  "./js/drag.js": "./js/drag.js?v=1.28",
+  "./js/effects.js": "./js/effects.js?v=1.28",
+  "./js/game.js": "./js/game.js?v=1.28",
+  "./js/gesto.js": "./js/gesto.js?v=1.28",
+  "./js/lore.js": "./js/lore.js?v=1.28",
+  "./js/main.js": "./js/main.js?v=1.28",
+  "./js/opinion.js": "./js/opinion.js?v=1.28",
+  "./js/palette.js": "./js/palette.js?v=1.28",
+  "./js/pistas.js": "./js/pistas.js?v=1.28",
+  "./js/portada.js": "./js/portada.js?v=1.28",
+  "./js/poster.js": "./js/poster.js?v=1.28",
+  "./js/posibles.js": "./js/posibles.js?v=1.28",
+  "./js/privacidad.js": "./js/privacidad.js?v=1.28",
+  "./js/sheet.js": "./js/sheet.js?v=1.28",
+  "./js/state.js": "./js/state.js?v=1.28",
+  "./js/ui.js": "./js/ui.js?v=1.28",
+  "./js/utils.js": "./js/utils.js?v=1.28",
+  "./js/ajustes.js": "./js/ajustes.js?v=1.28",
+  "./js/vibra.js": "./js/vibra.js?v=1.28",
+  "./js/wheel.js": "./js/wheel.js?v=1.28"
 }}
 </script>
-<script type="module" src="js/main.js?v=1.27"></script>
+<script type="module" src="js/main.js?v=1.28"></script>
 </head>
 <body>
 <div class="app">
   <header class="top">
-    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.27</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
+    <div class="brand"><h1>Chrom<i>alchemy</i></h1><span class="tag">v1.28</span><span class="brand-sep" aria-hidden="true">·</span><button type="button" class="enlace-priv" id="privacidadBtn">Privacidad</button></div>
     <div class="progress"><div class="count"><b id="cnt">5</b> / <span id="tot">246</span></div><div class="bar" id="bar"></div></div>
     <div class="tools">
       <button type="button" class="wheel-btn" id="openWheel"><i></i>Gama</button>
@@ -164,11 +165,11 @@
   <div class="op-cab"><h2 id="privacidadTitulo">Privacidad</h2>
     <button type="button" class="op-x" id="privacidadCerrar" aria-label="Cerrar">×</button></div>
   <div class="priv-texto">
-    <p>Chromalchemy <b>no tiene servidor, ni cuentas, ni analítica, ni cookies</b>.</p>
-    <p>Tu partida se guarda <b>sólo en este navegador</b>. Si borras los datos del sitio, se borra. En Safari, si pasas más de 7 días sin abrir el juego, el navegador puede borrarla.</p>
-    <p>Las letras y los colores vienen del propio juego: mientras juegas no se pide nada a otras webs.</p>
-    <p>Si mandas una opinión, va a un <b>formulario de Google</b> con tus respuestas, la versión del juego, cuántos colores llevas y si has usado pistas. Tu nombre y tu contacto, sólo si los escribes.</p>
-    <p>GitHub, que aloja la página, y Google, al opinar, ven tu dirección IP, como cualquier web.</p>
+    <p>Chromalchemy <b>no tiene servidor, ni cuentas, ni analítica, ni publicidad, ni cookies</b>, y no recoge datos tuyos por su cuenta.</p>
+    <p>Tu partida se guarda <b>sólo en tu dispositivo</b> (en el navegador o dentro de la app). No sale de ahí. Si borras los datos del sitio o desinstalas la app, se borra. En la web, Safari puede borrarla tras 7 días sin abrir el juego; en la app no pasa.</p>
+    <p>Las letras y los colores vienen del propio juego: mientras juegas no se pide nada a otras webs. La app sólo pide permiso de internet (para opinar) y de vibración.</p>
+    <p>Si mandas una opinión, tus respuestas se envían con tu consentimiento a un <b>formulario de Google</b> (Google LLC) junto con la versión, cuántos colores llevas y si has usado pistas. Tu nombre y tu contacto, sólo si los escribes. Se conservan mientras sean útiles para mejorar el juego o hasta que pidas borrarlos desde «Opinar» o en <b>inigo.caraballo.apps@gmail.com</b>.</p>
+    <p>En la web, GitHub (que aloja la página) y, al opinar, Google ven tu dirección IP, como cualquier página de internet.</p>
   </div>
   <button type="button" class="op-enviar" id="privacidadOk">Entendido</button>
 </div>

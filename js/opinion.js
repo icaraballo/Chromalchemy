@@ -7,7 +7,7 @@
    Google, hay que cambiarla aquí. Lo escrito se conserva al cerrar sin enviar. */
 import {DATA} from './data.js';
 import {st,order} from './state.js';
-import {$} from './utils.js';
+import {esc,$} from './utils.js';
 
 const FORM='https://docs.google.com/forms/d/e/1FAIpQLScHOYoZvEJPYK0olmKcdxqSPf4bNCYVPI7K5iZFXtGaOl2LlA/formResponse';
 const PREGUNTAS=[
@@ -29,17 +29,17 @@ export function yaOpino(){try{return localStorage.getItem(CLAVE)==='1';}catch{re
 
 const hoja=$('opinion'),velo=$('opinionFondo'),form=$('opinionForm'),caja=$('opinionPreguntas'),
  aviso=$('opinionAviso'),enviar=$('opinionEnviar'),gracias=$('opinionGracias');
-let abierta=false,origen=null,cierre=0;
+let abierta=false,origen=null,cierre=0,ultimoEnvio=0;
 
 const datos=()=>({version:document.querySelector('.tag').textContent.trim(),
- colores:`${order.length}/${DATA.length}`,
+ colores:`${order.length}/${DATA.length}${st.revelado?' (dev)':''}`,
  pistas:st.pistasUsadas?`sí (${st.pistasUsadas})`:'no'});
 
 export function abrirOpinion(){clearTimeout(cierre);abierta=true;origen=document.activeElement;
- if(!caja.children.length)caja.innerHTML=PREGUNTAS.map((p,i)=>{const ph=p.ayuda?` placeholder="${p.ayuda}"`:'';
+ if(!caja.children.length)caja.innerHTML=PREGUNTAS.map((p,i)=>{const ph=p.ayuda?` placeholder="${esc(p.ayuda)}"`:'';
   const campo=p.largo?`<textarea name="${p.entry}" rows="2" maxlength="${MAX.largo}"${ph}></textarea>`
    :`<input name="${p.entry}" type="text" maxlength="${MAX.corto}" autocomplete="${i===PREGUNTAS.length-1?'email':'name'}"${ph}>`;
-  return `<label>${p.texto}${campo}</label>`;}).join('');
+  return `<label>${esc(p.texto)}${campo}</label>`;}).join('');
  form.hidden=false;gracias.hidden=true;aviso.textContent='';enviar.disabled=false;enviar.textContent='Enviar';
  hoja.hidden=velo.hidden=false;hoja.getBoundingClientRect();   // para que haya transición
  hoja.classList.add('abierta');velo.classList.add('abierta');caja.scrollTop=0;ajustar();}
@@ -71,15 +71,19 @@ export function cuerpo(respuestas,d){const escritas=Object.keys(respuestas).filt
  return pares.join('&');}
 
 form.addEventListener('submit',async e=>{e.preventDefault();
+ if(Date.now()-ultimoEnvio<30000){aviso.textContent='Acabas de enviar una opinión; espera unos segundos si quieres mandar otra.';return;}
  const r={};for(const p of PREGUNTAS)r[p.entry]=form.elements[p.entry].value;
  const c=cuerpo(r,datos());
  if(!c){aviso.textContent='Escribe algo en alguna pregunta antes de enviar.';return;}
+ if(navigator.onLine===false){aviso.textContent='No se ha podido enviar: parece que no hay conexión. Lo escrito sigue aquí; inténtalo en un rato.';return;}
  aviso.textContent='';enviar.disabled=true;enviar.textContent='Enviando…';
  try{await fetch(FORM,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:c});}
  catch{enviar.disabled=false;enviar.textContent='Enviar';
   aviso.textContent='No se ha podido enviar: parece que no hay conexión. Lo escrito sigue aquí; inténtalo en un rato.';return;}
+ ultimoEnvio=Date.now();
  try{localStorage.setItem(CLAVE,'1');}catch{}
- form.reset();form.hidden=true;gracias.hidden=false;$('opinionVolver').focus({preventScroll:true});});
+ // Con no-cors la respuesta es opaca (H-04): no se llama a form.reset() para no destruir el texto en la sesión.
+ form.hidden=true;gracias.hidden=false;$('opinionVolver').focus({preventScroll:true});});
 
 $('opinarBtn').onclick=()=>abrirOpinion();
 $('opinionCerrar').onclick=cerrarOpinion;

@@ -117,5 +117,50 @@ for (const meta of [30, 62, 100, 150, 220]) {
   for (const f of FAMS) ok(motor.famPosible(f, partida) === DATA.some(d => d.fam === f && motor.posible(d.id, partida)), `${tag} ${f}: el punto de familia no cuadra`);
 }
 
+// 7. Reconstrucción de partidas guardadas (H-01, H-05, H-11): cambios de receta, orden alterado y datos corruptos
+ok(motor.reconstruir(null, BASICS) === null && motor.reconstruir({}, BASICS) === null, 'reconstruir rechaza entradas vacías');
+// Partida normal con pista válida y bola fija
+const r1 = motor.reconstruir({
+  order: [...BASICS, 'naranja', 'verde'],
+  fijas: {naranja: [0.25, 0.75], fantasma: [0.5, 0.5], verde: [-1, 2]},
+  logros: ['rojos:50', 123, null],
+  pistas: 3,
+  pista: {id: 'rosa', paso: 2},
+}, BASICS);
+ok(r1 && r1.limpio && r1.order.join() === [...BASICS, 'naranja', 'verde'].join(), 'reconstruir conserva una partida limpia');
+ok(r1.fijas.naranja && !r1.fijas.fantasma && !r1.fijas.verde, 'reconstruir filtra fijas fuera de [0,1] o de colores no descubiertos');
+ok(r1.logros.length === 1 && r1.logros[0] === 'rojos:50', 'reconstruir filtra logros no textuales');
+ok(r1.pista && r1.pista.id === 'rosa' && r1.pista.paso === 2, 'reconstruir conserva una pista posible');
+
+// Cambio de receta entre versiones (H-01): el jugador tenía azul-klein y sus descendientes sin tener azul-persa
+const r2 = motor.reconstruir({
+  order: [...BASICS, 'azul-klein', 'alizarina'],
+  pistas: -10,
+  pista: {id: 'toString', paso: 1, desde: 'constructor'},
+}, BASICS);
+ok(r2 && r2.order.includes('azul-klein') && r2.order.includes('alizarina'), 'reconstruir no borra colores descubiertos aunque su receta haya cambiado (H-01)');
+ok(r2.pistas === 0 && r2.pista === null && !r2.limpio, 'reconstruir sanea pistas negativas y claves del prototipo (toString/constructor)');
+
+// Pista sobre un color que aún no es posible tras limpiar ids corruptos
+const r3 = motor.reconstruir({
+  order: [...BASICS, 'toString', 'constructor', '__proto__', 'inexistente', 'naranja', 'naranja'],
+  pista: {id: 'ultramar', paso: 2, desde: 'toString'},
+}, BASICS);
+ok(r3 && r3.order.join() === [...BASICS, 'naranja'].join() && r3.pista === null && !r3.limpio, 'reconstruir descarta basura, duplicados y pistas aún no alcanzables');
+
+// 8. Coherencia de versión y cabeceras CSP en index.html, privacidad.html, js/data.js y app-android
+const indexHtml = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+const privHtml = readFileSync(new URL('../privacidad.html', import.meta.url), 'utf8');
+const dataJs = readFileSync(new URL('../js/data.js', import.meta.url), 'utf8');
+const pkgAnd = JSON.parse(readFileSync(new URL('../app-android/package.json', import.meta.url), 'utf8'));
+const gradleAnd = readFileSync(new URL('../app-android/android/app/build.gradle', import.meta.url), 'utf8');
+ok(indexHtml.includes('http-equiv="Content-Security-Policy"'), 'index.html lleva Content-Security-Policy');
+ok(privHtml.includes('http-equiv="Content-Security-Policy"'), 'privacidad.html lleva Content-Security-Policy');
+const verTag = (indexHtml.match(/<span class="tag">v([0-9.]+)<\/span>/) || [])[1];
+ok(Boolean(verTag), 'index.html tiene etiqueta de versión');
+ok(dataJs.includes(`colores.json?v=${verTag}`), `js/data.js lleva ?v=${verTag}`);
+ok(pkgAnd.version === verTag, `app-android/package.json (${pkgAnd.version}) coincide con v${verTag}`);
+ok(gradleAnd.includes(`versionName "${verTag}"`), `build.gradle coincide con v${verTag}`);
+
 console.log(fallos ? `\n${fallos} de ${pruebas} comprobaciones fallan` : `${pruebas} comprobaciones, todas bien: se llega a los ${tengo.size} colores`);
 process.exit(fallos ? 1 : 0);

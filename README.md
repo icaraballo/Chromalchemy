@@ -105,12 +105,14 @@ node tools/calcular-recetas.js entrada.json salida.json
 
 ## Privacidad
 
-Sin cookies ni analítica. La partida se guarda solo en tu navegador. Las letras se sirven desde
-el propio juego. Si pulsas «Enviar» en «Opinar», tus respuestas, la versión, cuántos colores
-llevas y si has usado pistas van a un formulario de Google; nombre y contacto, solo si los
-pones. En Safari, si pasas más de 7 días sin abrirlo, el navegador puede borrar la partida. Lo
-mismo se lee en el juego, en el enlace «Privacidad» junto a la versión (también en Ajustes → «Sobre este juego»), y en
-[privacidad.html](https://icaraballo.github.io/Chromalchemy/privacidad.html), la dirección que usa Google Play
-(cubre también la app de Android, donde la partida se guarda dentro de la app).
+Sin cookies, ni publicidad, ni analítica. La partida se guarda sólo en tu dispositivo (en el
+navegador o dentro de la app de Android) y no sale de ahí. Las letras se sirven desde el propio
+juego; la app sólo pide permiso de internet (para opinar) y de vibración. Si pulsas «Enviar» en
+«Opinar», tus respuestas se envían con tu consentimiento a un formulario de Google (Google LLC)
+junto con la versión, cuántos colores llevas y si has usado pistas; nombre y contacto, sólo si los
+pones, y puedes pedir que se borren escribiendo desde «Opinar» o a `inigo.caraballo.apps@gmail.com`.
+En la web, Safari puede borrar la partida tras 7 días sin abrir el juego; en la app no pasa. Lo
+mismo se lee en el juego, en el enlace «Privacidad» junto a la versión, y en
+[privacidad.html](https://icaraballo.github.io/Chromalchemy/privacidad.html), la dirección que usa Google Play.
 
 Hecho por Iñigo Caraballo con Claude (Anthropic).

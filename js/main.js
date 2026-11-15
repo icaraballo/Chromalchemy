@@ -17,6 +17,9 @@ import {$} from './utils.js';
 resize();makeStars();new ResizeObserver(()=>resize()).observe($('stage'));
 if(!restaurar())reset();
 iniciarPortada();
-let last=performance.now()/1000;
-function frame(){const t=performance.now()/1000;const dt=Math.min(.05,t-last);last=t;st.now=t;step(dt);draw();requestAnimationFrame(frame);}
+const portada=$('portada'),poster=$('poster');
+let last=performance.now()/1000,listo=false;
+function frame(){const t=performance.now()/1000;const dt=Math.min(.05,t-last);last=t;st.now=t;
+ if(!listo||(portada.hidden||portada.classList.contains('fuera'))&&poster.hidden){step(dt);draw();listo=true;}
+ requestAnimationFrame(frame);}
 requestAnimationFrame(frame);

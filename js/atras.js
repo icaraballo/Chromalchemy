@@ -10,7 +10,7 @@ import {$} from './utils.js';
 
 const cap=window.Capacitor, App=cap&&cap.isNativePlatform&&cap.isNativePlatform()&&cap.Plugins.App;
 // Lo que cierra Escape, en el orden en que lo cierra (lo de encima, primero).
-const VENTANAS=['privacidad','ajustes','cero','opinion','pCard','wheel','lore'];
+const VENTANAS=['poster','privacidad','ajustes','cero','opinion','pCard','wheel','lore'];
 
 // «¿Salir de Chromalchemy?» Sí / No, como en La Colmena (v1.25). Va encima de la portada.
 function salir(){return $('salir')||crearSalir();}
@@ -21,7 +21,6 @@ function crearSalir(){const v=document.createElement('div');v.id='salir';v.class
  $('salirNo').onclick=cerrar;$('salirSi').onclick=()=>App.exitApp();
  v.addEventListener('click',e=>{if(e.target===v)cerrar();});return v;}
 if(App)App.addListener('backButton',()=>{
- if(!$('poster').hidden){$('posterCerrar').click();return;}   // la vista del póster no atiende a Escape
  if(VENTANAS.some(id=>!$(id).hidden)){window.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape'}));return;}
  if(!salir().hidden){salir().hidden=true;return;}   // atrás con «¿Salir?» abierto = «No»
  if(plegarAtras())return;

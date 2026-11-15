@@ -27,4 +27,27 @@ export function crear(DATA){
   let t=id;
   for(let i=0;i<DATA.length&&!posible(t,tengo);i++){const f=BY[t].p.filter(x=>!tengo.has(x)).sort(antes);if(!f.length)break;t=f[0];}
   return posible(t,tengo)?{t,n:faltan.size}:null;} // null sólo si el JSON tuviera un ciclo
- return{posible,mezclas,famPosible,cadena,gen};}
+ /* Reconstruye y sanea una partida guardada sin depender del DOM (npm test la prueba):
+    si cambió una receta en el JSON, conserva igualmente los colores ya descubiertos (H-01). */
+ function reconstruir(g,BASICS){if(!g||typeof g!=='object'||!Array.isArray(g.order))return null;
+  const orden=[...BASICS],vistos=new Set(BASICS),cola=[];
+  for(const id of g.order)if(typeof id==='string'&&Object.hasOwn(BY,id)&&BY[id].p&&!vistos.has(id)&&!cola.includes(id))cola.push(id);
+  let cambio=true;
+  while(cambio){cambio=false;for(let i=0;i<cola.length;i++){const id=cola[i],[a,b]=BY[id].p;
+   if(vistos.has(a)&&vistos.has(b)){vistos.add(id);orden.push(id);cola.splice(i--,1);cambio=true;}}}
+  cambio=true;
+  while(cambio){cambio=false;for(let i=0;i<cola.length;i++){const id=cola[i],[a,b]=BY[id].p;
+   if(vistos.has(a)||vistos.has(b)){vistos.add(id);orden.push(id);cola.splice(i--,1);cambio=true;}}}
+  for(const id of cola){vistos.add(id);orden.push(id);}
+  const fijas={},gf=g.fijas&&typeof g.fijas==='object'?g.fijas:{};
+  for(const id of orden)if(Object.hasOwn(gf,id)){const f=gf[id];
+   if(Array.isArray(f)&&f.length===2&&f.every(v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1))fijas[id]=f;}
+  const logros=Array.isArray(g.logros)?g.logros.filter(k=>typeof k==='string'):[];
+  const pistas=Math.max(0,Number.isFinite(g.pistas)?g.pistas|0:0);
+  const p=g.pista&&typeof g.pista==='object'?g.pista:null,paso=p?p.paso|0:0;
+  const pista=p&&typeof p.id==='string'&&Object.hasOwn(BY,p.id)&&posible(p.id,vistos)&&paso>=1&&paso<=3
+   ?{id:p.id,paso,...(typeof p.desde==='string'&&Object.hasOwn(BY,p.desde)&&BY[p.desde].p&&!vistos.has(p.desde)&&cadena(p.desde,vistos)?.t===p.id?{desde:p.desde}:{})}
+   :null;
+  const limpio=g.order.length===orden.length&&g.order.every((id,i)=>id===orden[i])&&(g.pistas===undefined||g.pistas===pistas);
+  return{order:orden,fijas,logros,pistas,pista,limpio};}
+ return{posible,mezclas,famPosible,cadena,gen,reconstruir};}
