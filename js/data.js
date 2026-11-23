@@ -3,7 +3,7 @@
    no arranca hasta que los datos están). cert: doc = Documentado · disc = Discutido · ley = Leyenda */
 let raw;
 try{
- const res=await fetch(new URL('../data/colores.json?v=1.28',import.meta.url));
+ const res=await fetch(new URL('../data/colores.json?v=1.29',import.meta.url));
  if(!res.ok)throw new Error('No se pudo cargar data/colores.json ('+res.status+')');
  raw=await res.json();
 }catch(e){

@@ -1,6 +1,6 @@
 {
   "name": "chromalchemy-android",
-  "version": "1.28",
+  "version": "1.29",
   "private": true,
   "license": "UNLICENSED",
   "description": "Chromalchemy como app de Android (Capacitor). La web de la carpeta de arriba es el original: aquí sólo se copia y se empaqueta.",

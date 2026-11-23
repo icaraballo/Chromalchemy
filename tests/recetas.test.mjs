@@ -162,5 +162,14 @@ ok(dataJs.includes(`colores.json?v=${verTag}`), `js/data.js lleva ?v=${verTag}`)
 ok(pkgAnd.version === verTag, `app-android/package.json (${pkgAnd.version}) coincide con v${verTag}`);
 ok(gradleAnd.includes(`versionName "${verTag}"`), `build.gradle coincide con v${verTag}`);
 
+// 9. «Borrar tus datos»: la hoja del juego, el README y privacidad.html dicen lo mismo
+const readmeMd = readFileSync(new URL('../README.md', import.meta.url), 'utf8');
+const plano = t => t.replace(/<[^>]+>|\*\*|`/g, '').replace(/\s+/g, ' ');
+const hojaPriv = plano((/<div class="priv-texto">([\s\S]*?)<\/div>/.exec(indexHtml) || [])[1] || '');
+for (const f of ['Para borrar una opinión', 'inigo.caraballo.apps@gmail.com', 'Se borra todo lo que se envió con ella, también de cualquier copia, en un máximo de 30 días']) {
+  ok(hojaPriv.includes(f) && plano(readmeMd).includes(f), `privacidad: «${f}», en el juego y en el README`);
+}
+ok(privHtml.includes('id="borrar-datos"') && privHtml.includes('máximo de 30 días'), 'privacidad.html tiene el apartado «Borrar tus datos» con su plazo');
+
 console.log(fallos ? `\n${fallos} de ${pruebas} comprobaciones fallan` : `${pruebas} comprobaciones, todas bien: se llega a los ${tengo.size} colores`);
 process.exit(fallos ? 1 : 0);

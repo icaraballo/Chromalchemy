@@ -115,4 +115,6 @@ En la web, Safari puede borrar la partida tras 7 días sin abrir el juego; en la
 mismo se lee en el juego, en el enlace «Privacidad» junto a la versión, y en
 [privacidad.html](https://icaraballo.github.io/Chromalchemy/privacidad.html), la dirección que usa Google Play.
 
+**Para borrar una opinión**, escribe a inigo.caraballo.apps@gmail.com (o desde «Opinar») con el asunto «Borrar datos de Chromalchemy» y la fecha aproximada. Se borra todo lo que se envió con ella, también de cualquier copia, en un máximo de 30 días. Más detalle en [Borrar tus datos](https://icaraballo.github.io/Chromalchemy/privacidad.html#borrar-datos).
+
 Hecho por Iñigo Caraballo con Claude (Anthropic).
